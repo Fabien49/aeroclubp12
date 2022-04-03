@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+            crossorigin="anonymous"
+    />
+
+
+    <title>Bibliothèques d'Angers</title>
+
+</head>
+
+<body>
+
+<!-- Header -->
+<div th:replace="Header :: header"></div>
+
+
+<!-- Reste de la page -->
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="border-secondary shadow jumbotron">
+                <center><h2>Bienvenue sur le site des bibliothèques d'Angers !</h2></center>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 my-4 col-lg-4">
+            <div class="border-secondary shadow card h-90">
+                <img class="card-img-top" src="/biblio/bibliotheque_toussaint.jpg" alt="Bibliothèque Toussaint" height="250">
+                <div class="card-body">
+                    <h5 class="card-title">Bibliothèque Toussaint</h5>
+                    <button type="button" class="infosButton btn btn-info" data-toggle="modal" data-target="#infosToussaintModal">
+                        Horaires & contact
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 my-4 col-lg-4">
+            <div class="border-secondary shadow card h-90">
+                <img class="card-img-top" src="/biblio/bibliotheque_justices.jpg" alt="Bibliothèque Les Justices" height="250">
+                <div class="card-body">
+                    <h5 class="card-title">Bibliothèque les Justices</h5>
+                    <button type="button" class="infosButton btn btn-info" data-toggle="modal" data-target="#infosLesJusticesModal">
+                        Horaires & contact
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 my-4 col-lg-4">
+            <div class="border-secondary shadow card h-90">
+                <img class="card-img-top" src="/biblio/bibliotheque_annie-fratellini.jpg" alt="Bibliothèque Annie-Fratellini" height="250">
+                <div class="card-body">
+                    <h5 class="card-title">Bibliothèque Annie-Fratellini</h5>
+                    <button type="button" class="infosButton btn btn-info"  data-toggle="modal" data-target="#infosAnnie-FratelliniModal">
+                        Horaires & contact
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<!-- Bibliotheque Annie-Fratellini -->
+<div
+        class="modal fade"
+        id="infosAnnie-FratelliniModal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="infosAnnie-FratelliniModalLabel"
+        aria-hidden="true">
+
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="infosAnnie-FratelliniModalLabel">
+                    Plus d'infos
+                </h5>
+                <button
+                        type="button"
+                        class="close"
+                        data-dismiss="modal"
+                        aria-label="Close"
+                >
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <table class="table.responsive table-striped">
+                        <thead hidden>
+                        <tr>
+                            <th scope="col">Jours</th>
+                            <th scope="col">Horaires</th>
+                        </tr>
+                        </thead>
+                        <tr>
+                            <th scope="row">Lundi</th>
+                            <td class="text-right">Fermée</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Mardi</th>
+                            <td>9:30 - 17:30</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Mercredi</th>
+                            <td>9:30 - 17:30</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Jeudi</th>
+                            <td>9:30 - 17:30</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Vendredi</th>
+                            <td>9:30 - 17:30</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Samedi</th>
+                            <td class="text-right">Fermée</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Dimanche</th>
+                            <td class="text-right">Fermée</td>
+                        </tr>
+                        <tbody>
+                    </table>
+                    <div class="col">
+                        <div class="float-right">
+                            <table class="table.responsive">
+                                <thead hidden>
+                                <tr>
+                                    <th scope="col">Jours</th>
+                                    <th scope="col">Horaires</th>
+                                </tr>
+                                </thead>
+                                <tr>
+                                    <td class="font-weight-bold">Bibliothèque Annie-Fratellini</td>
+                                </tr>
+                                <tr>
+                                    <td>2 Mail Clément Pasquereau</td>
+                                </tr>
+                                <tr>
+                                    <td>49100 ANGERS</td>
+                                </tr>
+                                <tr>
+                                    <td>Tel: 02 41 81 89 93</td>
+                                </tr>
+                                <tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bibliotheque Toussaint -->
+<div
+        class="modal fade"
+        id="infosToussaintModal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="infosToussaintModalLabel"
+        aria-hidden="true">
+
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="infosToussaintModalLabel">
+                    Plus d'infos
+                </h5>
+                <button
+                        type="button"
+                        class="close"
+                        data-dismiss="modal"
+                        aria-label="Close"
+                >
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <table class="table.responsive table-striped">
+                        <thead hidden>
+                        <tr>
+                            <th scope="col">Jours</th>
+                            <th scope="col">Horaires</th>
+                        </tr>
+                        </thead>
+                        <tr>
+                            <th scope="row">Lundi</th>
+                            <td class="text-right">Fermée</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Mardi</th>
+                            <td>9:30 - 18:30</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Mercredi</th>
+                            <td>9:30 - 18:30</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Jeudi</th>
+                            <td>9:30 - 18:30</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Vendredi</th>
+                            <td>9:30 - 18:30</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Samedi</th>
+                            <td>9:30 - 17:30</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Dimanche</th>
+                            <td class="text-right">Fermée</td>
+                        </tr>
+                        <tbody>
+                    </table>
+                    <div class="col">
+                        <div class="float-right">
+                            <table class="table.responsive">
+                                <thead hidden>
+                                <tr>
+                                    <th scope="col">Jours</th>
+                                    <th scope="col">Horaires</th>
+                                </tr>
+                                </thead>
+                                <tr>
+                                    <td class="font-weight-bold">Bibliothèque Toussaint</td>
+                                </tr>
+                                <tr>
+                                    <td>49 Rue Toussaint</td>
+                                </tr>
+                                <tr>
+                                    <td>49100 ANGERS</td>
+                                </tr>
+                                <tr>
+                                    <td>Tel: 02 41 24 25 50</td>
+                                </tr>
+                                <tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bibliotheque Les Justices -->
+<div
+        class="modal fade"
+        id="infosLesJusticesModal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="infosLesJusticesModalLabel"
+        aria-hidden="true">
+
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="infosLesJusticesLabel">
+                    Plus d'infos
+                </h5>
+                <button
+                        type="button"
+                        class="close"
+                        data-dismiss="modal"
+                        aria-label="Close"
+                >
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <table class="table.responsive table-striped">
+                        <thead hidden>
+                        <tr>
+                            <th scope="col">Jours</th>
+                            <th scope="col">Horaires</th>
+                        </tr>
+                        </thead>
+                        <tr>
+                            <th scope="row">Lundi</th>
+                            <td class="text-center">Fermée</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Mardi</th>
+                            <td>15:00 - 18:30</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Mercredi</th>
+                            <td>9:30 - 12:30 , 14:00 - 18:30</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Jeudi</th>
+                            <td class="text-center">Fermée</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Vendredi</th>
+                            <td>15:00 - 18:30</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Samedi</th>
+                            <td>9:30 - 12:30 , 14:00 - 17:30</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Dimanche</th>
+                            <td class="text-center">Fermée</td>
+                        </tr>
+                        <tbody>
+                    </table>
+                    <div class="col">
+                        <div class="float-right">
+                            <table class="table.responsive">
+                                <thead hidden>
+                                <tr>
+                                    <th scope="col">Jours</th>
+                                    <th scope="col">Horaires</th>
+                                </tr>
+                                </thead>
+                                <tr>
+                                    <td class="font-weight-bold">Bibliothèque Les Justices</td>
+                                </tr>
+                                <tr>
+                                    <td>42 Pl. des Justices</td>
+                                </tr>
+                                <tr>
+                                    <td>49000 ANGERS</td>
+                                </tr>
+                                <tr>
+                                    <td>Tel: 02 41 66 97 23</td>
+                                </tr>
+                                <tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <ul class="list-inline text-center">
+                <li class="list-inline-item">&middot;</li>
+                <li class="list-inline-item">Par Fabien Chapeau de chez OC
+                </li>
+                <li class="list-inline-item">&middot;</li>
+            </ul>
+        </div>
+    </div>
+</div>
+</footer>
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script
+        src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"
+></script>
+<script
+        src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"
+></script>
+<script
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"
+></script>
+</body>
+</html>
+

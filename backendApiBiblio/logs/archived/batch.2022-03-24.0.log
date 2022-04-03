@@ -1,0 +1,17 @@
+2022-03-24 09:38:41,956 INFO com.fabienit.biblioapi.BiblioApiApplication [main] Starting BiblioApiApplication on FABPC with PID 13256 (started by FaB PC in C:\Users\FaB\Git\Projet 7\bibliothequeocp7\backendApiBiblio)
+2022-03-24 09:38:41,967 DEBUG com.fabienit.biblioapi.BiblioApiApplication [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-03-24 09:38:41,969 INFO com.fabienit.biblioapi.BiblioApiApplication [main] The following profiles are active: dev
+2022-03-24 09:38:47,251 DEBUG com.fabienit.biblioapi.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$a7d359cd [main] Set Swagger2 documentation
+2022-03-24 09:38:47,946 INFO com.fabienit.biblioapi.BiblioApiApplication [main] Started BiblioApiApplication in 6.447 seconds (JVM running for 7.35)
+2022-03-24 09:45:00,501 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-1] Providing borrow resource from database: all borrow list
+2022-03-24 09:54:02,565 INFO com.fabienit.biblioapi.BiblioApiApplication [main] Starting BiblioApiApplication on FABPC with PID 18580 (started by FaB PC in C:\Users\FaB\Git\Projet 7\bibliothequeocp7\backendApiBiblio)
+2022-03-24 09:54:02,569 DEBUG com.fabienit.biblioapi.BiblioApiApplication [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-03-24 09:54:02,570 INFO com.fabienit.biblioapi.BiblioApiApplication [main] The following profiles are active: dev
+2022-03-24 09:54:09,059 DEBUG com.fabienit.biblioapi.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$f45c5e39 [main] Set Swagger2 documentation
+2022-03-24 09:54:09,867 INFO com.fabienit.biblioapi.BiblioApiApplication [main] Started BiblioApiApplication in 7.779 seconds (JVM running for 8.757)
+2022-03-24 09:55:00,489 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-1] Providing borrow resource from database: all borrow list
+2022-03-24 10:15:15,176 INFO com.fabienit.biblioapi.BiblioApiApplication [main] Starting BiblioApiApplication on FABPC with PID 9332 (started by FaB PC in C:\Users\FaB\Git\Projet 7\bibliothequeocp7\backendApiBiblio)
+2022-03-24 10:15:15,188 DEBUG com.fabienit.biblioapi.BiblioApiApplication [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-03-24 10:15:15,194 INFO com.fabienit.biblioapi.BiblioApiApplication [main] The following profiles are active: dev
+2022-03-24 10:15:28,601 DEBUG com.fabienit.biblioapi.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$a4b529e9 [main] Set Swagger2 documentation
+2022-03-24 10:15:30,864 INFO com.fabienit.biblioapi.BiblioApiApplication [main] Started BiblioApiApplication in 16.285 seconds (JVM running for 18.093)
