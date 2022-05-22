@@ -1,0 +1,6 @@
+2022-03-30 08:58:54,458 INFO com.fabienit.biblioapi.BiblioApiApplicationTests [main] Starting BiblioApiApplicationTests on FABPC with PID 6088 (started by FaB PC in C:\Users\FaB\Git\Projet 7\bibliothequeocp7\backendApiBiblio)
+2022-03-30 08:58:54,467 DEBUG com.fabienit.biblioapi.BiblioApiApplicationTests [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-03-30 08:58:54,469 INFO com.fabienit.biblioapi.BiblioApiApplicationTests [main] The following profiles are active: dev
+2022-03-30 08:59:03,115 DEBUG com.fabienit.biblioapi.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$286c9584 [main] Set Swagger2 documentation
+2022-03-30 08:59:04,572 INFO com.fabienit.biblioapi.BiblioApiApplicationTests [main] Started BiblioApiApplicationTests in 10.549 seconds (JVM running for 12.305)
+2022-03-30 08:59:04,903 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table book if exists

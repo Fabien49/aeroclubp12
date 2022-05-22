@@ -1,0 +1,4 @@
+2022-05-01 18:58:34,812 INFO com.fabienit.biblioweb.BibliowebApplication [main] No active profile set, falling back to default profiles: default
+2022-05-01 18:58:39,303 INFO com.fabienit.biblioweb.BibliowebApplication [main] Started BibliowebApplication in 6.274 seconds (JVM running for 7.372)
+2022-05-01 19:00:09,567 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-1] Reach url: / - GET
+2022-05-01 19:00:12,688 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-7] Reach url: /books - GET

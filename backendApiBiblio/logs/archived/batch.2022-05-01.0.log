@@ -1,0 +1,56 @@
+2022-05-01 18:03:56,981 INFO com.fabienit.biblioapi.dao.ReservationDaoTest [main] Starting ReservationDaoTest on FABPC with PID 18268 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10\backendApiBiblio)
+2022-05-01 18:03:57,021 DEBUG com.fabienit.biblioapi.dao.ReservationDaoTest [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-05-01 18:03:57,022 INFO com.fabienit.biblioapi.dao.ReservationDaoTest [main] The following profiles are active: dev
+2022-05-01 18:04:11,452 DEBUG com.fabienit.biblioapi.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$4be1515a [main] Set Swagger2 documentation
+2022-05-01 18:04:13,083 INFO com.fabienit.biblioapi.dao.ReservationDaoTest [main] Started ReservationDaoTest in 16.768 seconds (JVM running for 18.95)
+2022-05-01 18:04:13,428 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table book if exists
+2022-05-01 18:04:13,436 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table library if exists
+2022-05-01 18:04:13,437 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table registered_user if exists
+2022-05-01 18:04:28,812 INFO com.fabienit.biblioapi.dao.ReservationDaoTest [main] Starting ReservationDaoTest on FABPC with PID 12100 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10\backendApiBiblio)
+2022-05-01 18:04:28,817 DEBUG com.fabienit.biblioapi.dao.ReservationDaoTest [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-05-01 18:04:28,818 INFO com.fabienit.biblioapi.dao.ReservationDaoTest [main] The following profiles are active: dev
+2022-05-01 18:04:37,735 DEBUG com.fabienit.biblioapi.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$f3b85956 [main] Set Swagger2 documentation
+2022-05-01 18:04:39,356 INFO com.fabienit.biblioapi.dao.ReservationDaoTest [main] Started ReservationDaoTest in 10.967 seconds (JVM running for 13.218)
+2022-05-01 18:04:39,673 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table book if exists
+2022-05-01 18:04:39,679 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table library if exists
+2022-05-01 18:04:39,683 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table registered_user if exists
+2022-05-01 18:05:38,454 INFO com.fabienit.biblioapi.dao.ReservationDaoTest [main] Starting ReservationDaoTest on FABPC with PID 15112 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10\backendApiBiblio)
+2022-05-01 18:05:38,461 DEBUG com.fabienit.biblioapi.dao.ReservationDaoTest [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-05-01 18:05:38,461 INFO com.fabienit.biblioapi.dao.ReservationDaoTest [main] The following profiles are active: dev
+2022-05-01 18:05:49,140 DEBUG com.fabienit.biblioapi.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$d19c759 [main] Set Swagger2 documentation
+2022-05-01 18:05:51,235 INFO com.fabienit.biblioapi.dao.ReservationDaoTest [main] Started ReservationDaoTest in 13.344 seconds (JVM running for 16.997)
+2022-05-01 18:05:51,631 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table book if exists
+2022-05-01 18:05:51,644 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table library if exists
+2022-05-01 18:05:51,646 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table registered_user if exists
+2022-05-01 18:08:58,421 INFO com.fabienit.biblioapi.dao.ReservationDaoTest [main] Starting ReservationDaoTest on FABPC with PID 15120 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10\backendApiBiblio)
+2022-05-01 18:08:58,425 DEBUG com.fabienit.biblioapi.dao.ReservationDaoTest [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-05-01 18:08:58,425 INFO com.fabienit.biblioapi.dao.ReservationDaoTest [main] The following profiles are active: dev
+2022-05-01 18:09:06,929 DEBUG com.fabienit.biblioapi.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$f3b85956 [main] Set Swagger2 documentation
+2022-05-01 18:09:08,805 INFO com.fabienit.biblioapi.dao.ReservationDaoTest [main] Started ReservationDaoTest in 10.764 seconds (JVM running for 12.822)
+2022-05-01 18:09:09,104 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table book if exists
+2022-05-01 18:09:09,110 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table library if exists
+2022-05-01 18:09:09,111 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table registered_user if exists
+2022-05-01 18:09:26,275 INFO com.fabienit.biblioapi.dao.ReservationDaoTest [main] Starting ReservationDaoTest on FABPC with PID 18088 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10\backendApiBiblio)
+2022-05-01 18:09:26,280 DEBUG com.fabienit.biblioapi.dao.ReservationDaoTest [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-05-01 18:09:26,281 INFO com.fabienit.biblioapi.dao.ReservationDaoTest [main] The following profiles are active: dev
+2022-05-01 18:09:34,970 DEBUG com.fabienit.biblioapi.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$f3b85956 [main] Set Swagger2 documentation
+2022-05-01 18:09:36,899 INFO com.fabienit.biblioapi.dao.ReservationDaoTest [main] Started ReservationDaoTest in 11.116 seconds (JVM running for 13.173)
+2022-05-01 18:09:37,061 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table book if exists
+2022-05-01 18:09:37,076 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table library if exists
+2022-05-01 18:09:37,077 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table registered_user if exists
+2022-05-01 18:19:34,267 INFO com.fabienit.biblioapi.dao.ReservationDaoTest [main] Starting ReservationDaoTest on FABPC with PID 9896 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10\backendApiBiblio)
+2022-05-01 18:19:34,281 DEBUG com.fabienit.biblioapi.dao.ReservationDaoTest [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-05-01 18:19:34,281 INFO com.fabienit.biblioapi.dao.ReservationDaoTest [main] The following profiles are active: dev
+2022-05-01 18:19:43,312 INFO com.fabienit.biblioapi.dao.ReservationDaoTest [main] Starting ReservationDaoTest on FABPC with PID 14488 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10\backendApiBiblio)
+2022-05-01 18:19:43,319 DEBUG com.fabienit.biblioapi.dao.ReservationDaoTest [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-05-01 18:19:43,319 INFO com.fabienit.biblioapi.dao.ReservationDaoTest [main] The following profiles are active: dev
+2022-05-01 18:19:49,427 DEBUG com.fabienit.biblioapi.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$499cd031 [main] Set Swagger2 documentation
+2022-05-01 18:19:52,771 INFO com.fabienit.biblioapi.dao.ReservationDaoTest [main] Started ReservationDaoTest in 19.133 seconds (JVM running for 21.656)
+2022-05-01 18:19:53,005 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table book if exists
+2022-05-01 18:19:53,010 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table library if exists
+2022-05-01 18:19:53,015 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table registered_user if exists
+2022-05-01 18:19:57,167 DEBUG com.fabienit.biblioapi.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$f3b85956 [main] Set Swagger2 documentation
+2022-05-01 18:19:59,103 INFO com.fabienit.biblioapi.dao.ReservationDaoTest [main] Started ReservationDaoTest in 16.899 seconds (JVM running for 19.684)
+2022-05-01 18:19:59,271 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table book if exists
+2022-05-01 18:19:59,277 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table library if exists
+2022-05-01 18:19:59,277 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table registered_user if exists

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/backendApiBiblio/biblioapi.iml" filepath="$PROJECT_DIR$/backendApiBiblio/biblioapi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/batchbiblio/bibliobatch.iml" filepath="$PROJECT_DIR$/batchbiblio/bibliobatch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/bibliothequeocp10.iml" filepath="$PROJECT_DIR$/.idea/bibliothequeocp10.iml" />
+      <module fileurl="file://$PROJECT_DIR$/frontendWebBiblio/webapp.iml" filepath="$PROJECT_DIR$/frontendWebBiblio/webapp.iml" />
+    </modules>
+  </component>
+</project>

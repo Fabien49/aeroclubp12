@@ -1,0 +1,12 @@
+2022-04-10 18:11:49,960 INFO com.fabienit.biblioapi.dao.BookDaoTest [main] Starting BookDaoTest on FABPC with PID 16784 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10\backendApiBiblio)
+2022-04-10 18:11:49,985 DEBUG com.fabienit.biblioapi.dao.BookDaoTest [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-04-10 18:11:49,986 INFO com.fabienit.biblioapi.dao.BookDaoTest [main] The following profiles are active: dev
+2022-04-10 18:11:58,583 DEBUG com.fabienit.biblioapi.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$1e39251f [main] Set Swagger2 documentation
+2022-04-10 18:12:00,546 INFO com.fabienit.biblioapi.dao.BookDaoTest [main] Started BookDaoTest in 11.001 seconds (JVM running for 13.436)
+2022-04-10 18:12:01,180 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table book if exists
+2022-04-10 18:55:33,898 INFO com.fabienit.biblioapi.BiblioApiApplicationTests [main] Starting BiblioApiApplicationTests on FABPC with PID 12324 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10\backendApiBiblio)
+2022-04-10 18:55:33,904 DEBUG com.fabienit.biblioapi.BiblioApiApplicationTests [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-04-10 18:55:33,905 INFO com.fabienit.biblioapi.BiblioApiApplicationTests [main] The following profiles are active: dev
+2022-04-10 18:55:46,217 DEBUG com.fabienit.biblioapi.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$286c9584 [main] Set Swagger2 documentation
+2022-04-10 18:55:48,566 INFO com.fabienit.biblioapi.BiblioApiApplicationTests [main] Started BiblioApiApplicationTests in 15.298 seconds (JVM running for 17.509)
+2022-04-10 18:55:49,597 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table book if exists

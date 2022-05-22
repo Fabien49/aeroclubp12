@@ -1,0 +1,89 @@
+2022-04-17 20:10:09,859 INFO com.fabienit.biblioapi.BiblioApiApplication [main] Starting BiblioApiApplication on FABPC with PID 11740 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10)
+2022-04-17 20:10:09,864 DEBUG com.fabienit.biblioapi.BiblioApiApplication [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-04-17 20:10:09,864 INFO com.fabienit.biblioapi.BiblioApiApplication [main] The following profiles are active: dev
+2022-04-17 20:10:24,622 DEBUG com.fabienit.biblioapi.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$86658055 [main] Set Swagger2 documentation
+2022-04-17 20:10:26,663 INFO com.fabienit.biblioapi.BiblioApiApplication [main] Started BiblioApiApplication in 18.403 seconds (JVM running for 21.238)
+2022-04-17 20:11:10,937 INFO com.fabienit.biblioapi.web.controllers.RegisteredUserController [http-nio-8001-exec-1] Search user by email: fabien@gmail.com
+2022-04-17 20:11:16,594 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-3] Providing borrow resources from database by user id: 1
+2022-04-17 20:11:20,819 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-10] Providing borrow resources from database by user id: 1
+2022-04-17 20:11:28,061 INFO com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-8] Providing book resource from database: all book list
+2022-04-17 20:11:28,101 DEBUG com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-8] Splitting query, query: 
+2022-04-17 20:11:28,207 INFO com.fabienit.biblioapi.web.controllers.AvailableCopieController [http-nio-8001-exec-7] Providing availablecopie resource from database: all availablecopie list
+2022-04-17 20:22:32,573 INFO com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-5] Providing book resource from database: all book list
+2022-04-17 20:22:32,576 DEBUG com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-5] Splitting query, query: 
+2022-04-17 20:22:32,794 INFO com.fabienit.biblioapi.web.controllers.AvailableCopieController [http-nio-8001-exec-4] Providing availablecopie resource from database: all availablecopie list
+2022-04-17 20:22:45,983 INFO com.fabienit.biblioapi.web.controllers.RegisteredUserController [http-nio-8001-exec-2] Search user by email: fabien@gmail.com
+2022-04-17 20:22:49,451 INFO com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-3] Providing book resource from database: all book list
+2022-04-17 20:22:49,455 DEBUG com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-3] Splitting query, query: 
+2022-04-17 20:22:49,550 INFO com.fabienit.biblioapi.web.controllers.AvailableCopieController [http-nio-8001-exec-3] Providing availablecopie resource from database: all availablecopie list
+2022-04-17 20:26:17,431 INFO com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-9] Providing book resource from database: all book list
+2022-04-17 20:26:17,435 DEBUG com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-9] Splitting query, query: 
+2022-04-17 20:26:17,667 INFO com.fabienit.biblioapi.web.controllers.AvailableCopieController [http-nio-8001-exec-8] Providing availablecopie resource from database: all availablecopie list
+2022-04-17 20:29:31,735 INFO com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-6] Providing book resource from database: all book list
+2022-04-17 20:29:31,737 DEBUG com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-6] Splitting query, query: 
+2022-04-17 20:29:31,937 INFO com.fabienit.biblioapi.web.controllers.AvailableCopieController [http-nio-8001-exec-5] Providing availablecopie resource from database: all availablecopie list
+2022-04-17 20:30:48,888 INFO com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-1] Providing book resource from database: all book list
+2022-04-17 20:30:48,891 DEBUG com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-1] Splitting query, query: 
+2022-04-17 20:30:49,107 INFO com.fabienit.biblioapi.web.controllers.AvailableCopieController [http-nio-8001-exec-2] Providing availablecopie resource from database: all availablecopie list
+2022-04-17 20:32:18,412 INFO com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-10] Providing book resource from database: all book list
+2022-04-17 20:32:18,414 DEBUG com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-10] Splitting query, query: 
+2022-04-17 20:32:18,608 INFO com.fabienit.biblioapi.web.controllers.AvailableCopieController [http-nio-8001-exec-9] Providing availablecopie resource from database: all availablecopie list
+2022-04-17 20:32:22,434 INFO com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-8] Providing book resource from database: all book list
+2022-04-17 20:32:22,437 DEBUG com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-8] Splitting query, query: 
+2022-04-17 20:32:22,534 INFO com.fabienit.biblioapi.web.controllers.AvailableCopieController [http-nio-8001-exec-7] Providing availablecopie resource from database: all availablecopie list
+2022-04-17 20:32:57,220 INFO com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-6] Providing book resource from database: all book list
+2022-04-17 20:32:57,223 DEBUG com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-6] Splitting query, query: 
+2022-04-17 20:32:57,511 INFO com.fabienit.biblioapi.web.controllers.AvailableCopieController [http-nio-8001-exec-5] Providing availablecopie resource from database: all availablecopie list
+2022-04-17 20:33:45,206 INFO com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-1] Providing book resource from database: all book list
+2022-04-17 20:33:45,209 DEBUG com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-1] Splitting query, query: 
+2022-04-17 20:33:45,432 INFO com.fabienit.biblioapi.web.controllers.AvailableCopieController [http-nio-8001-exec-2] Providing availablecopie resource from database: all availablecopie list
+2022-04-17 20:35:44,076 INFO com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-10] Providing book resource from database: all book list
+2022-04-17 20:35:44,086 DEBUG com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-10] Splitting query, query: 
+2022-04-17 20:35:44,295 INFO com.fabienit.biblioapi.web.controllers.AvailableCopieController [http-nio-8001-exec-9] Providing availablecopie resource from database: all availablecopie list
+2022-04-17 20:36:18,059 INFO com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-7] Providing book resource from database: all book list
+2022-04-17 20:36:18,063 DEBUG com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-7] Splitting query, query: 
+2022-04-17 20:36:18,260 INFO com.fabienit.biblioapi.web.controllers.AvailableCopieController [http-nio-8001-exec-6] Providing availablecopie resource from database: all availablecopie list
+2022-04-17 20:36:51,973 INFO com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-4] Providing book resource from database: all book list
+2022-04-17 20:36:51,977 DEBUG com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-4] Splitting query, query: 
+2022-04-17 20:36:52,185 INFO com.fabienit.biblioapi.web.controllers.AvailableCopieController [http-nio-8001-exec-1] Providing availablecopie resource from database: all availablecopie list
+2022-04-17 20:37:50,015 INFO com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-3] Providing book resource from database: all book list
+2022-04-17 20:37:50,023 DEBUG com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-3] Splitting query, query: 
+2022-04-17 20:37:50,279 INFO com.fabienit.biblioapi.web.controllers.AvailableCopieController [http-nio-8001-exec-10] Providing availablecopie resource from database: all availablecopie list
+2022-04-17 20:44:24,145 INFO com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-8] Providing book resource from database: all book list
+2022-04-17 20:44:24,149 DEBUG com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-8] Splitting query, query: 
+2022-04-17 20:44:24,420 INFO com.fabienit.biblioapi.web.controllers.AvailableCopieController [http-nio-8001-exec-7] Providing availablecopie resource from database: all availablecopie list
+2022-04-17 20:45:25,277 INFO com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-5] Providing book resource from database: all book list
+2022-04-17 20:45:25,280 DEBUG com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-5] Splitting query, query: 
+2022-04-17 20:45:25,480 INFO com.fabienit.biblioapi.web.controllers.AvailableCopieController [http-nio-8001-exec-4] Providing availablecopie resource from database: all availablecopie list
+2022-04-17 20:46:13,697 INFO com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-2] Providing book resource from database: all book list
+2022-04-17 20:46:13,699 DEBUG com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-2] Splitting query, query: 
+2022-04-17 20:46:13,917 INFO com.fabienit.biblioapi.web.controllers.AvailableCopieController [http-nio-8001-exec-3] Providing availablecopie resource from database: all availablecopie list
+2022-04-17 20:51:23,996 INFO com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-10] Providing book resource from database: all book list
+2022-04-17 20:51:23,998 DEBUG com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-10] Splitting query, query: 
+2022-04-17 20:51:24,208 INFO com.fabienit.biblioapi.web.controllers.AvailableCopieController [http-nio-8001-exec-9] Providing availablecopie resource from database: all availablecopie list
+2022-04-17 20:53:12,984 INFO com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-7] Providing book resource from database: all book list
+2022-04-17 20:53:12,986 DEBUG com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-7] Splitting query, query: 
+2022-04-17 20:53:13,179 INFO com.fabienit.biblioapi.web.controllers.AvailableCopieController [http-nio-8001-exec-6] Providing availablecopie resource from database: all availablecopie list
+2022-04-17 20:53:18,276 INFO com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-5] Providing book resource from database: all book list
+2022-04-17 20:53:18,278 DEBUG com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-5] Splitting query, query: 
+2022-04-17 20:53:18,378 INFO com.fabienit.biblioapi.web.controllers.AvailableCopieController [http-nio-8001-exec-4] Providing availablecopie resource from database: all availablecopie list
+2022-04-17 20:53:41,498 INFO com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-1] Providing book resource from database: all book list
+2022-04-17 20:53:41,500 DEBUG com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-1] Splitting query, query: 
+2022-04-17 20:53:41,714 INFO com.fabienit.biblioapi.web.controllers.AvailableCopieController [http-nio-8001-exec-2] Providing availablecopie resource from database: all availablecopie list
+2022-04-17 20:55:10,356 INFO com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-10] Providing book resource from database: all book list
+2022-04-17 20:55:10,359 DEBUG com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-10] Splitting query, query: 
+2022-04-17 20:55:10,460 INFO com.fabienit.biblioapi.web.controllers.AvailableCopieController [http-nio-8001-exec-9] Providing availablecopie resource from database: all availablecopie list
+2022-04-17 21:12:54,514 INFO com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-7] Providing book resource from database: all book list
+2022-04-17 21:12:54,517 DEBUG com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-7] Splitting query, query: 
+2022-04-17 21:12:54,733 INFO com.fabienit.biblioapi.web.controllers.AvailableCopieController [http-nio-8001-exec-6] Providing availablecopie resource from database: all availablecopie list
+2022-04-17 21:13:06,046 INFO com.fabienit.biblioapi.web.controllers.RegisteredUserController [http-nio-8001-exec-4] Search user by email: fabien@gmail.com
+2022-04-17 21:13:08,524 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-1] Providing borrow resources from database by user id: 1
+2022-04-17 21:13:10,264 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-2] Providing borrow resources from database by user id: 1
+2022-04-17 21:13:11,516 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-3] Providing borrow resources from database by user id: 1
+2022-04-17 21:13:12,434 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-10] Providing borrow resources from database by user id: 1
+2022-04-17 21:17:19,455 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-8] Providing borrow resources from database by user id: 1
+2022-04-17 21:17:20,499 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-7] Providing borrow resources from database by user id: 1
+2022-04-17 21:17:42,672 INFO com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-5] Providing book resource from database: all book list
+2022-04-17 21:17:42,675 DEBUG com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-5] Splitting query, query: 
+2022-04-17 21:17:42,774 INFO com.fabienit.biblioapi.web.controllers.AvailableCopieController [http-nio-8001-exec-4] Providing availablecopie resource from database: all availablecopie list
+2022-04-17 22:51:39,489 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table book if exists

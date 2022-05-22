@@ -1,0 +1,137 @@
+2022-05-11 10:40:31,912 INFO com.fabienit.biblioapi.BiblioApiApplication [main] Starting BiblioApiApplication on FABPC with PID 8848 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10)
+2022-05-11 10:40:31,942 DEBUG com.fabienit.biblioapi.BiblioApiApplication [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-05-11 10:40:31,942 INFO com.fabienit.biblioapi.BiblioApiApplication [main] The following profiles are active: dev
+2022-05-11 10:40:45,945 DEBUG com.fabienit.biblioapi.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$2d29dcfc [main] Set Swagger2 documentation
+2022-05-11 10:40:47,670 INFO com.fabienit.biblioapi.BiblioApiApplication [main] Started BiblioApiApplication in 16.609 seconds (JVM running for 18.463)
+2022-05-11 10:51:00,747 INFO com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-1] Providing book resource from database: all book list
+2022-05-11 10:51:01,397 DEBUG com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-1] Splitting query, query: 
+2022-05-11 10:51:01,784 INFO com.fabienit.biblioapi.web.controllers.AvailableCopieController [http-nio-8001-exec-3] Providing availablecopie resource from database: all availablecopie list
+2022-05-11 11:16:52,444 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table book if exists
+2022-05-11 11:16:52,448 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table library if exists
+2022-05-11 11:16:52,450 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table registered_user if exists
+2022-05-11 14:30:07,962 INFO com.fabienit.biblioapi.BiblioApiApplication [main] Starting BiblioApiApplication on FABPC with PID 5308 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10)
+2022-05-11 14:30:07,969 DEBUG com.fabienit.biblioapi.BiblioApiApplication [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-05-11 14:30:07,969 INFO com.fabienit.biblioapi.BiblioApiApplication [main] The following profiles are active: dev
+2022-05-11 14:30:17,778 DEBUG com.fabienit.biblioapi.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$75e114b5 [main] Set Swagger2 documentation
+2022-05-11 14:30:19,021 INFO com.fabienit.biblioapi.BiblioApiApplication [main] Started BiblioApiApplication in 12.306 seconds (JVM running for 14.285)
+2022-05-11 14:31:18,498 INFO com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-1] Providing book resource from database: all book list
+2022-05-11 14:31:18,812 DEBUG com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-1] Splitting query, query: 
+2022-05-11 14:31:19,062 INFO com.fabienit.biblioapi.web.controllers.AvailableCopieController [http-nio-8001-exec-2] Providing availablecopie resource from database: all availablecopie list
+2022-05-11 15:48:08,693 INFO com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-4] Providing book resource from database: all book list
+2022-05-11 15:48:08,700 DEBUG com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-4] Splitting query, query: 
+2022-05-11 15:48:08,900 INFO com.fabienit.biblioapi.web.controllers.AvailableCopieController [http-nio-8001-exec-5] Providing availablecopie resource from database: all availablecopie list
+2022-05-11 15:48:16,347 INFO com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-7] Providing book resource from database: all book list
+2022-05-11 15:48:16,349 DEBUG com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-7] Splitting query, query: 
+2022-05-11 15:48:16,443 INFO com.fabienit.biblioapi.web.controllers.AvailableCopieController [http-nio-8001-exec-8] Providing availablecopie resource from database: all availablecopie list
+2022-05-11 15:51:51,268 INFO com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-10] Providing book resource from database: all book list
+2022-05-11 15:51:51,271 DEBUG com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-10] Splitting query, query: 
+2022-05-11 15:51:51,482 INFO com.fabienit.biblioapi.web.controllers.AvailableCopieController [http-nio-8001-exec-1] Providing availablecopie resource from database: all availablecopie list
+2022-05-11 15:56:37,810 INFO com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-3] Providing book resource from database: all book list
+2022-05-11 15:56:37,822 DEBUG com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-3] Splitting query, query: 
+2022-05-11 15:56:38,051 INFO com.fabienit.biblioapi.web.controllers.AvailableCopieController [http-nio-8001-exec-4] Providing availablecopie resource from database: all availablecopie list
+2022-05-11 16:00:37,448 INFO com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-5] Providing book resource from database: all book list
+2022-05-11 16:00:37,452 DEBUG com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-5] Splitting query, query: 
+2022-05-11 16:00:37,668 INFO com.fabienit.biblioapi.web.controllers.AvailableCopieController [http-nio-8001-exec-6] Providing availablecopie resource from database: all availablecopie list
+2022-05-11 16:04:09,649 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table book if exists
+2022-05-11 16:04:09,690 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table library if exists
+2022-05-11 16:04:09,691 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table registered_user if exists
+2022-05-11 16:04:22,309 INFO com.fabienit.biblioapi.BiblioApiApplication [main] Starting BiblioApiApplication on FABPC with PID 16380 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10)
+2022-05-11 16:04:22,314 DEBUG com.fabienit.biblioapi.BiblioApiApplication [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-05-11 16:04:22,314 INFO com.fabienit.biblioapi.BiblioApiApplication [main] The following profiles are active: dev
+2022-05-11 16:04:28,585 ERROR org.springframework.boot.SpringApplication [main] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Initialization of bean failed; nested exception is org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #4 of URL [file:/C:/Users/FaB/Git/Projet%2010/bibliothequep10/backendApiBiblio/target/classes/data.sql]: INSERT INTO available_copie (book_id, library_id, owned_quantity, available_quantity) VALUES (1, 1, 2, 0), (1, 2, 2, 2), (1, 3, 2, 2), (2, 1, 2, 1), (2, 2, 2, 2), (2, 3, 2, 2), (3, 1, 2, 0), (3, 2, 2, 2), (3, 3, 2, 2), (4, 1, 3, 1), (4, 2, 2, 1), (4, 3, 2, 1), (5, 1, 4, 2), (5, 2, 4, 3), (5, 3, 3, 2); nested exception is org.h2.jdbc.JdbcSQLIntegrityConstraintViolationException: NULL non permis pour la colonne "BOOK_CAN_BE_RESERVED"
+NULL not allowed for column "BOOK_CAN_BE_RESERVED"; SQL statement:
+INSERT INTO available_copie (book_id, library_id, owned_quantity, available_quantity) VALUES (1, 1, 2, 0), (1, 2, 2, 2), (1, 3, 2, 2), (2, 1, 2, 1), (2, 2, 2, 2), (2, 3, 2, 2), (3, 1, 2, 0), (3, 2, 2, 2), (3, 3, 2, 2), (4, 1, 3, 1), (4, 2, 2, 1), (4, 3, 2, 1), (5, 1, 4, 2), (5, 2, 4, 3), (5, 3, 3, 2) [23502-200]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1108)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:868)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at com.fabienit.biblioapi.BiblioApiApplication.main(BiblioApiApplication.java:10)
+Caused by: org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #4 of URL [file:/C:/Users/FaB/Git/Projet%2010/bibliothequep10/backendApiBiblio/target/classes/data.sql]: INSERT INTO available_copie (book_id, library_id, owned_quantity, available_quantity) VALUES (1, 1, 2, 0), (1, 2, 2, 2), (1, 3, 2, 2), (2, 1, 2, 1), (2, 2, 2, 2), (2, 3, 2, 2), (3, 1, 2, 0), (3, 2, 2, 2), (3, 3, 2, 2), (4, 1, 3, 1), (4, 2, 2, 1), (4, 3, 2, 1), (5, 1, 4, 2), (5, 2, 4, 3), (5, 3, 3, 2); nested exception is org.h2.jdbc.JdbcSQLIntegrityConstraintViolationException: NULL non permis pour la colonne "BOOK_CAN_BE_RESERVED"
+NULL not allowed for column "BOOK_CAN_BE_RESERVED"; SQL statement:
+INSERT INTO available_copie (book_id, library_id, owned_quantity, available_quantity) VALUES (1, 1, 2, 0), (1, 2, 2, 2), (1, 3, 2, 2), (2, 1, 2, 1), (2, 2, 2, 2), (2, 3, 2, 2), (3, 1, 2, 0), (3, 2, 2, 2), (3, 3, 2, 2), (4, 1, 3, 1), (4, 2, 2, 1), (4, 3, 2, 1), (5, 1, 4, 2), (5, 2, 4, 3), (5, 3, 3, 2) [23502-200]
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:626)
+	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254)
+	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:49)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializer.runScripts(DataSourceInitializer.java:202)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializer.initSchema(DataSourceInitializer.java:119)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker.onApplicationEvent(DataSourceInitializerInvoker.java:91)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker.onApplicationEvent(DataSourceInitializerInvoker.java:38)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:403)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:360)
+	at org.springframework.boot.autoconfigure.orm.jpa.DataSourceInitializedPublisher.publishEventIfRequired(DataSourceInitializedPublisher.java:99)
+	at org.springframework.boot.autoconfigure.orm.jpa.DataSourceInitializedPublisher.postProcessAfterInitialization(DataSourceInitializedPublisher.java:90)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1807)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595)
+	... 15 common frames omitted
+Caused by: org.h2.jdbc.JdbcSQLIntegrityConstraintViolationException: NULL non permis pour la colonne "BOOK_CAN_BE_RESERVED"
+NULL not allowed for column "BOOK_CAN_BE_RESERVED"; SQL statement:
+INSERT INTO available_copie (book_id, library_id, owned_quantity, available_quantity) VALUES (1, 1, 2, 0), (1, 2, 2, 2), (1, 3, 2, 2), (2, 1, 2, 1), (2, 2, 2, 2), (2, 3, 2, 2), (3, 1, 2, 0), (3, 2, 2, 2), (3, 3, 2, 2), (4, 1, 3, 1), (4, 2, 2, 1), (4, 3, 2, 1), (5, 1, 4, 2), (5, 2, 4, 3), (5, 3, 3, 2) [23502-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:459)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.table.Column.validateConvertUpdateSequence(Column.java:374)
+	at org.h2.table.Table.validateConvertUpdateSequence(Table.java:845)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:187)
+	at org.h2.command.dml.Insert.update(Insert.java:151)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:198)
+	at org.h2.command.Command.executeUpdate(Command.java:251)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:228)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:605)
+	... 31 common frames omitted
+2022-05-11 17:22:43,356 INFO com.fabienit.biblioapi.BiblioApiApplication [main] Starting BiblioApiApplication on FABPC with PID 9500 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10)
+2022-05-11 17:22:43,364 DEBUG com.fabienit.biblioapi.BiblioApiApplication [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-05-11 17:22:43,365 INFO com.fabienit.biblioapi.BiblioApiApplication [main] The following profiles are active: dev
+2022-05-11 17:22:51,735 DEBUG com.fabienit.biblioapi.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$84aef936 [main] Set Swagger2 documentation
+2022-05-11 17:22:52,693 INFO com.fabienit.biblioapi.BiblioApiApplication [main] Started BiblioApiApplication in 10.022 seconds (JVM running for 11.127)
+2022-05-11 17:23:17,990 INFO com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-1] Providing book resource from database: all book list
+2022-05-11 17:23:18,307 DEBUG com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-1] Splitting query, query: 
+2022-05-11 17:23:18,597 INFO com.fabienit.biblioapi.web.controllers.AvailableCopieController [http-nio-8001-exec-2] Providing availablecopie resource from database: all availablecopie list
+2022-05-11 17:23:28,276 INFO com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-3] Providing book resource from database: all book list
+2022-05-11 17:23:28,280 DEBUG com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-3] Splitting query, query: 
+2022-05-11 17:23:28,391 INFO com.fabienit.biblioapi.web.controllers.AvailableCopieController [http-nio-8001-exec-3] Providing availablecopie resource from database: all availablecopie list
+2022-05-11 17:24:30,306 INFO com.fabienit.biblioapi.web.controllers.RegisteredUserController [http-nio-8001-exec-4] Search user by email: fabien@gmail.com
+2022-05-11 17:24:30,561 INFO com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-5] Providing book resource from database: all book list
+2022-05-11 17:24:30,564 DEBUG com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-5] Splitting query, query: 
+2022-05-11 17:24:30,657 INFO com.fabienit.biblioapi.web.controllers.AvailableCopieController [http-nio-8001-exec-6] Providing availablecopie resource from database: all availablecopie list
+2022-05-11 17:24:30,819 INFO com.fabienit.biblioapi.web.controllers.ReservationController [http-nio-8001-exec-7] Providing reservation list for registered user from database: user id: 1
+2022-05-11 17:24:31,140 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-7] Providing borrow resources from database by user id: 1
+2022-05-11 17:24:34,429 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-8] Providing borrow resources from database by user id: 1
+2022-05-11 17:24:34,527 INFO com.fabienit.biblioapi.web.controllers.ReservationController [http-nio-8001-exec-9] Providing reservation list for registered user from database: user id: 1
+2022-05-11 17:24:37,158 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-10] Providing borrow resources from database by user id: 1
+2022-05-11 17:24:37,255 INFO com.fabienit.biblioapi.web.controllers.ReservationController [http-nio-8001-exec-1] Providing reservation list for registered user from database: user id: 1
+2022-05-11 17:24:38,725 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-2] Providing borrow resources from database by user id: 1
+2022-05-11 17:24:38,819 INFO com.fabienit.biblioapi.web.controllers.ReservationController [http-nio-8001-exec-3] Providing reservation list for registered user from database: user id: 1
+2022-05-11 17:24:42,573 INFO com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-4] Providing book resource from database: all book list
+2022-05-11 17:24:42,575 DEBUG com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-4] Splitting query, query: 
+2022-05-11 17:24:42,663 INFO com.fabienit.biblioapi.web.controllers.AvailableCopieController [http-nio-8001-exec-5] Providing availablecopie resource from database: all availablecopie list
+2022-05-11 17:24:42,764 INFO com.fabienit.biblioapi.web.controllers.ReservationController [http-nio-8001-exec-6] Providing reservation list for registered user from database: user id: 1
+2022-05-11 17:24:42,853 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-7] Providing borrow resources from database by user id: 1
+2022-05-11 17:44:25,372 INFO com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-9] Providing book resource from database: all book list
+2022-05-11 17:44:25,374 DEBUG com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-9] Splitting query, query: 
+2022-05-11 17:44:25,483 INFO com.fabienit.biblioapi.web.controllers.AvailableCopieController [http-nio-8001-exec-10] Providing availablecopie resource from database: all availablecopie list
+2022-05-11 17:44:25,617 INFO com.fabienit.biblioapi.web.controllers.ReservationController [http-nio-8001-exec-10] Providing reservation list for registered user from database: user id: 1
+2022-05-11 17:44:25,722 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-1] Providing borrow resources from database by user id: 1
+2022-05-11 23:05:33,505 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table available_copie if exists
+2022-05-11 23:05:33,512 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table book if exists
+2022-05-11 23:05:33,526 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table library if exists
+2022-05-11 23:05:33,529 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table registered_user if exists

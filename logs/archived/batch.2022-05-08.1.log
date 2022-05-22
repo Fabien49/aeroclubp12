@@ -1,0 +1,25 @@
+2022-05-08 21:03:38,917 INFO com.fabienit.biblioapi.BiblioApiApplication [main] Starting BiblioApiApplication on FABPC with PID 10652 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10)
+2022-05-08 21:03:38,947 DEBUG com.fabienit.biblioapi.BiblioApiApplication [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-05-08 21:03:38,951 INFO com.fabienit.biblioapi.BiblioApiApplication [main] The following profiles are active: dev
+2022-05-08 21:03:51,967 DEBUG com.fabienit.biblioapi.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$63019735 [main] Set Swagger2 documentation
+2022-05-08 21:03:53,813 INFO com.fabienit.biblioapi.BiblioApiApplication [main] Started BiblioApiApplication in 15.644 seconds (JVM running for 16.812)
+2022-05-08 21:03:58,500 INFO com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-1] Providing book resource from database: all book list
+2022-05-08 21:03:58,888 DEBUG com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-1] Splitting query, query: 
+2022-05-08 21:03:59,187 INFO com.fabienit.biblioapi.web.controllers.AvailableCopieController [http-nio-8001-exec-2] Providing availablecopie resource from database: all availablecopie list
+2022-05-08 21:06:09,087 INFO com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-3] Providing book resource from database: all book list
+2022-05-08 21:06:09,091 DEBUG com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-3] Splitting query, query: 
+2022-05-08 21:06:09,357 INFO com.fabienit.biblioapi.web.controllers.AvailableCopieController [http-nio-8001-exec-4] Providing availablecopie resource from database: all availablecopie list
+2022-05-08 21:12:29,919 INFO com.fabienit.biblioapi.web.controllers.RegisteredUserController [http-nio-8001-exec-5] Search user by email: fabien@gmail.com
+2022-05-08 21:12:35,342 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-7] Providing borrow resources from database by user id: 1
+2022-05-08 21:12:37,230 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-8] Providing borrow resources from database by user id: 1
+2022-05-08 21:12:55,981 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-10] Providing borrow resources from database by user id: 1
+2022-05-08 21:13:02,457 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-2] Providing borrow resources from database by user id: 1
+2022-05-08 21:13:27,771 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-4] Providing borrow resources from database by user id: 1
+2022-05-08 21:13:39,122 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-6] Providing borrow resources from database by user id: 1
+2022-05-08 21:13:40,712 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-7] Providing borrow resources from database by user id: 1
+2022-05-08 21:13:51,086 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-9] Providing borrow resources from database by user id: 1
+2022-05-08 21:17:33,851 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-1] Providing borrow resources from database by user id: 1
+2022-05-08 21:17:35,253 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-2] Providing borrow resources from database by user id: 1
+2022-05-08 23:02:04,963 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table book if exists
+2022-05-08 23:02:04,972 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table library if exists
+2022-05-08 23:02:04,973 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table registered_user if exists
