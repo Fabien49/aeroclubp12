@@ -8,8 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class BiblioApiApplication implements CommandLineRunner{
 
-	@Value( "${biblio.mode}" )
-	private String biblioMode;
+
 
 	public static void main(String[] args) {
 
@@ -21,7 +20,6 @@ public class BiblioApiApplication implements CommandLineRunner{
 
 
 	public void run(String... args) throws Exception{
-		System.out.println("The mode is : *****************" + biblioMode);
 		}
 
 

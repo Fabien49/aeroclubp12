@@ -1,0 +1,14 @@
+2022-05-23 15:39:39,024 INFO com.fabienit.bibliobatch.BibliobatchApplication [main] No active profile set, falling back to default profiles: default
+2022-05-23 15:39:42,144 INFO com.fabienit.bibliobatch.BibliobatchApplication [main] Started BibliobatchApplication in 4.279 seconds (JVM running for 5.131)
+2022-05-23 15:45:22,904 INFO com.fabienit.bibliobatch.BibliobatchApplication [main] No active profile set, falling back to default profiles: default
+2022-05-23 15:45:25,938 INFO com.fabienit.bibliobatch.BibliobatchApplication [main] Started BibliobatchApplication in 4.425 seconds (JVM running for 5.492)
+2022-05-23 15:46:00,190 INFO com.fabienit.bibliobatch.service.impl.EmailServiceImpl [scheduling-1] Sending notification emails for available reservations
+2022-05-23 15:46:00,416 DEBUG com.fabienit.bibliobatch.service.impl.EmailServiceImpl [scheduling-1] Generating mail data for reservation, id:1
+2022-05-23 15:46:00,749 DEBUG com.fabienit.bibliobatch.service.impl.EmailServiceImpl [scheduling-1] Generating mail data for reservation, id:3
+2022-05-23 16:08:21,376 INFO com.fabienit.bibliobatch.BibliobatchApplication [main] No active profile set, falling back to default profiles: default
+2022-05-23 16:08:26,284 INFO com.fabienit.bibliobatch.BibliobatchApplication [main] Started BibliobatchApplication in 6.651 seconds (JVM running for 7.783)
+2022-05-23 16:10:26,423 INFO com.fabienit.bibliobatch.BibliobatchApplication [main] No active profile set, falling back to default profiles: default
+2022-05-23 16:10:32,963 INFO com.fabienit.bibliobatch.BibliobatchApplication [main] Started BibliobatchApplication in 8.584 seconds (JVM running for 9.54)
+2022-05-23 16:11:00,154 INFO com.fabienit.bibliobatch.service.impl.EmailServiceImpl [scheduling-1] Sending notification emails for available reservations
+2022-05-23 16:11:00,373 DEBUG com.fabienit.bibliobatch.service.impl.EmailServiceImpl [scheduling-1] Generating mail data for reservation, id:1
+2022-05-23 16:11:00,643 DEBUG com.fabienit.bibliobatch.service.impl.EmailServiceImpl [scheduling-1] Generating mail data for reservation, id:3

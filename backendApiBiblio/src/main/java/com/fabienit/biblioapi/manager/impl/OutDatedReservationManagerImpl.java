@@ -9,7 +9,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
+import java.time.Duration;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,8 +22,6 @@ public class OutDatedReservationManagerImpl implements OutDatedReservationManage
     @Autowired
     private ReservationManager reservationManager;
 
-    @Value( "${biblio.mode}" )
-    private String biblioMode;
 
     public void setReservationManager(ReservationManager reservationManager) {
         this.reservationManager = reservationManager;
@@ -34,47 +35,6 @@ public class OutDatedReservationManagerImpl implements OutDatedReservationManage
      */
     @Override
     public List<Reservation> deleteOutDatedReservations() {
-
-        logger.debug("Deleting outdated reservations");
-        logger.debug("The mode is : ***************" + biblioMode);
-
-        // Get reservation list
-        List<Reservation> reservations = reservationManager.findAll();
-
-        // Init today date
-        LocalDate today = LocalDate.now();
-
-        List<Reservation> reservationListWithoutOutDatedReservation = new ArrayList<>();
-
-        for (Reservation reservationBean: reservations) {
-            if(reservationBean.getAvailabilityDate() != null && reservationBean.getNotificationIsSent()){
-                deleteWithBiblioMode(today, reservationListWithoutOutDatedReservation, reservationBean);
-            }else {
-                reservationListWithoutOutDatedReservation.add(reservationBean);
-            }
-        }
-        return reservationListWithoutOutDatedReservation;
-    }
-
-    private void deleteWithBiblioMode(LocalDate today, List<Reservation> reservationListWithoutOutDatedReservation, Reservation reservationBean) {
-        if ("devmode".equals(biblioMode)){
-            //TODO
-        }else {
-            if (reservationBean.getAvailabilityDate().isBefore(today.minusDays(2)) || reservationBean.getAvailabilityDate().isEqual(today.minusDays(2))){
-                reservationManager.deleteById(reservationBean.getId());
-            }else {
-                reservationListWithoutOutDatedReservation.add(reservationBean);
-            }
-        }
-
-    }
-
-    /**
-     * Delete outdated reservation, 2 days old reservations are deleted.
-     * @return
-     */
-
-    public List<Reservation> deleteOutDatedReservationsDevMode() {
 
         logger.debug("Deleting outdated reservations");
 

@@ -1,0 +1,77 @@
+2022-05-12 08:48:57,144 INFO com.fabienit.biblioapi.BiblioApiApplication [main] Starting BiblioApiApplication on FABPC with PID 1036 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10)
+2022-05-12 08:48:57,162 DEBUG com.fabienit.biblioapi.BiblioApiApplication [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-05-12 08:48:57,163 INFO com.fabienit.biblioapi.BiblioApiApplication [main] The following profiles are active: dev
+2022-05-12 08:49:09,205 DEBUG com.fabienit.biblioapi.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$37e91fe3 [main] Set Swagger2 documentation
+2022-05-12 08:49:10,984 INFO com.fabienit.biblioapi.BiblioApiApplication [main] Started BiblioApiApplication in 15.387 seconds (JVM running for 16.486)
+2022-05-12 08:49:59,495 INFO com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-2] Providing book resource from database: all book list
+2022-05-12 08:49:59,942 DEBUG com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-2] Splitting query, query: 
+2022-05-12 08:50:00,231 INFO com.fabienit.biblioapi.web.controllers.AvailableCopieController [http-nio-8001-exec-3] Providing availablecopie resource from database: all availablecopie list
+2022-05-12 09:43:03,927 INFO com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-1] Providing book resource from database: all book list
+2022-05-12 09:43:03,932 DEBUG com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-1] Splitting query, query: 
+2022-05-12 09:43:04,208 INFO com.fabienit.biblioapi.web.controllers.AvailableCopieController [http-nio-8001-exec-4] Providing availablecopie resource from database: all availablecopie list
+2022-05-12 09:46:14,048 INFO com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-6] Providing book resource from database: all book list
+2022-05-12 09:46:14,052 DEBUG com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-6] Splitting query, query: 
+2022-05-12 09:46:14,260 INFO com.fabienit.biblioapi.web.controllers.AvailableCopieController [http-nio-8001-exec-8] Providing availablecopie resource from database: all availablecopie list
+2022-05-12 09:46:30,243 INFO com.fabienit.biblioapi.web.controllers.RegisteredUserController [http-nio-8001-exec-9] Search user by email: fabien@gmail.com
+2022-05-12 09:46:30,460 INFO com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-10] Providing book resource from database: all book list
+2022-05-12 09:46:30,462 DEBUG com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-10] Splitting query, query: 
+2022-05-12 09:46:30,555 INFO com.fabienit.biblioapi.web.controllers.AvailableCopieController [http-nio-8001-exec-2] Providing availablecopie resource from database: all availablecopie list
+2022-05-12 09:46:30,691 INFO com.fabienit.biblioapi.web.controllers.ReservationController [http-nio-8001-exec-3] Providing reservation list for registered user from database: user id: 1
+2022-05-12 09:46:30,881 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-3] Providing borrow resources from database by user id: 1
+2022-05-12 09:46:51,380 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-4] Providing borrow resources from database by user id: 1
+2022-05-12 09:46:51,476 INFO com.fabienit.biblioapi.web.controllers.ReservationController [http-nio-8001-exec-5] Providing reservation list for registered user from database: user id: 1
+2022-05-12 13:48:10,146 INFO com.fabienit.biblioapi.BiblioApiApplication [main] Starting BiblioApiApplication on FABPC with PID 3036 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequeocp10\bibliothequeocp10)
+2022-05-12 13:48:10,150 DEBUG com.fabienit.biblioapi.BiblioApiApplication [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-05-12 13:48:10,150 INFO com.fabienit.biblioapi.BiblioApiApplication [main] The following profiles are active: dev
+2022-05-12 13:48:21,845 DEBUG com.fabienit.biblioapi.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$3cace429 [main] Set Swagger2 documentation
+2022-05-12 13:48:22,786 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8001 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8001 or configure this application to listen on another port.
+
+2022-05-12 13:48:22,798 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [main] HHH000478: Unsuccessful: drop table available_copie if exists
+2022-05-12 13:48:22,801 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [main] HHH000478: Unsuccessful: drop table book if exists
+2022-05-12 13:48:22,807 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [main] HHH000478: Unsuccessful: drop table library if exists
+2022-05-12 13:48:22,809 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [main] HHH000478: Unsuccessful: drop table registered_user if exists
+2022-05-12 13:49:05,464 INFO com.fabienit.biblioapi.BiblioApiApplication [main] Starting BiblioApiApplication on FABPC with PID 17004 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequeocp10\bibliothequeocp10)
+2022-05-12 13:49:05,470 DEBUG com.fabienit.biblioapi.BiblioApiApplication [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-05-12 13:49:05,470 INFO com.fabienit.biblioapi.BiblioApiApplication [main] The following profiles are active: dev
+2022-05-12 13:49:18,194 DEBUG com.fabienit.biblioapi.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$9cca5591 [main] Set Swagger2 documentation
+2022-05-12 13:49:19,474 INFO com.fabienit.biblioapi.BiblioApiApplication [main] Started BiblioApiApplication in 14.636 seconds (JVM running for 15.577)
+2022-05-12 13:53:26,431 INFO com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-1] Providing book resource from database: all book list
+2022-05-12 13:53:26,647 DEBUG com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-1] Splitting query, query: 
+2022-05-12 13:53:27,010 INFO com.fabienit.biblioapi.web.controllers.AvailableCopieController [http-nio-8001-exec-2] Providing availablecopie resource from database: all availablecopie list
+2022-05-12 14:00:06,470 INFO com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-4] Providing book resource from database: all book list
+2022-05-12 14:00:06,474 DEBUG com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-4] Splitting query, query: 
+2022-05-12 14:00:06,668 INFO com.fabienit.biblioapi.web.controllers.AvailableCopieController [http-nio-8001-exec-3] Providing availablecopie resource from database: all availablecopie list
+2022-05-12 14:00:18,159 INFO com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-5] Providing book resource from database: all book list
+2022-05-12 14:00:18,162 DEBUG com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-5] Splitting query, query: 
+2022-05-12 14:00:18,254 INFO com.fabienit.biblioapi.web.controllers.AvailableCopieController [http-nio-8001-exec-8] Providing availablecopie resource from database: all availablecopie list
+2022-05-12 14:00:31,378 INFO com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-9] Providing book resource from database: all book list
+2022-05-12 14:00:31,381 DEBUG com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-9] Splitting query, query: 
+2022-05-12 14:00:31,472 INFO com.fabienit.biblioapi.web.controllers.AvailableCopieController [http-nio-8001-exec-10] Providing availablecopie resource from database: all availablecopie list
+2022-05-12 14:00:47,648 INFO com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-1] Providing book resource from database: all book list
+2022-05-12 14:00:47,651 DEBUG com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-1] Splitting query, query: 
+2022-05-12 14:00:47,746 INFO com.fabienit.biblioapi.web.controllers.AvailableCopieController [http-nio-8001-exec-2] Providing availablecopie resource from database: all availablecopie list
+2022-05-12 14:01:05,611 INFO com.fabienit.biblioapi.web.controllers.RegisteredUserController [http-nio-8001-exec-4] Search user by email: fabien@gmail.com
+2022-05-12 14:01:07,903 INFO com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-3] Providing book resource from database: all book list
+2022-05-12 14:01:07,905 DEBUG com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-3] Splitting query, query: 
+2022-05-12 14:01:07,994 INFO com.fabienit.biblioapi.web.controllers.AvailableCopieController [http-nio-8001-exec-6] Providing availablecopie resource from database: all availablecopie list
+2022-05-12 14:01:08,195 INFO com.fabienit.biblioapi.web.controllers.ReservationController [http-nio-8001-exec-5] Providing reservation list for registered user from database: user id: 1
+2022-05-12 14:01:08,379 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-8] Providing borrow resources from database by user id: 1
+2022-05-12 14:01:33,943 INFO com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-7] Providing book resource from database: all book list
+2022-05-12 14:01:33,945 DEBUG com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-7] Splitting query, query: 
+2022-05-12 14:01:34,036 INFO com.fabienit.biblioapi.web.controllers.AvailableCopieController [http-nio-8001-exec-9] Providing availablecopie resource from database: all availablecopie list
+2022-05-12 16:16:45,542 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table available_copie if exists
+2022-05-12 16:16:45,556 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table book if exists
+2022-05-12 16:16:45,594 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table library if exists
+2022-05-12 16:16:45,595 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table registered_user if exists

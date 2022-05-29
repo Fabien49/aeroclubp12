@@ -115,8 +115,9 @@ public class ReservationController {
     }
 
     @GetMapping(value = "reservations/delete/outdated")
-    public ResponseEntity<Void> deleteOutdatedReservations() {
+    public ResponseEntity<Void> deleteOutDatedReservations() {
         logger.info("Deleting outdated reservations from database");
+        //outDatedReservationManager.deleteOutDatedReservations();
         outDatedReservationManager.deleteOutDatedReservations();
         return ResponseEntity.ok().build();
 

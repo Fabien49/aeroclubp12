@@ -68,8 +68,7 @@ public class EmailServiceImpl implements EmailService {
     @Scheduled(cron = "${batch.time.event.reservationsnotifications}")
     public void launchingReservationDailyTask() {
         // Delete outdated reservations
-        apiProxy.deleteOutdatedReservations();
-
+        apiProxy.deleteOutDatedReservations();
         // send reservations notifications
         sendMailReservationNotification();
     }
