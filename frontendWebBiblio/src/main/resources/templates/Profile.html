@@ -66,8 +66,8 @@
                                 <span th:if="${!borrow.getExtendedDuration()}">Non</span>
                             </td>
                             <td class="align-middle">
-                                <form th:action="@{/profile}" method="post">
-<!--                                      th:if="${!borrow.getExtendedDuration() and (borrow.getReturnDate().isAfter(today) or borrow.getReturnDate().isEqual(today))}">-->
+                                <form th:action="@{/profile}" method="post"
+                                      th:if="${!borrow.getExtendedDuration() and (borrow.getReturnDate().isAfter(today) or borrow.getReturnDate().isEqual(today))}">
                                     <input
                                             hidden
                                             th:value="${borrow.getId()}"
@@ -75,7 +75,8 @@
                                             name="borrowId"
                                             id="borrowId"
                                     />
-                                    <button th:if="${!borrow.getExtendedDuration()}" class="btn btn-primary btn-sm" type="submit">Prolonger</button>
+                                    <button class="btn btn-primary btn-sm" type="submit">Prolonger</button>
+
                                 </form>
                             </td>
                         </tr>

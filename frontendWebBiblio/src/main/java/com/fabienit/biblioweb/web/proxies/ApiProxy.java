@@ -106,6 +106,9 @@ public interface ApiProxy {
         ResponseEntity<Void> updateBorrow(@PathVariable @Min(value = 1) int id,
                                           @Valid @RequestBody BorrowBean borrowDetails);
 
+        @PutMapping(value="/borrows/extend/{id}")
+        ResponseEntity<Void> extendBorrow(@PathVariable @Min(value = 1) int id, @Valid @RequestBody BorrowBean borrowDetails);
+
 
 
 

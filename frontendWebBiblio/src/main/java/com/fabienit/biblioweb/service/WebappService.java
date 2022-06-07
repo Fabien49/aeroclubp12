@@ -19,7 +19,7 @@ public interface WebappService {
 
     Boolean getIsAuthenticated();
 
-    ResponseEntity<Void> extendBorrowDuration(int borrowId);
+//    ResponseEntity<Void> extendBorrow(int borrowId, BorrowBean borrowBean);
 
     List<BorrowBean> getActiveBorrowsByRegisteredUserId();
 

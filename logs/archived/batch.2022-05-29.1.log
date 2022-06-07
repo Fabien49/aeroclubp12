@@ -1,0 +1,242 @@
+2022-05-29 18:37:24,266 INFO com.fabienit.biblioweb.BibliowebApplication [main] No active profile set, falling back to default profiles: default
+2022-05-29 18:37:34,773 INFO com.fabienit.biblioweb.BibliowebApplication [main] Started BibliowebApplication in 13.408 seconds (JVM running for 16.959)
+2022-05-29 18:40:07,007 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-1] Reach url: / - GET
+2022-05-29 18:40:10,700 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-7] Reach url: /connexion - GET
+2022-05-29 18:40:16,975 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-10] Reach url: / - GET
+2022-05-29 18:40:18,986 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-4] Reach url: /profile - GET
+2022-05-29 18:40:18,987 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-4] Getting active borrows for current authenticated user
+2022-05-29 18:40:18,987 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-4] Getting authenticated current user id
+2022-05-29 18:40:19,262 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-4] Getting reservations for current authenticated user
+2022-05-29 18:40:19,262 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-4] Getting authenticated current user id
+2022-05-29 18:41:19,674 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-9] Reach url: /profile - GET
+2022-05-29 18:41:19,674 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-9] Getting active borrows for current authenticated user
+2022-05-29 18:41:19,674 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-9] Getting authenticated current user id
+2022-05-29 18:41:19,783 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-9] Getting reservations for current authenticated user
+2022-05-29 18:41:19,783 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-9] Getting authenticated current user id
+2022-05-29 18:45:38,404 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-5] Reach url: /profile - GET
+2022-05-29 18:45:38,405 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-5] Getting active borrows for current authenticated user
+2022-05-29 18:45:38,405 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-5] Getting authenticated current user id
+2022-05-29 18:45:38,423 ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] [http-nio-8002-exec-5] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is feign.RetryableException: Connection refused: no further information executing GET http://localhost:8001/users/2/borrows] with root cause
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:669)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.Socket.connect(Socket.java:645)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:177)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:497)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:600)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:246)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:351)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:372)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1299)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1232)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1120)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1051)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1653)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1577)
+	at java.base/java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:527)
+	at feign.Client$Default.convertResponse(Client.java:82)
+	at feign.Client$Default.execute(Client.java:78)
+	at feign.SynchronousMethodHandler.executeAndDecode(SynchronousMethodHandler.java:110)
+	at feign.SynchronousMethodHandler.invoke(SynchronousMethodHandler.java:80)
+	at feign.ReflectiveFeign$FeignInvocationHandler.invoke(ReflectiveFeign.java:103)
+	at jdk.proxy2/jdk.proxy2.$Proxy82.getBorrowsByUserId(Unknown Source)
+	at com.fabienit.biblioweb.service.impl.WebappServiceImpl.getActiveBorrowsByRegisteredUserId(WebappServiceImpl.java:132)
+	at com.fabienit.biblioweb.web.controllers.WebappController.getProfilePage(WebappController.java:140)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:126)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:90)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:118)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:158)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:117)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1591)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+2022-05-29 18:45:41,444 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-4] Reach url: / - GET
+2022-05-29 18:45:44,349 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-9] Reach url: /profile - GET
+2022-05-29 18:45:44,350 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-9] Getting active borrows for current authenticated user
+2022-05-29 18:45:44,350 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-9] Getting authenticated current user id
+2022-05-29 18:45:45,161 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-9] Getting reservations for current authenticated user
+2022-05-29 18:45:45,161 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-9] Getting authenticated current user id
+2022-05-29 18:46:22,302 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-2] Reach url: /profile - GET
+2022-05-29 18:46:22,302 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-2] Getting active borrows for current authenticated user
+2022-05-29 18:46:22,313 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-2] Getting authenticated current user id
+2022-05-29 18:46:22,433 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-2] Getting reservations for current authenticated user
+2022-05-29 18:46:22,434 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-2] Getting authenticated current user id
+2022-05-29 18:47:41,861 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-6] Reach url: / - GET
+2022-05-29 18:47:44,171 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-3] Reach url: /profile - GET
+2022-05-29 18:47:44,172 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-3] Getting active borrows for current authenticated user
+2022-05-29 18:47:44,172 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-3] Getting authenticated current user id
+2022-05-29 18:47:44,950 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-3] Getting reservations for current authenticated user
+2022-05-29 18:47:44,950 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-3] Getting authenticated current user id
+2022-05-29 18:50:24,999 INFO com.fabienit.biblioweb.BibliowebApplication [main] No active profile set, falling back to default profiles: default
+2022-05-29 18:50:28,290 INFO com.fabienit.biblioweb.BibliowebApplication [main] Started BibliowebApplication in 4.75 seconds (JVM running for 5.672)
+2022-05-29 18:52:48,186 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-1] Reach url: / - GET
+2022-05-29 18:52:50,417 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-4] Reach url: /connexion - GET
+2022-05-29 18:52:58,431 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-9] Reach url: / - GET
+2022-05-29 18:53:00,876 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-6] Reach url: /profile - GET
+2022-05-29 18:53:00,877 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-6] Getting active borrows for current authenticated user
+2022-05-29 18:53:00,877 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-6] Getting authenticated current user id
+2022-05-29 18:53:01,117 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-6] Getting reservations for current authenticated user
+2022-05-29 18:53:01,117 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-6] Getting authenticated current user id
+2022-05-29 18:53:14,723 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-4] Reach url: /profile - GET
+2022-05-29 18:53:14,725 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-4] Getting active borrows for current authenticated user
+2022-05-29 18:53:14,725 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-4] Getting authenticated current user id
+2022-05-29 18:53:14,831 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-4] Getting reservations for current authenticated user
+2022-05-29 18:53:14,840 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-4] Getting authenticated current user id
+2022-05-29 18:53:16,404 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-8] Reach url: / - GET
+2022-05-29 18:53:16,668 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-8] Getting authenticated current user id
+2022-05-29 18:53:16,763 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-8] Getting active borrows for current authenticated user
+2022-05-29 18:53:16,764 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-8] Getting authenticated current user id
+2022-05-29 18:53:22,881 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-5] Reach url: /reserve - POST
+2022-05-29 18:53:22,882 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-5] Getting authenticated current user id
+2022-05-29 18:53:23,123 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-4] Reach url: /profile - GET
+2022-05-29 18:53:23,126 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-4] Getting active borrows for current authenticated user
+2022-05-29 18:53:23,126 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-4] Getting authenticated current user id
+2022-05-29 18:53:23,236 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-4] Getting reservations for current authenticated user
+2022-05-29 18:53:23,237 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-4] Getting authenticated current user id
+2022-05-29 18:53:29,111 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-10] Reach url: /disconnect - GET
+2022-05-29 18:53:29,122 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-9] Reach url: /connexion - GET
+2022-05-29 18:59:19,384 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-2] Reach url: / - GET
+2022-05-29 21:04:48,189 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-2] Reach url: /connexion - GET
+2022-05-29 21:04:50,553 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-3] Reach url: / - GET
+2022-05-29 21:04:59,365 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-7] Reach url: /connexion - GET
+2022-05-29 21:05:02,493 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-9] Reach url: / - GET
+2022-05-29 21:05:08,820 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-10] Reach url: /connexion - GET
+2022-05-29 21:05:14,527 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-9] Reach url: / - GET
+2022-05-29 21:05:17,392 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-4] Reach url: /profile - GET
+2022-05-29 21:05:17,392 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-4] Getting active borrows for current authenticated user
+2022-05-29 21:05:17,392 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-4] Getting authenticated current user id
+2022-05-29 21:05:17,610 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-4] Getting reservations for current authenticated user
+2022-05-29 21:05:17,610 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-4] Getting authenticated current user id
+2022-05-29 21:07:18,676 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-3] Reach url: /profile - GET
+2022-05-29 21:07:18,676 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-3] Getting active borrows for current authenticated user
+2022-05-29 21:07:18,676 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-3] Getting authenticated current user id
+2022-05-29 21:07:18,788 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-3] Getting reservations for current authenticated user
+2022-05-29 21:07:18,788 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-3] Getting authenticated current user id
+2022-05-29 21:11:09,842 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-7] Reach url: / - GET
+2022-05-29 21:11:10,108 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-7] Getting authenticated current user id
+2022-05-29 21:11:10,201 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-7] Getting active borrows for current authenticated user
+2022-05-29 21:11:10,201 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-7] Getting authenticated current user id
+2022-05-29 21:11:19,490 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-3] Reach url: /reserve - POST
+2022-05-29 21:11:19,495 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-3] Getting authenticated current user id
+2022-05-29 21:11:19,728 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-4] Reach url: /profile - GET
+2022-05-29 21:11:19,728 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-4] Getting active borrows for current authenticated user
+2022-05-29 21:11:19,728 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-4] Getting authenticated current user id
+2022-05-29 21:11:19,830 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-4] Getting reservations for current authenticated user
+2022-05-29 21:11:19,830 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-4] Getting authenticated current user id
+2022-05-29 21:11:51,502 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-7] Reach url: / - GET
+2022-05-29 21:11:51,744 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-7] Getting authenticated current user id
+2022-05-29 21:11:51,854 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-7] Getting active borrows for current authenticated user
+2022-05-29 21:11:51,854 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-7] Getting authenticated current user id
+2022-05-29 21:16:23,635 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-10] Reach url: /profile - GET
+2022-05-29 21:16:23,636 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-10] Getting active borrows for current authenticated user
+2022-05-29 21:16:23,637 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-10] Getting authenticated current user id
+2022-05-29 21:16:23,756 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-10] Getting reservations for current authenticated user
+2022-05-29 21:16:23,757 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-10] Getting authenticated current user id
+2022-05-29 21:17:38,402 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-9] Reach url: / - GET
+2022-05-29 21:17:38,602 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-9] Getting authenticated current user id
+2022-05-29 21:17:38,700 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-9] Getting active borrows for current authenticated user
+2022-05-29 21:17:38,700 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-9] Getting authenticated current user id
+2022-05-29 21:21:19,744 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-2] Reach url: / - GET
+2022-05-29 21:21:48,173 INFO com.fabienit.biblioweb.BibliowebApplication [main] No active profile set, falling back to default profiles: default
+2022-05-29 21:21:55,170 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-1] Reach url: / - GET
+2022-05-29 21:21:55,290 INFO com.fabienit.biblioweb.BibliowebApplication [main] Started BibliowebApplication in 9.443 seconds (JVM running for 10.535)
+2022-05-29 21:21:59,309 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-6] Reach url: /connexion - GET
+2022-05-29 21:22:04,808 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-9] Reach url: / - GET
+2022-05-29 21:22:06,793 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-5] Reach url: /profile - GET
+2022-05-29 21:22:06,794 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-5] Getting active borrows for current authenticated user
+2022-05-29 21:22:06,794 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-5] Getting authenticated current user id
+2022-05-29 21:22:07,073 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-5] Getting reservations for current authenticated user
+2022-05-29 21:22:07,073 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-5] Getting authenticated current user id
+2022-05-29 21:22:56,425 INFO com.fabienit.biblioweb.BibliowebApplication [main] No active profile set, falling back to default profiles: default
+2022-05-29 21:23:03,490 INFO com.fabienit.biblioweb.BibliowebApplication [main] Started BibliowebApplication in 9.01 seconds (JVM running for 10.351)
+2022-05-29 21:23:03,905 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-2] Reach url: /connexion - GET
+2022-05-29 21:23:11,028 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-7] Reach url: /profile - GET
+2022-05-29 21:23:11,052 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-7] Getting active borrows for current authenticated user
+2022-05-29 21:23:11,052 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-7] Getting authenticated current user id
+2022-05-29 21:23:11,473 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-7] Getting reservations for current authenticated user
+2022-05-29 21:23:11,474 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-7] Getting authenticated current user id
+2022-05-29 21:24:05,860 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-10] Reach url: /profile - GET
+2022-05-29 21:24:05,861 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-10] Getting active borrows for current authenticated user
+2022-05-29 21:24:05,861 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-10] Getting authenticated current user id
+2022-05-29 21:24:05,964 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-10] Getting reservations for current authenticated user
+2022-05-29 21:24:05,964 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-10] Getting authenticated current user id

@@ -5,6 +5,7 @@
       <list>
         <option value="$PROJECT_DIR$/batchbiblio/pom.xml" />
         <option value="$PROJECT_DIR$/backendApiBiblio/pom.xml" />
+        <option value="$PROJECT_DIR$/frontendWebBiblio/pom.xml" />
       </list>
     </option>
   </component>

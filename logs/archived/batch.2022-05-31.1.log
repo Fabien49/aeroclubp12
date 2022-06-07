@@ -1,0 +1,160 @@
+2022-05-31 08:28:11,114 INFO com.fabienit.biblioapi.BiblioApiApplication [main] Starting BiblioApiApplication on FABPC with PID 2352 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10)
+2022-05-31 08:28:11,144 DEBUG com.fabienit.biblioapi.BiblioApiApplication [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-05-31 08:28:11,145 INFO com.fabienit.biblioapi.BiblioApiApplication [main] The following profiles are active: dev
+2022-05-31 08:28:19,548 DEBUG com.fabienit.biblioapi.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$990bd5a8 [main] Set Swagger2 documentation
+2022-05-31 08:28:20,762 INFO com.fabienit.biblioapi.BiblioApiApplication [main] Started BiblioApiApplication in 10.719 seconds (JVM running for 15.463)
+2022-05-31 12:01:56,443 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table available_copie if exists
+2022-05-31 12:01:56,455 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table book if exists
+2022-05-31 12:01:56,472 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table library if exists
+2022-05-31 12:01:56,476 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table registered_user if exists
+2022-05-31 12:02:07,105 INFO com.fabienit.biblioapi.BiblioApiApplication [main] Starting BiblioApiApplication on FABPC with PID 18448 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10)
+2022-05-31 12:02:07,109 DEBUG com.fabienit.biblioapi.BiblioApiApplication [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-05-31 12:02:07,109 INFO com.fabienit.biblioapi.BiblioApiApplication [main] The following profiles are active: dev
+2022-05-31 12:02:27,930 DEBUG com.fabienit.biblioapi.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$31ea39e7 [main] Set Swagger2 documentation
+2022-05-31 12:02:33,624 INFO com.fabienit.biblioapi.BiblioApiApplication [main] Started BiblioApiApplication in 27.55 seconds (JVM running for 29.424)
+2022-05-31 12:02:53,905 INFO com.fabienit.biblioapi.web.controllers.RegisteredUserController [http-nio-8001-exec-1] Search user by email: test1@gmail.com
+2022-05-31 12:02:56,025 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-2] Providing borrow resources from database by user id: 2
+2022-05-31 12:02:56,364 INFO com.fabienit.biblioapi.web.controllers.ReservationController [http-nio-8001-exec-3] Providing reservation list for registered user from database: user id: 2
+2022-05-31 12:03:05,982 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-5] Providing borrow resource from database: borrow id: 6
+2022-05-31 12:03:06,105 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-6] Providing borrow resource from database: borrow id: 6
+2022-05-31 12:03:06,276 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-7] Updating borrow in database, id: 6
+2022-05-31 12:03:06,428 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-8] Providing borrow resources from database by user id: 2
+2022-05-31 12:03:06,527 INFO com.fabienit.biblioapi.web.controllers.ReservationController [http-nio-8001-exec-9] Providing reservation list for registered user from database: user id: 2
+2022-05-31 12:03:14,165 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-10] Providing borrow resources from database by user id: 2
+2022-05-31 12:03:14,264 INFO com.fabienit.biblioapi.web.controllers.ReservationController [http-nio-8001-exec-1] Providing reservation list for registered user from database: user id: 2
+2022-05-31 12:04:26,941 INFO com.fabienit.biblioapi.web.controllers.RegisteredUserController [http-nio-8001-exec-3] Search user by email: test1@gmail.com
+2022-05-31 12:04:27,206 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-4] Providing borrow resources from database by user id: 2
+2022-05-31 12:04:27,314 INFO com.fabienit.biblioapi.web.controllers.ReservationController [http-nio-8001-exec-5] Providing reservation list for registered user from database: user id: 2
+2022-05-31 12:04:45,491 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table available_copie if exists
+2022-05-31 12:04:45,501 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table book if exists
+2022-05-31 12:04:45,535 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table library if exists
+2022-05-31 12:04:45,538 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table registered_user if exists
+2022-05-31 12:04:56,657 INFO com.fabienit.biblioapi.BiblioApiApplication [main] Starting BiblioApiApplication on FABPC with PID 8120 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10)
+2022-05-31 12:04:56,661 DEBUG com.fabienit.biblioapi.BiblioApiApplication [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-05-31 12:04:56,661 INFO com.fabienit.biblioapi.BiblioApiApplication [main] The following profiles are active: dev
+2022-05-31 12:05:04,358 DEBUG com.fabienit.biblioapi.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$a0d78dc5 [main] Set Swagger2 documentation
+2022-05-31 12:05:05,314 INFO com.fabienit.biblioapi.BiblioApiApplication [main] Started BiblioApiApplication in 9.24 seconds (JVM running for 10.141)
+2022-05-31 12:05:22,211 INFO com.fabienit.biblioapi.web.controllers.RegisteredUserController [http-nio-8001-exec-1] Search user by email: test1@gmail.com
+2022-05-31 12:05:22,736 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-2] Providing borrow resources from database by user id: 2
+2022-05-31 12:05:22,943 INFO com.fabienit.biblioapi.web.controllers.ReservationController [http-nio-8001-exec-3] Providing reservation list for registered user from database: user id: 2
+2022-05-31 12:07:27,913 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table available_copie if exists
+2022-05-31 12:07:27,917 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table book if exists
+2022-05-31 12:07:27,926 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table library if exists
+2022-05-31 12:07:27,927 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table registered_user if exists
+2022-05-31 12:07:34,044 INFO com.fabienit.biblioapi.BiblioApiApplication [main] Starting BiblioApiApplication on FABPC with PID 12896 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10)
+2022-05-31 12:07:34,049 DEBUG com.fabienit.biblioapi.BiblioApiApplication [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-05-31 12:07:34,049 INFO com.fabienit.biblioapi.BiblioApiApplication [main] The following profiles are active: dev
+2022-05-31 12:07:42,451 DEBUG com.fabienit.biblioapi.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$83b6bc27 [main] Set Swagger2 documentation
+2022-05-31 12:07:43,492 INFO com.fabienit.biblioapi.BiblioApiApplication [main] Started BiblioApiApplication in 10.21 seconds (JVM running for 11.518)
+2022-05-31 12:09:17,314 INFO com.fabienit.biblioapi.web.controllers.RegisteredUserController [http-nio-8001-exec-1] Search user by email: test1@gmail.com
+2022-05-31 12:09:18,034 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-2] Providing borrow resources from database by user id: 2
+2022-05-31 12:09:18,435 INFO com.fabienit.biblioapi.web.controllers.ReservationController [http-nio-8001-exec-3] Providing reservation list for registered user from database: user id: 2
+2022-05-31 12:10:29,220 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table available_copie if exists
+2022-05-31 12:10:29,226 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table book if exists
+2022-05-31 12:10:29,236 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table library if exists
+2022-05-31 12:10:29,237 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table registered_user if exists
+2022-05-31 12:10:40,365 INFO com.fabienit.biblioapi.BiblioApiApplication [main] Starting BiblioApiApplication on FABPC with PID 15872 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10)
+2022-05-31 12:10:40,369 DEBUG com.fabienit.biblioapi.BiblioApiApplication [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-05-31 12:10:40,369 INFO com.fabienit.biblioapi.BiblioApiApplication [main] The following profiles are active: dev
+2022-05-31 12:10:47,938 DEBUG com.fabienit.biblioapi.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$95f1f4b2 [main] Set Swagger2 documentation
+2022-05-31 12:10:48,916 INFO com.fabienit.biblioapi.BiblioApiApplication [main] Started BiblioApiApplication in 9.117 seconds (JVM running for 9.995)
+2022-05-31 12:11:42,862 INFO com.fabienit.biblioapi.web.controllers.RegisteredUserController [http-nio-8001-exec-1] Search user by email: test1@gmail.com
+2022-05-31 12:11:43,471 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-2] Providing borrow resources from database by user id: 2
+2022-05-31 12:11:43,718 INFO com.fabienit.biblioapi.web.controllers.ReservationController [http-nio-8001-exec-3] Providing reservation list for registered user from database: user id: 2
+2022-05-31 12:11:47,122 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-4] Providing borrow resource from database: borrow id: 6
+2022-05-31 12:11:47,247 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-5] Providing borrow resource from database: borrow id: 6
+2022-05-31 12:11:47,447 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-6] Updating borrow in database, id: 6
+2022-05-31 12:11:47,655 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-7] Providing borrow resources from database by user id: 2
+2022-05-31 12:11:47,788 INFO com.fabienit.biblioapi.web.controllers.ReservationController [http-nio-8001-exec-8] Providing reservation list for registered user from database: user id: 2
+2022-05-31 12:11:55,523 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table available_copie if exists
+2022-05-31 12:11:55,533 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table book if exists
+2022-05-31 12:11:55,563 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table library if exists
+2022-05-31 12:11:55,565 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table registered_user if exists
+2022-05-31 12:12:01,928 INFO com.fabienit.biblioapi.BiblioApiApplication [main] Starting BiblioApiApplication on FABPC with PID 15032 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10)
+2022-05-31 12:12:01,933 DEBUG com.fabienit.biblioapi.BiblioApiApplication [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-05-31 12:12:01,933 INFO com.fabienit.biblioapi.BiblioApiApplication [main] The following profiles are active: dev
+2022-05-31 12:12:10,778 DEBUG com.fabienit.biblioapi.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$a509a972 [main] Set Swagger2 documentation
+2022-05-31 12:12:11,808 INFO com.fabienit.biblioapi.BiblioApiApplication [main] Started BiblioApiApplication in 10.543 seconds (JVM running for 11.579)
+2022-05-31 12:12:24,624 INFO com.fabienit.biblioapi.web.controllers.RegisteredUserController [http-nio-8001-exec-1] Search user by email: test1@gmail.com
+2022-05-31 12:12:27,200 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-2] Providing borrow resources from database by user id: 2
+2022-05-31 12:12:27,470 INFO com.fabienit.biblioapi.web.controllers.ReservationController [http-nio-8001-exec-3] Providing reservation list for registered user from database: user id: 2
+2022-05-31 12:12:30,104 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-4] Providing borrow resource from database: borrow id: 6
+2022-05-31 12:12:30,231 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-4] Providing borrow resource from database: borrow id: 6
+2022-05-31 12:12:30,401 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-6] Updating borrow in database, id: 6
+2022-05-31 12:12:30,562 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-7] Providing borrow resources from database by user id: 2
+2022-05-31 12:12:30,662 INFO com.fabienit.biblioapi.web.controllers.ReservationController [http-nio-8001-exec-8] Providing reservation list for registered user from database: user id: 2
+2022-05-31 12:19:45,031 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table available_copie if exists
+2022-05-31 12:19:45,034 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table book if exists
+2022-05-31 12:19:45,047 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table library if exists
+2022-05-31 12:19:45,073 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table registered_user if exists
+2022-05-31 12:20:00,280 INFO com.fabienit.biblioapi.BiblioApiApplication [main] Starting BiblioApiApplication on FABPC with PID 10976 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10)
+2022-05-31 12:20:00,284 DEBUG com.fabienit.biblioapi.BiblioApiApplication [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-05-31 12:20:00,284 INFO com.fabienit.biblioapi.BiblioApiApplication [main] The following profiles are active: dev
+2022-05-31 12:20:08,755 DEBUG com.fabienit.biblioapi.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$cf7b6c4f [main] Set Swagger2 documentation
+2022-05-31 12:20:10,011 INFO com.fabienit.biblioapi.BiblioApiApplication [main] Started BiblioApiApplication in 10.278 seconds (JVM running for 11.302)
+2022-05-31 12:21:19,560 INFO com.fabienit.biblioapi.web.controllers.RegisteredUserController [http-nio-8001-exec-1] Search user by email: test1@gmail.com
+2022-05-31 12:21:20,051 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-2] Providing borrow resources from database by user id: 2
+2022-05-31 12:21:20,298 INFO com.fabienit.biblioapi.web.controllers.ReservationController [http-nio-8001-exec-3] Providing reservation list for registered user from database: user id: 2
+2022-05-31 12:23:18,692 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table available_copie if exists
+2022-05-31 12:23:18,698 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table book if exists
+2022-05-31 12:23:18,710 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table library if exists
+2022-05-31 12:23:18,712 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table registered_user if exists
+2022-05-31 12:23:24,238 INFO com.fabienit.biblioapi.BiblioApiApplication [main] Starting BiblioApiApplication on FABPC with PID 6652 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10)
+2022-05-31 12:23:24,243 DEBUG com.fabienit.biblioapi.BiblioApiApplication [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-05-31 12:23:24,243 INFO com.fabienit.biblioapi.BiblioApiApplication [main] The following profiles are active: dev
+2022-05-31 12:23:36,318 DEBUG com.fabienit.biblioapi.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$7f7b9027 [main] Set Swagger2 documentation
+2022-05-31 12:23:37,390 INFO com.fabienit.biblioapi.BiblioApiApplication [main] Started BiblioApiApplication in 13.712 seconds (JVM running for 14.753)
+2022-05-31 12:24:00,799 INFO com.fabienit.biblioapi.web.controllers.RegisteredUserController [http-nio-8001-exec-1] Search user by email: test1@gmail.com
+2022-05-31 12:24:01,371 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-2] Providing borrow resources from database by user id: 2
+2022-05-31 12:24:01,598 INFO com.fabienit.biblioapi.web.controllers.ReservationController [http-nio-8001-exec-3] Providing reservation list for registered user from database: user id: 2
+2022-05-31 12:24:09,216 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-4] Providing borrow resource from database: borrow id: 6
+2022-05-31 12:24:09,340 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-4] Providing borrow resource from database: borrow id: 6
+2022-05-31 12:24:09,498 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-6] Updating borrow in database, id: 6
+2022-05-31 12:24:09,654 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-7] Providing borrow resources from database by user id: 2
+2022-05-31 12:24:09,759 INFO com.fabienit.biblioapi.web.controllers.ReservationController [http-nio-8001-exec-8] Providing reservation list for registered user from database: user id: 2
+2022-05-31 12:29:29,192 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table available_copie if exists
+2022-05-31 12:29:29,201 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table book if exists
+2022-05-31 12:29:29,219 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table library if exists
+2022-05-31 12:29:29,220 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table registered_user if exists
+2022-05-31 12:29:39,175 INFO com.fabienit.biblioapi.BiblioApiApplication [main] Starting BiblioApiApplication on FABPC with PID 13632 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10)
+2022-05-31 12:29:39,179 DEBUG com.fabienit.biblioapi.BiblioApiApplication [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-05-31 12:29:39,179 INFO com.fabienit.biblioapi.BiblioApiApplication [main] The following profiles are active: dev
+2022-05-31 12:29:47,043 DEBUG com.fabienit.biblioapi.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$e6e0e365 [main] Set Swagger2 documentation
+2022-05-31 12:29:48,071 INFO com.fabienit.biblioapi.BiblioApiApplication [main] Started BiblioApiApplication in 9.483 seconds (JVM running for 10.414)
+2022-05-31 12:30:49,211 INFO com.fabienit.biblioapi.web.controllers.RegisteredUserController [http-nio-8001-exec-1] Search user by email: test1@gmail.com
+2022-05-31 12:30:51,359 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-2] Providing borrow resources from database by user id: 2
+2022-05-31 12:30:51,598 INFO com.fabienit.biblioapi.web.controllers.ReservationController [http-nio-8001-exec-3] Providing reservation list for registered user from database: user id: 2
+2022-05-31 12:30:55,683 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-4] Providing borrow resource from database: borrow id: 6
+2022-05-31 12:30:55,803 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-5] Providing borrow resource from database: borrow id: 6
+2022-05-31 12:30:55,984 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-6] Updating borrow in database, id: 6
+2022-05-31 12:30:56,159 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-7] Providing borrow resources from database by user id: 2
+2022-05-31 12:30:56,262 INFO com.fabienit.biblioapi.web.controllers.ReservationController [http-nio-8001-exec-8] Providing reservation list for registered user from database: user id: 2
+2022-05-31 12:30:58,367 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-9] Providing borrow resource from database: borrow id: 2
+2022-05-31 12:30:58,460 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-10] Providing borrow resource from database: borrow id: 2
+2022-05-31 12:30:58,558 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-1] Updating borrow in database, id: 2
+2022-05-31 12:30:58,664 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-2] Providing borrow resources from database by user id: 2
+2022-05-31 12:30:58,758 INFO com.fabienit.biblioapi.web.controllers.ReservationController [http-nio-8001-exec-3] Providing reservation list for registered user from database: user id: 2
+2022-05-31 13:30:42,005 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table available_copie if exists
+2022-05-31 13:30:42,017 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table book if exists
+2022-05-31 13:30:42,047 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table library if exists
+2022-05-31 13:30:42,048 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table registered_user if exists
+2022-05-31 13:30:51,336 INFO com.fabienit.biblioapi.BiblioApiApplication [main] Starting BiblioApiApplication on FABPC with PID 4244 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10)
+2022-05-31 13:30:51,342 DEBUG com.fabienit.biblioapi.BiblioApiApplication [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-05-31 13:30:51,343 INFO com.fabienit.biblioapi.BiblioApiApplication [main] The following profiles are active: dev
+2022-05-31 13:31:01,334 DEBUG com.fabienit.biblioapi.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$709a7d8d [main] Set Swagger2 documentation
+2022-05-31 13:31:02,605 INFO com.fabienit.biblioapi.BiblioApiApplication [main] Started BiblioApiApplication in 11.99 seconds (JVM running for 13.017)
+2022-05-31 13:32:08,950 INFO com.fabienit.biblioapi.web.controllers.RegisteredUserController [http-nio-8001-exec-1] Search user by email: test1@gmail.com
+2022-05-31 13:32:11,447 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-4] Providing borrow resources from database by user id: 2
+2022-05-31 13:32:11,723 INFO com.fabienit.biblioapi.web.controllers.ReservationController [http-nio-8001-exec-2] Providing reservation list for registered user from database: user id: 2
+2022-05-31 13:32:17,404 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-5] Providing borrow resource from database: borrow id: 6
+2022-05-31 13:32:17,537 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-5] Providing borrow resource from database: borrow id: 6
+2022-05-31 13:32:17,728 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-8] Updating borrow in database, id: 6
+2022-05-31 13:32:17,889 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-9] Providing borrow resources from database by user id: 2
+2022-05-31 13:32:17,991 INFO com.fabienit.biblioapi.web.controllers.ReservationController [http-nio-8001-exec-10] Providing reservation list for registered user from database: user id: 2
+2022-05-31 14:20:14,013 INFO com.fabienit.biblioapi.web.controllers.RegisteredUserController [http-nio-8001-exec-1] Search user by email: test1@gmail.com
+2022-05-31 14:20:14,229 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-4] Providing borrow resources from database by user id: 2
+2022-05-31 14:20:14,364 INFO com.fabienit.biblioapi.web.controllers.ReservationController [http-nio-8001-exec-2] Providing reservation list for registered user from database: user id: 2
+2022-05-31 15:42:30,860 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table available_copie if exists
+2022-05-31 15:42:30,877 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table book if exists
+2022-05-31 15:42:30,917 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table library if exists
+2022-05-31 15:42:30,919 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table registered_user if exists

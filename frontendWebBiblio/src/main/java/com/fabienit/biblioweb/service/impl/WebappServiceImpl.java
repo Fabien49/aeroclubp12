@@ -91,8 +91,8 @@ public class WebappServiceImpl implements WebappService {
     /**
      * Extend duration for the target borrow
      */
-    @Override
-    public ResponseEntity<Void> extendBorrowDuration(int borrowId) {
+    /*@Override
+    public ResponseEntity<Void> extendBorrow(int borrowId, BorrowBean borrowBean) {
 
         logger.debug("Extending Borrow bean duration");
 
@@ -112,7 +112,7 @@ public class WebappServiceImpl implements WebappService {
         // Update database
         return apiProxy.updateBorrow(updatedBorrow.getId(), updatedBorrow);
 
-    }
+    }*/
 
     /**
      * Get active borrows (bookReturned = false) for current authenticated user

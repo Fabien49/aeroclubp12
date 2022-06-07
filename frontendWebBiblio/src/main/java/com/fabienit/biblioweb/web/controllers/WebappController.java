@@ -89,8 +89,7 @@ public class WebappController {
     }
 
     @PostMapping(value = "/registration")
-    public String registerUserAccount(@ModelAttribute("user") @Valid RegisteredUserDto accountDto, BindingResult result,
-                                      Model model) {
+    public String registerUserAccount(@ModelAttribute("user") @Valid RegisteredUserDto accountDto, BindingResult result, Model model) {
 
         logger.info("Reach url: /registration - POST");
 
@@ -149,6 +148,7 @@ public class WebappController {
         LocalDate today = LocalDate.now();
         model.addAttribute("today", today);
 
+
         return "Profile";
     }
 
@@ -161,7 +161,7 @@ public class WebappController {
         BorrowBean borrowBean = apiProxy.getBorrowById(borrowId);
 
         // Extend borrow duration
-        webappService.extendBorrowDuration(borrowId);
+        apiProxy.extendBorrow(borrowId, borrowBean);
 
         return "redirect:/profile";
     }

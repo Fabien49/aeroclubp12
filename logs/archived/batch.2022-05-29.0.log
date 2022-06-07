@@ -1,0 +1,295 @@
+2022-05-29 18:37:20,418 INFO com.fabienit.biblioapi.BiblioApiApplication [main] Starting BiblioApiApplication on FABPC with PID 13820 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10)
+2022-05-29 18:37:20,430 DEBUG com.fabienit.biblioapi.BiblioApiApplication [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-05-29 18:37:20,431 INFO com.fabienit.biblioapi.BiblioApiApplication [main] The following profiles are active: dev
+2022-05-29 18:37:38,213 DEBUG com.fabienit.biblioapi.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$917c750b [main] Set Swagger2 documentation
+2022-05-29 18:37:39,353 INFO com.fabienit.biblioapi.BiblioApiApplication [main] Started BiblioApiApplication in 19.65 seconds (JVM running for 26.985)
+2022-05-29 18:40:16,410 INFO com.fabienit.biblioapi.web.controllers.RegisteredUserController [http-nio-8001-exec-1] Search user by email: test1@gmail.com
+2022-05-29 18:40:19,106 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-2] Providing borrow resources from database by user id: 2
+2022-05-29 18:40:19,426 INFO com.fabienit.biblioapi.web.controllers.ReservationController [http-nio-8001-exec-3] Providing reservation list for registered user from database: user id: 2
+2022-05-29 18:41:00,161 INFO com.fabienit.biblioapi.web.controllers.ReservationController [http-nio-8001-exec-5] Deleting outdated reservations from database
+2022-05-29 18:41:00,161 DEBUG com.fabienit.biblioapi.manager.impl.OutDatedReservationManagerImpl [http-nio-8001-exec-5] Deleting outdated reservations
+2022-05-29 18:41:00,353 INFO com.fabienit.biblioapi.web.controllers.ReservationController [http-nio-8001-exec-6] Providing reservation resource from database: all reservation list
+2022-05-29 18:41:01,017 INFO com.fabienit.biblioapi.web.controllers.ReservationController [http-nio-8001-exec-7] Update reservation after notfications is sent, reservation id: 1
+2022-05-29 18:41:19,772 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-9] Providing borrow resources from database by user id: 2
+2022-05-29 18:41:19,871 INFO com.fabienit.biblioapi.web.controllers.ReservationController [http-nio-8001-exec-10] Providing reservation list for registered user from database: user id: 2
+2022-05-29 18:45:14,444 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table available_copie if exists
+2022-05-29 18:45:14,450 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table book if exists
+2022-05-29 18:45:14,459 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table library if exists
+2022-05-29 18:45:14,517 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table registered_user if exists
+2022-05-29 18:45:27,094 INFO com.fabienit.biblioapi.BiblioApiApplication [main] Starting BiblioApiApplication on FABPC with PID 3292 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10)
+2022-05-29 18:45:27,098 DEBUG com.fabienit.biblioapi.BiblioApiApplication [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-05-29 18:45:27,099 INFO com.fabienit.biblioapi.BiblioApiApplication [main] The following profiles are active: dev
+2022-05-29 18:45:38,095 DEBUG com.fabienit.biblioapi.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$3793cf91 [main] Set Swagger2 documentation
+2022-05-29 18:45:39,736 INFO com.fabienit.biblioapi.BiblioApiApplication [main] Started BiblioApiApplication in 13.181 seconds (JVM running for 14.337)
+2022-05-29 18:45:44,880 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-1] Providing borrow resources from database by user id: 2
+2022-05-29 18:45:45,264 INFO com.fabienit.biblioapi.web.controllers.ReservationController [http-nio-8001-exec-2] Providing reservation list for registered user from database: user id: 2
+2022-05-29 18:46:22,422 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-3] Providing borrow resources from database by user id: 2
+2022-05-29 18:46:22,554 INFO com.fabienit.biblioapi.web.controllers.ReservationController [http-nio-8001-exec-4] Providing reservation list for registered user from database: user id: 2
+2022-05-29 18:46:35,888 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table available_copie if exists
+2022-05-29 18:46:35,908 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table book if exists
+2022-05-29 18:46:35,922 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table library if exists
+2022-05-29 18:46:35,923 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table registered_user if exists
+2022-05-29 18:46:42,664 INFO com.fabienit.biblioapi.BiblioApiApplication [main] Starting BiblioApiApplication on FABPC with PID 8908 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10)
+2022-05-29 18:46:42,668 DEBUG com.fabienit.biblioapi.BiblioApiApplication [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-05-29 18:46:42,669 INFO com.fabienit.biblioapi.BiblioApiApplication [main] The following profiles are active: dev
+2022-05-29 18:46:57,966 DEBUG com.fabienit.biblioapi.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$a003b732 [main] Set Swagger2 documentation
+2022-05-29 18:47:00,006 INFO com.fabienit.biblioapi.BiblioApiApplication [main] Started BiblioApiApplication in 18.232 seconds (JVM running for 19.777)
+2022-05-29 18:47:44,648 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-1] Providing borrow resources from database by user id: 2
+2022-05-29 18:47:45,054 INFO com.fabienit.biblioapi.web.controllers.ReservationController [http-nio-8001-exec-2] Providing reservation list for registered user from database: user id: 2
+2022-05-29 18:48:00,116 INFO com.fabienit.biblioapi.web.controllers.ReservationController [http-nio-8001-exec-4] Deleting outdated reservations from database
+2022-05-29 18:48:00,116 DEBUG com.fabienit.biblioapi.manager.impl.OutDatedReservationManagerImpl [http-nio-8001-exec-4] Deleting outdated reservations
+2022-05-29 18:48:00,117 DEBUG com.fabienit.biblioapi.manager.impl.OutDatedReservationManagerImpl [http-nio-8001-exec-4] The mode is : ***************devmode
+2022-05-29 18:48:00,143 ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] [http-nio-8001-exec-4] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.time.temporal.UnsupportedTemporalTypeException: Unsupported unit: Minutes] with root cause
+java.time.temporal.UnsupportedTemporalTypeException: Unsupported unit: Minutes
+	at java.base/java.time.LocalDate.plus(LocalDate.java:1274)
+	at com.fabienit.biblioapi.manager.impl.OutDatedReservationManagerImpl.deleteWithBiblioMode(OutDatedReservationManagerImpl.java:68)
+	at com.fabienit.biblioapi.manager.impl.OutDatedReservationManagerImpl.deleteOutDatedReservations(OutDatedReservationManagerImpl.java:54)
+	at com.fabienit.biblioapi.web.controllers.ReservationController.deleteOutDatedReservations(ReservationController.java:121)
+	at com.fabienit.biblioapi.web.controllers.ReservationController$$FastClassBySpringCGLIB$$3e25ea01.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:769)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747)
+	at org.springframework.validation.beanvalidation.MethodValidationInterceptor.invoke(MethodValidationInterceptor.java:120)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:689)
+	at com.fabienit.biblioapi.web.controllers.ReservationController$$EnhancerBySpringCGLIB$$bca1477e.deleteOutDatedReservations(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:126)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:90)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:118)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:158)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:203)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1579)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+2022-05-29 18:49:57,166 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table available_copie if exists
+2022-05-29 18:49:57,179 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table book if exists
+2022-05-29 18:49:57,193 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table library if exists
+2022-05-29 18:49:57,194 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table registered_user if exists
+2022-05-29 18:50:05,586 INFO com.fabienit.biblioapi.BiblioApiApplication [main] Starting BiblioApiApplication on FABPC with PID 19224 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10)
+2022-05-29 18:50:05,592 DEBUG com.fabienit.biblioapi.BiblioApiApplication [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-05-29 18:50:05,592 INFO com.fabienit.biblioapi.BiblioApiApplication [main] The following profiles are active: dev
+2022-05-29 18:50:19,442 DEBUG com.fabienit.biblioapi.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$acb842a8 [main] Set Swagger2 documentation
+2022-05-29 18:50:20,419 INFO com.fabienit.biblioapi.BiblioApiApplication [main] Started BiblioApiApplication in 15.692 seconds (JVM running for 16.597)
+2022-05-29 18:51:16,552 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table available_copie if exists
+2022-05-29 18:51:16,558 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table book if exists
+2022-05-29 18:51:16,573 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table library if exists
+2022-05-29 18:51:16,574 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table registered_user if exists
+2022-05-29 18:51:21,811 INFO com.fabienit.biblioapi.BiblioApiApplication [main] Starting BiblioApiApplication on FABPC with PID 19204 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10)
+2022-05-29 18:51:21,815 DEBUG com.fabienit.biblioapi.BiblioApiApplication [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-05-29 18:51:21,815 INFO com.fabienit.biblioapi.BiblioApiApplication [main] The following profiles are active: dev
+2022-05-29 18:51:29,756 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [main] HHH000478: Unsuccessful: drop table available_copie if exists
+2022-05-29 18:51:29,759 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [main] HHH000478: Unsuccessful: drop table book if exists
+2022-05-29 18:51:29,768 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [main] HHH000478: Unsuccessful: drop table library if exists
+2022-05-29 18:51:29,768 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [main] HHH000478: Unsuccessful: drop table registered_user if exists
+2022-05-29 18:51:29,802 ERROR org.springframework.boot.SpringApplication [main] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'biblioApiApplication': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'biblio.mode' in value "${biblio.mode}"
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:403)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1429)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at com.fabienit.biblioapi.BiblioApiApplication.main(BiblioApiApplication.java:16)
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'biblio.mode' in value "${biblio.mode}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:178)
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:124)
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:236)
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210)
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:175)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:908)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1228)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:636)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:116)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:397)
+	... 17 common frames omitted
+2022-05-29 18:51:58,046 INFO com.fabienit.biblioapi.BiblioApiApplication [main] Starting BiblioApiApplication on FABPC with PID 14160 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10)
+2022-05-29 18:51:58,050 DEBUG com.fabienit.biblioapi.BiblioApiApplication [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-05-29 18:51:58,050 INFO com.fabienit.biblioapi.BiblioApiApplication [main] The following profiles are active: dev
+2022-05-29 18:52:11,242 DEBUG com.fabienit.biblioapi.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$65b1d406 [main] Set Swagger2 documentation
+2022-05-29 18:52:12,479 INFO com.fabienit.biblioapi.BiblioApiApplication [main] Started BiblioApiApplication in 15.02 seconds (JVM running for 15.914)
+2022-05-29 18:52:58,044 INFO com.fabienit.biblioapi.web.controllers.RegisteredUserController [http-nio-8001-exec-1] Search user by email: test1@gmail.com
+2022-05-29 18:53:00,143 INFO com.fabienit.biblioapi.web.controllers.ReservationController [http-nio-8001-exec-2] Deleting outdated reservations from database
+2022-05-29 18:53:00,143 DEBUG com.fabienit.biblioapi.manager.impl.OutDatedReservationManagerImpl [http-nio-8001-exec-2] Deleting outdated reservations
+2022-05-29 18:53:00,427 INFO com.fabienit.biblioapi.web.controllers.ReservationController [http-nio-8001-exec-3] Providing reservation resource from database: all reservation list
+2022-05-29 18:53:00,826 INFO com.fabienit.biblioapi.web.controllers.ReservationController [http-nio-8001-exec-4] Update reservation after notfications is sent, reservation id: 1
+2022-05-29 18:53:01,028 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-5] Providing borrow resources from database by user id: 2
+2022-05-29 18:53:01,233 INFO com.fabienit.biblioapi.web.controllers.ReservationController [http-nio-8001-exec-6] Providing reservation list for registered user from database: user id: 2
+2022-05-29 18:53:14,820 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-9] Providing borrow resources from database by user id: 2
+2022-05-29 18:53:14,929 INFO com.fabienit.biblioapi.web.controllers.ReservationController [http-nio-8001-exec-10] Providing reservation list for registered user from database: user id: 2
+2022-05-29 18:53:16,504 INFO com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-1] Providing book resource from database: all book list
+2022-05-29 18:53:16,511 DEBUG com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-1] Splitting query, query: 
+2022-05-29 18:53:16,619 INFO com.fabienit.biblioapi.web.controllers.AvailableCopieController [http-nio-8001-exec-2] Providing availablecopie resource from database: all availablecopie list
+2022-05-29 18:53:16,758 INFO com.fabienit.biblioapi.web.controllers.ReservationController [http-nio-8001-exec-3] Providing reservation list for registered user from database: user id: 2
+2022-05-29 18:53:16,849 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-4] Providing borrow resources from database by user id: 2
+2022-05-29 18:53:23,015 INFO com.fabienit.biblioapi.web.controllers.ReservationController [http-nio-8001-exec-6] Adding new reservation in database
+2022-05-29 18:53:23,227 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-7] Providing borrow resources from database by user id: 2
+2022-05-29 18:53:23,326 INFO com.fabienit.biblioapi.web.controllers.ReservationController [http-nio-8001-exec-8] Providing reservation list for registered user from database: user id: 2
+2022-05-29 18:54:57,530 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table available_copie if exists
+2022-05-29 18:54:57,539 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table book if exists
+2022-05-29 18:54:57,585 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table library if exists
+2022-05-29 18:54:57,586 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table registered_user if exists
+2022-05-29 18:55:03,377 INFO com.fabienit.biblioapi.BiblioApiApplication [main] Starting BiblioApiApplication on FABPC with PID 13748 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10)
+2022-05-29 18:55:03,381 DEBUG com.fabienit.biblioapi.BiblioApiApplication [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-05-29 18:55:03,381 INFO com.fabienit.biblioapi.BiblioApiApplication [main] The following profiles are active: dev
+2022-05-29 18:55:11,729 DEBUG com.fabienit.biblioapi.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$e2661a98 [main] Set Swagger2 documentation
+2022-05-29 18:55:12,798 INFO com.fabienit.biblioapi.BiblioApiApplication [main] Started BiblioApiApplication in 10.058 seconds (JVM running for 11.031)
+2022-05-29 21:04:51,377 INFO com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-1] Providing book resource from database: all book list
+2022-05-29 21:04:51,711 DEBUG com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-1] Splitting query, query: 
+2022-05-29 21:04:51,931 INFO com.fabienit.biblioapi.web.controllers.AvailableCopieController [http-nio-8001-exec-2] Providing availablecopie resource from database: all availablecopie list
+2022-05-29 21:05:02,589 INFO com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-3] Providing book resource from database: all book list
+2022-05-29 21:05:02,593 DEBUG com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-3] Splitting query, query: 
+2022-05-29 21:05:02,686 INFO com.fabienit.biblioapi.web.controllers.AvailableCopieController [http-nio-8001-exec-4] Providing availablecopie resource from database: all availablecopie list
+2022-05-29 21:05:14,361 INFO com.fabienit.biblioapi.web.controllers.RegisteredUserController [http-nio-8001-exec-5] Search user by email: test1@gmail.com
+2022-05-29 21:05:17,529 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-6] Providing borrow resources from database by user id: 2
+2022-05-29 21:05:17,719 INFO com.fabienit.biblioapi.web.controllers.ReservationController [http-nio-8001-exec-7] Providing reservation list for registered user from database: user id: 2
+2022-05-29 21:07:18,563 INFO com.fabienit.biblioapi.web.controllers.ReservationController [http-nio-8001-exec-9] Deleting reservation from database: id: 2
+2022-05-29 21:07:18,773 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-10] Providing borrow resources from database by user id: 2
+2022-05-29 21:07:18,876 INFO com.fabienit.biblioapi.web.controllers.ReservationController [http-nio-8001-exec-1] Providing reservation list for registered user from database: user id: 2
+2022-05-29 21:11:09,950 INFO com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-3] Providing book resource from database: all book list
+2022-05-29 21:11:09,967 DEBUG com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-3] Splitting query, query: 
+2022-05-29 21:11:10,090 INFO com.fabienit.biblioapi.web.controllers.AvailableCopieController [http-nio-8001-exec-4] Providing availablecopie resource from database: all availablecopie list
+2022-05-29 21:11:10,196 INFO com.fabienit.biblioapi.web.controllers.ReservationController [http-nio-8001-exec-5] Providing reservation list for registered user from database: user id: 2
+2022-05-29 21:11:10,301 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-6] Providing borrow resources from database by user id: 2
+2022-05-29 21:11:19,658 INFO com.fabienit.biblioapi.web.controllers.ReservationController [http-nio-8001-exec-8] Adding new reservation in database
+2022-05-29 21:11:19,817 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-9] Providing borrow resources from database by user id: 2
+2022-05-29 21:11:19,920 INFO com.fabienit.biblioapi.web.controllers.ReservationController [http-nio-8001-exec-10] Providing reservation list for registered user from database: user id: 2
+2022-05-29 21:11:51,602 INFO com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-2] Providing book resource from database: all book list
+2022-05-29 21:11:51,610 DEBUG com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-2] Splitting query, query: 
+2022-05-29 21:11:51,713 INFO com.fabienit.biblioapi.web.controllers.AvailableCopieController [http-nio-8001-exec-3] Providing availablecopie resource from database: all availablecopie list
+2022-05-29 21:11:51,845 INFO com.fabienit.biblioapi.web.controllers.ReservationController [http-nio-8001-exec-4] Providing reservation list for registered user from database: user id: 2
+2022-05-29 21:11:51,947 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-4] Providing borrow resources from database by user id: 2
+2022-05-29 21:16:23,745 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-3] Providing borrow resources from database by user id: 2
+2022-05-29 21:16:23,867 INFO com.fabienit.biblioapi.web.controllers.ReservationController [http-nio-8001-exec-8] Providing reservation list for registered user from database: user id: 2
+2022-05-29 21:17:38,496 INFO com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-5] Providing book resource from database: all book list
+2022-05-29 21:17:38,498 DEBUG com.fabienit.biblioapi.web.controllers.BookController [http-nio-8001-exec-5] Splitting query, query: 
+2022-05-29 21:17:38,588 INFO com.fabienit.biblioapi.web.controllers.AvailableCopieController [http-nio-8001-exec-4] Providing availablecopie resource from database: all availablecopie list
+2022-05-29 21:17:38,694 INFO com.fabienit.biblioapi.web.controllers.ReservationController [http-nio-8001-exec-3] Providing reservation list for registered user from database: user id: 2
+2022-05-29 21:17:38,788 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-8] Providing borrow resources from database by user id: 2
+2022-05-29 21:20:36,308 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table available_copie if exists
+2022-05-29 21:20:36,314 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table book if exists
+2022-05-29 21:20:36,342 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table library if exists
+2022-05-29 21:20:36,352 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table registered_user if exists
+2022-05-29 21:20:43,787 INFO com.fabienit.biblioapi.BiblioApiApplication [main] Starting BiblioApiApplication on FABPC with PID 13744 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10)
+2022-05-29 21:20:43,792 DEBUG com.fabienit.biblioapi.BiblioApiApplication [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-05-29 21:20:43,792 INFO com.fabienit.biblioapi.BiblioApiApplication [main] The following profiles are active: dev
+2022-05-29 21:20:59,514 DEBUG com.fabienit.biblioapi.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$cf7b6c4f [main] Set Swagger2 documentation
+2022-05-29 21:21:02,175 INFO com.fabienit.biblioapi.BiblioApiApplication [main] Started BiblioApiApplication in 19.104 seconds (JVM running for 20.099)
+2022-05-29 21:22:00,813 INFO com.fabienit.biblioapi.web.controllers.ReservationController [http-nio-8001-exec-1] Deleting outdated reservations from database
+2022-05-29 21:22:00,814 DEBUG com.fabienit.biblioapi.manager.impl.OutDatedReservationManagerImpl [http-nio-8001-exec-1] Deleting outdated reservations
+2022-05-29 21:22:01,324 INFO com.fabienit.biblioapi.web.controllers.ReservationController [http-nio-8001-exec-2] Providing reservation resource from database: all reservation list
+2022-05-29 21:22:02,225 INFO com.fabienit.biblioapi.web.controllers.ReservationController [http-nio-8001-exec-3] Update reservation after notfications is sent, reservation id: 1
+2022-05-29 21:22:04,559 INFO com.fabienit.biblioapi.web.controllers.RegisteredUserController [http-nio-8001-exec-4] Search user by email: test1@gmail.com
+2022-05-29 21:22:06,950 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-5] Providing borrow resources from database by user id: 2
+2022-05-29 21:22:07,325 INFO com.fabienit.biblioapi.web.controllers.ReservationController [http-nio-8001-exec-6] Providing reservation list for registered user from database: user id: 2
+2022-05-29 21:22:27,100 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table available_copie if exists
+2022-05-29 21:22:27,103 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table book if exists
+2022-05-29 21:22:27,110 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table library if exists
+2022-05-29 21:22:27,111 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table registered_user if exists
+2022-05-29 21:22:32,962 INFO com.fabienit.biblioapi.BiblioApiApplication [main] Starting BiblioApiApplication on FABPC with PID 13920 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10)
+2022-05-29 21:22:32,967 DEBUG com.fabienit.biblioapi.BiblioApiApplication [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-05-29 21:22:32,967 INFO com.fabienit.biblioapi.BiblioApiApplication [main] The following profiles are active: dev
+2022-05-29 21:22:48,200 DEBUG com.fabienit.biblioapi.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$31f02035 [main] Set Swagger2 documentation
+2022-05-29 21:22:50,379 INFO com.fabienit.biblioapi.BiblioApiApplication [main] Started BiblioApiApplication in 18.041 seconds (JVM running for 19.074)
+2022-05-29 21:23:10,405 INFO com.fabienit.biblioapi.web.controllers.RegisteredUserController [http-nio-8001-exec-1] Search user by email: test1@gmail.com
+2022-05-29 21:23:11,306 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-2] Providing borrow resources from database by user id: 2
+2022-05-29 21:23:11,762 INFO com.fabienit.biblioapi.web.controllers.ReservationController [http-nio-8001-exec-3] Providing reservation list for registered user from database: user id: 2
+2022-05-29 21:24:00,124 INFO com.fabienit.biblioapi.web.controllers.ReservationController [http-nio-8001-exec-6] Deleting outdated reservations from database
+2022-05-29 21:24:00,126 DEBUG com.fabienit.biblioapi.manager.impl.OutDatedReservationManagerImpl [http-nio-8001-exec-6] Deleting outdated reservations
+2022-05-29 21:24:00,322 INFO com.fabienit.biblioapi.web.controllers.ReservationController [http-nio-8001-exec-1] Providing reservation resource from database: all reservation list
+2022-05-29 21:24:00,943 INFO com.fabienit.biblioapi.web.controllers.ReservationController [http-nio-8001-exec-5] Update reservation after notfications is sent, reservation id: 1
+2022-05-29 21:24:05,953 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-3] Providing borrow resources from database by user id: 2
+2022-05-29 21:24:06,079 INFO com.fabienit.biblioapi.web.controllers.ReservationController [http-nio-8001-exec-4] Providing reservation list for registered user from database: user id: 2
+2022-05-29 23:39:01,012 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table available_copie if exists
+2022-05-29 23:39:01,018 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table book if exists
+2022-05-29 23:39:01,034 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table library if exists
+2022-05-29 23:39:01,034 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table registered_user if exists
