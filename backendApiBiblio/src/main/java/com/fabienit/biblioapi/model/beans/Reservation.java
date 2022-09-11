@@ -36,6 +36,16 @@ public class Reservation {
     public Reservation() {
     }
 
+    public Reservation(int id, AvailableCopie availableCopie, RegisteredUser registereduser, Boolean notificationIsSent, LocalDate availabilityDate, int position) {
+        this.id = id;
+        this.availableCopie = availableCopie;
+        this.registereduser = registereduser;
+        this.notificationIsSent = notificationIsSent;
+        this.availabilityDate = availabilityDate;
+        this.position = position;
+    }
+
+
     public int getId() {
         return id;
     }

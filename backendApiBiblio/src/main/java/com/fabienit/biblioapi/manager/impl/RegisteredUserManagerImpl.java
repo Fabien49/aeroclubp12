@@ -1,8 +1,8 @@
 package com.fabienit.biblioapi.manager.impl;
 
-import com.fabienit.biblioapi.model.beans.RegisteredUser;
 import com.fabienit.biblioapi.dao.RegisteredUserDao;
 import com.fabienit.biblioapi.manager.RegisteredUserManager;
+import com.fabienit.biblioapi.model.beans.RegisteredUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -31,8 +31,9 @@ public class RegisteredUserManagerImpl implements RegisteredUserManager {
     }
 
     @Override
-    public void deleteById(int id) {
+    public RegisteredUser deleteById(int id) {
         registeredUserDao.deleteById(id);
+        return null;
     }
 
     @Override

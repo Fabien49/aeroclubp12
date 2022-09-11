@@ -1,7 +1,7 @@
 package com.fabienit.biblioapi.web.controllers;
 
-import com.fabienit.biblioapi.model.beans.RegisteredUser;
 import com.fabienit.biblioapi.dao.RegisteredUserDao;
+import com.fabienit.biblioapi.model.beans.RegisteredUser;
 import com.fabienit.biblioapi.web.exceptions.EntityAlreadyExistsException;
 import com.fabienit.biblioapi.web.exceptions.RessourceNotFoundException;
 import org.slf4j.Logger;

@@ -10,7 +10,7 @@ public interface RegisteredUserManager {
     List<RegisteredUser> findAll();
     Optional<RegisteredUser> findById(int id);
     RegisteredUser save(RegisteredUser registeredUser);
-    void deleteById(int id);
+    RegisteredUser deleteById(int id);
     RegisteredUser findByEmail(String email);
 
 }

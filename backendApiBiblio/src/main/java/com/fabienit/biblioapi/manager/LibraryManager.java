@@ -10,6 +10,6 @@ public interface LibraryManager {
     List<Library> findAll();
     Optional<Library> findById(int id);
     Library save(Library library);
-    void deleteById(int id);
+    Library deleteById(int id);
 }
 

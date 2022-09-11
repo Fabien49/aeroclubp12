@@ -1,8 +1,8 @@
 package com.fabienit.biblioapi.web.controllers;
 
-import com.fabienit.biblioapi.model.beans.Reservation;
 import com.fabienit.biblioapi.manager.OutDatedReservationManager;
 import com.fabienit.biblioapi.manager.ReservationManager;
+import com.fabienit.biblioapi.model.beans.Reservation;
 import com.fabienit.biblioapi.web.exceptions.FunctionnalException;
 import com.fabienit.biblioapi.web.exceptions.RessourceNotFoundException;
 import org.slf4j.Logger;

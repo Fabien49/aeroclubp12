@@ -11,7 +11,7 @@ public interface ReservationManager {
     void relatedReservationUpdate(int bookId, int libraryId, int userId);
 
     @Transactional
-    void deleteById(int id);
+    Reservation deleteById(int id);
 
     Reservation save(Reservation reservation) throws FunctionnalException;
 

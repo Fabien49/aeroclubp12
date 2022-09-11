@@ -1,13 +1,13 @@
 package com.fabienit.biblioapi.manager.impl;
 
-import com.fabienit.biblioapi.model.beans.AvailableCopie;
-import com.fabienit.biblioapi.model.beans.AvailableCopieKey;
-import com.fabienit.biblioapi.model.beans.Borrow;
-import com.fabienit.biblioapi.model.beans.Reservation;
 import com.fabienit.biblioapi.dao.ReservationDao;
 import com.fabienit.biblioapi.manager.AvailableCopieManager;
 import com.fabienit.biblioapi.manager.BorrowManager;
 import com.fabienit.biblioapi.manager.ReservationManager;
+import com.fabienit.biblioapi.model.beans.AvailableCopie;
+import com.fabienit.biblioapi.model.beans.AvailableCopieKey;
+import com.fabienit.biblioapi.model.beans.Borrow;
+import com.fabienit.biblioapi.model.beans.Reservation;
 import com.fabienit.biblioapi.web.exceptions.FunctionnalException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -58,17 +58,18 @@ public class ReservationManagerImpl implements ReservationManager {
     }
 
     /**
-     *
+     * @return
      */
     @Override
     @Transactional
-    public void deleteById(int id) {
+    public Reservation deleteById(int id) {
         Reservation reservationToDelete = reservationDao.findById(id).get();
         int bookId = reservationToDelete.getAvailableCopie().getId().getBookId();
         int libraryid = reservationToDelete.getAvailableCopie().getId().getLibraryId();
         reservationDao.deleteById(id);
         offsetReservationsPositionAfterDelete(bookId, libraryid, reservationToDelete.getPosition());
         availableCopieManager.updateReservationCount(reservationToDelete.getAvailableCopie().getId().getBookId(), reservationToDelete.getAvailableCopie().getId().getLibraryId());
+        return reservationToDelete;
     }
 
     /**

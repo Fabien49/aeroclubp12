@@ -31,7 +31,8 @@ public class LibraryManagerImpl implements LibraryManager {
     }
 
     @Override
-    public void deleteById(int id) {
+    public Library deleteById(int id) {
         libraryDao.deleteById(id);
+        return null;
     }
 }

@@ -55,6 +55,19 @@ public class Book {
     public Book() {
     }
 
+    public Book(int id, String title, String authorFirstName, String authorLastName, LocalDate publicationDate, String synopsis, String pictureURL, Set<Borrow> borrows, Set<AvailableCopie> availableCopies) {
+        this.id = id;
+        this.title = title;
+        this.authorFirstName = authorFirstName;
+        this.authorLastName = authorLastName;
+        this.publicationDate = publicationDate;
+        this.synopsis = synopsis;
+        this.pictureURL = pictureURL;
+        this.borrows = borrows;
+        this.availableCopies = availableCopies;
+    }
+
+
     public int getId() {
         return id;
     }

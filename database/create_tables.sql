@@ -2,8 +2,8 @@
 -- Base de données :  `bibliop7`
 --
 
-CREATE DATABASE IF NOT EXISTS bibliop7 DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-USE bibliop7;
+CREATE DATABASE IF NOT EXISTS bibliop10 DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE bibliop10;
 
 -- --------------------------------------------------------
 

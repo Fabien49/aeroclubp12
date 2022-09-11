@@ -18,4 +18,6 @@ public interface BorrowDao extends JpaRepository<Borrow, Integer>{
 
     @Query(value = "SELECT * from borrow WHERE book_id = ? AND library_id = ?;", nativeQuery = true)
     List<Borrow> findAllByBookIdAndLibraryId(int book_id, int library_id);
+
+
 }

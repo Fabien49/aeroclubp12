@@ -1,0 +1,15 @@
+/*{
+  "id": 1,
+  "availableCopie": {
+    "id": {
+      "bookId": 1,
+      "libraryId": 1
+    }
+  },
+  "registereduser": {
+    "id": 4
+  },
+  "notificationIsSent": false,
+  "availabilityDate": null,
+  "position": 1
+}*/

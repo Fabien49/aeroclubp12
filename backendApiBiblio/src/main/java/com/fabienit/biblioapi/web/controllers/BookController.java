@@ -83,7 +83,7 @@ public class BookController {
      
         logger.info("Adding new book in database");
         
-        if(bookDao.existsBookByTitleAndPublicationDate(book.getTitle(), book.getPublicationDate()))
+        if(bookDao.existsBookByTitle(book.getTitle()))
             throw new EntityAlreadyExistsException("L'entité livre existe déjà, tilte: " + book.getTitle());
 
         Book bookAdded = bookDao.save(book);

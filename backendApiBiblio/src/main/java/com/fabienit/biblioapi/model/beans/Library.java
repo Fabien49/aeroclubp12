@@ -31,6 +31,12 @@ public class Library {
     public Library() {
     }
 
+    public Library(int id, String name, Set<Borrow> borrows, Set<AvailableCopie> availableCopies) {
+        this.id = id;
+        this.name = name;
+        this.borrows = borrows;
+        this.availableCopies = availableCopies;
+    }
 
     public int getId() {
         return id;

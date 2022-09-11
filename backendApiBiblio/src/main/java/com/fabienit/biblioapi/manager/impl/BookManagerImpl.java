@@ -1,12 +1,11 @@
 package com.fabienit.biblioapi.manager.impl;
 
-import com.fabienit.biblioapi.model.beans.Book;
 import com.fabienit.biblioapi.dao.BookDao;
 import com.fabienit.biblioapi.manager.BookManager;
+import com.fabienit.biblioapi.model.beans.Book;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
@@ -32,12 +31,13 @@ public class BookManagerImpl  implements BookManager {
     }
 
     @Override
-    public Boolean existsBookByTitleAndPublicationDate(String title, LocalDate parutionDate) {
-        return bookDao.existsBookByTitleAndPublicationDate(title, parutionDate);
+    public Boolean existsBookByTitle(String title) {
+        return bookDao.existsBookByTitle(title);
     }
 
     @Override
-    public void deleteById(int id) {
+    public Book deleteById(int id) {
         bookDao.deleteById(id);
+        return null;
     }
 }

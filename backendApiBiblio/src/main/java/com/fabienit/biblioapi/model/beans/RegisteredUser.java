@@ -44,7 +44,17 @@ public class RegisteredUser {
 
     public RegisteredUser() {
     }
-    
+
+    public RegisteredUser(int id, String firstName, String lastName, String email, String password, String roles, Set<Borrow> borrows, Set<Reservation> reservations) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.password = password;
+        this.roles = roles;
+        this.borrows = borrows;
+        this.reservations = reservations;
+    }
 
     public int getId() {
         return id;

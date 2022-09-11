@@ -1,13 +1,13 @@
 package com.fabienit.biblioapi.manager.impl;
 
-import com.fabienit.biblioapi.model.beans.AvailableCopie;
-import com.fabienit.biblioapi.model.beans.AvailableCopieKey;
-import com.fabienit.biblioapi.model.beans.Borrow;
-import com.fabienit.biblioapi.model.beans.Reservation;
 import com.fabienit.biblioapi.dao.AvailableCopieDao;
 import com.fabienit.biblioapi.manager.AvailableCopieManager;
 import com.fabienit.biblioapi.manager.BorrowManager;
 import com.fabienit.biblioapi.manager.ReservationManager;
+import com.fabienit.biblioapi.model.beans.AvailableCopie;
+import com.fabienit.biblioapi.model.beans.AvailableCopieKey;
+import com.fabienit.biblioapi.model.beans.Borrow;
+import com.fabienit.biblioapi.model.beans.Reservation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
