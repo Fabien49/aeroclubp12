@@ -1,0 +1,2 @@
+2022-09-13 16:01:24,763 INFO com.fabienit.bibliobatch.BibliobatchApplication [main] No active profile set, falling back to default profiles: default
+2022-09-13 16:01:29,250 INFO com.fabienit.bibliobatch.BibliobatchApplication [main] Started BibliobatchApplication in 5.782 seconds (JVM running for 6.804)

@@ -1,0 +1,14 @@
+2022-09-13 16:00:56,612 INFO com.fabienit.biblioapi.BiblioApiApplication [main] Starting BiblioApiApplication on FABPC with PID 1000 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10)
+2022-09-13 16:00:56,625 DEBUG com.fabienit.biblioapi.BiblioApiApplication [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-09-13 16:00:56,629 INFO com.fabienit.biblioapi.BiblioApiApplication [main] The following profiles are active: dev
+2022-09-13 16:01:15,692 DEBUG com.fabienit.biblioapi.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$73ad252c [main] Set Swagger2 documentation
+2022-09-13 16:01:17,649 INFO com.fabienit.biblioapi.BiblioApiApplication [main] Started BiblioApiApplication in 22.097 seconds (JVM running for 30.501)
+2022-09-13 16:04:55,664 INFO com.fabienit.biblioapi.web.controllers.ReservationController [http-nio-8001-exec-2] Providing reservation resource from database: all reservation list
+2022-09-13 16:05:08,405 INFO com.fabienit.biblioapi.web.controllers.ReservationController [http-nio-8001-exec-3] Adding new reservation in database
+2022-09-13 16:05:18,281 INFO com.fabienit.biblioapi.web.controllers.ReservationController [http-nio-8001-exec-4] Adding new reservation in database
+2022-09-13 16:05:18,296 INFO com.fabienit.biblioapi.web.controllers.ReservationController [http-nio-8001-exec-4] L'utilisateur a déjà un emprunt en cours concernant ce livre
+2022-09-13 16:09:42,785 INFO com.fabienit.biblioapi.web.controllers.AvailableCopieController [http-nio-8001-exec-5] Providing availablecopie resource from database: availableCopie book_id: 1, library_id: 1
+2022-09-13 17:20:44,497 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table available_copie if exists
+2022-09-13 17:20:44,535 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table book if exists
+2022-09-13 17:20:44,554 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table library if exists
+2022-09-13 17:20:44,571 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table registered_user if exists

@@ -1,0 +1,10 @@
+2022-09-11 21:05:14,959 INFO com.fabienit.biblioweb.BibliowebApplication [main] No active profile set, falling back to default profiles: default
+2022-09-11 21:05:20,524 INFO com.fabienit.biblioweb.BibliowebApplication [main] Started BibliowebApplication in 7.538 seconds (JVM running for 9.958)
+2022-09-11 21:23:26,127 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-1] Reach url: / - GET
+2022-09-11 21:23:31,166 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-8] Reach url: /connexion - GET
+2022-09-11 21:23:38,660 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-10] Reach url: / - GET
+2022-09-11 21:23:44,630 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-3] Reach url: /profile - GET
+2022-09-11 21:23:44,631 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-3] Getting active borrows for current authenticated user
+2022-09-11 21:23:44,632 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-3] Getting authenticated current user id
+2022-09-11 21:23:44,939 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-3] Getting reservations for current authenticated user
+2022-09-11 21:23:44,940 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-3] Getting authenticated current user id

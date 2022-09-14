@@ -1,0 +1,2 @@
+2022-09-13 16:00:50,638 INFO com.fabienit.biblioweb.BibliowebApplication [main] No active profile set, falling back to default profiles: default
+2022-09-13 16:01:07,250 INFO com.fabienit.biblioweb.BibliowebApplication [main] Started BibliowebApplication in 19.322 seconds (JVM running for 27.023)
