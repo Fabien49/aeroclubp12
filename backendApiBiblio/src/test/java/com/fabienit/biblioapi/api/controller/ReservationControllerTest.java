@@ -53,7 +53,7 @@ public class ReservationControllerTest {
     }
 
     @Test
-    public void givenReservationId_whenGetNonExistingReservation_thenReturns200() {
+    public void givenReservationId_whenGetExistingReservation_thenReturns200() {
 
         //given
         int reservationId = 1;

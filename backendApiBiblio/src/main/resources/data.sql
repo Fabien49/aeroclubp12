@@ -98,13 +98,13 @@ VALUES
 INSERT INTO available_copie
 (book_id, library_id, owned_quantity, available_quantity, book_can_be_reserved, nearest_return_date, reservation_count)
 VALUES
-(1, 1, 2, 0, true, '2022-06-01', 2),
+(1, 1, 2, 0, true, '2022-10-01', 2),
 (1, 2, 2, 2, true, null, 0),
 (1, 3, 2, 2, true, null, 0),
-(2, 1, 2, 1, true, '2022-06-11', 0),
+(2, 1, 2, 1, true, '2022-10-11', 0),
 (2, 2, 2, 2, true, null, 0),
 (2, 3, 2, 2, true, null, 0),
-(3, 1, 2, 0, true, '2020-06-11', 0),
+(3, 1, 2, 0, true, '2022-10-11', 0),
 (3, 2, 2, 2, true, null, 0),
 (3, 3, 2, 2, true, null, 0),
 (4, 1, 3, 1, true, null, 0),
@@ -127,54 +127,54 @@ insert into borrow (
 VALUES
   (
     false,
-    '2022-05-01',
+    '2022-08-01',
     false,
-    '2022-06-01',
+    '2022-09-01',
     1,
     1,
     1
   ),
   (
     false,
-    '2022-05-11',
+    '2022-08-11',
     false,
-    '2022-06-11',
+    '2022-09-11',
     3,
     1,
     2
   ),
   (
     false,
-    '2022-01-17',
+    '2022-09-17',
     false,
-    '2022-02-14',
+    '2022-10-14',
     2,
     1,
     1
   ),
   (
     false,
-    '2022-03-17',
+    '2022-09-17',
     false,
-    '2022-04-14',
+    '2022-10-14',
     3,
     1,
     1
   ),
   (
     false,
-    '2022-05-11',
+    '2022-09-11',
     false,
-    '2022-06-11',
+    '2022-10-11',
     3,
     1,
     3
   ),
     (
       false,
-      '2022-04-17',
+      '2022-09-17',
       false,
-      '2022-05-14',
+      '2022-10-14',
       4,
       2,
       2
@@ -185,5 +185,5 @@ VALUES
  insert into reservation
 (avalaibility_date, notification_is_sent, book_id, library_id, registered_user_id, position)
 VALUES
-(null, false, 1, 1, 3, 1),
-('2022-05-26', true, 1, 1, 2, 1);
+('2022-09-26', true, 1, 1, 3, 1),
+('2022-09-26', false, 1, 1, 2, 2);

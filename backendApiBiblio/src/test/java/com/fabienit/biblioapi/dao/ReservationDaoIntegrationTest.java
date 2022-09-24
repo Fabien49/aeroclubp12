@@ -182,4 +182,15 @@ public class ReservationDaoIntegrationTest {
         // THEN
         assertThat(result.size()).isEqualTo(2);
     }
+
+    @Test
+    public void Given_ListReservation_When_findByUserId_Then_shouldReturn1() {
+        // GIVEN
+        int registeredUserId = 2;
+        // WHEN
+        final List<Reservation> result = classUnderTest.findAllByRegisteredUser(registeredUserId);
+        // THEN
+        assertThat(result.size()).isEqualTo(1);
+    }
+
 }

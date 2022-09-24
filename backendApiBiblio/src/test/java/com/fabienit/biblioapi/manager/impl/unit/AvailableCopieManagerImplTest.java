@@ -10,8 +10,8 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.Mock;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import java.time.LocalDate;
@@ -35,13 +35,13 @@ public class AvailableCopieManagerImplTest {
             0,
             true, LocalDate.of(2020,05,12), 2);
 
-    @MockBean
+    @Mock
     private List<Reservation> reservationList;
 
-    @MockBean
+    @Mock
     private ReservationManager reservationManager;
 
-    @MockBean
+    @Mock
     private BorrowManager borrowManager;
 
 

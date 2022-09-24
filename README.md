@@ -194,6 +194,14 @@ spring.profiles.active=dev
 
 Ce fichier se trouve dans le répertoire /database
 
+### Migration des données
+
+1. Elle se fait en mode production, en mode développeur, les fichiers ont été modifiés par rapport à la version précédente
+2. Faire attention à ce que dans le fichier application-prod.properties de l'api, cette propriété soit bien écrite comme suit :
+```properties
+spring.jpa.hibernate.ddl-auto = update
+````
+
 ### Utilisateur enregistré
 
 Identifiant : fabien@gmail.com  

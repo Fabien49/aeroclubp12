@@ -10,8 +10,8 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.Mock;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import java.time.LocalDate;
@@ -28,14 +28,17 @@ import static org.mockito.BDDMockito.given;
 public class ReservationManagerImplTest {
 
     private ReservationManagerImpl classUnderTest;
-    @MockBean
+    @Mock
     private AvailableCopieManager availableCopieManager;
-    @MockBean
+    @Mock
     private BorrowManager borrowManager;
-    @MockBean
+    @Mock
     private ReservationDao reservationDao;
+    @Mock
     private AvailableCopie availableCopie;
+    @Mock
     private List<Borrow> borrowList;
+    @Mock
     private Borrow borrow;
     private List<Reservation> reservationList;
     private Reservation reservation;

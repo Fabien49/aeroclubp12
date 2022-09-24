@@ -1,20 +1,161 @@
-2022-06-07 13:25:44,709 INFO com.fabienit.biblioweb.BibliowebApplication [main] No active profile set, falling back to default profiles: default
-2022-06-07 13:25:52,066 INFO com.fabienit.biblioweb.BibliowebApplication [main] Started BibliowebApplication in 10.043 seconds (JVM running for 13.213)
-2022-06-07 13:25:52,154 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-1] Reach url: / - GET
-2022-06-07 13:27:24,967 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-1] Reach url: /connexion - GET
-2022-06-07 13:27:27,402 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-2] Reach url: / - GET
-2022-06-07 13:27:28,812 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-8] Reach url: /profile - GET
-2022-06-07 13:27:28,812 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-8] Getting active borrows for current authenticated user
-2022-06-07 13:27:28,813 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-8] Getting authenticated current user id
-2022-06-07 13:27:29,087 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-8] Getting reservations for current authenticated user
-2022-06-07 13:27:29,087 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-8] Getting authenticated current user id
-2022-06-07 13:28:39,149 INFO com.fabienit.biblioweb.BibliowebApplication [main] No active profile set, falling back to default profiles: default
-2022-06-07 13:28:45,135 INFO com.fabienit.biblioweb.BibliowebApplication [main] Started BibliowebApplication in 8.41 seconds (JVM running for 10.321)
-2022-06-07 13:29:17,587 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-1] Reach url: / - GET
-2022-06-07 13:29:19,356 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-6] Reach url: /connexion - GET
-2022-06-07 13:29:21,736 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-8] Reach url: / - GET
-2022-06-07 13:29:22,604 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-2] Reach url: /profile - GET
-2022-06-07 13:29:22,605 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-2] Getting active borrows for current authenticated user
-2022-06-07 13:29:22,606 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-2] Getting authenticated current user id
-2022-06-07 13:29:22,876 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-2] Getting reservations for current authenticated user
-2022-06-07 13:29:22,876 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-2] Getting authenticated current user id
+2022-09-18 18:10:50,155 INFO com.fabienit.biblioweb.BibliowebApplication [main] No active profile set, falling back to default profiles: default
+2022-09-18 18:10:55,407 INFO com.fabienit.biblioweb.BibliowebApplication [main] Started BibliowebApplication in 7.136 seconds (JVM running for 8.889)
+2022-09-18 18:16:34,366 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-1] Reach url: / - GET
+2022-09-18 18:16:37,298 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-7] Reach url: /connexion - GET
+2022-09-18 18:16:39,548 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-10] Reach url: / - GET
+2022-09-18 18:16:42,169 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-5] Reach url: /profile - GET
+2022-09-18 18:16:42,171 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-5] Getting active borrows for current authenticated user
+2022-09-18 18:16:42,176 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-5] Getting authenticated current user id
+2022-09-18 18:16:42,405 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-5] Getting reservations for current authenticated user
+2022-09-18 18:16:42,406 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-5] Getting authenticated current user id
+2022-09-18 18:20:18,565 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-1] Reach url: /profile - GET
+2022-09-18 18:20:18,565 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-1] Getting active borrows for current authenticated user
+2022-09-18 18:20:18,565 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-1] Getting authenticated current user id
+2022-09-18 18:20:19,552 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-1] Getting reservations for current authenticated user
+2022-09-18 18:20:19,552 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-1] Getting authenticated current user id
+2022-09-18 18:20:24,055 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-3] Reach url: /disconnect - GET
+2022-09-18 18:20:24,069 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-5] Reach url: /connexion - GET
+2022-09-18 18:20:25,633 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-8] Reach url: / - GET
+2022-09-18 18:20:27,472 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-4] Reach url: /profile - GET
+2022-09-18 18:20:27,474 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-4] Getting active borrows for current authenticated user
+2022-09-18 18:20:27,474 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-4] Getting authenticated current user id
+2022-09-18 18:20:27,580 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-4] Getting reservations for current authenticated user
+2022-09-18 18:20:27,580 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-4] Getting authenticated current user id
+2022-09-18 18:21:26,956 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-7] Reach url: / - GET
+2022-09-18 18:21:36,121 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-4] Reach url: /disconnect - GET
+2022-09-18 18:21:36,139 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-3] Reach url: /connexion - GET
+2022-09-18 18:21:38,838 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-6] Reach url: /connexion - GET
+2022-09-18 18:21:42,607 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-1] Reach url: / - GET
+2022-09-18 18:21:45,215 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-4] Reach url: /connexion - GET
+2022-09-18 18:21:46,990 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-6] Reach url: / - GET
+2022-09-18 18:21:48,217 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-9] Reach url: /profile - GET
+2022-09-18 18:21:48,218 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-9] Getting active borrows for current authenticated user
+2022-09-18 18:21:48,219 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-9] Getting authenticated current user id
+2022-09-18 18:21:48,450 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-9] Getting reservations for current authenticated user
+2022-09-18 18:21:48,450 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-9] Getting authenticated current user id
+2022-09-18 18:22:13,618 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-5] Reach url: /disconnect - GET
+2022-09-18 18:22:13,628 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-6] Reach url: /connexion - GET
+2022-09-18 18:22:18,012 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-10] Reach url: / - GET
+2022-09-18 18:22:19,589 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-3] Reach url: /profile - GET
+2022-09-18 18:22:19,590 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-3] Getting active borrows for current authenticated user
+2022-09-18 18:22:19,590 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-3] Getting authenticated current user id
+2022-09-18 18:22:19,695 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-3] Getting reservations for current authenticated user
+2022-09-18 18:22:19,695 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-3] Getting authenticated current user id
+2022-09-18 18:23:05,266 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-6] Reach url: / - GET
+2022-09-18 18:23:08,229 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-4] Reach url: /profile - GET
+2022-09-18 18:23:08,230 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-4] Getting active borrows for current authenticated user
+2022-09-18 18:23:08,230 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-4] Getting authenticated current user id
+2022-09-18 18:23:09,010 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-4] Getting reservations for current authenticated user
+2022-09-18 18:23:09,010 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-4] Getting authenticated current user id
+2022-09-18 18:24:05,432 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-3] Reach url: /disconnect - GET
+2022-09-18 18:24:05,445 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-5] Reach url: /connexion - GET
+2022-09-18 18:24:08,307 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-8] Reach url: / - GET
+2022-09-18 18:24:09,482 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-5] Reach url: /profile - GET
+2022-09-18 18:24:09,482 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-5] Getting active borrows for current authenticated user
+2022-09-18 18:24:09,482 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-5] Getting authenticated current user id
+2022-09-18 18:24:09,713 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-5] Getting reservations for current authenticated user
+2022-09-18 18:24:09,714 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-5] Getting authenticated current user id
+2022-09-18 18:24:29,975 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-10] Reach url: /profile - POST
+2022-09-18 18:24:30,371 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-7] Reach url: /profile - GET
+2022-09-18 18:24:30,373 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-7] Getting active borrows for current authenticated user
+2022-09-18 18:24:30,374 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-7] Getting authenticated current user id
+2022-09-18 18:24:30,477 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-7] Getting reservations for current authenticated user
+2022-09-18 18:24:30,477 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-7] Getting authenticated current user id
+2022-09-18 18:24:42,844 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-3] Reach url: /profile - GET
+2022-09-18 18:24:42,845 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-3] Getting active borrows for current authenticated user
+2022-09-18 18:24:42,845 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-3] Getting authenticated current user id
+2022-09-18 18:24:42,943 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-3] Getting reservations for current authenticated user
+2022-09-18 18:24:42,945 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-3] Getting authenticated current user id
+2022-09-18 18:25:19,441 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-5] Reach url: / - GET
+2022-09-18 18:25:19,702 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-5] Getting authenticated current user id
+2022-09-18 18:25:19,800 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-5] Getting active borrows for current authenticated user
+2022-09-18 18:25:19,800 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-5] Getting authenticated current user id
+2022-09-18 18:25:49,276 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-4] Reach url: /reserve - POST
+2022-09-18 18:25:49,277 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-4] Getting authenticated current user id
+2022-09-18 18:25:49,433 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-2] Reach url: /profile - GET
+2022-09-18 18:25:49,433 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-2] Getting active borrows for current authenticated user
+2022-09-18 18:25:49,433 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-2] Getting authenticated current user id
+2022-09-18 18:25:49,530 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-2] Getting reservations for current authenticated user
+2022-09-18 18:25:49,530 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-2] Getting authenticated current user id
+2022-09-18 18:25:55,481 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-7] Reach url: /profile - GET
+2022-09-18 18:25:55,482 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-7] Getting active borrows for current authenticated user
+2022-09-18 18:25:55,482 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-7] Getting authenticated current user id
+2022-09-18 18:25:55,576 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-7] Getting reservations for current authenticated user
+2022-09-18 18:25:55,577 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-7] Getting authenticated current user id
+2022-09-18 18:25:57,498 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-6] Reach url: / - GET
+2022-09-18 18:25:57,721 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-6] Getting authenticated current user id
+2022-09-18 18:25:57,871 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-6] Getting active borrows for current authenticated user
+2022-09-18 18:25:57,871 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-6] Getting authenticated current user id
+2022-09-18 18:26:35,389 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-5] Reach url: /profile - GET
+2022-09-18 18:26:35,390 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-5] Getting active borrows for current authenticated user
+2022-09-18 18:26:35,390 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-5] Getting authenticated current user id
+2022-09-18 18:26:35,494 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-5] Getting reservations for current authenticated user
+2022-09-18 18:26:35,494 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-5] Getting authenticated current user id
+2022-09-18 18:26:50,602 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-6] Reach url: /disconnect - GET
+2022-09-18 18:26:50,613 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-3] Reach url: /connexion - GET
+2022-09-18 18:27:04,087 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-7] Reach url: / - GET
+2022-09-18 18:27:05,477 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-9] Reach url: /profile - GET
+2022-09-18 18:27:05,477 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-9] Getting active borrows for current authenticated user
+2022-09-18 18:27:05,477 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-9] Getting authenticated current user id
+2022-09-18 18:27:05,733 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-9] Getting reservations for current authenticated user
+2022-09-18 18:27:05,734 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-9] Getting authenticated current user id
+2022-09-18 18:27:18,281 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-8] Reach url: /profile - POST
+2022-09-18 18:27:18,633 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-4] Reach url: /profile - GET
+2022-09-18 18:27:18,634 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-4] Getting active borrows for current authenticated user
+2022-09-18 18:27:18,635 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-4] Getting authenticated current user id
+2022-09-18 18:27:18,731 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-4] Getting reservations for current authenticated user
+2022-09-18 18:27:18,731 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-4] Getting authenticated current user id
+2022-09-18 20:44:32,932 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-9] Reach url: /disconnect - GET
+2022-09-18 20:44:32,942 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-1] Reach url: /connexion - GET
+2022-09-18 21:33:05,661 INFO com.fabienit.biblioweb.BibliowebApplication [main] No active profile set, falling back to default profiles: default
+2022-09-18 21:33:13,082 INFO com.fabienit.biblioweb.BibliowebApplication [main] Started BibliowebApplication in 9.214 seconds (JVM running for 10.895)
+2022-09-18 21:33:13,394 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-1] Reach url: / - GET
+2022-09-18 21:34:48,555 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-10] Reach url: /connexion - GET
+2022-09-18 21:34:52,379 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-5] Reach url: / - GET
+2022-09-18 21:34:54,705 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-6] Reach url: / - GET
+2022-09-18 21:34:55,098 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-6] Getting authenticated current user id
+2022-09-18 21:34:55,343 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-6] Getting active borrows for current authenticated user
+2022-09-18 21:34:55,344 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-6] Getting authenticated current user id
+2022-09-18 21:35:12,710 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-9] Reach url: /profile - GET
+2022-09-18 21:35:12,716 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-9] Getting active borrows for current authenticated user
+2022-09-18 21:35:12,716 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-9] Getting authenticated current user id
+2022-09-18 21:35:12,822 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-9] Getting reservations for current authenticated user
+2022-09-18 21:35:12,822 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-9] Getting authenticated current user id
+2022-09-18 21:35:40,617 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-10] Reach url: /profile - GET
+2022-09-18 21:35:40,618 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-10] Getting active borrows for current authenticated user
+2022-09-18 21:35:40,618 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-10] Getting authenticated current user id
+2022-09-18 21:35:40,719 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-10] Getting reservations for current authenticated user
+2022-09-18 21:35:40,720 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-10] Getting authenticated current user id
+2022-09-18 21:35:45,016 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-1] Reach url: / - GET
+2022-09-18 21:35:45,228 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-1] Getting authenticated current user id
+2022-09-18 21:35:45,321 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-1] Getting active borrows for current authenticated user
+2022-09-18 21:35:45,322 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-1] Getting authenticated current user id
+2022-09-18 21:35:49,349 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-7] Reach url: /reserve - POST
+2022-09-18 21:35:49,350 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-7] Getting authenticated current user id
+2022-09-18 21:35:49,611 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-10] Reach url: /profile - GET
+2022-09-18 21:35:49,612 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-10] Getting active borrows for current authenticated user
+2022-09-18 21:35:49,612 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-10] Getting authenticated current user id
+2022-09-18 21:35:49,712 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-10] Getting reservations for current authenticated user
+2022-09-18 21:35:49,712 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-10] Getting authenticated current user id
+2022-09-18 21:35:54,133 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-4] Reach url: /profile - GET
+2022-09-18 21:35:54,133 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-4] Getting active borrows for current authenticated user
+2022-09-18 21:35:54,134 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-4] Getting authenticated current user id
+2022-09-18 21:35:54,235 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-4] Getting reservations for current authenticated user
+2022-09-18 21:35:54,236 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-4] Getting authenticated current user id
+2022-09-18 21:35:55,358 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-5] Reach url: / - GET
+2022-09-18 21:35:55,572 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-5] Getting authenticated current user id
+2022-09-18 21:35:55,668 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-5] Getting active borrows for current authenticated user
+2022-09-18 21:35:55,668 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-5] Getting authenticated current user id
+2022-09-18 21:36:04,878 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-1] Reach url: /reserve - POST
+2022-09-18 21:36:04,878 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-1] Getting authenticated current user id
+2022-09-18 21:36:05,006 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-4] Reach url: /profile - GET
+2022-09-18 21:36:05,007 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-4] Getting active borrows for current authenticated user
+2022-09-18 21:36:05,007 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-4] Getting authenticated current user id
+2022-09-18 21:36:05,120 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-4] Getting reservations for current authenticated user
+2022-09-18 21:36:05,120 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-4] Getting authenticated current user id
+2022-09-18 21:37:39,744 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-1] Reach url: /profile - POST
+2022-09-18 21:37:40,004 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-4] Reach url: /profile - GET
+2022-09-18 21:37:40,005 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-4] Getting active borrows for current authenticated user
+2022-09-18 21:37:40,005 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-4] Getting authenticated current user id
+2022-09-18 21:37:40,104 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-4] Getting reservations for current authenticated user
+2022-09-18 21:37:40,104 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-4] Getting authenticated current user id

@@ -178,6 +178,22 @@ public class BorrowControllerTest {
     }
 
     @Test
+    public void givenBorrowAndBorrowId_whenPutExtendBorrow_thenReturns400() {
+
+        //given
+        int borrowId = 2;
+        ResponseEntity<Borrow> borrowResponseEntity = testRestTemplate.getForEntity("/borrows/"+borrowId, Borrow.class);
+        Borrow borrowToSave = borrowResponseEntity.getBody();
+        HttpEntity<Borrow> request = new HttpEntity<>(borrowToSave);
+
+        //when
+        ResponseEntity<Borrow> responseEntity = testRestTemplate.exchange("/borrows/extend/"+borrowId, HttpMethod.PUT,request, Borrow.class);
+
+        //then
+        assertEquals(BAD_REQUEST, responseEntity.getStatusCode());
+    }
+
+    @Test
     public void givenBorrowAndBorrowId_whenPutReturnBorrow_thenReturns200() {
 
         //given

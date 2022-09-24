@@ -1,7 +1,0 @@
-2022-08-14 22:05:40,447 INFO com.fabienit.biblioapi.BiblioApiApplication [main] Starting BiblioApiApplication on FABPC with PID 16576 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10)
-2022-08-14 22:05:40,462 DEBUG com.fabienit.biblioapi.BiblioApiApplication [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
-2022-08-14 22:05:40,463 INFO com.fabienit.biblioapi.BiblioApiApplication [main] The following profiles are active: dev
-2022-08-14 22:06:00,813 DEBUG com.fabienit.biblioapi.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$cbd76cae [main] Set Swagger2 documentation
-2022-08-14 22:06:03,388 INFO com.fabienit.biblioapi.BiblioApiApplication [main] Started BiblioApiApplication in 23.667 seconds (JVM running for 25.537)
-2022-08-14 22:06:51,391 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-1] Providing borrow resource from database: borrow id: 999
-2022-08-14 22:07:11,694 INFO com.fabienit.biblioapi.web.controllers.BorrowController [http-nio-8001-exec-3] Providing borrow resource from database: borrow id: 999

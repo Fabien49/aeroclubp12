@@ -125,15 +125,15 @@ insert into borrow (
     registered_user_id
   )
 VALUES
---  (
---    false,
---    '2022-09-01',
---    false,
---    '2022-10-01',
---    1,
---    1,
---    1
---  ),
+  (
+    false,
+   '2022-09-01',
+    false,
+    '2022-10-01',
+    1,
+    1,
+    1
+  ),
   (
     false,
     '2022-05-11',

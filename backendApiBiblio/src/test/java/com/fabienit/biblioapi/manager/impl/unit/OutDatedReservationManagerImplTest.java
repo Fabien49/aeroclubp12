@@ -11,8 +11,8 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.Mock;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import java.time.LocalDate;
@@ -28,12 +28,17 @@ import static org.mockito.Mockito.doReturn;
 public class OutDatedReservationManagerImplTest {
 
     private OutDatedReservationManagerImpl classUnderTest;
-    @MockBean
+    @Mock
     private ReservationManager reservationManager;
+    @Mock
     private AvailableCopie availableCopie;
+    @Mock
     private List<Borrow> borrowList;
+    @Mock
     private Borrow borrow;
+    @Mock
     private List<Reservation> reservationList;
+    @Mock
     private Reservation reservation;
 
     /**

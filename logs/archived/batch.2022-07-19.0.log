@@ -1,9 +1,0 @@
-2022-07-19 11:56:53,066 INFO com.fabienit.biblioapi.BiblioApiApplication [main] Starting BiblioApiApplication on FABPC with PID 7816 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10)
-2022-07-19 11:56:53,077 DEBUG com.fabienit.biblioapi.BiblioApiApplication [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
-2022-07-19 11:56:53,077 INFO com.fabienit.biblioapi.BiblioApiApplication [main] The following profiles are active: dev
-2022-07-19 11:57:08,094 DEBUG com.fabienit.biblioapi.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$b01e52a3 [main] Set Swagger2 documentation
-2022-07-19 11:57:10,033 INFO com.fabienit.biblioapi.BiblioApiApplication [main] Started BiblioApiApplication in 17.554 seconds (JVM running for 18.469)
-2022-07-19 11:57:30,285 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table available_copie if exists
-2022-07-19 11:57:30,288 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table book if exists
-2022-07-19 11:57:30,301 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table library if exists
-2022-07-19 11:57:30,301 ERROR org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000478: Unsuccessful: drop table registered_user if exists

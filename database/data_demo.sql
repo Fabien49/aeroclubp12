@@ -1,7 +1,8 @@
 -- Create user
-insert into registered_user (id INT PRIMARY KEY NOT NULL AUTO_INCREMENT, email, first_name, last_name, password,roles)
+INSERT INTO registered_user ( id , email, first_name, last_name, password, roles)
 VALUES
   (
+    1,
   	'fabien@gmail.com',
     'Fabien',
     'Chapeau',
@@ -9,6 +10,7 @@ VALUES
     'USER'
   ),
   (
+    2,
   	'test1@gmail.com',
     'userName',
     'userLastName',
@@ -16,6 +18,7 @@ VALUES
     'USER'
   ),
   (
+    3,
   	'test2@gmail.com',
     'userName',
     'userLastName',
@@ -23,6 +26,7 @@ VALUES
     'USER'
   ),
   (
+    4,
   	'test3@gmail.com',
     'userName',
     'userLastName',
@@ -32,7 +36,6 @@ VALUES
 
 -- Create book
 insert into book (
-    id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
     author_first_name,
     author_last_name,
     pictureurl,
@@ -84,7 +87,7 @@ VALUES
 
 
 -- Create Library
-insert into library (id INT PRIMARY KEY NOT NULL AUTO_INCREMENT, name)
+insert into library (name)
 VALUES
   ('Toussaint'),
   ('Justice'),
@@ -93,27 +96,26 @@ VALUES
 -- Create Available copie
 
 INSERT INTO available_copie
-(book_id, library_id, owned_quantity, available_quantity)
+(book_id, library_id, owned_quantity, available_quantity, book_can_be_reserved, nearest_return_date, reservation_count)
 VALUES
-(1, 1, 2, 0),
-(1, 2, 2, 2),
-(1, 3, 2, 2),
-(2, 1, 2, 1),
-(2, 2, 2, 2),
-(2, 3, 2, 2),
-(3, 1, 2, 0),
-(3, 2, 2, 2),
-(3, 3, 2, 2),
-(4, 1, 3, 1),
-(4, 2, 2, 1),
-(4, 3, 2, 1),
-(5, 1, 4, 2),
-(5, 2, 4, 3),
-(5, 3, 3, 2);
+(1, 1, 4, 0, true, '2022-06-01', 6),
+(1, 2, 2, 2, true, null, 0),
+(1, 3, 2, 2, true, null, 0),
+(2, 1, 2, 1, true, '2022-06-11', 0),
+(2, 2, 2, 2, true, null, 0),
+(2, 3, 2, 2, true, null, 0),
+(3, 1, 2, 0, true, '2020-06-11', 0),
+(3, 2, 2, 2, true, null, 0),
+(3, 3, 2, 2, true, null, 0),
+(4, 1, 3, 1, true, null, 0),
+(4, 2, 2, 1, true, null, 0),
+(4, 3, 2, 1, true, null, 0),
+(5, 1, 4, 2, true, null, 0),
+(5, 2, 4, 3, true, null, 0),
+(5, 3, 3, 2, true, null, 0);
 
 -- Create Borrow
 insert into borrow (
-    id INT PRIMARY KEY NOT NULL AUTO_INCREMENT ,
     book_returned,
     borrow_date,
     extended_duration,
@@ -125,55 +127,63 @@ insert into borrow (
 VALUES
   (
     false,
-    '2022-02-01',
+   '2022-09-01',
     false,
-    '2022-03-01',
+    '2022-10-01',
     1,
     1,
     1
   ),
   (
     false,
-    '2021-11-01',
+    '2022-05-11',
     false,
-    '2021-12-01',
-    1,
+    '2022-06-11',
+    3,
     1,
     2
   ),
   (
     false,
-    '2022-01-12',
+    '2022-01-17',
     false,
-    '2022-02-12',
+    '2022-02-14',
     2,
     1,
     1
   ),
   (
     false,
-    '2021-12-17',
+    '2022-03-17',
     false,
-    '2022-01-17',
+    '2022-04-14',
     3,
     1,
     1
   ),
   (
     false,
-    '2021-10-17',
+    '2022-05-11',
     false,
-    '2021-11-14',
+    '2022-06-11',
     3,
     1,
     3
   ),
     (
       false,
-      '2021-06-17',
+      '2022-04-17',
       false,
-      '2021-07-14',
+      '2022-05-14',
       4,
       2,
       2
-    );
+    )
+    ;
+
+    -- Create Reservation
+ insert into reservation
+(avalaibility_date, notification_is_sent, book_id, library_id, registered_user_id, position)
+VALUES
+('2022-09-26', false, 1, 1, 3, 1),
+('2022-09-26', true, 1, 1, 2, 2);
