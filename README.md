@@ -1,10 +1,10 @@
-#Bibliothequeocp10
+#Bibliothequep10
 
 ---
 
 ## Présentation
 
-Bibliothequeocp10 est un site web dédié aux usagers du réseau de bibliothèques du même nom, cette application web JEE a été réalisée dans le cadre du parcours Développeur d'application Java de la plateforme d'enseignement OpenClassrooms.
+Bibliothequep10 est un site web dédié aux usagers du réseau de bibliothèques du même nom, cette application web JEE a été réalisée dans le cadre du parcours Développeur d'application Java de la plateforme d'enseignement OpenClassrooms.
 
 Les compétences évaluées sont les suivantes:
 
@@ -36,7 +36,7 @@ Les fonctions suivantes sont implémentées:
 ### Paramétrage
 
 Chaque service dispose à l'intérieur de son répertoire, à l'emplacement /src/main/resources d'un fichier application.properties. Un fichier application-prod.properties et application-dev.properties sont en plus au niveau de l'API. 
-Ceux-ci permetent de paramétrer certaines propriétés comme l'exemple ci-dessous:
+Ceux-ci permettent de paramétrer certaines propriétés comme l'exemple ci-dessous:
 
 #### Port
 
