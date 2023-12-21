@@ -1,0 +1,495 @@
+2023-11-14 14:40:25,187 INFO com.fabienit.flyingclub.AeroclubApiApplication [main] Starting AeroclubApiApplication on FABPC with PID 1520 (started by FaB PC in C:\Users\FaB\Git\Projet 12\aeroclubp12)
+2023-11-14 14:40:25,205 DEBUG com.fabienit.flyingclub.AeroclubApiApplication [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2023-11-14 14:40:25,205 INFO com.fabienit.flyingclub.AeroclubApiApplication [main] The following profiles are active: dev
+2023-11-14 14:40:33,230 DEBUG com.fabienit.flyingclub.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$c72a3f14 [main] Set Swagger2 documentation
+2023-11-14 14:40:34,126 INFO com.fabienit.flyingclub.AeroclubApiApplication [main] Started AeroclubApiApplication in 9.494 seconds (JVM running for 11.549)
+2023-11-14 15:26:05,802 INFO com.fabienit.flyingclub.AeroclubApiApplication [main] Starting AeroclubApiApplication on FABPC with PID 14876 (started by FaB PC in C:\Users\FaB\Git\Projet 12\aeroclubp12)
+2023-11-14 15:26:05,805 DEBUG com.fabienit.flyingclub.AeroclubApiApplication [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2023-11-14 15:26:05,806 INFO com.fabienit.flyingclub.AeroclubApiApplication [main] The following profiles are active: dev
+2023-11-14 15:26:10,708 ERROR org.springframework.boot.SpringApplication [main] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Initialization of bean failed; nested exception is org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #3 of URL [file:/C:/Users/FaB/Git/Projet%2012/aeroclubp12/backendApiAeroclub/target/classes/data.sql]: insert into revision ( levels, pressure, bodywork, date, aircraft_id ) VALUES ( true, true, false, '2023-09-26', 1 ), ( true, true, true, '2023-09-30', 3 ), ( true, true, false, '2023-10-10', 2 ), ( true, true, false, '2023-10-26', 4 ); nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "REVISION" non trouvée
+Table "REVISION" not found; SQL statement:
+insert into revision ( levels, pressure, bodywork, date, aircraft_id ) VALUES ( true, true, false, '2023-09-26', 1 ), ( true, true, true, '2023-09-30', 3 ), ( true, true, false, '2023-10-10', 2 ), ( true, true, false, '2023-10-26', 4 ) [42102-200]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1108)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:868)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at com.fabienit.flyingclub.AeroclubApiApplication.main(AeroclubApiApplication.java:24)
+Caused by: org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #3 of URL [file:/C:/Users/FaB/Git/Projet%2012/aeroclubp12/backendApiAeroclub/target/classes/data.sql]: insert into revision ( levels, pressure, bodywork, date, aircraft_id ) VALUES ( true, true, false, '2023-09-26', 1 ), ( true, true, true, '2023-09-30', 3 ), ( true, true, false, '2023-10-10', 2 ), ( true, true, false, '2023-10-26', 4 ); nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "REVISION" non trouvée
+Table "REVISION" not found; SQL statement:
+insert into revision ( levels, pressure, bodywork, date, aircraft_id ) VALUES ( true, true, false, '2023-09-26', 1 ), ( true, true, true, '2023-09-30', 3 ), ( true, true, false, '2023-10-10', 2 ), ( true, true, false, '2023-10-26', 4 ) [42102-200]
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:626)
+	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254)
+	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:49)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializer.runScripts(DataSourceInitializer.java:202)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializer.initSchema(DataSourceInitializer.java:119)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker.onApplicationEvent(DataSourceInitializerInvoker.java:91)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker.onApplicationEvent(DataSourceInitializerInvoker.java:38)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:403)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:360)
+	at org.springframework.boot.autoconfigure.orm.jpa.DataSourceInitializedPublisher.publishEventIfRequired(DataSourceInitializedPublisher.java:99)
+	at org.springframework.boot.autoconfigure.orm.jpa.DataSourceInitializedPublisher.postProcessAfterInitialization(DataSourceInitializedPublisher.java:90)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1807)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595)
+	... 15 common frames omitted
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "REVISION" non trouvée
+Table "REVISION" not found; SQL statement:
+insert into revision ( levels, pressure, bodywork, date, aircraft_id ) VALUES ( true, true, false, '2023-09-26', 1 ), ( true, true, true, '2023-09-30', 3 ), ( true, true, false, '2023-10-10', 2 ), ( true, true, false, '2023-10-26', 4 ) [42102-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.command.Parser.readTableOrView(Parser.java:7628)
+	at org.h2.command.Parser.readTableOrView(Parser.java:7599)
+	at org.h2.command.Parser.parseInsert(Parser.java:1747)
+	at org.h2.command.Parser.parsePrepared(Parser.java:954)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:605)
+	... 31 common frames omitted
+2023-11-14 15:27:10,143 INFO com.fabienit.flyingclub.AeroclubApiApplication [main] Starting AeroclubApiApplication on FABPC with PID 7928 (started by FaB PC in C:\Users\FaB\Git\Projet 12\aeroclubp12)
+2023-11-14 15:27:10,147 DEBUG com.fabienit.flyingclub.AeroclubApiApplication [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2023-11-14 15:27:10,147 INFO com.fabienit.flyingclub.AeroclubApiApplication [main] The following profiles are active: dev
+2023-11-14 15:27:15,048 ERROR org.springframework.boot.SpringApplication [main] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Initialization of bean failed; nested exception is org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #3 of URL [file:/C:/Users/FaB/Git/Projet%2012/aeroclubp12/backendApiAeroclub/target/classes/data.sql]: insert into revisions ( levels, pressure, bodywork, date, aircraft_id ) VALUES ( true, true, false, '2023-09-26', 1 ), ( true, true, true, '2023-09-30', 3 ), ( true, true, false, '2023-10-10', 2 ), ( true, true, false, '2023-10-26', 4 ); nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "REVISIONS" non trouvée
+Table "REVISIONS" not found; SQL statement:
+insert into revisions ( levels, pressure, bodywork, date, aircraft_id ) VALUES ( true, true, false, '2023-09-26', 1 ), ( true, true, true, '2023-09-30', 3 ), ( true, true, false, '2023-10-10', 2 ), ( true, true, false, '2023-10-26', 4 ) [42102-200]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1108)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:868)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at com.fabienit.flyingclub.AeroclubApiApplication.main(AeroclubApiApplication.java:24)
+Caused by: org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #3 of URL [file:/C:/Users/FaB/Git/Projet%2012/aeroclubp12/backendApiAeroclub/target/classes/data.sql]: insert into revisions ( levels, pressure, bodywork, date, aircraft_id ) VALUES ( true, true, false, '2023-09-26', 1 ), ( true, true, true, '2023-09-30', 3 ), ( true, true, false, '2023-10-10', 2 ), ( true, true, false, '2023-10-26', 4 ); nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "REVISIONS" non trouvée
+Table "REVISIONS" not found; SQL statement:
+insert into revisions ( levels, pressure, bodywork, date, aircraft_id ) VALUES ( true, true, false, '2023-09-26', 1 ), ( true, true, true, '2023-09-30', 3 ), ( true, true, false, '2023-10-10', 2 ), ( true, true, false, '2023-10-26', 4 ) [42102-200]
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:626)
+	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254)
+	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:49)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializer.runScripts(DataSourceInitializer.java:202)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializer.initSchema(DataSourceInitializer.java:119)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker.onApplicationEvent(DataSourceInitializerInvoker.java:91)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker.onApplicationEvent(DataSourceInitializerInvoker.java:38)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:403)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:360)
+	at org.springframework.boot.autoconfigure.orm.jpa.DataSourceInitializedPublisher.publishEventIfRequired(DataSourceInitializedPublisher.java:99)
+	at org.springframework.boot.autoconfigure.orm.jpa.DataSourceInitializedPublisher.postProcessAfterInitialization(DataSourceInitializedPublisher.java:90)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1807)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595)
+	... 15 common frames omitted
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "REVISIONS" non trouvée
+Table "REVISIONS" not found; SQL statement:
+insert into revisions ( levels, pressure, bodywork, date, aircraft_id ) VALUES ( true, true, false, '2023-09-26', 1 ), ( true, true, true, '2023-09-30', 3 ), ( true, true, false, '2023-10-10', 2 ), ( true, true, false, '2023-10-26', 4 ) [42102-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.command.Parser.readTableOrView(Parser.java:7628)
+	at org.h2.command.Parser.readTableOrView(Parser.java:7599)
+	at org.h2.command.Parser.parseInsert(Parser.java:1747)
+	at org.h2.command.Parser.parsePrepared(Parser.java:954)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:605)
+	... 31 common frames omitted
+2023-11-14 15:27:46,197 INFO com.fabienit.flyingclub.AeroclubApiApplication [main] Starting AeroclubApiApplication on FABPC with PID 2240 (started by FaB PC in C:\Users\FaB\Git\Projet 12\aeroclubp12)
+2023-11-14 15:27:46,201 DEBUG com.fabienit.flyingclub.AeroclubApiApplication [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2023-11-14 15:27:46,201 INFO com.fabienit.flyingclub.AeroclubApiApplication [main] The following profiles are active: dev
+2023-11-14 15:27:51,052 ERROR org.springframework.boot.SpringApplication [main] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Initialization of bean failed; nested exception is org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #4 of URL [file:/C:/Users/FaB/Git/Projet%2012/aeroclubp12/backendApiAeroclub/target/classes/data.sql]: insert into workshop ( motorChange, helixChange, other, date, aircraft_id ) VALUES ( true, true, '', '2023-09-13', 1 ), ( true, true, '', '2023-09-29', 3 ), ( true, true, '', '2023-10-09', 2 ), ( true, true, '', '2023-10-306', 4 ); nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Colonne "MOTORCHANGE" non trouvée
+Column "MOTORCHANGE" not found; SQL statement:
+insert into workshop ( motorChange, helixChange, other, date, aircraft_id ) VALUES ( true, true, '', '2023-09-13', 1 ), ( true, true, '', '2023-09-29', 3 ), ( true, true, '', '2023-10-09', 2 ), ( true, true, '', '2023-10-306', 4 ) [42122-200]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1108)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:868)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at com.fabienit.flyingclub.AeroclubApiApplication.main(AeroclubApiApplication.java:24)
+Caused by: org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #4 of URL [file:/C:/Users/FaB/Git/Projet%2012/aeroclubp12/backendApiAeroclub/target/classes/data.sql]: insert into workshop ( motorChange, helixChange, other, date, aircraft_id ) VALUES ( true, true, '', '2023-09-13', 1 ), ( true, true, '', '2023-09-29', 3 ), ( true, true, '', '2023-10-09', 2 ), ( true, true, '', '2023-10-306', 4 ); nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Colonne "MOTORCHANGE" non trouvée
+Column "MOTORCHANGE" not found; SQL statement:
+insert into workshop ( motorChange, helixChange, other, date, aircraft_id ) VALUES ( true, true, '', '2023-09-13', 1 ), ( true, true, '', '2023-09-29', 3 ), ( true, true, '', '2023-10-09', 2 ), ( true, true, '', '2023-10-306', 4 ) [42122-200]
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:626)
+	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254)
+	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:49)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializer.runScripts(DataSourceInitializer.java:202)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializer.initSchema(DataSourceInitializer.java:119)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker.onApplicationEvent(DataSourceInitializerInvoker.java:91)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker.onApplicationEvent(DataSourceInitializerInvoker.java:38)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:403)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:360)
+	at org.springframework.boot.autoconfigure.orm.jpa.DataSourceInitializedPublisher.publishEventIfRequired(DataSourceInitializedPublisher.java:99)
+	at org.springframework.boot.autoconfigure.orm.jpa.DataSourceInitializedPublisher.postProcessAfterInitialization(DataSourceInitializedPublisher.java:90)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1807)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595)
+	... 15 common frames omitted
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Colonne "MOTORCHANGE" non trouvée
+Column "MOTORCHANGE" not found; SQL statement:
+insert into workshop ( motorChange, helixChange, other, date, aircraft_id ) VALUES ( true, true, '', '2023-09-13', 1 ), ( true, true, '', '2023-09-29', 3 ), ( true, true, '', '2023-10-09', 2 ), ( true, true, '', '2023-10-306', 4 ) [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.table.Table.getColumn(Table.java:703)
+	at org.h2.command.Parser.parseColumn(Parser.java:1450)
+	at org.h2.command.Parser.parseColumnList(Parser.java:1435)
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1804)
+	at org.h2.command.Parser.parseInsert(Parser.java:1749)
+	at org.h2.command.Parser.parsePrepared(Parser.java:954)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:605)
+	... 31 common frames omitted
+2023-11-14 15:29:07,890 INFO com.fabienit.flyingclub.AeroclubApiApplication [main] Starting AeroclubApiApplication on FABPC with PID 11576 (started by FaB PC in C:\Users\FaB\Git\Projet 12\aeroclubp12)
+2023-11-14 15:29:07,894 DEBUG com.fabienit.flyingclub.AeroclubApiApplication [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2023-11-14 15:29:07,894 INFO com.fabienit.flyingclub.AeroclubApiApplication [main] The following profiles are active: dev
+2023-11-14 15:29:12,782 ERROR org.springframework.boot.SpringApplication [main] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Initialization of bean failed; nested exception is org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #4 of URL [file:/C:/Users/FaB/Git/Projet%2012/aeroclubp12/backendApiAeroclub/target/classes/data.sql]: insert into workshop ( motor_change, helix_change, other, date, aircraft_id ) VALUES ( true, true, '', '2023-09-13', 1 ), ( true, true, '', '2023-09-29', 3 ), ( true, true, '', '2023-10-09', 2 ), ( true, true, '', '2023-10-306', 4 ); nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Colonne "AIRCRAFT_ID" non trouvée
+Column "AIRCRAFT_ID" not found; SQL statement:
+insert into workshop ( motor_change, helix_change, other, date, aircraft_id ) VALUES ( true, true, '', '2023-09-13', 1 ), ( true, true, '', '2023-09-29', 3 ), ( true, true, '', '2023-10-09', 2 ), ( true, true, '', '2023-10-306', 4 ) [42122-200]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1108)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:868)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at com.fabienit.flyingclub.AeroclubApiApplication.main(AeroclubApiApplication.java:24)
+Caused by: org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #4 of URL [file:/C:/Users/FaB/Git/Projet%2012/aeroclubp12/backendApiAeroclub/target/classes/data.sql]: insert into workshop ( motor_change, helix_change, other, date, aircraft_id ) VALUES ( true, true, '', '2023-09-13', 1 ), ( true, true, '', '2023-09-29', 3 ), ( true, true, '', '2023-10-09', 2 ), ( true, true, '', '2023-10-306', 4 ); nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Colonne "AIRCRAFT_ID" non trouvée
+Column "AIRCRAFT_ID" not found; SQL statement:
+insert into workshop ( motor_change, helix_change, other, date, aircraft_id ) VALUES ( true, true, '', '2023-09-13', 1 ), ( true, true, '', '2023-09-29', 3 ), ( true, true, '', '2023-10-09', 2 ), ( true, true, '', '2023-10-306', 4 ) [42122-200]
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:626)
+	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254)
+	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:49)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializer.runScripts(DataSourceInitializer.java:202)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializer.initSchema(DataSourceInitializer.java:119)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker.onApplicationEvent(DataSourceInitializerInvoker.java:91)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker.onApplicationEvent(DataSourceInitializerInvoker.java:38)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:403)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:360)
+	at org.springframework.boot.autoconfigure.orm.jpa.DataSourceInitializedPublisher.publishEventIfRequired(DataSourceInitializedPublisher.java:99)
+	at org.springframework.boot.autoconfigure.orm.jpa.DataSourceInitializedPublisher.postProcessAfterInitialization(DataSourceInitializedPublisher.java:90)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1807)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595)
+	... 15 common frames omitted
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Colonne "AIRCRAFT_ID" non trouvée
+Column "AIRCRAFT_ID" not found; SQL statement:
+insert into workshop ( motor_change, helix_change, other, date, aircraft_id ) VALUES ( true, true, '', '2023-09-13', 1 ), ( true, true, '', '2023-09-29', 3 ), ( true, true, '', '2023-10-09', 2 ), ( true, true, '', '2023-10-306', 4 ) [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.table.Table.getColumn(Table.java:703)
+	at org.h2.command.Parser.parseColumn(Parser.java:1450)
+	at org.h2.command.Parser.parseColumnList(Parser.java:1435)
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1804)
+	at org.h2.command.Parser.parseInsert(Parser.java:1749)
+	at org.h2.command.Parser.parsePrepared(Parser.java:954)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:605)
+	... 31 common frames omitted
+2023-11-14 15:31:30,470 INFO com.fabienit.flyingclub.AeroclubApiApplication [main] Starting AeroclubApiApplication on FABPC with PID 12316 (started by FaB PC in C:\Users\FaB\Git\Projet 12\aeroclubp12)
+2023-11-14 15:31:30,474 DEBUG com.fabienit.flyingclub.AeroclubApiApplication [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2023-11-14 15:31:30,474 INFO com.fabienit.flyingclub.AeroclubApiApplication [main] The following profiles are active: dev
+2023-11-14 15:31:35,636 ERROR org.springframework.boot.SpringApplication [main] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Initialization of bean failed; nested exception is org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #4 of URL [file:/C:/Users/FaB/Git/Projet%2012/aeroclubp12/backendApiAeroclub/target/classes/data.sql]: insert into workshop ( motor_change, helix_change, other, date, aircraft_id ) VALUES ( true, true, '', '2023-09-13', 1 ), ( true, true, '', '2023-09-29', 3 ), ( true, true, '', '2023-10-09', 2 ), ( true, true, '', '2023-10-306', 4 ); nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Colonne "AIRCRAFT_ID" non trouvée
+Column "AIRCRAFT_ID" not found; SQL statement:
+insert into workshop ( motor_change, helix_change, other, date, aircraft_id ) VALUES ( true, true, '', '2023-09-13', 1 ), ( true, true, '', '2023-09-29', 3 ), ( true, true, '', '2023-10-09', 2 ), ( true, true, '', '2023-10-306', 4 ) [42122-200]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1108)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:868)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at com.fabienit.flyingclub.AeroclubApiApplication.main(AeroclubApiApplication.java:24)
+Caused by: org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #4 of URL [file:/C:/Users/FaB/Git/Projet%2012/aeroclubp12/backendApiAeroclub/target/classes/data.sql]: insert into workshop ( motor_change, helix_change, other, date, aircraft_id ) VALUES ( true, true, '', '2023-09-13', 1 ), ( true, true, '', '2023-09-29', 3 ), ( true, true, '', '2023-10-09', 2 ), ( true, true, '', '2023-10-306', 4 ); nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Colonne "AIRCRAFT_ID" non trouvée
+Column "AIRCRAFT_ID" not found; SQL statement:
+insert into workshop ( motor_change, helix_change, other, date, aircraft_id ) VALUES ( true, true, '', '2023-09-13', 1 ), ( true, true, '', '2023-09-29', 3 ), ( true, true, '', '2023-10-09', 2 ), ( true, true, '', '2023-10-306', 4 ) [42122-200]
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:626)
+	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254)
+	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:49)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializer.runScripts(DataSourceInitializer.java:202)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializer.initSchema(DataSourceInitializer.java:119)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker.onApplicationEvent(DataSourceInitializerInvoker.java:91)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker.onApplicationEvent(DataSourceInitializerInvoker.java:38)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:403)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:360)
+	at org.springframework.boot.autoconfigure.orm.jpa.DataSourceInitializedPublisher.publishEventIfRequired(DataSourceInitializedPublisher.java:99)
+	at org.springframework.boot.autoconfigure.orm.jpa.DataSourceInitializedPublisher.postProcessAfterInitialization(DataSourceInitializedPublisher.java:90)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1807)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595)
+	... 15 common frames omitted
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Colonne "AIRCRAFT_ID" non trouvée
+Column "AIRCRAFT_ID" not found; SQL statement:
+insert into workshop ( motor_change, helix_change, other, date, aircraft_id ) VALUES ( true, true, '', '2023-09-13', 1 ), ( true, true, '', '2023-09-29', 3 ), ( true, true, '', '2023-10-09', 2 ), ( true, true, '', '2023-10-306', 4 ) [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.table.Table.getColumn(Table.java:703)
+	at org.h2.command.Parser.parseColumn(Parser.java:1450)
+	at org.h2.command.Parser.parseColumnList(Parser.java:1435)
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1804)
+	at org.h2.command.Parser.parseInsert(Parser.java:1749)
+	at org.h2.command.Parser.parsePrepared(Parser.java:954)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:605)
+	... 31 common frames omitted
+2023-11-14 15:34:05,520 INFO com.fabienit.flyingclub.AeroclubApiApplication [main] Starting AeroclubApiApplication on FABPC with PID 16556 (started by FaB PC in C:\Users\FaB\Git\Projet 12\aeroclubp12)
+2023-11-14 15:34:05,524 DEBUG com.fabienit.flyingclub.AeroclubApiApplication [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2023-11-14 15:34:05,524 INFO com.fabienit.flyingclub.AeroclubApiApplication [main] The following profiles are active: dev
+2023-11-14 15:34:14,177 ERROR org.springframework.boot.SpringApplication [main] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Initialization of bean failed; nested exception is org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #4 of URL [file:/C:/Users/FaB/Git/Projet%2012/aeroclubp12/backendApiAeroclub/target/classes/data.sql]: insert into workshop ( motor_change, helix_change, other, date, aircraft_id ) VALUES ( true, true, '', '2023-09-13', 1 ), ( true, true, '', '2023-09-29', 3 ), ( true, true, '', '2023-10-09', 2 ), ( true, true, '', '2023-10-306', 4 ); nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Colonne "AIRCRAFT_ID" non trouvée
+Column "AIRCRAFT_ID" not found; SQL statement:
+insert into workshop ( motor_change, helix_change, other, date, aircraft_id ) VALUES ( true, true, '', '2023-09-13', 1 ), ( true, true, '', '2023-09-29', 3 ), ( true, true, '', '2023-10-09', 2 ), ( true, true, '', '2023-10-306', 4 ) [42122-200]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1108)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:868)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at com.fabienit.flyingclub.AeroclubApiApplication.main(AeroclubApiApplication.java:24)
+Caused by: org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #4 of URL [file:/C:/Users/FaB/Git/Projet%2012/aeroclubp12/backendApiAeroclub/target/classes/data.sql]: insert into workshop ( motor_change, helix_change, other, date, aircraft_id ) VALUES ( true, true, '', '2023-09-13', 1 ), ( true, true, '', '2023-09-29', 3 ), ( true, true, '', '2023-10-09', 2 ), ( true, true, '', '2023-10-306', 4 ); nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Colonne "AIRCRAFT_ID" non trouvée
+Column "AIRCRAFT_ID" not found; SQL statement:
+insert into workshop ( motor_change, helix_change, other, date, aircraft_id ) VALUES ( true, true, '', '2023-09-13', 1 ), ( true, true, '', '2023-09-29', 3 ), ( true, true, '', '2023-10-09', 2 ), ( true, true, '', '2023-10-306', 4 ) [42122-200]
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:626)
+	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254)
+	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:49)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializer.runScripts(DataSourceInitializer.java:202)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializer.initSchema(DataSourceInitializer.java:119)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker.onApplicationEvent(DataSourceInitializerInvoker.java:91)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker.onApplicationEvent(DataSourceInitializerInvoker.java:38)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:403)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:360)
+	at org.springframework.boot.autoconfigure.orm.jpa.DataSourceInitializedPublisher.publishEventIfRequired(DataSourceInitializedPublisher.java:99)
+	at org.springframework.boot.autoconfigure.orm.jpa.DataSourceInitializedPublisher.postProcessAfterInitialization(DataSourceInitializedPublisher.java:90)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1807)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595)
+	... 15 common frames omitted
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Colonne "AIRCRAFT_ID" non trouvée
+Column "AIRCRAFT_ID" not found; SQL statement:
+insert into workshop ( motor_change, helix_change, other, date, aircraft_id ) VALUES ( true, true, '', '2023-09-13', 1 ), ( true, true, '', '2023-09-29', 3 ), ( true, true, '', '2023-10-09', 2 ), ( true, true, '', '2023-10-306', 4 ) [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.table.Table.getColumn(Table.java:703)
+	at org.h2.command.Parser.parseColumn(Parser.java:1450)
+	at org.h2.command.Parser.parseColumnList(Parser.java:1435)
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1804)
+	at org.h2.command.Parser.parseInsert(Parser.java:1749)
+	at org.h2.command.Parser.parsePrepared(Parser.java:954)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:605)
+	... 31 common frames omitted
+2023-11-14 15:36:01,423 INFO com.fabienit.flyingclub.AeroclubApiApplication [main] Starting AeroclubApiApplication on FABPC with PID 1092 (started by FaB PC in C:\Users\FaB\Git\Projet 12\aeroclubp12)
+2023-11-14 15:36:01,426 DEBUG com.fabienit.flyingclub.AeroclubApiApplication [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2023-11-14 15:36:01,427 INFO com.fabienit.flyingclub.AeroclubApiApplication [main] The following profiles are active: dev
+2023-11-14 15:36:06,229 ERROR org.springframework.boot.SpringApplication [main] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Initialization of bean failed; nested exception is org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #4 of URL [file:/C:/Users/FaB/Git/Projet%2012/aeroclubp12/backendApiAeroclub/target/classes/data.sql]: insert into workshop ( motor_change, helix_change, other, date, aircraft_id ) VALUES ( true, true, '', '2023-09-13', 1 ), ( true, true, '', '2023-09-29', 3 ), ( true, true, '', '2023-10-09', 2 ), ( true, true, '', '2023-10-306', 4 ); nested exception is org.h2.jdbc.JdbcSQLDataException: Impossible d'analyser "TIMESTAMP" constante "2023-10-306"
+Cannot parse "TIMESTAMP" constant "2023-10-306"; SQL statement:
+insert into workshop ( motor_change, helix_change, other, date, aircraft_id ) VALUES ( true, true, '', '2023-09-13', 1 ), ( true, true, '', '2023-09-29', 3 ), ( true, true, '', '2023-10-09', 2 ), ( true, true, '', '2023-10-306', 4 ) [22007-200]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1108)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:868)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at com.fabienit.flyingclub.AeroclubApiApplication.main(AeroclubApiApplication.java:24)
+Caused by: org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #4 of URL [file:/C:/Users/FaB/Git/Projet%2012/aeroclubp12/backendApiAeroclub/target/classes/data.sql]: insert into workshop ( motor_change, helix_change, other, date, aircraft_id ) VALUES ( true, true, '', '2023-09-13', 1 ), ( true, true, '', '2023-09-29', 3 ), ( true, true, '', '2023-10-09', 2 ), ( true, true, '', '2023-10-306', 4 ); nested exception is org.h2.jdbc.JdbcSQLDataException: Impossible d'analyser "TIMESTAMP" constante "2023-10-306"
+Cannot parse "TIMESTAMP" constant "2023-10-306"; SQL statement:
+insert into workshop ( motor_change, helix_change, other, date, aircraft_id ) VALUES ( true, true, '', '2023-09-13', 1 ), ( true, true, '', '2023-09-29', 3 ), ( true, true, '', '2023-10-09', 2 ), ( true, true, '', '2023-10-306', 4 ) [22007-200]
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:626)
+	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254)
+	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:49)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializer.runScripts(DataSourceInitializer.java:202)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializer.initSchema(DataSourceInitializer.java:119)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker.onApplicationEvent(DataSourceInitializerInvoker.java:91)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker.onApplicationEvent(DataSourceInitializerInvoker.java:38)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:403)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:360)
+	at org.springframework.boot.autoconfigure.orm.jpa.DataSourceInitializedPublisher.publishEventIfRequired(DataSourceInitializedPublisher.java:99)
+	at org.springframework.boot.autoconfigure.orm.jpa.DataSourceInitializedPublisher.postProcessAfterInitialization(DataSourceInitializedPublisher.java:90)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1807)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595)
+	... 15 common frames omitted
+Caused by: org.h2.jdbc.JdbcSQLDataException: Impossible d'analyser "TIMESTAMP" constante "2023-10-306"
+Cannot parse "TIMESTAMP" constant "2023-10-306"; SQL statement:
+insert into workshop ( motor_change, helix_change, other, date, aircraft_id ) VALUES ( true, true, '', '2023-09-13', 1 ), ( true, true, '', '2023-09-29', 3 ), ( true, true, '', '2023-10-09', 2 ), ( true, true, '', '2023-10-306', 4 ) [22007-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:457)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:194)
+	at org.h2.value.ValueTimestamp.parse(ValueTimestamp.java:136)
+	at org.h2.value.Value.convertToTimestamp(Value.java:1169)
+	at org.h2.value.Value.convertTo(Value.java:822)
+	at org.h2.value.Value.convertTo(Value.java:772)
+	at org.h2.value.TypeInfo.cast(TypeInfo.java:515)
+	at org.h2.table.Column.validateConvertUpdateSequence(Column.java:378)
+	at org.h2.table.Table.validateConvertUpdateSequence(Table.java:845)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:187)
+	at org.h2.command.dml.Insert.update(Insert.java:151)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:198)
+	at org.h2.command.Command.executeUpdate(Command.java:251)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:228)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:605)
+	... 31 common frames omitted
+Caused by: java.lang.IllegalArgumentException: 2023-10-306
+	at org.h2.util.DateTimeUtils.parseDateValue(DateTimeUtils.java:173)
+	at org.h2.util.DateTimeUtils.parseTimestamp(DateTimeUtils.java:316)
+	at org.h2.value.ValueTimestamp.parse(ValueTimestamp.java:134)
+	... 46 common frames omitted
+2023-11-14 15:36:48,468 INFO com.fabienit.flyingclub.AeroclubApiApplication [main] Starting AeroclubApiApplication on FABPC with PID 6708 (started by FaB PC in C:\Users\FaB\Git\Projet 12\aeroclubp12)
+2023-11-14 15:36:48,471 DEBUG com.fabienit.flyingclub.AeroclubApiApplication [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2023-11-14 15:36:48,471 INFO com.fabienit.flyingclub.AeroclubApiApplication [main] The following profiles are active: dev
+2023-11-14 15:36:54,583 DEBUG com.fabienit.flyingclub.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$c64cbbbd [main] Set Swagger2 documentation
+2023-11-14 15:36:55,440 INFO com.fabienit.flyingclub.AeroclubApiApplication [main] Started AeroclubApiApplication in 7.39 seconds (JVM running for 8.48)
+2023-11-14 15:37:14,744 INFO com.fabienit.flyingclub.web.controllers.RevisionController [http-nio-8001-exec-3] Providing revision resource from database: all revisions list
+2023-11-14 15:37:44,212 INFO com.fabienit.flyingclub.web.controllers.WorkshopController [http-nio-8001-exec-5] Providing revision resource from database: all revisions list
+2023-11-14 15:38:06,059 INFO com.fabienit.flyingclub.web.controllers.WorkshopController [http-nio-8001-exec-2] Providing workshop resource from database: revision id: 2

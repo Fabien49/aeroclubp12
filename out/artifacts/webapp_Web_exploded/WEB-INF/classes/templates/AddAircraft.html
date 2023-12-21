@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+            crossorigin="anonymous"
+    />
+
+    <title>Formulaire d'ajout d'un avion</title>
+</head>
+
+<body>
+<div class="container-fluid px-0">
+    <div th:replace="Header :: header"></div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="col-md-2 mb-3">
+                        <a class="btn btn-primary" href="/aircrafts">Retour à la liste des avions</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <h2>Formulaire d'ajout d'un avion</h2>
+
+                    <form class="form-row" th:action="@{/addAircraft}" th:object="${aircraftBean}" method="post">
+                        <input type="hidden" th:field="*{id}"/>
+                        <div class="col-md-6 mb-3">
+                            <label for="mark">Marque </label>
+                            <input type="text" class="form-control" id="mark" th:field="*{mark}"/>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="type">Type </label>
+                            <input type="text" class="form-control" id="type" th:field="*{type}"/>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="motor">Moteur </label>
+                            <input type="text" class="form-control" id="motor" th:field="*{motor}"/>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="power">Puissance </label>
+                            <input type="text" class="form-control" id="power" th:field="*{power}"/>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="seats">Nombre de places </label>
+                            <input type="number" class="form-control" id="seats" th:field="*{seats}"/>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="autonomy">Autonomie </label>
+                            <input type="number" class="form-control" id="autonomy" th:field="*{autonomy}"/>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="hours">Heures de vol </label>
+                            <input type="number" class="form-control" id="hours" th:field="*{hours}"/>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="use">Utilisation </label>
+                            <input type="text" class="form-control" id="use" th:field="*{use}" />
+                        </div>
+                        <div class="col-md-1 mb-3 mt-1">
+                            <label for="available">Disponible </label>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <select class="form-control" id="available" th:field="*{available}">
+                                <option th:value="true">Oui</option>
+                                <option th:value="false">Non</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <button type="submit" class="form-control btn btn-primary">Ajouter</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

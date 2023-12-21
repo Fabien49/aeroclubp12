@@ -4,7 +4,7 @@
 
 ## Présentation
 
-Bibliothequep10 est un site web dédié aux usagers du réseau de bibliothèques du même nom, cette application web JEE a été réalisée dans le cadre du parcours Développeur d'application Java de la plateforme d'enseignement OpenClassrooms.
+Aeroclub12 est un site web dédié aux pilotes d'un aéroclub, cette application web JEE a été réalisée dans le cadre du parcours Développeur d'application Java de la plateforme d'enseignement OpenClassrooms.
 
 Les compétences évaluées sont les suivantes:
 

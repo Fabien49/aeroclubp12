@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Created-By: IntelliJ IDEA
+Built-By: FaB PC
+Build-Jdk: Oracle OpenJDK version 11.0.2
+Implementation-Title: aeroclubweb
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: com.fabienit
+Main-Class: ${start-class}
+

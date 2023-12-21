@@ -1,0 +1,22 @@
+2023-12-17 20:03:23,646 INFO com.fabienit.flyingclub.AeroclubApiApplication [main] Starting AeroclubApiApplication on FABPC with PID 13612 (started by FaB PC in C:\Users\FaB\Git\Projet 12\aeroclubp12)
+2023-12-17 20:03:23,657 DEBUG com.fabienit.flyingclub.AeroclubApiApplication [main] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2023-12-17 20:03:23,658 INFO com.fabienit.flyingclub.AeroclubApiApplication [main] The following profiles are active: dev
+2023-12-17 20:03:39,480 DEBUG com.fabienit.flyingclub.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$d854b363 [main] Set Swagger2 documentation
+2023-12-17 20:03:41,280 INFO com.fabienit.flyingclub.AeroclubApiApplication [main] Started AeroclubApiApplication in 18.366 seconds (JVM running for 29.51)
+2023-12-17 20:07:11,790 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-1] Search user by email: test1@gmail.com
+2023-12-17 20:07:21,683 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-2] Providing aircraft resource from database: all aircraft list
+2023-12-17 20:07:22,003 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-3] Providing reservation list for registered user from database: user id: 2
+2023-12-17 20:07:36,135 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-4] Providing registeredUser resource from database: registeredUser id: 2
+2023-12-17 20:07:37,519 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-5] Providing registeredUser resource from database: registeredUser id: 2
+2023-12-17 20:07:41,120 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-6] Updating registeredUser in database, id: 2
+2023-12-17 20:07:41,330 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-7] Providing registeredUser resource from database: registeredUser id: 2
+2023-12-17 20:07:45,893 INFO com.fabienit.flyingclub.web.controllers.FlyingClubController [http-nio-8001-exec-8] Providing aircraft resource from database: all aircraft list
+2023-12-17 20:07:46,982 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-9] Providing aircraft resource from database: all aircraft list
+2023-12-17 20:07:48,813 INFO com.fabienit.flyingclub.web.controllers.FlyingClubController [http-nio-8001-exec-10] Providing aircraft resource from database: all aircraft list
+2023-12-17 20:08:06,313 INFO com.fabienit.flyingclub.web.controllers.FlyingClubController [http-nio-8001-exec-1] Providing aircraft resource from database: all aircraft list
+2023-12-17 20:08:07,442 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-2] Providing aircraft resource from database: all aircraft list
+2023-12-17 20:08:13,766 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-3] Providing aircraft resource from database: all aircraft list
+2023-12-17 20:08:15,981 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-4] Providing aircraft resource from database: aircraft id: 2
+2023-12-17 20:08:20,100 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-5] Updating aircraft in database, id: 2
+2023-12-17 20:08:20,251 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-6] Providing aircraft resource from database: all aircraft list
+2023-12-17 20:08:29,406 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-7] Providing aircraft resource from database: aircraft id: 2

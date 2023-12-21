@@ -1,0 +1,368 @@
+2022-09-22 13:57:49,995 INFO com.fabienit.flyingclub.manager.impl.unit.ReservationManagerImplTest [main] Starting ReservationManagerImplTest on FABPC with PID 7016 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10\backendApiBiblio)
+2022-09-22 13:57:50,092 DEBUG com.fabienit.flyingclub.manager.impl.unit.ReservationManagerImplTest [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-09-22 13:57:50,093 INFO com.fabienit.flyingclub.manager.impl.unit.ReservationManagerImplTest [main] The following profiles are active: integration
+2022-09-22 13:58:03,102 DEBUG configuration.com.fabien.flyingclub.SwaggerConfig$$EnhancerBySpringCGLIB$$7335f5e8 [main] Set Swagger2 documentation
+2022-09-22 13:58:04,774 INFO com.fabienit.flyingclub.manager.impl.unit.ReservationManagerImplTest [main] Started ReservationManagerImplTest in 15.951 seconds (JVM running for 20.997)
+2022-09-22 13:59:15,305 INFO com.fabienit.flyingclub.manager.impl.unit.OutDatedReservationManagerImplTest [main] Starting OutDatedReservationManagerImplTest on FABPC with PID 12336 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10\backendApiBiblio)
+2022-09-22 13:59:15,310 DEBUG com.fabienit.flyingclub.manager.impl.unit.OutDatedReservationManagerImplTest [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-09-22 13:59:15,310 INFO com.fabienit.flyingclub.manager.impl.unit.OutDatedReservationManagerImplTest [main] The following profiles are active: integration
+2022-09-22 13:59:24,073 DEBUG configuration.com.fabien.flyingclub.SwaggerConfig$$EnhancerBySpringCGLIB$$cb377733 [main] Set Swagger2 documentation
+2022-09-22 13:59:25,811 INFO com.fabienit.flyingclub.manager.impl.unit.OutDatedReservationManagerImplTest [main] Started OutDatedReservationManagerImplTest in 10.916 seconds (JVM running for 12.9)
+2022-09-22 13:59:25,885 DEBUG com.fabienit.flyingclub.manager.impl.OutDatedReservationManagerImpl [main] Deleting outdated reservations
+2022-09-22 14:02:26,620 INFO com.fabienit.flyingclub.manager.impl.unit.OutDatedReservationManagerImplTest [main] Starting OutDatedReservationManagerImplTest on FABPC with PID 3684 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10\backendApiBiblio)
+2022-09-22 14:02:26,625 DEBUG com.fabienit.flyingclub.manager.impl.unit.OutDatedReservationManagerImplTest [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-09-22 14:02:26,625 INFO com.fabienit.flyingclub.manager.impl.unit.OutDatedReservationManagerImplTest [main] The following profiles are active: integration
+2022-09-22 14:02:35,102 DEBUG configuration.com.fabien.flyingclub.SwaggerConfig$$EnhancerBySpringCGLIB$$1e7257f [main] Set Swagger2 documentation
+2022-09-22 14:02:36,962 INFO com.fabienit.flyingclub.manager.impl.unit.OutDatedReservationManagerImplTest [main] Started OutDatedReservationManagerImplTest in 10.971 seconds (JVM running for 12.981)
+2022-09-22 14:02:37,450 DEBUG com.fabienit.flyingclub.manager.impl.OutDatedReservationManagerImpl [main] Deleting outdated reservations
+2022-09-22 14:03:14,423 INFO com.fabienit.flyingclub.manager.impl.unit.ReservationManagerImplTest [main] Starting ReservationManagerImplTest on FABPC with PID 17260 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10\backendApiBiblio)
+2022-09-22 14:03:14,427 DEBUG com.fabienit.flyingclub.manager.impl.unit.ReservationManagerImplTest [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-09-22 14:03:14,428 INFO com.fabienit.flyingclub.manager.impl.unit.ReservationManagerImplTest [main] The following profiles are active: integration
+2022-09-22 14:03:23,429 DEBUG configuration.com.fabien.flyingclub.SwaggerConfig$$EnhancerBySpringCGLIB$$2ed68c06 [main] Set Swagger2 documentation
+2022-09-22 14:03:25,680 INFO com.fabienit.flyingclub.manager.impl.unit.ReservationManagerImplTest [main] Started ReservationManagerImplTest in 11.7 seconds (JVM running for 13.625)
+2022-09-22 14:04:41,050 INFO com.fabienit.flyingclub.manager.impl.unit.AvailableCopieManagerImplTest [main] Starting AvailableCopieManagerImplTest on FABPC with PID 17856 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10\backendApiBiblio)
+2022-09-22 14:04:41,055 DEBUG com.fabienit.flyingclub.manager.impl.unit.AvailableCopieManagerImplTest [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-09-22 14:04:41,055 INFO com.fabienit.flyingclub.manager.impl.unit.AvailableCopieManagerImplTest [main] The following profiles are active: integration
+2022-09-22 14:04:51,306 DEBUG configuration.com.fabien.flyingclub.SwaggerConfig$$EnhancerBySpringCGLIB$$14195665 [main] Set Swagger2 documentation
+2022-09-22 14:04:52,959 INFO com.fabienit.flyingclub.manager.impl.unit.AvailableCopieManagerImplTest [main] Started AvailableCopieManagerImplTest in 12.337 seconds (JVM running for 14.334)
+2022-09-22 14:06:42,745 INFO com.fabienit.flyingclub.api.controller.AvailableCopieControllerTest [main] Starting AvailableCopieControllerTest on FABPC with PID 10024 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10\backendApiBiblio)
+2022-09-22 14:06:42,771 DEBUG com.fabienit.flyingclub.api.controller.AvailableCopieControllerTest [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-09-22 14:06:42,771 INFO com.fabienit.flyingclub.api.controller.AvailableCopieControllerTest [main] The following profiles are active: integration
+2022-09-22 14:06:59,281 DEBUG configuration.com.fabien.flyingclub.SwaggerConfig$$EnhancerBySpringCGLIB$$4e58d5b8 [main] Set Swagger2 documentation
+2022-09-22 14:07:01,705 INFO com.fabienit.flyingclub.api.controller.AvailableCopieControllerTest [main] Started AvailableCopieControllerTest in 19.987 seconds (JVM running for 24.837)
+2022-09-22 14:07:03,080 INFO com.fabienit.flyingclub.web.controllers.AvailableCopieController [http-nio-auto-1-exec-1] Providing availablecopie resource from database: all availablecopie list
+2022-09-22 14:07:04,047 INFO com.fabienit.flyingclub.api.controller.AvailableCopieControllerTest [main] Starting AvailableCopieControllerTest on FABPC with PID 10024 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10\backendApiBiblio)
+2022-09-22 14:07:04,048 DEBUG com.fabienit.flyingclub.api.controller.AvailableCopieControllerTest [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-09-22 14:07:04,048 INFO com.fabienit.flyingclub.api.controller.AvailableCopieControllerTest [main] The following profiles are active: integration
+2022-09-22 14:07:07,576 DEBUG configuration.com.fabien.flyingclub.SwaggerConfig$$EnhancerBySpringCGLIB$$4e58d5b8 [main] Set Swagger2 documentation
+2022-09-22 14:07:08,468 INFO com.fabienit.flyingclub.api.controller.AvailableCopieControllerTest [main] Started AvailableCopieControllerTest in 4.485 seconds (JVM running for 31.6)
+2022-09-22 14:07:08,949 INFO com.fabienit.flyingclub.web.controllers.AvailableCopieController [http-nio-auto-2-exec-1] Providing availablecopie resource from database: availableCopie book_id: 1, library_id: 1
+2022-09-22 14:07:09,173 INFO com.fabienit.flyingclub.api.controller.AvailableCopieControllerTest [main] Starting AvailableCopieControllerTest on FABPC with PID 10024 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10\backendApiBiblio)
+2022-09-22 14:07:09,173 DEBUG com.fabienit.flyingclub.api.controller.AvailableCopieControllerTest [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-09-22 14:07:09,174 INFO com.fabienit.flyingclub.api.controller.AvailableCopieControllerTest [main] The following profiles are active: integration
+2022-09-22 14:07:12,262 DEBUG configuration.com.fabien.flyingclub.SwaggerConfig$$EnhancerBySpringCGLIB$$4e58d5b8 [main] Set Swagger2 documentation
+2022-09-22 14:07:12,965 INFO com.fabienit.flyingclub.api.controller.AvailableCopieControllerTest [main] Started AvailableCopieControllerTest in 3.844 seconds (JVM running for 36.097)
+2022-09-22 14:07:13,330 INFO com.fabienit.flyingclub.web.controllers.AvailableCopieController [http-nio-auto-3-exec-1] Providing availablecopie resource from database: availableCopie book_id: 999, library_id: 999
+2022-09-22 14:07:13,800 INFO com.fabienit.flyingclub.api.controller.AircraftControllerTest [main] Starting BookControllerTest on FABPC with PID 10024 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10\backendApiBiblio)
+2022-09-22 14:07:13,801 DEBUG com.fabienit.flyingclub.api.controller.AircraftControllerTest [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-09-22 14:07:13,802 INFO com.fabienit.flyingclub.api.controller.AircraftControllerTest [main] The following profiles are active: integration
+2022-09-22 14:07:16,984 DEBUG configuration.com.fabien.flyingclub.SwaggerConfig$$EnhancerBySpringCGLIB$$4e58d5b8 [main] Set Swagger2 documentation
+2022-09-22 14:07:17,579 INFO com.fabienit.flyingclub.api.controller.AircraftControllerTest [main] Started BookControllerTest in 3.979 seconds (JVM running for 40.71)
+2022-09-22 14:07:17,922 INFO controllers.web.com.fabien.flyingclub.AircraftController [http-nio-auto-4-exec-1] Providing aircraft resource from database: all aircraft list
+2022-09-22 14:07:18,123 INFO com.fabienit.flyingclub.api.controller.AircraftControllerTest [main] Starting BookControllerTest on FABPC with PID 10024 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10\backendApiBiblio)
+2022-09-22 14:07:18,124 DEBUG com.fabienit.flyingclub.api.controller.AircraftControllerTest [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-09-22 14:07:18,124 INFO com.fabienit.flyingclub.api.controller.AircraftControllerTest [main] The following profiles are active: integration
+2022-09-22 14:07:20,732 DEBUG configuration.com.fabien.flyingclub.SwaggerConfig$$EnhancerBySpringCGLIB$$4e58d5b8 [main] Set Swagger2 documentation
+2022-09-22 14:07:21,375 INFO com.fabienit.flyingclub.api.controller.AircraftControllerTest [main] Started BookControllerTest in 3.304 seconds (JVM running for 44.506)
+2022-09-22 14:07:21,764 INFO controllers.web.com.fabien.flyingclub.AircraftController [http-nio-auto-5-exec-1] Adding new aircraft in database
+2022-09-22 14:07:22,305 INFO com.fabienit.flyingclub.api.controller.AircraftControllerTest [main] Starting BookControllerTest on FABPC with PID 10024 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10\backendApiBiblio)
+2022-09-22 14:07:22,305 DEBUG com.fabienit.flyingclub.api.controller.AircraftControllerTest [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-09-22 14:07:22,305 INFO com.fabienit.flyingclub.api.controller.AircraftControllerTest [main] The following profiles are active: integration
+2022-09-22 14:07:25,003 DEBUG configuration.com.fabien.flyingclub.SwaggerConfig$$EnhancerBySpringCGLIB$$4e58d5b8 [main] Set Swagger2 documentation
+2022-09-22 14:07:25,544 INFO com.fabienit.flyingclub.api.controller.AircraftControllerTest [main] Started BookControllerTest in 3.309 seconds (JVM running for 48.676)
+2022-09-22 14:07:25,871 INFO controllers.web.com.fabien.flyingclub.AircraftController [http-nio-auto-6-exec-1] Adding new aircraft in database
+2022-09-22 14:07:26,048 INFO com.fabienit.flyingclub.api.controller.AircraftControllerTest [main] Starting BookControllerTest on FABPC with PID 10024 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10\backendApiBiblio)
+2022-09-22 14:07:26,049 DEBUG com.fabienit.flyingclub.api.controller.AircraftControllerTest [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-09-22 14:07:26,049 INFO com.fabienit.flyingclub.api.controller.AircraftControllerTest [main] The following profiles are active: integration
+2022-09-22 14:07:28,691 DEBUG configuration.com.fabien.flyingclub.SwaggerConfig$$EnhancerBySpringCGLIB$$4e58d5b8 [main] Set Swagger2 documentation
+2022-09-22 14:07:29,219 INFO com.fabienit.flyingclub.api.controller.AircraftControllerTest [main] Started BookControllerTest in 3.225 seconds (JVM running for 52.35)
+2022-09-22 14:07:29,549 INFO controllers.web.com.fabien.flyingclub.AircraftController [http-nio-auto-7-exec-1] Providing aircraft resource from database: aircraft id: 1
+2022-09-22 14:07:29,704 INFO controllers.web.com.fabien.flyingclub.AircraftController [http-nio-auto-7-exec-2] Updating aircraft in database, id: 1
+2022-09-22 14:07:29,889 INFO com.fabienit.flyingclub.api.controller.AircraftControllerTest [main] Starting BookControllerTest on FABPC with PID 10024 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10\backendApiBiblio)
+2022-09-22 14:07:29,892 DEBUG com.fabienit.flyingclub.api.controller.AircraftControllerTest [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-09-22 14:07:29,896 INFO com.fabienit.flyingclub.api.controller.AircraftControllerTest [main] The following profiles are active: integration
+2022-09-22 14:07:32,321 DEBUG configuration.com.fabien.flyingclub.SwaggerConfig$$EnhancerBySpringCGLIB$$4e58d5b8 [main] Set Swagger2 documentation
+2022-09-22 14:07:32,798 INFO com.fabienit.flyingclub.api.controller.AircraftControllerTest [main] Started BookControllerTest in 2.957 seconds (JVM running for 55.929)
+2022-09-22 14:07:33,133 INFO controllers.web.com.fabien.flyingclub.AircraftController [http-nio-auto-8-exec-1] Providing aircraft resource from database: aircraft id: 1
+2022-09-22 14:07:33,365 INFO com.fabienit.flyingclub.api.controller.AircraftControllerTest [main] Starting BookControllerTest on FABPC with PID 10024 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10\backendApiBiblio)
+2022-09-22 14:07:33,365 DEBUG com.fabienit.flyingclub.api.controller.AircraftControllerTest [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-09-22 14:07:33,365 INFO com.fabienit.flyingclub.api.controller.AircraftControllerTest [main] The following profiles are active: integration
+2022-09-22 14:07:35,994 DEBUG configuration.com.fabien.flyingclub.SwaggerConfig$$EnhancerBySpringCGLIB$$4e58d5b8 [main] Set Swagger2 documentation
+2022-09-22 14:07:36,499 INFO com.fabienit.flyingclub.api.controller.AircraftControllerTest [main] Started BookControllerTest in 3.185 seconds (JVM running for 59.631)
+2022-09-22 14:07:36,825 INFO controllers.web.com.fabien.flyingclub.AircraftController [http-nio-auto-9-exec-1] Providing aircraft resource from database: aircraft id: 999
+2022-09-22 14:07:36,986 INFO com.fabienit.flyingclub.api.controller.BorrowControllerTest [main] Starting BorrowControllerTest on FABPC with PID 10024 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10\backendApiBiblio)
+2022-09-22 14:07:36,987 DEBUG com.fabienit.flyingclub.api.controller.BorrowControllerTest [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-09-22 14:07:36,987 INFO com.fabienit.flyingclub.api.controller.BorrowControllerTest [main] The following profiles are active: integration
+2022-09-22 14:07:39,337 DEBUG configuration.com.fabien.flyingclub.SwaggerConfig$$EnhancerBySpringCGLIB$$4e58d5b8 [main] Set Swagger2 documentation
+2022-09-22 14:07:39,771 INFO com.fabienit.flyingclub.api.controller.BorrowControllerTest [main] Started BorrowControllerTest in 2.824 seconds (JVM running for 62.902)
+2022-09-22 14:07:40,087 INFO com.fabienit.flyingclub.web.controllers.BorrowController [http-nio-auto-10-exec-1] Providing borrow resource from database: borrow id: 1
+2022-09-22 14:07:40,252 INFO com.fabienit.flyingclub.web.controllers.BorrowController [http-nio-auto-10-exec-2] Deleting borrow from database: id: 1
+2022-09-22 14:07:40,450 INFO com.fabienit.flyingclub.api.controller.BorrowControllerTest [main] Starting BorrowControllerTest on FABPC with PID 10024 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10\backendApiBiblio)
+2022-09-22 14:07:40,451 DEBUG com.fabienit.flyingclub.api.controller.BorrowControllerTest [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-09-22 14:07:40,456 INFO com.fabienit.flyingclub.api.controller.BorrowControllerTest [main] The following profiles are active: integration
+2022-09-22 14:07:42,651 DEBUG configuration.com.fabien.flyingclub.SwaggerConfig$$EnhancerBySpringCGLIB$$4e58d5b8 [main] Set Swagger2 documentation
+2022-09-22 14:07:43,109 INFO com.fabienit.flyingclub.api.controller.BorrowControllerTest [main] Started BorrowControllerTest in 2.708 seconds (JVM running for 66.24)
+2022-09-22 14:07:43,441 INFO com.fabienit.flyingclub.web.controllers.BorrowController [http-nio-auto-11-exec-1] Providing borrow resource from database: borrow id: 999
+2022-09-22 14:07:43,595 INFO com.fabienit.flyingclub.api.controller.BorrowControllerTest [main] Starting BorrowControllerTest on FABPC with PID 10024 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10\backendApiBiblio)
+2022-09-22 14:07:43,596 DEBUG com.fabienit.flyingclub.api.controller.BorrowControllerTest [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-09-22 14:07:43,596 INFO com.fabienit.flyingclub.api.controller.BorrowControllerTest [main] The following profiles are active: integration
+2022-09-22 14:07:46,008 DEBUG configuration.com.fabien.flyingclub.SwaggerConfig$$EnhancerBySpringCGLIB$$4e58d5b8 [main] Set Swagger2 documentation
+2022-09-22 14:07:46,438 INFO com.fabienit.flyingclub.api.controller.BorrowControllerTest [main] Started BorrowControllerTest in 2.88 seconds (JVM running for 69.57)
+2022-09-22 14:07:46,783 INFO com.fabienit.flyingclub.web.controllers.BorrowController [http-nio-auto-12-exec-1] Adding new borrow in database
+2022-09-22 14:07:47,089 INFO com.fabienit.flyingclub.api.controller.BorrowControllerTest [main] Starting BorrowControllerTest on FABPC with PID 10024 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10\backendApiBiblio)
+2022-09-22 14:07:47,090 DEBUG com.fabienit.flyingclub.api.controller.BorrowControllerTest [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-09-22 14:07:47,090 INFO com.fabienit.flyingclub.api.controller.BorrowControllerTest [main] The following profiles are active: integration
+2022-09-22 14:07:49,250 DEBUG configuration.com.fabien.flyingclub.SwaggerConfig$$EnhancerBySpringCGLIB$$4e58d5b8 [main] Set Swagger2 documentation
+2022-09-22 14:07:49,792 INFO com.fabienit.flyingclub.api.controller.BorrowControllerTest [main] Started BorrowControllerTest in 2.742 seconds (JVM running for 72.924)
+2022-09-22 14:07:50,084 INFO com.fabienit.flyingclub.web.controllers.BorrowController [http-nio-auto-13-exec-1] Providing borrow resource from database: all borrow list
+2022-09-22 14:07:50,339 INFO com.fabienit.flyingclub.api.controller.BorrowControllerTest [main] Starting BorrowControllerTest on FABPC with PID 10024 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10\backendApiBiblio)
+2022-09-22 14:07:50,340 DEBUG com.fabienit.flyingclub.api.controller.BorrowControllerTest [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-09-22 14:07:50,340 INFO com.fabienit.flyingclub.api.controller.BorrowControllerTest [main] The following profiles are active: integration
+2022-09-22 14:07:52,470 DEBUG configuration.com.fabien.flyingclub.SwaggerConfig$$EnhancerBySpringCGLIB$$4e58d5b8 [main] Set Swagger2 documentation
+2022-09-22 14:07:52,934 INFO com.fabienit.flyingclub.api.controller.BorrowControllerTest [main] Started BorrowControllerTest in 2.639 seconds (JVM running for 76.066)
+2022-09-22 14:07:53,253 INFO com.fabienit.flyingclub.web.controllers.BorrowController [http-nio-auto-14-exec-1] Providing borrow resource from database: borrow id: 999
+2022-09-22 14:07:53,405 INFO com.fabienit.flyingclub.api.controller.BorrowControllerTest [main] Starting BorrowControllerTest on FABPC with PID 10024 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10\backendApiBiblio)
+2022-09-22 14:07:53,405 DEBUG com.fabienit.flyingclub.api.controller.BorrowControllerTest [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-09-22 14:07:53,405 INFO com.fabienit.flyingclub.api.controller.BorrowControllerTest [main] The following profiles are active: integration
+2022-09-22 14:07:55,635 DEBUG configuration.com.fabien.flyingclub.SwaggerConfig$$EnhancerBySpringCGLIB$$4e58d5b8 [main] Set Swagger2 documentation
+2022-09-22 14:07:56,064 INFO com.fabienit.flyingclub.api.controller.BorrowControllerTest [main] Started BorrowControllerTest in 2.701 seconds (JVM running for 79.196)
+2022-09-22 14:07:56,384 INFO com.fabienit.flyingclub.web.controllers.BorrowController [http-nio-auto-15-exec-1] Providing borrow resource from database: borrow id: 1
+2022-09-22 14:07:56,502 INFO com.fabienit.flyingclub.web.controllers.BorrowController [http-nio-auto-15-exec-2] Return borrow, id: 1
+2022-09-22 14:07:56,713 INFO com.fabienit.flyingclub.api.controller.BorrowControllerTest [main] Starting BorrowControllerTest on FABPC with PID 10024 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10\backendApiBiblio)
+2022-09-22 14:07:56,713 DEBUG com.fabienit.flyingclub.api.controller.BorrowControllerTest [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-09-22 14:07:56,713 INFO com.fabienit.flyingclub.api.controller.BorrowControllerTest [main] The following profiles are active: integration
+2022-09-22 14:07:58,933 DEBUG configuration.com.fabien.flyingclub.SwaggerConfig$$EnhancerBySpringCGLIB$$4e58d5b8 [main] Set Swagger2 documentation
+2022-09-22 14:07:59,403 INFO com.fabienit.flyingclub.api.controller.BorrowControllerTest [main] Started BorrowControllerTest in 2.74 seconds (JVM running for 82.534)
+2022-09-22 14:07:59,727 INFO com.fabienit.flyingclub.web.controllers.BorrowController [http-nio-auto-16-exec-1] Providing borrow resources from database by user id: 1
+2022-09-22 14:07:59,963 INFO com.fabienit.flyingclub.api.controller.BorrowControllerTest [main] Starting BorrowControllerTest on FABPC with PID 10024 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10\backendApiBiblio)
+2022-09-22 14:07:59,964 DEBUG com.fabienit.flyingclub.api.controller.BorrowControllerTest [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-09-22 14:07:59,964 INFO com.fabienit.flyingclub.api.controller.BorrowControllerTest [main] The following profiles are active: integration
+2022-09-22 14:08:02,233 DEBUG configuration.com.fabien.flyingclub.SwaggerConfig$$EnhancerBySpringCGLIB$$4e58d5b8 [main] Set Swagger2 documentation
+2022-09-22 14:08:02,654 INFO com.fabienit.flyingclub.api.controller.BorrowControllerTest [main] Started BorrowControllerTest in 2.735 seconds (JVM running for 85.786)
+2022-09-22 14:08:02,986 INFO com.fabienit.flyingclub.web.controllers.BorrowController [http-nio-auto-17-exec-1] Providing borrow resource from database: borrow id: 1
+2022-09-22 14:08:03,135 INFO com.fabienit.flyingclub.web.controllers.BorrowController [http-nio-auto-17-exec-2] Extend borrow in database, id: 1
+2022-09-22 14:08:03,340 INFO com.fabienit.flyingclub.api.controller.BorrowControllerTest [main] Starting BorrowControllerTest on FABPC with PID 10024 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10\backendApiBiblio)
+2022-09-22 14:08:03,341 DEBUG com.fabienit.flyingclub.api.controller.BorrowControllerTest [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-09-22 14:08:03,341 INFO com.fabienit.flyingclub.api.controller.BorrowControllerTest [main] The following profiles are active: integration
+2022-09-22 14:08:05,678 DEBUG configuration.com.fabien.flyingclub.SwaggerConfig$$EnhancerBySpringCGLIB$$4e58d5b8 [main] Set Swagger2 documentation
+2022-09-22 14:08:06,323 INFO com.fabienit.flyingclub.api.controller.BorrowControllerTest [main] Started BorrowControllerTest in 3.031 seconds (JVM running for 89.455)
+2022-09-22 14:08:06,674 INFO com.fabienit.flyingclub.web.controllers.BorrowController [http-nio-auto-18-exec-1] Providing borrow resource from database: borrow id: 2
+2022-09-22 14:08:06,815 INFO com.fabienit.flyingclub.web.controllers.BorrowController [http-nio-auto-18-exec-2] Extend borrow in database, id: 2
+2022-09-22 14:08:06,835 DEBUG com.fabienit.flyingclub.web.controllers.BorrowController [http-nio-auto-18-exec-2] Le pr�t ne peut pas �tre prolong� car la date de retour est d�pass�e
+2022-09-22 14:08:07,061 INFO com.fabienit.flyingclub.api.controller.BorrowControllerTest [main] Starting BorrowControllerTest on FABPC with PID 10024 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10\backendApiBiblio)
+2022-09-22 14:08:07,062 DEBUG com.fabienit.flyingclub.api.controller.BorrowControllerTest [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-09-22 14:08:07,062 INFO com.fabienit.flyingclub.api.controller.BorrowControllerTest [main] The following profiles are active: integration
+2022-09-22 14:08:09,403 DEBUG configuration.com.fabien.flyingclub.SwaggerConfig$$EnhancerBySpringCGLIB$$4e58d5b8 [main] Set Swagger2 documentation
+2022-09-22 14:08:09,851 INFO com.fabienit.flyingclub.api.controller.BorrowControllerTest [main] Started BorrowControllerTest in 2.829 seconds (JVM running for 92.983)
+2022-09-22 14:08:10,168 INFO com.fabienit.flyingclub.web.controllers.BorrowController [http-nio-auto-19-exec-1] Providing borrow resource from database: borrow id: 1
+2022-09-22 14:08:10,302 INFO com.fabienit.flyingclub.api.controller.BorrowControllerTest [main] Starting BorrowControllerTest on FABPC with PID 10024 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10\backendApiBiblio)
+2022-09-22 14:08:10,302 DEBUG com.fabienit.flyingclub.api.controller.BorrowControllerTest [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-09-22 14:08:10,302 INFO com.fabienit.flyingclub.api.controller.BorrowControllerTest [main] The following profiles are active: integration
+2022-09-22 14:08:12,645 DEBUG configuration.com.fabien.flyingclub.SwaggerConfig$$EnhancerBySpringCGLIB$$4e58d5b8 [main] Set Swagger2 documentation
+2022-09-22 14:08:13,050 INFO com.fabienit.flyingclub.api.controller.BorrowControllerTest [main] Started BorrowControllerTest in 2.785 seconds (JVM running for 96.182)
+2022-09-22 14:08:13,364 INFO com.fabienit.flyingclub.web.controllers.BorrowController [http-nio-auto-20-exec-1] Providing borrow resource from database: borrow id: 1
+2022-09-22 14:08:13,487 INFO com.fabienit.flyingclub.web.controllers.BorrowController [http-nio-auto-20-exec-2] Updating borrow in database, id: 1
+2022-09-22 14:08:13,659 INFO com.fabienit.flyingclub.api.controller.LibraryControllerTest [main] Starting LibraryControllerTest on FABPC with PID 10024 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10\backendApiBiblio)
+2022-09-22 14:08:13,660 DEBUG com.fabienit.flyingclub.api.controller.LibraryControllerTest [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-09-22 14:08:13,660 INFO com.fabienit.flyingclub.api.controller.LibraryControllerTest [main] The following profiles are active: integration
+2022-09-22 14:08:15,900 DEBUG configuration.com.fabien.flyingclub.SwaggerConfig$$EnhancerBySpringCGLIB$$4e58d5b8 [main] Set Swagger2 documentation
+2022-09-22 14:08:16,322 INFO com.fabienit.flyingclub.api.controller.LibraryControllerTest [main] Started LibraryControllerTest in 2.702 seconds (JVM running for 99.454)
+2022-09-22 14:08:16,695 INFO com.fabienit.flyingclub.web.controllers.LibraryController [http-nio-auto-21-exec-1] Providing library resource from database: all library list
+2022-09-22 14:08:16,914 INFO com.fabienit.flyingclub.api.controller.LibraryControllerTest [main] Starting LibraryControllerTest on FABPC with PID 10024 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10\backendApiBiblio)
+2022-09-22 14:08:16,914 DEBUG com.fabienit.flyingclub.api.controller.LibraryControllerTest [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-09-22 14:08:16,914 INFO com.fabienit.flyingclub.api.controller.LibraryControllerTest [main] The following profiles are active: integration
+2022-09-22 14:08:19,123 DEBUG configuration.com.fabien.flyingclub.SwaggerConfig$$EnhancerBySpringCGLIB$$4e58d5b8 [main] Set Swagger2 documentation
+2022-09-22 14:08:19,549 INFO com.fabienit.flyingclub.api.controller.LibraryControllerTest [main] Started LibraryControllerTest in 2.677 seconds (JVM running for 102.68)
+2022-09-22 14:08:19,840 INFO com.fabienit.flyingclub.web.controllers.LibraryController [http-nio-auto-22-exec-1] Adding new library in database
+2022-09-22 14:08:19,980 INFO com.fabienit.flyingclub.api.controller.LibraryControllerTest [main] Starting LibraryControllerTest on FABPC with PID 10024 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10\backendApiBiblio)
+2022-09-22 14:08:19,980 DEBUG com.fabienit.flyingclub.api.controller.LibraryControllerTest [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-09-22 14:08:19,981 INFO com.fabienit.flyingclub.api.controller.LibraryControllerTest [main] The following profiles are active: integration
+2022-09-22 14:08:22,143 DEBUG configuration.com.fabien.flyingclub.SwaggerConfig$$EnhancerBySpringCGLIB$$4e58d5b8 [main] Set Swagger2 documentation
+2022-09-22 14:08:22,588 INFO com.fabienit.flyingclub.api.controller.LibraryControllerTest [main] Started LibraryControllerTest in 2.644 seconds (JVM running for 105.72)
+2022-09-22 14:08:22,882 INFO com.fabienit.flyingclub.web.controllers.LibraryController [http-nio-auto-23-exec-2] Providing library resource from database: library id: 1
+2022-09-22 14:08:23,013 INFO com.fabienit.flyingclub.api.controller.LibraryControllerTest [main] Starting LibraryControllerTest on FABPC with PID 10024 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10\backendApiBiblio)
+2022-09-22 14:08:23,014 DEBUG com.fabienit.flyingclub.api.controller.LibraryControllerTest [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-09-22 14:08:23,014 INFO com.fabienit.flyingclub.api.controller.LibraryControllerTest [main] The following profiles are active: integration
+2022-09-22 14:08:25,060 DEBUG configuration.com.fabien.flyingclub.SwaggerConfig$$EnhancerBySpringCGLIB$$4e58d5b8 [main] Set Swagger2 documentation
+2022-09-22 14:08:25,465 INFO com.fabienit.flyingclub.api.controller.LibraryControllerTest [main] Started LibraryControllerTest in 2.495 seconds (JVM running for 108.597)
+2022-09-22 14:08:25,769 INFO com.fabienit.flyingclub.web.controllers.LibraryController [http-nio-auto-24-exec-1] Providing library resource from database: library id: 1
+2022-09-22 14:08:25,886 INFO com.fabienit.flyingclub.web.controllers.LibraryController [http-nio-auto-24-exec-2] Updating library in database, id: 1
+2022-09-22 14:08:26,023 INFO com.fabienit.flyingclub.api.controller.LibraryControllerTest [main] Starting LibraryControllerTest on FABPC with PID 10024 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10\backendApiBiblio)
+2022-09-22 14:08:26,023 DEBUG com.fabienit.flyingclub.api.controller.LibraryControllerTest [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-09-22 14:08:26,023 INFO com.fabienit.flyingclub.api.controller.LibraryControllerTest [main] The following profiles are active: integration
+2022-09-22 14:08:28,140 DEBUG configuration.com.fabien.flyingclub.SwaggerConfig$$EnhancerBySpringCGLIB$$4e58d5b8 [main] Set Swagger2 documentation
+2022-09-22 14:08:28,535 INFO com.fabienit.flyingclub.api.controller.LibraryControllerTest [main] Started LibraryControllerTest in 2.548 seconds (JVM running for 111.667)
+2022-09-22 14:08:28,825 INFO controllers.web.com.fabien.flyingclub.AircraftController [http-nio-auto-25-exec-1] Providing aircraft resource from database: aircraft id: 999
+2022-09-22 14:08:28,975 INFO com.fabienit.flyingclub.api.controller.LibraryControllerTest [main] Starting LibraryControllerTest on FABPC with PID 10024 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10\backendApiBiblio)
+2022-09-22 14:08:28,975 DEBUG com.fabienit.flyingclub.api.controller.LibraryControllerTest [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-09-22 14:08:28,975 INFO com.fabienit.flyingclub.api.controller.LibraryControllerTest [main] The following profiles are active: integration
+2022-09-22 14:08:30,995 DEBUG configuration.com.fabien.flyingclub.SwaggerConfig$$EnhancerBySpringCGLIB$$4e58d5b8 [main] Set Swagger2 documentation
+2022-09-22 14:08:31,391 INFO com.fabienit.flyingclub.api.controller.LibraryControllerTest [main] Started LibraryControllerTest in 2.452 seconds (JVM running for 114.523)
+2022-09-22 14:08:31,686 INFO com.fabienit.flyingclub.web.controllers.LibraryController [http-nio-auto-26-exec-1] Providing library resource from database: library id: 1
+2022-09-22 14:08:31,788 INFO com.fabienit.flyingclub.web.controllers.LibraryController [http-nio-auto-26-exec-2] Deleting library from database: id: 1
+2022-09-22 14:08:31,974 INFO com.fabienit.flyingclub.api.controller.RegisteredUserControllerTest [main] Starting RegisteredUserControllerTest on FABPC with PID 10024 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10\backendApiBiblio)
+2022-09-22 14:08:31,974 DEBUG com.fabienit.flyingclub.api.controller.RegisteredUserControllerTest [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-09-22 14:08:31,974 INFO com.fabienit.flyingclub.api.controller.RegisteredUserControllerTest [main] The following profiles are active: integration
+2022-09-22 14:08:34,371 DEBUG configuration.com.fabien.flyingclub.SwaggerConfig$$EnhancerBySpringCGLIB$$4e58d5b8 [main] Set Swagger2 documentation
+2022-09-22 14:08:34,771 INFO com.fabienit.flyingclub.api.controller.RegisteredUserControllerTest [main] Started RegisteredUserControllerTest in 2.835 seconds (JVM running for 117.903)
+2022-09-22 14:08:35,074 INFO controllers.web.com.fabien.flyingclub.RegisteredUserController [http-nio-auto-27-exec-1] Providing registeredUser resource from database: registeredUser id: 1
+2022-09-22 14:08:35,190 INFO controllers.web.com.fabien.flyingclub.RegisteredUserController [http-nio-auto-27-exec-2] Updating registeredUser in database, id: 1
+2022-09-22 14:08:35,350 INFO com.fabienit.flyingclub.api.controller.RegisteredUserControllerTest [main] Starting RegisteredUserControllerTest on FABPC with PID 10024 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10\backendApiBiblio)
+2022-09-22 14:08:35,350 DEBUG com.fabienit.flyingclub.api.controller.RegisteredUserControllerTest [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-09-22 14:08:35,351 INFO com.fabienit.flyingclub.api.controller.RegisteredUserControllerTest [main] The following profiles are active: integration
+2022-09-22 14:08:37,434 DEBUG configuration.com.fabien.flyingclub.SwaggerConfig$$EnhancerBySpringCGLIB$$4e58d5b8 [main] Set Swagger2 documentation
+2022-09-22 14:08:37,821 INFO com.fabienit.flyingclub.api.controller.RegisteredUserControllerTest [main] Started RegisteredUserControllerTest in 2.516 seconds (JVM running for 120.953)
+2022-09-22 14:08:38,113 INFO controllers.web.com.fabien.flyingclub.RegisteredUserController [http-nio-auto-28-exec-1] Adding new registeredUser in database
+2022-09-22 14:08:38,347 INFO com.fabienit.flyingclub.api.controller.RegisteredUserControllerTest [main] Starting RegisteredUserControllerTest on FABPC with PID 10024 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10\backendApiBiblio)
+2022-09-22 14:08:38,347 DEBUG com.fabienit.flyingclub.api.controller.RegisteredUserControllerTest [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-09-22 14:08:38,348 INFO com.fabienit.flyingclub.api.controller.RegisteredUserControllerTest [main] The following profiles are active: integration
+2022-09-22 14:08:40,521 DEBUG configuration.com.fabien.flyingclub.SwaggerConfig$$EnhancerBySpringCGLIB$$4e58d5b8 [main] Set Swagger2 documentation
+2022-09-22 14:08:40,932 INFO com.fabienit.flyingclub.api.controller.RegisteredUserControllerTest [main] Started RegisteredUserControllerTest in 2.624 seconds (JVM running for 124.063)
+2022-09-22 14:08:41,220 INFO controllers.web.com.fabien.flyingclub.RegisteredUserController [http-nio-auto-29-exec-1] Providing registeredUser resource from database: all registeredUser list
+2022-09-22 14:08:41,352 INFO com.fabienit.flyingclub.api.controller.RegisteredUserControllerTest [main] Starting RegisteredUserControllerTest on FABPC with PID 10024 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10\backendApiBiblio)
+2022-09-22 14:08:41,352 DEBUG com.fabienit.flyingclub.api.controller.RegisteredUserControllerTest [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-09-22 14:08:41,352 INFO com.fabienit.flyingclub.api.controller.RegisteredUserControllerTest [main] The following profiles are active: integration
+2022-09-22 14:08:43,565 DEBUG configuration.com.fabien.flyingclub.SwaggerConfig$$EnhancerBySpringCGLIB$$4e58d5b8 [main] Set Swagger2 documentation
+2022-09-22 14:08:44,064 INFO com.fabienit.flyingclub.api.controller.RegisteredUserControllerTest [main] Started RegisteredUserControllerTest in 2.748 seconds (JVM running for 127.196)
+2022-09-22 14:08:44,354 INFO controllers.web.com.fabien.flyingclub.RegisteredUserController [http-nio-auto-30-exec-1] Providing registeredUser resource from database: registeredUser id: 999
+2022-09-22 14:08:44,501 INFO com.fabienit.flyingclub.api.controller.RegisteredUserControllerTest [main] Starting RegisteredUserControllerTest on FABPC with PID 10024 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10\backendApiBiblio)
+2022-09-22 14:08:44,501 DEBUG com.fabienit.flyingclub.api.controller.RegisteredUserControllerTest [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-09-22 14:08:44,501 INFO com.fabienit.flyingclub.api.controller.RegisteredUserControllerTest [main] The following profiles are active: integration
+2022-09-22 14:08:46,436 DEBUG configuration.com.fabien.flyingclub.SwaggerConfig$$EnhancerBySpringCGLIB$$4e58d5b8 [main] Set Swagger2 documentation
+2022-09-22 14:08:46,840 INFO com.fabienit.flyingclub.api.controller.RegisteredUserControllerTest [main] Started RegisteredUserControllerTest in 2.378 seconds (JVM running for 129.971)
+2022-09-22 14:08:47,146 INFO controllers.web.com.fabien.flyingclub.RegisteredUserController [http-nio-auto-31-exec-1] Providing registeredUser resource from database: registeredUser id: 1
+2022-09-22 14:08:47,339 INFO com.fabienit.flyingclub.api.controller.ReservationControllerTest [main] Starting ReservationControllerTest on FABPC with PID 10024 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10\backendApiBiblio)
+2022-09-22 14:08:47,340 DEBUG com.fabienit.flyingclub.api.controller.ReservationControllerTest [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-09-22 14:08:47,340 INFO com.fabienit.flyingclub.api.controller.ReservationControllerTest [main] The following profiles are active: integration
+2022-09-22 14:08:49,709 DEBUG configuration.com.fabien.flyingclub.SwaggerConfig$$EnhancerBySpringCGLIB$$4e58d5b8 [main] Set Swagger2 documentation
+2022-09-22 14:08:50,098 INFO com.fabienit.flyingclub.api.controller.ReservationControllerTest [main] Started ReservationControllerTest in 2.81 seconds (JVM running for 133.23)
+2022-09-22 14:08:50,403 INFO controllers.web.com.fabien.flyingclub.ReservationController [http-nio-auto-32-exec-1] Providing reservation resource from database: reservation id: 999
+2022-09-22 14:08:50,591 INFO com.fabienit.flyingclub.api.controller.ReservationControllerTest [main] Starting ReservationControllerTest on FABPC with PID 10024 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10\backendApiBiblio)
+2022-09-22 14:08:50,591 DEBUG com.fabienit.flyingclub.api.controller.ReservationControllerTest [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-09-22 14:08:50,591 INFO com.fabienit.flyingclub.api.controller.ReservationControllerTest [main] The following profiles are active: integration
+2022-09-22 14:08:52,591 DEBUG configuration.com.fabien.flyingclub.SwaggerConfig$$EnhancerBySpringCGLIB$$4e58d5b8 [main] Set Swagger2 documentation
+2022-09-22 14:08:52,978 INFO com.fabienit.flyingclub.api.controller.ReservationControllerTest [main] Started ReservationControllerTest in 2.428 seconds (JVM running for 136.11)
+2022-09-22 14:08:53,296 INFO controllers.web.com.fabien.flyingclub.ReservationController [http-nio-auto-33-exec-1] Providing reservation resource from database: reservation id: 1
+2022-09-22 14:08:53,437 INFO controllers.web.com.fabien.flyingclub.ReservationController [http-nio-auto-33-exec-2] Deleting reservation from database: id: 1
+2022-09-22 14:08:53,594 INFO com.fabienit.flyingclub.api.controller.ReservationControllerTest [main] Starting ReservationControllerTest on FABPC with PID 10024 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10\backendApiBiblio)
+2022-09-22 14:08:53,595 DEBUG com.fabienit.flyingclub.api.controller.ReservationControllerTest [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-09-22 14:08:53,595 INFO com.fabienit.flyingclub.api.controller.ReservationControllerTest [main] The following profiles are active: integration
+2022-09-22 14:08:55,620 DEBUG configuration.com.fabien.flyingclub.SwaggerConfig$$EnhancerBySpringCGLIB$$4e58d5b8 [main] Set Swagger2 documentation
+2022-09-22 14:08:56,008 INFO com.fabienit.flyingclub.api.controller.ReservationControllerTest [main] Started ReservationControllerTest in 2.448 seconds (JVM running for 139.14)
+2022-09-22 14:08:56,336 INFO controllers.web.com.fabien.flyingclub.ReservationController [http-nio-auto-34-exec-1] Adding new reservation in database
+2022-09-22 14:08:56,487 INFO com.fabienit.flyingclub.api.controller.ReservationControllerTest [main] Starting ReservationControllerTest on FABPC with PID 10024 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10\backendApiBiblio)
+2022-09-22 14:08:56,487 DEBUG com.fabienit.flyingclub.api.controller.ReservationControllerTest [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-09-22 14:08:56,487 INFO com.fabienit.flyingclub.api.controller.ReservationControllerTest [main] The following profiles are active: integration
+2022-09-22 14:08:58,446 DEBUG configuration.com.fabien.flyingclub.SwaggerConfig$$EnhancerBySpringCGLIB$$4e58d5b8 [main] Set Swagger2 documentation
+2022-09-22 14:08:58,838 INFO com.fabienit.flyingclub.api.controller.ReservationControllerTest [main] Started ReservationControllerTest in 2.386 seconds (JVM running for 141.97)
+2022-09-22 14:08:59,169 INFO controllers.web.com.fabien.flyingclub.ReservationController [http-nio-auto-35-exec-1] Providing reservation resource from database: reservation id: 1
+2022-09-22 14:08:59,307 INFO controllers.web.com.fabien.flyingclub.ReservationController [http-nio-auto-35-exec-2] Updating reservation in database, id: 1
+2022-09-22 14:08:59,464 INFO com.fabienit.flyingclub.api.controller.ReservationControllerTest [main] Starting ReservationControllerTest on FABPC with PID 10024 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10\backendApiBiblio)
+2022-09-22 14:08:59,465 DEBUG com.fabienit.flyingclub.api.controller.ReservationControllerTest [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-09-22 14:08:59,465 INFO com.fabienit.flyingclub.api.controller.ReservationControllerTest [main] The following profiles are active: integration
+2022-09-22 14:09:01,669 DEBUG configuration.com.fabien.flyingclub.SwaggerConfig$$EnhancerBySpringCGLIB$$4e58d5b8 [main] Set Swagger2 documentation
+2022-09-22 14:09:02,082 INFO com.fabienit.flyingclub.api.controller.ReservationControllerTest [main] Started ReservationControllerTest in 2.653 seconds (JVM running for 145.214)
+2022-09-22 14:09:02,385 INFO controllers.web.com.fabien.flyingclub.ReservationController [http-nio-auto-36-exec-1] Providing reservation resource from database: reservation id: 1
+2022-09-22 14:09:02,529 INFO com.fabienit.flyingclub.api.controller.ReservationControllerTest [main] Starting ReservationControllerTest on FABPC with PID 10024 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10\backendApiBiblio)
+2022-09-22 14:09:02,530 DEBUG com.fabienit.flyingclub.api.controller.ReservationControllerTest [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-09-22 14:09:02,530 INFO com.fabienit.flyingclub.api.controller.ReservationControllerTest [main] The following profiles are active: integration
+2022-09-22 14:09:04,525 DEBUG configuration.com.fabien.flyingclub.SwaggerConfig$$EnhancerBySpringCGLIB$$4e58d5b8 [main] Set Swagger2 documentation
+2022-09-22 14:09:04,906 INFO com.fabienit.flyingclub.api.controller.ReservationControllerTest [main] Started ReservationControllerTest in 2.414 seconds (JVM running for 148.038)
+2022-09-22 14:09:05,191 INFO controllers.web.com.fabien.flyingclub.ReservationController [http-nio-auto-37-exec-1] Providing reservation resource from database: all reservation list
+2022-09-22 14:09:05,330 INFO com.fabienit.flyingclub.api.controller.ReservationControllerTest [main] Starting ReservationControllerTest on FABPC with PID 10024 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10\backendApiBiblio)
+2022-09-22 14:09:05,331 DEBUG com.fabienit.flyingclub.api.controller.ReservationControllerTest [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-09-22 14:09:05,331 INFO com.fabienit.flyingclub.api.controller.ReservationControllerTest [main] The following profiles are active: integration
+2022-09-22 14:09:07,411 DEBUG configuration.com.fabien.flyingclub.SwaggerConfig$$EnhancerBySpringCGLIB$$4e58d5b8 [main] Set Swagger2 documentation
+2022-09-22 14:09:07,792 INFO com.fabienit.flyingclub.api.controller.ReservationControllerTest [main] Started ReservationControllerTest in 2.502 seconds (JVM running for 150.924)
+2022-09-22 14:09:08,099 INFO controllers.web.com.fabien.flyingclub.ReservationController [http-nio-auto-38-exec-1] Providing reservation list for registered user from database: user id: 1
+2022-09-22 14:09:08,283 INFO com.fabienit.flyingclub.dao.AircraftDaoTest [main] Starting BookDaoTest on FABPC with PID 10024 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10\backendApiBiblio)
+2022-09-22 14:09:08,284 DEBUG com.fabienit.flyingclub.dao.AircraftDaoTest [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-09-22 14:09:08,285 INFO com.fabienit.flyingclub.dao.AircraftDaoTest [main] The following profiles are active: integration
+2022-09-22 14:09:10,590 DEBUG configuration.com.fabien.flyingclub.SwaggerConfig$$EnhancerBySpringCGLIB$$4e58d5b8 [main] Set Swagger2 documentation
+2022-09-22 14:09:11,288 INFO com.fabienit.flyingclub.dao.AircraftDaoTest [main] Started BookDaoTest in 3.048 seconds (JVM running for 154.419)
+2022-09-22 14:09:11,553 INFO com.fabienit.flyingclub.dao.AircraftDaoTest [main] Starting BookDaoTest on FABPC with PID 10024 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10\backendApiBiblio)
+2022-09-22 14:09:11,554 DEBUG com.fabienit.flyingclub.dao.AircraftDaoTest [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-09-22 14:09:11,554 INFO com.fabienit.flyingclub.dao.AircraftDaoTest [main] The following profiles are active: integration
+2022-09-22 14:09:13,447 DEBUG configuration.com.fabien.flyingclub.SwaggerConfig$$EnhancerBySpringCGLIB$$4e58d5b8 [main] Set Swagger2 documentation
+2022-09-22 14:09:13,955 INFO com.fabienit.flyingclub.dao.AircraftDaoTest [main] Started BookDaoTest in 2.441 seconds (JVM running for 157.087)
+2022-09-22 14:09:14,114 INFO com.fabienit.flyingclub.dao.BorrowDaoIntegrationTest [main] Starting BorrowDaoIntegrationTest on FABPC with PID 10024 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10\backendApiBiblio)
+2022-09-22 14:09:14,115 DEBUG com.fabienit.flyingclub.dao.BorrowDaoIntegrationTest [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-09-22 14:09:14,115 INFO com.fabienit.flyingclub.dao.BorrowDaoIntegrationTest [main] The following profiles are active: integration
+2022-09-22 14:09:18,430 DEBUG configuration.com.fabien.flyingclub.SwaggerConfig$$EnhancerBySpringCGLIB$$4e58d5b8 [main] Set Swagger2 documentation
+2022-09-22 14:09:19,030 INFO com.fabienit.flyingclub.dao.BorrowDaoIntegrationTest [main] Started BorrowDaoIntegrationTest in 4.959 seconds (JVM running for 162.161)
+2022-09-22 14:09:19,401 INFO com.fabienit.flyingclub.dao.ReservationDaoIntegrationTest [main] Starting ReservationDaoIntegrationTest on FABPC with PID 10024 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10\backendApiBiblio)
+2022-09-22 14:09:19,402 DEBUG com.fabienit.flyingclub.dao.ReservationDaoIntegrationTest [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-09-22 14:09:19,402 INFO com.fabienit.flyingclub.dao.ReservationDaoIntegrationTest [main] The following profiles are active: integration
+2022-09-22 14:09:21,240 DEBUG configuration.com.fabien.flyingclub.SwaggerConfig$$EnhancerBySpringCGLIB$$4e58d5b8 [main] Set Swagger2 documentation
+2022-09-22 14:09:21,748 INFO com.fabienit.flyingclub.dao.ReservationDaoIntegrationTest [main] Started ReservationDaoIntegrationTest in 2.391 seconds (JVM running for 164.88)
+2022-09-22 14:09:21,974 INFO com.fabienit.flyingclub.dao.ReservationDaoIntegrationTest [main] Starting ReservationDaoIntegrationTest on FABPC with PID 10024 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10\backendApiBiblio)
+2022-09-22 14:09:21,974 DEBUG com.fabienit.flyingclub.dao.ReservationDaoIntegrationTest [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-09-22 14:09:21,974 INFO com.fabienit.flyingclub.dao.ReservationDaoIntegrationTest [main] The following profiles are active: integration
+2022-09-22 14:09:24,054 DEBUG configuration.com.fabien.flyingclub.SwaggerConfig$$EnhancerBySpringCGLIB$$4e58d5b8 [main] Set Swagger2 documentation
+2022-09-22 14:09:24,598 INFO com.fabienit.flyingclub.dao.ReservationDaoIntegrationTest [main] Started ReservationDaoIntegrationTest in 2.658 seconds (JVM running for 167.73)
+2022-09-22 14:09:24,806 INFO com.fabienit.flyingclub.dao.ReservationDaoIntegrationTest [main] Starting ReservationDaoIntegrationTest on FABPC with PID 10024 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10\backendApiBiblio)
+2022-09-22 14:09:24,806 DEBUG com.fabienit.flyingclub.dao.ReservationDaoIntegrationTest [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-09-22 14:09:24,807 INFO com.fabienit.flyingclub.dao.ReservationDaoIntegrationTest [main] The following profiles are active: integration
+2022-09-22 14:09:26,599 DEBUG configuration.com.fabien.flyingclub.SwaggerConfig$$EnhancerBySpringCGLIB$$4e58d5b8 [main] Set Swagger2 documentation
+2022-09-22 14:09:27,088 INFO com.fabienit.flyingclub.dao.ReservationDaoIntegrationTest [main] Started ReservationDaoIntegrationTest in 2.324 seconds (JVM running for 170.22)
+2022-09-22 14:09:27,254 INFO com.fabienit.flyingclub.dao.ReservationDaoIntegrationTest [main] Starting ReservationDaoIntegrationTest on FABPC with PID 10024 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10\backendApiBiblio)
+2022-09-22 14:09:27,254 DEBUG com.fabienit.flyingclub.dao.ReservationDaoIntegrationTest [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-09-22 14:09:27,254 INFO com.fabienit.flyingclub.dao.ReservationDaoIntegrationTest [main] The following profiles are active: integration
+2022-09-22 14:09:29,788 DEBUG configuration.com.fabien.flyingclub.SwaggerConfig$$EnhancerBySpringCGLIB$$4e58d5b8 [main] Set Swagger2 documentation
+2022-09-22 14:09:30,257 INFO com.fabienit.flyingclub.dao.ReservationDaoIntegrationTest [main] Started ReservationDaoIntegrationTest in 3.04 seconds (JVM running for 173.389)
+2022-09-22 14:09:30,429 INFO com.fabienit.flyingclub.dao.ReservationDaoIntegrationTest [main] Starting ReservationDaoIntegrationTest on FABPC with PID 10024 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10\backendApiBiblio)
+2022-09-22 14:09:30,429 DEBUG com.fabienit.flyingclub.dao.ReservationDaoIntegrationTest [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-09-22 14:09:30,429 INFO com.fabienit.flyingclub.dao.ReservationDaoIntegrationTest [main] The following profiles are active: integration
+2022-09-22 14:09:32,185 DEBUG configuration.com.fabien.flyingclub.SwaggerConfig$$EnhancerBySpringCGLIB$$4e58d5b8 [main] Set Swagger2 documentation
+2022-09-22 14:09:32,649 INFO com.fabienit.flyingclub.dao.ReservationDaoIntegrationTest [main] Started ReservationDaoIntegrationTest in 2.256 seconds (JVM running for 175.78)
+2022-09-22 14:09:32,816 INFO com.fabienit.flyingclub.dao.ReservationDaoIntegrationTest [main] Starting ReservationDaoIntegrationTest on FABPC with PID 10024 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10\backendApiBiblio)
+2022-09-22 14:09:32,816 DEBUG com.fabienit.flyingclub.dao.ReservationDaoIntegrationTest [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-09-22 14:09:32,816 INFO com.fabienit.flyingclub.dao.ReservationDaoIntegrationTest [main] The following profiles are active: integration
+2022-09-22 14:09:34,985 DEBUG configuration.com.fabien.flyingclub.SwaggerConfig$$EnhancerBySpringCGLIB$$4e58d5b8 [main] Set Swagger2 documentation
+2022-09-22 14:09:35,510 INFO com.fabienit.flyingclub.dao.ReservationDaoIntegrationTest [main] Started ReservationDaoIntegrationTest in 2.728 seconds (JVM running for 178.642)
+2022-09-22 14:09:35,899 INFO com.fabienit.flyingclub.dao.ReservationDaoIntegrationTest [main] Starting ReservationDaoIntegrationTest on FABPC with PID 10024 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10\backendApiBiblio)
+2022-09-22 14:09:35,899 DEBUG com.fabienit.flyingclub.dao.ReservationDaoIntegrationTest [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-09-22 14:09:35,899 INFO com.fabienit.flyingclub.dao.ReservationDaoIntegrationTest [main] The following profiles are active: integration
+2022-09-22 14:09:37,777 DEBUG configuration.com.fabien.flyingclub.SwaggerConfig$$EnhancerBySpringCGLIB$$4e58d5b8 [main] Set Swagger2 documentation
+2022-09-22 14:09:38,323 INFO com.fabienit.flyingclub.dao.ReservationDaoIntegrationTest [main] Started ReservationDaoIntegrationTest in 2.462 seconds (JVM running for 181.455)
+2022-09-22 14:09:38,584 INFO com.fabienit.flyingclub.dao.ReservationDaoIntegrationTest [main] Starting ReservationDaoIntegrationTest on FABPC with PID 10024 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10\backendApiBiblio)
+2022-09-22 14:09:38,584 DEBUG com.fabienit.flyingclub.dao.ReservationDaoIntegrationTest [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-09-22 14:09:38,584 INFO com.fabienit.flyingclub.dao.ReservationDaoIntegrationTest [main] The following profiles are active: integration
+2022-09-22 14:09:40,685 DEBUG configuration.com.fabien.flyingclub.SwaggerConfig$$EnhancerBySpringCGLIB$$4e58d5b8 [main] Set Swagger2 documentation
+2022-09-22 14:09:41,196 INFO com.fabienit.flyingclub.dao.ReservationDaoIntegrationTest [main] Started ReservationDaoIntegrationTest in 2.656 seconds (JVM running for 184.328)
+2022-09-22 14:09:41,382 INFO com.fabienit.flyingclub.dao.ReservationDaoIntegrationTest [main] Starting ReservationDaoIntegrationTest on FABPC with PID 10024 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10\backendApiBiblio)
+2022-09-22 14:09:41,382 DEBUG com.fabienit.flyingclub.dao.ReservationDaoIntegrationTest [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-09-22 14:09:41,382 INFO com.fabienit.flyingclub.dao.ReservationDaoIntegrationTest [main] The following profiles are active: integration
+2022-09-22 14:09:43,568 DEBUG configuration.com.fabien.flyingclub.SwaggerConfig$$EnhancerBySpringCGLIB$$4e58d5b8 [main] Set Swagger2 documentation
+2022-09-22 14:09:44,054 INFO com.fabienit.flyingclub.dao.ReservationDaoIntegrationTest [main] Started ReservationDaoIntegrationTest in 2.712 seconds (JVM running for 187.186)
+2022-09-22 14:09:44,268 INFO com.fabienit.flyingclub.dao.ReservationDaoIntegrationTest [main] Starting ReservationDaoIntegrationTest on FABPC with PID 10024 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10\backendApiBiblio)
+2022-09-22 14:09:44,269 DEBUG com.fabienit.flyingclub.dao.ReservationDaoIntegrationTest [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-09-22 14:09:44,269 INFO com.fabienit.flyingclub.dao.ReservationDaoIntegrationTest [main] The following profiles are active: integration
+2022-09-22 14:09:46,369 DEBUG configuration.com.fabien.flyingclub.SwaggerConfig$$EnhancerBySpringCGLIB$$4e58d5b8 [main] Set Swagger2 documentation
+2022-09-22 14:09:46,912 INFO com.fabienit.flyingclub.dao.ReservationDaoIntegrationTest [main] Started ReservationDaoIntegrationTest in 2.68 seconds (JVM running for 190.044)
+2022-09-22 14:09:47,166 INFO com.fabienit.flyingclub.dao.ReservationDaoIntegrationTest [main] Starting ReservationDaoIntegrationTest on FABPC with PID 10024 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10\backendApiBiblio)
+2022-09-22 14:09:47,167 DEBUG com.fabienit.flyingclub.dao.ReservationDaoIntegrationTest [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-09-22 14:09:47,167 INFO com.fabienit.flyingclub.dao.ReservationDaoIntegrationTest [main] The following profiles are active: integration
+2022-09-22 14:09:49,025 DEBUG configuration.com.fabien.flyingclub.SwaggerConfig$$EnhancerBySpringCGLIB$$4e58d5b8 [main] Set Swagger2 documentation
+2022-09-22 14:09:49,508 INFO com.fabienit.flyingclub.dao.ReservationDaoIntegrationTest [main] Started ReservationDaoIntegrationTest in 2.38 seconds (JVM running for 192.639)
+2022-09-22 14:09:49,843 INFO com.fabienit.flyingclub.manager.impl.unit.AvailableCopieManagerImplTest [main] Starting AvailableCopieManagerImplTest on FABPC with PID 10024 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10\backendApiBiblio)
+2022-09-22 14:09:49,843 DEBUG com.fabienit.flyingclub.manager.impl.unit.AvailableCopieManagerImplTest [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-09-22 14:09:49,843 INFO com.fabienit.flyingclub.manager.impl.unit.AvailableCopieManagerImplTest [main] The following profiles are active: integration
+2022-09-22 14:09:52,348 DEBUG configuration.com.fabien.flyingclub.SwaggerConfig$$EnhancerBySpringCGLIB$$4e58d5b8 [main] Set Swagger2 documentation
+2022-09-22 14:09:52,957 INFO com.fabienit.flyingclub.manager.impl.unit.AvailableCopieManagerImplTest [main] Started AvailableCopieManagerImplTest in 3.151 seconds (JVM running for 196.089)
+2022-09-22 14:09:53,353 DEBUG com.fabienit.flyingclub.manager.impl.OutDatedReservationManagerImpl [main] Deleting outdated reservations
+2022-09-22 14:09:54,156 INFO com.fabienit.flyingclub.model.beans.BorrowTest [main] Starting BorrowTest on FABPC with PID 10024 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10\backendApiBiblio)
+2022-09-22 14:09:54,161 DEBUG com.fabienit.flyingclub.model.beans.BorrowTest [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-09-22 14:09:54,163 INFO com.fabienit.flyingclub.model.beans.BorrowTest [main] The following profiles are active: integration
+2022-09-22 14:09:56,872 DEBUG configuration.com.fabien.flyingclub.SwaggerConfig$$EnhancerBySpringCGLIB$$4e58d5b8 [main] Set Swagger2 documentation
+2022-09-22 14:09:57,394 INFO com.fabienit.flyingclub.model.beans.BorrowTest [main] Started BorrowTest in 3.294 seconds (JVM running for 200.526)
+2022-09-22 14:09:57,530 INFO com.fabienit.flyingclub.model.beans.LibraryTest [main] Starting LibraryTest on FABPC with PID 10024 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10\backendApiBiblio)
+2022-09-22 14:09:57,532 DEBUG com.fabienit.flyingclub.model.beans.LibraryTest [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-09-22 14:09:57,532 INFO com.fabienit.flyingclub.model.beans.LibraryTest [main] The following profiles are active: integration
+2022-09-22 14:09:59,984 DEBUG configuration.com.fabien.flyingclub.SwaggerConfig$$EnhancerBySpringCGLIB$$4e58d5b8 [main] Set Swagger2 documentation
+2022-09-22 14:10:00,574 INFO com.fabienit.flyingclub.model.beans.LibraryTest [main] Started LibraryTest in 3.112 seconds (JVM running for 203.706)
+2022-09-22 14:10:00,766 INFO com.fabienit.flyingclub.model.beans.RegisteredUserTest [main] Starting RegisteredUserTest on FABPC with PID 10024 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10\backendApiBiblio)
+2022-09-22 14:10:00,767 DEBUG com.fabienit.flyingclub.model.beans.RegisteredUserTest [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-09-22 14:10:00,767 INFO com.fabienit.flyingclub.model.beans.RegisteredUserTest [main] The following profiles are active: integration
+2022-09-22 14:10:03,289 DEBUG configuration.com.fabien.flyingclub.SwaggerConfig$$EnhancerBySpringCGLIB$$4e58d5b8 [main] Set Swagger2 documentation
+2022-09-22 14:10:03,998 INFO com.fabienit.flyingclub.model.beans.RegisteredUserTest [main] Started RegisteredUserTest in 3.272 seconds (JVM running for 207.13)
+2022-09-22 14:10:04,111 INFO com.fabienit.flyingclub.model.beans.RegisteredUserTest [main] Starting RegisteredUserTest on FABPC with PID 10024 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10\backendApiBiblio)
+2022-09-22 14:10:04,111 DEBUG com.fabienit.flyingclub.model.beans.RegisteredUserTest [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-09-22 14:10:04,111 INFO com.fabienit.flyingclub.model.beans.RegisteredUserTest [main] The following profiles are active: integration
+2022-09-22 14:10:08,132 DEBUG configuration.com.fabien.flyingclub.SwaggerConfig$$EnhancerBySpringCGLIB$$4e58d5b8 [main] Set Swagger2 documentation
+2022-09-22 14:10:09,049 INFO com.fabienit.flyingclub.model.beans.RegisteredUserTest [main] Started RegisteredUserTest in 4.971 seconds (JVM running for 212.18)
+2022-09-22 14:10:09,198 INFO com.fabienit.flyingclub.model.beans.ReservationTest [main] Starting ReservationTest on FABPC with PID 10024 (started by FaB PC in C:\Users\FaB\Git\Projet 10\bibliothequep10\backendApiBiblio)
+2022-09-22 14:10:09,199 DEBUG com.fabienit.flyingclub.model.beans.ReservationTest [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2022-09-22 14:10:09,199 INFO com.fabienit.flyingclub.model.beans.ReservationTest [main] The following profiles are active: integration
+2022-09-22 14:10:10,992 DEBUG configuration.com.fabien.flyingclub.SwaggerConfig$$EnhancerBySpringCGLIB$$4e58d5b8 [main] Set Swagger2 documentation
+2022-09-22 14:10:11,467 INFO com.fabienit.flyingclub.model.beans.ReservationTest [main] Started ReservationTest in 2.311 seconds (JVM running for 214.599)

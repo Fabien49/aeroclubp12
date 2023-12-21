@@ -11,7 +11,7 @@
 	<groupId>com.fabienit</groupId>
 	<artifactId>bibliobatch</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>bibliobatch</name>
+	<name>aeroclubbatch</name>
 	<description>batch d'envoi de mail de relance</description>
 
 	<properties>

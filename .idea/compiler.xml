@@ -6,20 +6,15 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="biblioapi" />
         <module name="webapp" />
         <module name="bibliobatch" />
+        <module name="aeroclubapi" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="biblioapi" target="1.8" />
-      <module name="bibliobatch" target="1.8" />
-      <module name="webapp" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="biblioapi" options="-parameters" />
+      <module name="aeroclubapi" options="-parameters" />
       <module name="bibliobatch" options="-parameters" />
       <module name="webapp" options="-parameters" />
     </option>

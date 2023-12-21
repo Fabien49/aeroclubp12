@@ -1,161 +1,303 @@
-2022-09-18 18:10:50,155 INFO com.fabienit.biblioweb.BibliowebApplication [main] No active profile set, falling back to default profiles: default
-2022-09-18 18:10:55,407 INFO com.fabienit.biblioweb.BibliowebApplication [main] Started BibliowebApplication in 7.136 seconds (JVM running for 8.889)
-2022-09-18 18:16:34,366 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-1] Reach url: / - GET
-2022-09-18 18:16:37,298 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-7] Reach url: /connexion - GET
-2022-09-18 18:16:39,548 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-10] Reach url: / - GET
-2022-09-18 18:16:42,169 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-5] Reach url: /profile - GET
-2022-09-18 18:16:42,171 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-5] Getting active borrows for current authenticated user
-2022-09-18 18:16:42,176 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-5] Getting authenticated current user id
-2022-09-18 18:16:42,405 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-5] Getting reservations for current authenticated user
-2022-09-18 18:16:42,406 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-5] Getting authenticated current user id
-2022-09-18 18:20:18,565 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-1] Reach url: /profile - GET
-2022-09-18 18:20:18,565 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-1] Getting active borrows for current authenticated user
-2022-09-18 18:20:18,565 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-1] Getting authenticated current user id
-2022-09-18 18:20:19,552 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-1] Getting reservations for current authenticated user
-2022-09-18 18:20:19,552 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-1] Getting authenticated current user id
-2022-09-18 18:20:24,055 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-3] Reach url: /disconnect - GET
-2022-09-18 18:20:24,069 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-5] Reach url: /connexion - GET
-2022-09-18 18:20:25,633 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-8] Reach url: / - GET
-2022-09-18 18:20:27,472 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-4] Reach url: /profile - GET
-2022-09-18 18:20:27,474 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-4] Getting active borrows for current authenticated user
-2022-09-18 18:20:27,474 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-4] Getting authenticated current user id
-2022-09-18 18:20:27,580 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-4] Getting reservations for current authenticated user
-2022-09-18 18:20:27,580 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-4] Getting authenticated current user id
-2022-09-18 18:21:26,956 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-7] Reach url: / - GET
-2022-09-18 18:21:36,121 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-4] Reach url: /disconnect - GET
-2022-09-18 18:21:36,139 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-3] Reach url: /connexion - GET
-2022-09-18 18:21:38,838 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-6] Reach url: /connexion - GET
-2022-09-18 18:21:42,607 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-1] Reach url: / - GET
-2022-09-18 18:21:45,215 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-4] Reach url: /connexion - GET
-2022-09-18 18:21:46,990 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-6] Reach url: / - GET
-2022-09-18 18:21:48,217 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-9] Reach url: /profile - GET
-2022-09-18 18:21:48,218 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-9] Getting active borrows for current authenticated user
-2022-09-18 18:21:48,219 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-9] Getting authenticated current user id
-2022-09-18 18:21:48,450 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-9] Getting reservations for current authenticated user
-2022-09-18 18:21:48,450 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-9] Getting authenticated current user id
-2022-09-18 18:22:13,618 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-5] Reach url: /disconnect - GET
-2022-09-18 18:22:13,628 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-6] Reach url: /connexion - GET
-2022-09-18 18:22:18,012 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-10] Reach url: / - GET
-2022-09-18 18:22:19,589 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-3] Reach url: /profile - GET
-2022-09-18 18:22:19,590 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-3] Getting active borrows for current authenticated user
-2022-09-18 18:22:19,590 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-3] Getting authenticated current user id
-2022-09-18 18:22:19,695 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-3] Getting reservations for current authenticated user
-2022-09-18 18:22:19,695 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-3] Getting authenticated current user id
-2022-09-18 18:23:05,266 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-6] Reach url: / - GET
-2022-09-18 18:23:08,229 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-4] Reach url: /profile - GET
-2022-09-18 18:23:08,230 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-4] Getting active borrows for current authenticated user
-2022-09-18 18:23:08,230 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-4] Getting authenticated current user id
-2022-09-18 18:23:09,010 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-4] Getting reservations for current authenticated user
-2022-09-18 18:23:09,010 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-4] Getting authenticated current user id
-2022-09-18 18:24:05,432 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-3] Reach url: /disconnect - GET
-2022-09-18 18:24:05,445 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-5] Reach url: /connexion - GET
-2022-09-18 18:24:08,307 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-8] Reach url: / - GET
-2022-09-18 18:24:09,482 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-5] Reach url: /profile - GET
-2022-09-18 18:24:09,482 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-5] Getting active borrows for current authenticated user
-2022-09-18 18:24:09,482 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-5] Getting authenticated current user id
-2022-09-18 18:24:09,713 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-5] Getting reservations for current authenticated user
-2022-09-18 18:24:09,714 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-5] Getting authenticated current user id
-2022-09-18 18:24:29,975 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-10] Reach url: /profile - POST
-2022-09-18 18:24:30,371 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-7] Reach url: /profile - GET
-2022-09-18 18:24:30,373 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-7] Getting active borrows for current authenticated user
-2022-09-18 18:24:30,374 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-7] Getting authenticated current user id
-2022-09-18 18:24:30,477 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-7] Getting reservations for current authenticated user
-2022-09-18 18:24:30,477 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-7] Getting authenticated current user id
-2022-09-18 18:24:42,844 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-3] Reach url: /profile - GET
-2022-09-18 18:24:42,845 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-3] Getting active borrows for current authenticated user
-2022-09-18 18:24:42,845 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-3] Getting authenticated current user id
-2022-09-18 18:24:42,943 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-3] Getting reservations for current authenticated user
-2022-09-18 18:24:42,945 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-3] Getting authenticated current user id
-2022-09-18 18:25:19,441 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-5] Reach url: / - GET
-2022-09-18 18:25:19,702 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-5] Getting authenticated current user id
-2022-09-18 18:25:19,800 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-5] Getting active borrows for current authenticated user
-2022-09-18 18:25:19,800 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-5] Getting authenticated current user id
-2022-09-18 18:25:49,276 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-4] Reach url: /reserve - POST
-2022-09-18 18:25:49,277 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-4] Getting authenticated current user id
-2022-09-18 18:25:49,433 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-2] Reach url: /profile - GET
-2022-09-18 18:25:49,433 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-2] Getting active borrows for current authenticated user
-2022-09-18 18:25:49,433 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-2] Getting authenticated current user id
-2022-09-18 18:25:49,530 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-2] Getting reservations for current authenticated user
-2022-09-18 18:25:49,530 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-2] Getting authenticated current user id
-2022-09-18 18:25:55,481 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-7] Reach url: /profile - GET
-2022-09-18 18:25:55,482 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-7] Getting active borrows for current authenticated user
-2022-09-18 18:25:55,482 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-7] Getting authenticated current user id
-2022-09-18 18:25:55,576 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-7] Getting reservations for current authenticated user
-2022-09-18 18:25:55,577 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-7] Getting authenticated current user id
-2022-09-18 18:25:57,498 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-6] Reach url: / - GET
-2022-09-18 18:25:57,721 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-6] Getting authenticated current user id
-2022-09-18 18:25:57,871 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-6] Getting active borrows for current authenticated user
-2022-09-18 18:25:57,871 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-6] Getting authenticated current user id
-2022-09-18 18:26:35,389 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-5] Reach url: /profile - GET
-2022-09-18 18:26:35,390 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-5] Getting active borrows for current authenticated user
-2022-09-18 18:26:35,390 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-5] Getting authenticated current user id
-2022-09-18 18:26:35,494 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-5] Getting reservations for current authenticated user
-2022-09-18 18:26:35,494 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-5] Getting authenticated current user id
-2022-09-18 18:26:50,602 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-6] Reach url: /disconnect - GET
-2022-09-18 18:26:50,613 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-3] Reach url: /connexion - GET
-2022-09-18 18:27:04,087 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-7] Reach url: / - GET
-2022-09-18 18:27:05,477 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-9] Reach url: /profile - GET
-2022-09-18 18:27:05,477 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-9] Getting active borrows for current authenticated user
-2022-09-18 18:27:05,477 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-9] Getting authenticated current user id
-2022-09-18 18:27:05,733 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-9] Getting reservations for current authenticated user
-2022-09-18 18:27:05,734 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-9] Getting authenticated current user id
-2022-09-18 18:27:18,281 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-8] Reach url: /profile - POST
-2022-09-18 18:27:18,633 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-4] Reach url: /profile - GET
-2022-09-18 18:27:18,634 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-4] Getting active borrows for current authenticated user
-2022-09-18 18:27:18,635 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-4] Getting authenticated current user id
-2022-09-18 18:27:18,731 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-4] Getting reservations for current authenticated user
-2022-09-18 18:27:18,731 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-4] Getting authenticated current user id
-2022-09-18 20:44:32,932 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-9] Reach url: /disconnect - GET
-2022-09-18 20:44:32,942 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-1] Reach url: /connexion - GET
-2022-09-18 21:33:05,661 INFO com.fabienit.biblioweb.BibliowebApplication [main] No active profile set, falling back to default profiles: default
-2022-09-18 21:33:13,082 INFO com.fabienit.biblioweb.BibliowebApplication [main] Started BibliowebApplication in 9.214 seconds (JVM running for 10.895)
-2022-09-18 21:33:13,394 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-1] Reach url: / - GET
-2022-09-18 21:34:48,555 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-10] Reach url: /connexion - GET
-2022-09-18 21:34:52,379 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-5] Reach url: / - GET
-2022-09-18 21:34:54,705 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-6] Reach url: / - GET
-2022-09-18 21:34:55,098 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-6] Getting authenticated current user id
-2022-09-18 21:34:55,343 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-6] Getting active borrows for current authenticated user
-2022-09-18 21:34:55,344 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-6] Getting authenticated current user id
-2022-09-18 21:35:12,710 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-9] Reach url: /profile - GET
-2022-09-18 21:35:12,716 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-9] Getting active borrows for current authenticated user
-2022-09-18 21:35:12,716 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-9] Getting authenticated current user id
-2022-09-18 21:35:12,822 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-9] Getting reservations for current authenticated user
-2022-09-18 21:35:12,822 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-9] Getting authenticated current user id
-2022-09-18 21:35:40,617 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-10] Reach url: /profile - GET
-2022-09-18 21:35:40,618 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-10] Getting active borrows for current authenticated user
-2022-09-18 21:35:40,618 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-10] Getting authenticated current user id
-2022-09-18 21:35:40,719 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-10] Getting reservations for current authenticated user
-2022-09-18 21:35:40,720 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-10] Getting authenticated current user id
-2022-09-18 21:35:45,016 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-1] Reach url: / - GET
-2022-09-18 21:35:45,228 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-1] Getting authenticated current user id
-2022-09-18 21:35:45,321 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-1] Getting active borrows for current authenticated user
-2022-09-18 21:35:45,322 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-1] Getting authenticated current user id
-2022-09-18 21:35:49,349 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-7] Reach url: /reserve - POST
-2022-09-18 21:35:49,350 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-7] Getting authenticated current user id
-2022-09-18 21:35:49,611 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-10] Reach url: /profile - GET
-2022-09-18 21:35:49,612 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-10] Getting active borrows for current authenticated user
-2022-09-18 21:35:49,612 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-10] Getting authenticated current user id
-2022-09-18 21:35:49,712 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-10] Getting reservations for current authenticated user
-2022-09-18 21:35:49,712 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-10] Getting authenticated current user id
-2022-09-18 21:35:54,133 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-4] Reach url: /profile - GET
-2022-09-18 21:35:54,133 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-4] Getting active borrows for current authenticated user
-2022-09-18 21:35:54,134 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-4] Getting authenticated current user id
-2022-09-18 21:35:54,235 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-4] Getting reservations for current authenticated user
-2022-09-18 21:35:54,236 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-4] Getting authenticated current user id
-2022-09-18 21:35:55,358 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-5] Reach url: / - GET
-2022-09-18 21:35:55,572 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-5] Getting authenticated current user id
-2022-09-18 21:35:55,668 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-5] Getting active borrows for current authenticated user
-2022-09-18 21:35:55,668 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-5] Getting authenticated current user id
-2022-09-18 21:36:04,878 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-1] Reach url: /reserve - POST
-2022-09-18 21:36:04,878 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-1] Getting authenticated current user id
-2022-09-18 21:36:05,006 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-4] Reach url: /profile - GET
-2022-09-18 21:36:05,007 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-4] Getting active borrows for current authenticated user
-2022-09-18 21:36:05,007 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-4] Getting authenticated current user id
-2022-09-18 21:36:05,120 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-4] Getting reservations for current authenticated user
-2022-09-18 21:36:05,120 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-4] Getting authenticated current user id
-2022-09-18 21:37:39,744 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-1] Reach url: /profile - POST
-2022-09-18 21:37:40,004 INFO com.fabienit.biblioweb.web.controllers.WebappController [http-nio-8002-exec-4] Reach url: /profile - GET
-2022-09-18 21:37:40,005 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-4] Getting active borrows for current authenticated user
-2022-09-18 21:37:40,005 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-4] Getting authenticated current user id
-2022-09-18 21:37:40,104 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-4] Getting reservations for current authenticated user
-2022-09-18 21:37:40,104 DEBUG com.fabienit.biblioweb.service.impl.WebappServiceImpl [http-nio-8002-exec-4] Getting authenticated current user id
+2023-12-21 00:00:10,152 INFO com.fabienit.flyingclub.AeroclubwebApplication [restartedMain] No active profile set, falling back to default profiles: default
+2023-12-21 00:00:16,572 INFO com.fabienit.flyingclub.AeroclubwebApplication [restartedMain] Started AeroclubwebApplication in 11.097 seconds (JVM running for 15.016)
+2023-12-21 00:00:56,557 INFO com.fabienit.flyingclub.web.controllers.WebappController [http-nio-8002-exec-2] Reach url: / - GET
+2023-12-21 00:00:59,330 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-3] [ApiProxy#findUserByEmail] ---> POST http://localhost:8001/users/email HTTP/1.1
+2023-12-21 00:00:59,331 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-3] [ApiProxy#findUserByEmail] Authorization: Basic ZmFiaWVuOjEyMzQ1Ng==
+2023-12-21 00:00:59,332 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-3] [ApiProxy#findUserByEmail] Content-Length: 15
+2023-12-21 00:00:59,332 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-3] [ApiProxy#findUserByEmail] Content-Type: text/plain;charset=UTF-8
+2023-12-21 00:00:59,332 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-3] [ApiProxy#findUserByEmail] 
+2023-12-21 00:00:59,332 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-3] [ApiProxy#findUserByEmail] test1@gmail.com
+2023-12-21 00:00:59,333 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-3] [ApiProxy#findUserByEmail] ---> END HTTP (15-byte body)
+2023-12-21 00:00:59,494 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-3] [ApiProxy#findUserByEmail] <--- HTTP/1.1 200 (160ms)
+2023-12-21 00:00:59,494 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-3] [ApiProxy#findUserByEmail] cache-control: no-cache, no-store, max-age=0, must-revalidate
+2023-12-21 00:00:59,494 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-3] [ApiProxy#findUserByEmail] connection: keep-alive
+2023-12-21 00:00:59,495 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-3] [ApiProxy#findUserByEmail] content-type: application/json
+2023-12-21 00:00:59,495 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-3] [ApiProxy#findUserByEmail] date: Wed, 20 Dec 2023 23:00:59 GMT
+2023-12-21 00:00:59,495 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-3] [ApiProxy#findUserByEmail] expires: 0
+2023-12-21 00:00:59,495 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-3] [ApiProxy#findUserByEmail] keep-alive: timeout=60
+2023-12-21 00:00:59,495 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-3] [ApiProxy#findUserByEmail] pragma: no-cache
+2023-12-21 00:00:59,495 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-3] [ApiProxy#findUserByEmail] set-cookie: JSESSIONID=86F5225B3279FE7716E4C416EAE26F71; Path=/; HttpOnly
+2023-12-21 00:00:59,495 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-3] [ApiProxy#findUserByEmail] transfer-encoding: chunked
+2023-12-21 00:00:59,495 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-3] [ApiProxy#findUserByEmail] x-content-type-options: nosniff
+2023-12-21 00:00:59,496 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-3] [ApiProxy#findUserByEmail] x-xss-protection: 1; mode=block
+2023-12-21 00:00:59,496 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-3] [ApiProxy#findUserByEmail] 
+2023-12-21 00:00:59,497 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-3] [ApiProxy#findUserByEmail] {"id":2,"firstName":"userName","lastName":"userLastName","email":"test1@gmail.com","password":"$2a$10$jPUTDV6/9AkC7NRPPzmvXuLJlfnKoAYo.uJuZc0aeJHGum.LpxO0a","hours":138,"roles":"USER"}
+2023-12-21 00:00:59,497 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-3] [ApiProxy#findUserByEmail] <--- END HTTP (184-byte body)
+2023-12-21 00:00:59,694 INFO com.fabienit.flyingclub.web.controllers.WebappController [http-nio-8002-exec-5] Reach url: / - GET
+2023-12-21 00:01:01,864 INFO com.fabienit.flyingclub.web.controllers.WebappController [http-nio-8002-exec-8] Reach url: /reservations - GET
+2023-12-21 00:01:01,865 DEBUG com.fabienit.flyingclub.service.impl.WebappServiceImpl [http-nio-8002-exec-8] Getting authenticated current user id
+2023-12-21 00:01:01,866 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-8] [ApiProxy#getAvailableAircrafts] ---> GET http://localhost:8001/aircraftsAvailable HTTP/1.1
+2023-12-21 00:01:01,866 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-8] [ApiProxy#getAvailableAircrafts] Authorization: Basic ZmFiaWVuOjEyMzQ1Ng==
+2023-12-21 00:01:01,867 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-8] [ApiProxy#getAvailableAircrafts] ---> END HTTP (0-byte body)
+2023-12-21 00:01:02,031 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-8] [ApiProxy#getAvailableAircrafts] <--- HTTP/1.1 200 (164ms)
+2023-12-21 00:01:02,032 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-8] [ApiProxy#getAvailableAircrafts] cache-control: no-cache, no-store, max-age=0, must-revalidate
+2023-12-21 00:01:02,032 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-8] [ApiProxy#getAvailableAircrafts] connection: keep-alive
+2023-12-21 00:01:02,032 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-8] [ApiProxy#getAvailableAircrafts] content-type: application/json
+2023-12-21 00:01:02,032 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-8] [ApiProxy#getAvailableAircrafts] date: Wed, 20 Dec 2023 23:01:02 GMT
+2023-12-21 00:01:02,032 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-8] [ApiProxy#getAvailableAircrafts] expires: 0
+2023-12-21 00:01:02,033 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-8] [ApiProxy#getAvailableAircrafts] keep-alive: timeout=60
+2023-12-21 00:01:02,033 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-8] [ApiProxy#getAvailableAircrafts] pragma: no-cache
+2023-12-21 00:01:02,033 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-8] [ApiProxy#getAvailableAircrafts] set-cookie: JSESSIONID=B1D3FEBB52D1E4AA41698C8FB46A6EDC; Path=/; HttpOnly
+2023-12-21 00:01:02,033 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-8] [ApiProxy#getAvailableAircrafts] transfer-encoding: chunked
+2023-12-21 00:01:02,034 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-8] [ApiProxy#getAvailableAircrafts] x-content-type-options: nosniff
+2023-12-21 00:01:02,034 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-8] [ApiProxy#getAvailableAircrafts] x-xss-protection: 1; mode=block
+2023-12-21 00:01:02,034 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-8] [ApiProxy#getAvailableAircrafts] 
+2023-12-21 00:01:02,034 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-8] [ApiProxy#getAvailableAircrafts] [{"id":1,"mark":"Diamond Aircraft","type":"DA 20-100 Katana","motor":"Rotax 912 S","power":"100 ch","seats":2,"autonomy":4,"use":"ecole","hours":4589,"available":true},{"id":3,"mark":"Piper","type":"PA 28-161 Cadet","motor":"Lycoming ","power":"160 ch","seats":2,"autonomy":5,"use":"voyage","hours":7810,"available":true},{"id":4,"mark":"Cessna","type":"kyhawk C172 S","motor":"Lycoming ","power":"180 ch","seats":4,"autonomy":5,"use":"voyage","hours":429,"available":true}]
+2023-12-21 00:01:02,034 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-8] [ApiProxy#getAvailableAircrafts] <--- END HTTP (474-byte body)
+2023-12-21 00:01:02,041 DEBUG com.fabienit.flyingclub.service.impl.WebappServiceImpl [http-nio-8002-exec-8] Getting reservations for current authenticated user
+2023-12-21 00:01:02,042 DEBUG com.fabienit.flyingclub.service.impl.WebappServiceImpl [http-nio-8002-exec-8] Getting authenticated current user id
+2023-12-21 00:01:02,042 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-8] [ApiProxy#getReservationByRegisteredUser] ---> GET http://localhost:8001/reservations/user/2 HTTP/1.1
+2023-12-21 00:01:02,043 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-8] [ApiProxy#getReservationByRegisteredUser] Authorization: Basic ZmFiaWVuOjEyMzQ1Ng==
+2023-12-21 00:01:02,043 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-8] [ApiProxy#getReservationByRegisteredUser] ---> END HTTP (0-byte body)
+2023-12-21 00:01:02,225 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-8] [ApiProxy#getReservationByRegisteredUser] <--- HTTP/1.1 200 (182ms)
+2023-12-21 00:01:02,226 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-8] [ApiProxy#getReservationByRegisteredUser] cache-control: no-cache, no-store, max-age=0, must-revalidate
+2023-12-21 00:01:02,226 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-8] [ApiProxy#getReservationByRegisteredUser] connection: keep-alive
+2023-12-21 00:01:02,226 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-8] [ApiProxy#getReservationByRegisteredUser] content-type: application/json
+2023-12-21 00:01:02,226 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-8] [ApiProxy#getReservationByRegisteredUser] date: Wed, 20 Dec 2023 23:01:02 GMT
+2023-12-21 00:01:02,226 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-8] [ApiProxy#getReservationByRegisteredUser] expires: 0
+2023-12-21 00:01:02,226 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-8] [ApiProxy#getReservationByRegisteredUser] keep-alive: timeout=60
+2023-12-21 00:01:02,226 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-8] [ApiProxy#getReservationByRegisteredUser] pragma: no-cache
+2023-12-21 00:01:02,226 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-8] [ApiProxy#getReservationByRegisteredUser] set-cookie: JSESSIONID=3A12F65C7C40CE55F0BB2AECE585E404; Path=/; HttpOnly
+2023-12-21 00:01:02,226 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-8] [ApiProxy#getReservationByRegisteredUser] transfer-encoding: chunked
+2023-12-21 00:01:02,226 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-8] [ApiProxy#getReservationByRegisteredUser] x-content-type-options: nosniff
+2023-12-21 00:01:02,226 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-8] [ApiProxy#getReservationByRegisteredUser] x-xss-protection: 1; mode=block
+2023-12-21 00:01:02,227 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-8] [ApiProxy#getReservationByRegisteredUser] 
+2023-12-21 00:01:02,227 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-8] [ApiProxy#getReservationByRegisteredUser] [{"id":2,"borrowingDate":"2023-10-08T22:00:00.000+0000","returnDate":"2023-10-08T22:00:00.000+0000","aircraft":{"id":2,"mark":"Diamond Aircraft","type":"DA 40","motor":"Rotax 912 S","power":"180 ch","seats":4,"autonomy":4,"use":"voyage","hours":378,"available":false},"registeredUser":{"id":2,"firstName":"userName","lastName":"userLastName","email":"test1@gmail.com","password":"$2a$10$jPUTDV6/9AkC7NRPPzmvXuLJlfnKoAYo.uJuZc0aeJHGum.LpxO0a","hours":138,"roles":"USER"}},{"id":6,"borrowingDate":"2023-12-10T23:00:00.000+0000","returnDate":"2023-12-11T23:00:00.000+0000","aircraft":{"id":3,"mark":"Piper","type":"PA 28-161 Cadet","motor":"Lycoming ","power":"160 ch","seats":2,"autonomy":5,"use":"voyage","hours":7810,"available":true},"registeredUser":{"id":2,"firstName":"userName","lastName":"userLastName","email":"test1@gmail.com","password":"$2a$10$jPUTDV6/9AkC7NRPPzmvXuLJlfnKoAYo.uJuZc0aeJHGum.LpxO0a","hours":138,"roles":"USER"}}]
+2023-12-21 00:01:02,228 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-8] [ApiProxy#getReservationByRegisteredUser] <--- END HTTP (938-byte body)
+2023-12-21 00:01:07,287 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-5] [ApiProxy#getAvailableAircrafts] ---> GET http://localhost:8001/aircraftsAvailable HTTP/1.1
+2023-12-21 00:01:07,289 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-5] [ApiProxy#getAvailableAircrafts] Authorization: Basic ZmFiaWVuOjEyMzQ1Ng==
+2023-12-21 00:01:07,289 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-5] [ApiProxy#getAvailableAircrafts] ---> END HTTP (0-byte body)
+2023-12-21 00:01:07,417 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-5] [ApiProxy#getAvailableAircrafts] <--- HTTP/1.1 200 (128ms)
+2023-12-21 00:01:07,417 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-5] [ApiProxy#getAvailableAircrafts] cache-control: no-cache, no-store, max-age=0, must-revalidate
+2023-12-21 00:01:07,418 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-5] [ApiProxy#getAvailableAircrafts] connection: keep-alive
+2023-12-21 00:01:07,418 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-5] [ApiProxy#getAvailableAircrafts] content-type: application/json
+2023-12-21 00:01:07,418 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-5] [ApiProxy#getAvailableAircrafts] date: Wed, 20 Dec 2023 23:01:07 GMT
+2023-12-21 00:01:07,418 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-5] [ApiProxy#getAvailableAircrafts] expires: 0
+2023-12-21 00:01:07,418 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-5] [ApiProxy#getAvailableAircrafts] keep-alive: timeout=60
+2023-12-21 00:01:07,418 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-5] [ApiProxy#getAvailableAircrafts] pragma: no-cache
+2023-12-21 00:01:07,418 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-5] [ApiProxy#getAvailableAircrafts] set-cookie: JSESSIONID=8FF16FB02476CA0090E9FEED12FDA529; Path=/; HttpOnly
+2023-12-21 00:01:07,418 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-5] [ApiProxy#getAvailableAircrafts] transfer-encoding: chunked
+2023-12-21 00:01:07,419 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-5] [ApiProxy#getAvailableAircrafts] x-content-type-options: nosniff
+2023-12-21 00:01:07,419 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-5] [ApiProxy#getAvailableAircrafts] x-xss-protection: 1; mode=block
+2023-12-21 00:01:07,420 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-5] [ApiProxy#getAvailableAircrafts] 
+2023-12-21 00:01:07,420 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-5] [ApiProxy#getAvailableAircrafts] [{"id":1,"mark":"Diamond Aircraft","type":"DA 20-100 Katana","motor":"Rotax 912 S","power":"100 ch","seats":2,"autonomy":4,"use":"ecole","hours":4589,"available":true},{"id":3,"mark":"Piper","type":"PA 28-161 Cadet","motor":"Lycoming ","power":"160 ch","seats":2,"autonomy":5,"use":"voyage","hours":7810,"available":true},{"id":4,"mark":"Cessna","type":"kyhawk C172 S","motor":"Lycoming ","power":"180 ch","seats":4,"autonomy":5,"use":"voyage","hours":429,"available":true}]
+2023-12-21 00:01:07,420 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-5] [ApiProxy#getAvailableAircrafts] <--- END HTTP (474-byte body)
+2023-12-21 00:01:07,426 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-5] [ApiProxy#getReservations] ---> GET http://localhost:8001/reservations HTTP/1.1
+2023-12-21 00:01:07,426 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-5] [ApiProxy#getReservations] Authorization: Basic ZmFiaWVuOjEyMzQ1Ng==
+2023-12-21 00:01:07,426 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-5] [ApiProxy#getReservations] Content-Length: 2
+2023-12-21 00:01:07,426 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-5] [ApiProxy#getReservations] Content-Type: application/json
+2023-12-21 00:01:07,426 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-5] [ApiProxy#getReservations] 
+2023-12-21 00:01:07,426 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-5] [ApiProxy#getReservations] []
+2023-12-21 00:01:07,426 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-5] [ApiProxy#getReservations] ---> END HTTP (2-byte body)
+2023-12-21 00:01:07,583 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-5] [ApiProxy#getReservations] <--- HTTP/1.1 400 (156ms)
+2023-12-21 00:01:07,583 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-5] [ApiProxy#getReservations] cache-control: no-cache, no-store, max-age=0, must-revalidate
+2023-12-21 00:01:07,583 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-5] [ApiProxy#getReservations] connection: close
+2023-12-21 00:01:07,584 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-5] [ApiProxy#getReservations] content-length: 0
+2023-12-21 00:01:07,584 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-5] [ApiProxy#getReservations] date: Wed, 20 Dec 2023 23:01:07 GMT
+2023-12-21 00:01:07,584 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-5] [ApiProxy#getReservations] expires: 0
+2023-12-21 00:01:07,584 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-5] [ApiProxy#getReservations] pragma: no-cache
+2023-12-21 00:01:07,584 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-5] [ApiProxy#getReservations] set-cookie: JSESSIONID=1D305734E3E0C0CB0FF78C9EECEC1832; Path=/; HttpOnly
+2023-12-21 00:01:07,584 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-5] [ApiProxy#getReservations] x-content-type-options: nosniff
+2023-12-21 00:01:07,584 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-5] [ApiProxy#getReservations] x-xss-protection: 1; mode=block
+2023-12-21 00:01:07,584 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-5] [ApiProxy#getReservations] <--- END HTTP (0-byte body)
+2023-12-21 00:01:07,599 ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] [http-nio-8002-exec-5] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is feign.FeignException$BadRequest: status 400 reading ApiProxy#getReservations(List)] with root cause
+feign.FeignException$BadRequest: status 400 reading ApiProxy#getReservations(List)
+	at feign.FeignException.clientErrorStatus(FeignException.java:159)
+	at feign.FeignException.errorStatus(FeignException.java:141)
+	at feign.FeignException.errorStatus(FeignException.java:133)
+	at feign.codec.ErrorDecoder$Default.decode(ErrorDecoder.java:92)
+	at feign.SynchronousMethodHandler.executeAndDecode(SynchronousMethodHandler.java:151)
+	at feign.SynchronousMethodHandler.invoke(SynchronousMethodHandler.java:80)
+	at feign.ReflectiveFeign$FeignInvocationHandler.invoke(ReflectiveFeign.java:103)
+	at com.sun.proxy.$Proxy114.getReservations(Unknown Source)
+	at com.fabienit.flyingclub.web.controllers.WebappController.getAvailableAircrafts(WebappController.java:419)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:126)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:90)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:118)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:158)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:117)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:108)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1591)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2023-12-21 00:01:11,029 INFO com.fabienit.flyingclub.web.controllers.WebappController [http-nio-8002-exec-6] Reach url: /reservations - POST
+2023-12-21 00:01:11,030 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getRegisteredUserById] ---> GET http://localhost:8001/users/2 HTTP/1.1
+2023-12-21 00:01:11,031 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getRegisteredUserById] Authorization: Basic ZmFiaWVuOjEyMzQ1Ng==
+2023-12-21 00:01:11,031 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getRegisteredUserById] ---> END HTTP (0-byte body)
+2023-12-21 00:01:11,165 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getRegisteredUserById] <--- HTTP/1.1 200 (133ms)
+2023-12-21 00:01:11,165 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getRegisteredUserById] cache-control: no-cache, no-store, max-age=0, must-revalidate
+2023-12-21 00:01:11,165 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getRegisteredUserById] connection: keep-alive
+2023-12-21 00:01:11,165 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getRegisteredUserById] content-type: application/json
+2023-12-21 00:01:11,165 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getRegisteredUserById] date: Wed, 20 Dec 2023 23:01:11 GMT
+2023-12-21 00:01:11,166 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getRegisteredUserById] expires: 0
+2023-12-21 00:01:11,166 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getRegisteredUserById] keep-alive: timeout=60
+2023-12-21 00:01:11,166 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getRegisteredUserById] pragma: no-cache
+2023-12-21 00:01:11,166 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getRegisteredUserById] set-cookie: JSESSIONID=92847C12A678693A4A110FE2EBDA3109; Path=/; HttpOnly
+2023-12-21 00:01:11,166 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getRegisteredUserById] transfer-encoding: chunked
+2023-12-21 00:01:11,166 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getRegisteredUserById] x-content-type-options: nosniff
+2023-12-21 00:01:11,166 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getRegisteredUserById] x-xss-protection: 1; mode=block
+2023-12-21 00:01:11,167 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getRegisteredUserById] 
+2023-12-21 00:01:11,167 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getRegisteredUserById] {"id":2,"firstName":"userName","lastName":"userLastName","email":"test1@gmail.com","password":"$2a$10$jPUTDV6/9AkC7NRPPzmvXuLJlfnKoAYo.uJuZc0aeJHGum.LpxO0a","hours":138,"roles":"USER"}
+2023-12-21 00:01:11,167 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getRegisteredUserById] <--- END HTTP (184-byte body)
+2023-12-21 01:10:16,607 ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] [http-nio-8002-exec-6] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at com.fabienit.flyingclub.service.impl.WebappServiceImpl.convertToEntity(WebappServiceImpl.java:394)
+	at com.fabienit.flyingclub.service.impl.WebappServiceImpl.createReservation(WebappServiceImpl.java:382)
+	at com.fabienit.flyingclub.web.controllers.WebappController.saveReservation(WebappController.java:510)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:126)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:90)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:118)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:158)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:141)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:108)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1591)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2023-12-21 01:10:16,631 INFO com.fabienit.flyingclub.web.controllers.WebappController [http-nio-8002-exec-4] Reach url: / - GET
+2023-12-21 13:34:14,963 INFO com.fabienit.flyingclub.AeroclubwebApplication [restartedMain] No active profile set, falling back to default profiles: default

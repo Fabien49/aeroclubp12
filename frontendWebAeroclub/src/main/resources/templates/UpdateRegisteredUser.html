@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link type="text/css" rel="stylesheet" href="/static/css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="/static/css/style.css" />
+
+    <title>Utilisateur</title>
+  </head>
+
+  <body>
+
+  <div class="container-fluid px-0">
+      <div th:replace="Header :: header"></div>
+
+      <div
+              style="max-width:1200px;margin-left: auto;margin-right: auto;margin-top:24px;padding: 24px;"
+      >
+      <div class="container">
+        <div class="row">
+          <div class="col">
+              <div class="card mb-4">
+                  <div class="card-header">
+                      <h2>Modifier mon profile</h2>
+                  </div>
+                  <div class="card-block">
+                      <div class="table-responsive">
+                          <style>
+                              .narrow-table th, .narrow-table td {
+                                  max-width: 150px; /* Ajustez cette valeur en fonction de la largeur souhaitée */
+                                  overflow: hidden;
+                                  text-overflow: ellipsis;
+                                  white-space: nowrap;
+                              }
+                          </style>
+                          <form th:object="${registeredUser}" th:action="@{/profile/updateRegisteredUser/{id}(id=${registeredUser.id})}" method="post">
+                              <input type="hidden" name="password" th:value="${registeredUser.password}" />
+                              <input type="hidden" name="roles" th:value="${registeredUser.roles}" />
+                              <table class="table table-striped table-hover align-middle">
+                                  <tbody>
+                                  <tr>
+                                      <th scope="row">Nom</th>
+                                      <td>
+                                          <input type="text" class="form-control" id="lastName" name="lastName" th:field="*{lastName}" th:placeholder="${registeredUser.lastName}" required>
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">Prénom</th>
+                                      <td>
+                                          <input type="text" class="form-control" id="firstName" name="firstName" th:field="*{firstName}" th:placeholder="${registeredUser.firstName}" required>
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">Email</th>
+                                      <td>
+                                              <input type="text" class="form-control" id="email" name="email" th:field="*{email}" th:placeholder="${registeredUser.email}" required>
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">Nombre d'heures de vol</th>
+                                      <td>
+                                          <input type="text" class="form-control" id="hours" name="hours" th:field="*{hours}" th:placeholder="${registeredUser.hours}" required>
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">Modifier profile</th>
+                                      <td>
+                                          <button class="btn btn-warning form-control" type="submit" id="valider">Valider</button>
+                                      </td>
+                                  </tr>
+                                  </tbody>
+                              </table>
+                          </form>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>
+
+
+      </div>
+
+
+
+
+                  <ul class="nav nav-pills">
+                      <li  th:each="page,status:${pages}">
+                          <a  th:class="${status.index == currentPage?'btn btn-primary' : 'btn'}" th:href="@{topoListe(page=${status.index}, keyword=${keyword}, disponible=${disponible})}" th:text="${status.index + 1}"></a>
+                      </li>
+                  </ul>
+
+
+                                <div sec:authorize="isAnonymous()">
+                                    <a class="btn btn-info" th:href="@{/connexion}" role="button">Réserver</a>
+                                </div>
+
+
+  </div>
+  </body>
+</html>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+
+<!--    <script>
+      $(document).ready(function() {
+        $(".booksAvailabilityButton").click(function() {
+          $(".copy").hide();
+          var bookId =
+            "bookId" +
+            $(this)
+              .attr("id")
+              .split("_", 1);
+          $("." + bookId).show();
+        });
+      });
+    </script>-->
+  </body>
+</html>
