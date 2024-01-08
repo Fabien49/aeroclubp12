@@ -27,17 +27,18 @@
   <div class="col-12">
       <div class="border-secondary shadow card h-100">
           <div class="card-body">
-              <a class="btn btn-info" th:href="@{/addAircraft}">Ajouter un avion</a>
+              <a class="btn btn-info" th:href="@{/addWorkshop}">Ajouter un avion à l'atelier</a>
               <div class="table-responsive-sm table-responsive-md table-responsive-lg">
                   <CAPTION> <h1 class="text-center">Atelier </h1></CAPTION>
                   <table th:object="${role}" class="table table-bordered table-striped table">
                       <thead class="bg-info text-white">
                       <tr>
                           <th>Avion</th>
-                          <th>Hélisse changée</th>
+                          <th>Hélice changée</th>
                           <th>Moteur changé</th>
                           <th>Autre</th>
-                          <th>Date</th>
+                          <th>Date d'entrée</th>
+                          <th>Date de sortie</th>
                       </tr>
                       </thead>
 
@@ -46,10 +47,11 @@
                           <td th:text="${w.helixChange ? 'oui' : 'non'}"></td>
                           <td th:text="${w.motorChange ? 'oui' : 'non'}"></td>
                           <td th:text="${#strings.isEmpty(w.other) ? 'non' : w.other}"></td>
-                          <td th:text="${#dates.format(w.getDate(), 'dd-MMMM-yyyy')}"></td>
+                          <td th:text="${#dates.format(w.getEntryDate(), 'dd-MMMM-yyyy')}"></td>
+                          <td th:text="${#dates.format(w.getExitDate(), 'dd-MMMM-yyyy')}"></td>
                           <td>
-<!--                             <a th:href="@{/aircrafts/edit/{id}(id=${aircrafts.id})}">Éditer</a>-->
-                              <a onclick="return confirm('Etes-vous sur de vouloir supprimer cet avion ?')" th:href="@{'/workshop/' + ${w.id}}" class="btn btn-danger" >Supprimer</a>
+                              <a class="btn btn-success btn-block" th:href="@{/updateWorkshop/{id}(id=${w.id})}">Éditer</a>
+                              <a onclick="return confirm('Etes-vous sur de vouloir supprimer cet avion ?')" th:href="@{'/workshop/' + ${w.id}}" class="btn btn-danger btn-block" >Supprimer</a>
                           </td>
                       </tr>
 

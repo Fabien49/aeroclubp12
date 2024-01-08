@@ -137,7 +137,7 @@ public class WebappController {
     }
 
     @PostMapping("/aircrafts/updateAircraft/{id}")
-    public String updateAicraft(@PathVariable int id, @ModelAttribute("aircraft") AircraftBean updateAircraftFormDto, BindingResult result, RedirectAttributes redirectAttributes, Model model){
+    public String updateAircraft(@PathVariable int id, @ModelAttribute("aircraft") AircraftBean updateAircraftFormDto, BindingResult result, RedirectAttributes redirectAttributes, Model model){
 
 // Valider les données mises à jour
         if (result.hasErrors()) {
@@ -389,7 +389,7 @@ public class WebappController {
 
             model.addAttribute("currentUserReservations", currentUserReservations);
 
-                        ReservationDto reservationDto = new ReservationDto();
+            ReservationDto reservationDto = new ReservationDto();
             reservationDto.setRegisteredUserId(id);
             model.addAttribute("reservationDto", reservationDto);
 
@@ -400,6 +400,43 @@ public class WebappController {
 
         return "Reservations";
     }
+
+    @GetMapping(value = "/addReservation")
+    public String getAddReservationPage(Model model) {
+
+        logger.info("Reach url: /reservations - GET");
+
+        Boolean isAuthenticated = webappService.getIsAuthenticated();
+
+        if (isAuthenticated) {
+            int id = webappService.getAuthenticatedRegisteredUserId();
+            RegisteredUserBean registeredUserBean = new RegisteredUserBean();
+            registeredUserBean.setId(id);
+
+
+/*            // Get available aircrafts
+            List<AircraftDto> availableAircrafts = webappService.getAvailableAircrafts();
+            model.addAttribute("availableAircrafts", availableAircrafts);
+
+
+            // Get reservations list for current user
+            List<ReservationBean> currentUserReservations = webappService.getReservationsByRegisteredUserId();
+            System.out.println("*************Liste des reservations de l'utilisateur qui a pour id : " + id + "******" + currentUserReservations);
+
+            model.addAttribute("currentUserReservations", currentUserReservations);*/
+
+            ReservationDto reservationDto = new ReservationDto();
+            reservationDto.setRegisteredUserId(id);
+            model.addAttribute("reservationDto", reservationDto);
+
+            System.out.println("/////////////********************------------- reservation avec l'utisateur connecte : " + reservationDto);
+
+
+        }
+
+        return "AddReservation";
+    }
+
 
     @GetMapping("/getAvailableAircrafts")
     @ResponseBody
@@ -533,6 +570,55 @@ public class WebappController {
         return "redirect:/reservations";
     }
 
+
+    @GetMapping(value = "/addHours")
+    public String getAddHoursPage(Model model){
+
+        logger.info("Reach url: /addHours - GET");
+        WorkshopBean workshopBean = new WorkshopBean();
+        model.addAttribute("workshopBean", workshopBean);
+        List<AircraftDto> aircraftDtoList = webappService.getAvailableAircrafts();
+        model.addAttribute("aircraftAvailable", aircraftDtoList);
+
+        return "AddHours";
+    }
+
+    @PostMapping("/updateHours/{id}")
+    public String updateHours(@PathVariable int id, @ModelAttribute("registeredUser") RegisteredUserBean updateRegisteredUserFormDto, BindingResult result, RedirectAttributes redirectAttributes, Model model){
+
+// Valider les données mises à jour
+        if (result.hasErrors()) {
+            // Si des erreurs de validation existent, retourner à la page de mise à jour avec les erreurs
+            return "UpdateHours";
+        }
+
+        updateRegisteredUserFormDto.setLastName(updateRegisteredUserFormDto.getLastName());
+        updateRegisteredUserFormDto.setFirstName(updateRegisteredUserFormDto.getFirstName());
+        updateRegisteredUserFormDto.setEmail(updateRegisteredUserFormDto.getEmail());
+        updateRegisteredUserFormDto.setHours(updateRegisteredUserFormDto.getHours());
+        updateRegisteredUserFormDto.setPassword(updateRegisteredUserFormDto.getPassword());
+        updateRegisteredUserFormDto.setRoles(updateRegisteredUserFormDto.getRoles());
+
+        System.out.println(updateRegisteredUserFormDto.getRoles());
+
+
+        // Mettre à jour l'utilisateur
+        try {
+            webappService.updateRegisteredUser(id, updateRegisteredUserFormDto);
+            redirectAttributes.addFlashAttribute("successMessage", "Utilisateur mis à jour avec succès!");
+        } catch (FeignException e) {
+            // Gérer les erreurs liées à la mise à jour de l'utilisateur
+            redirectAttributes.addFlashAttribute("errorMessage", "Erreur lors de la mise à jour de l'utilisateur.");
+        }
+
+        model.addAttribute("updateRegisteredUserFormDto", updateRegisteredUserFormDto);
+
+        System.out.println("77777777777777777777777777777777777777777777777777777777" + updateRegisteredUserFormDto);
+
+        // Rediriger vers une page de confirmation ou une autre vue
+        return "redirect:/reservations";
+    }
+
     @GetMapping(value = "/workshop")
     public String getWorkshopPage(Model model) {
 
@@ -542,6 +628,93 @@ public class WebappController {
         model.addAttribute("workshop", workshopBean);
 
         return "Workshop";
+    }
+
+    @GetMapping(value = "/addWorkshop")
+    public String getAddWorkshopPage(Model model){
+
+        logger.info("Reach url: /addWorkshop - GET");
+        WorkshopBean workshopBean = new WorkshopBean();
+        model.addAttribute("workshopBean", workshopBean);
+        List<AircraftDto> aircraftDtoList = webappService.getAvailableAircrafts();
+        model.addAttribute("aircraftAvailable", aircraftDtoList);
+
+        return "AddWorkshop";
+    }
+
+    @PostMapping(value = "/addWorkshop")
+    public String addWorkshop(@Valid WorkshopBean workshopBean, RedirectAttributes redirectAttributes){
+
+        System.out.println("&&&&&&&&&&&&&&&&&&&&&&&&&&&&& objet workshop depuis *****WebappController*****" + workshopBean);
+        logger.info("Reach url: /addWorkshop - POST");
+
+
+        System.out.println("objet workshop depuis *****WebappController*****" + workshopBean);
+
+        ResponseEntity<Void> response = null;
+        int status = 0;
+
+        try {
+            response = webappService.createWorkshop(workshopBean);
+            status = response.getStatusCodeValue();
+        } catch (FeignException e) {
+            logger.debug(e.getMessage());
+            logger.debug(e.getLocalizedMessage());
+            status = e.status();
+            e.printStackTrace();
+        }
+
+        if(status == 201){
+            redirectAttributes.addAttribute("workshopStatus", "success");
+        }
+        return "redirect:/workshop";
+    }
+
+    @GetMapping("/updateWorkshop/{id}")
+    public String updateWorkshopForm(Model model, @PathVariable int id){
+        logger.info("Reach url: /updateWorkshopForm - GET");
+
+        WorkshopBean workshopBean = webappService.getWorkshopBeanById(id);
+
+        model.addAttribute("workshop", workshopBean);
+
+
+        return "UpdateWorkshop";
+    }
+
+    @PostMapping("/updateWorkshop/{id}")
+    public String updateWorkshopBean(@PathVariable int id, @ModelAttribute("workshop") WorkshopBean workshopBean, BindingResult result, RedirectAttributes redirectAttributes, Model model){
+
+// Valider les données mises à jour
+        if (result.hasErrors()) {
+            // Si des erreurs de validation existent, retourner à la page de mise à jour avec les erreurs
+            for (ObjectError error : result.getAllErrors()) {
+                System.out.println(error.getDefaultMessage());
+            }
+            System.out.println("il y a une ou des erreurs de validation");
+            return "UpdateWorkshop";
+        }
+
+        workshopBean.setHelixChange(workshopBean.getHelixChange());
+        workshopBean.setMotorChange(workshopBean.getMotorChange());
+        workshopBean.setOther(workshopBean.getOther());
+        workshopBean.setEntryDate(workshopBean.getEntryDate());
+        workshopBean.setExitDate(workshopBean.getExitDate());
+        workshopBean.setAircraft(workshopBean.getAircraft());
+
+        // Mettre à jour l'utilisateur
+        try {
+            webappService.updateWorkshopBean(id, workshopBean);
+            redirectAttributes.addFlashAttribute("successMessage", "Utilisateur mis à jour avec succès!");
+        } catch (FeignException e) {
+            // Gérer les erreurs liées à la mise à jour de l'utilisateur
+            redirectAttributes.addFlashAttribute("errorMessage", "Erreur lors de la mise à jour de l'utilisateur.");
+        }
+
+        model.addAttribute("workshop", workshopBean);
+
+        // Rediriger vers une page de confirmation ou une autre vue
+        return "redirect:/workshop";
     }
 
 

@@ -14,16 +14,19 @@ public class ReservationBean {
     @DateTimeFormat(pattern = "yyyy-MM-dd", iso = DateTimeFormat.ISO.DATE)
     @NotNull(message = "La date de retour ne peut pas être nulle")
     private Date returnDate;
+
+    private boolean finished;
     private RegisteredUserBean registeredUser;
     private AircraftBean aircraft;
 
     public ReservationBean() {
     }
 
-    public ReservationBean(int id, Date borrowingDate, Date returnDate, RegisteredUserBean registeredUser, AircraftBean aircraft) {
+    public ReservationBean(int id, Date borrowingDate, Date returnDate, boolean finished, RegisteredUserBean registeredUser, AircraftBean aircraft) {
         this.id = id;
         this.borrowingDate = borrowingDate;
         this.returnDate = returnDate;
+        this.finished = finished;
         this.registeredUser = registeredUser;
         this.aircraft = aircraft;
     }
@@ -52,12 +55,12 @@ public class ReservationBean {
         this.returnDate = returnDate;
     }
 
-    public AircraftBean getAircraft() {
-        return aircraft;
+    public boolean isFinished() {
+        return finished;
     }
 
-    public void setAircraft(AircraftBean aircraft) {
-        this.aircraft = aircraft;
+    public void setFinished(boolean finished) {
+        this.finished = finished;
     }
 
     public RegisteredUserBean getRegisteredUser() {
@@ -68,18 +71,24 @@ public class ReservationBean {
         this.registeredUser = registeredUser;
     }
 
+    public AircraftBean getAircraft() {
+        return aircraft;
+    }
+
+    public void setAircraft(AircraftBean aircraft) {
+        this.aircraft = aircraft;
+    }
+
     @Override
     public String toString() {
         return "ReservationBean{" +
                 "id=" + id +
                 ", borrowingDate=" + borrowingDate +
                 ", returnDate=" + returnDate +
+                ", finished=" + finished +
                 ", registeredUser=" + registeredUser +
                 ", aircraft=" + aircraft +
                 '}';
     }
-
-
-
 }
 

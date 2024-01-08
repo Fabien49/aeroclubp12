@@ -63,7 +63,7 @@ public interface ApiProxy {
         public void deleteAvailableCopie(@PathVariable(value = "book_id") @Min(value = 1) int bookId,
                                          @PathVariable(value = "library_id") @Min(value = 1) int libraryId);
 
-        // Library methods
+        // FlyingClub methods
 
         @GetMapping(value = "/flyingClub")
         List<FlyingClubBean> getFlyingClub();
@@ -159,13 +159,13 @@ public interface ApiProxy {
         List<WorkshopBean> getWorkshops();
 
         @GetMapping(value = "/workshop/{id}")
-        Optional<WorkshopBean> getWorkshopById(@PathVariable @Min(value = 1) int id);
+        WorkshopBean getWorkshopById(@PathVariable @Min(value = 1) int id);
 
         @PostMapping(value = "/workshop")
         ResponseEntity<Void> addWorkshop(@Valid @RequestBody WorkshopBean workshop);
 
         @PutMapping(value = "/workshop/{id}")
-        ResponseEntity<Void> updateWorkshop(@PathVariable
+        WorkshopBean updateWorkshop(@PathVariable
                                             @Min(value = 1) int id, @Valid @RequestBody WorkshopBean workshopDetails);
 
         @DeleteMapping(value = "/workshop/{id}")

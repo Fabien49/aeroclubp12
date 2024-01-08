@@ -1,10 +1,7 @@
 package com.fabienit.flyingclub.service.impl;
 
+import com.fabienit.flyingclub.model.beans.*;
 import com.fabienit.flyingclub.model.dto.ReservationDto;
-import com.fabienit.flyingclub.model.beans.AircraftBean;
-import com.fabienit.flyingclub.model.beans.BorrowBean;
-import com.fabienit.flyingclub.model.beans.RegisteredUserBean;
-import com.fabienit.flyingclub.model.beans.ReservationBean;
 import com.fabienit.flyingclub.model.dto.AircraftDto;
 import com.fabienit.flyingclub.model.dto.RegisteredUserDto;
 import com.fabienit.flyingclub.model.dto.RegisteredUserReservationDto;
@@ -264,23 +261,11 @@ public class WebappServiceImpl implements WebappService {
         return aircraftBean;
     }
 
-    /**
-     * Get list of book already borrowed by authenticated user
-     *
-     * @return
-     */
     @Override
     public List<Integer> getBookIdActiveBorrowList() {
-
-        List<Integer> bookIdActiveBorrowList = new ArrayList<>();
-
-        List<BorrowBean> borrowList = getActiveBorrowsByRegisteredUserId();
-
-        for (BorrowBean borrow : borrowList) {
-            bookIdActiveBorrowList.add(borrow.getBook().getId());
-        }
-        return bookIdActiveBorrowList;
+        return null;
     }
+
 
     @Override
     public List<AircraftBean> checkIfAircraftIsAvailable() {
@@ -317,6 +302,32 @@ public class WebappServiceImpl implements WebappService {
         return registeredUsers.stream()
                 .map(this::convertToDTO)
                 .collect(Collectors.toList());
+    }
+
+    @Override
+    public WorkshopBean getWorkshopBeanById(int id) {
+
+        WorkshopBean workshopBean = apiProxy.getWorkshopById(id);
+
+        return workshopBean;
+    }
+
+    @Override
+    public ResponseEntity<Void> createWorkshop(WorkshopBean workshopBean) {
+
+        workshopBean.setAircraft(workshopBean.getAircraft());
+        workshopBean.setHelixChange(!workshopBean.getHelixChange());
+        workshopBean.setMotorChange(!workshopBean.getMotorChange());
+
+        return apiProxy.addWorkshop(workshopBean);
+    }
+
+    @Override
+    public WorkshopBean updateWorkshopBean(int id, WorkshopBean workshopBean) {
+
+        workshopBean = apiProxy.updateWorkshop(id, workshopBean);
+
+        return null;
     }
 
     public RegisteredUserReservationDto convertToDTO(RegisteredUserBean registeredUserBean) {

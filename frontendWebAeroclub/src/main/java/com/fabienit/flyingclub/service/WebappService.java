@@ -1,13 +1,10 @@
 package com.fabienit.flyingclub.service;
 
+import com.fabienit.flyingclub.model.beans.*;
 import com.fabienit.flyingclub.model.dto.ReservationDto;
 import com.fabienit.flyingclub.model.dto.AircraftDto;
 import com.fabienit.flyingclub.model.dto.RegisteredUserDto;
 import com.fabienit.flyingclub.model.dto.RegisteredUserReservationDto;
-import com.fabienit.flyingclub.model.beans.AircraftBean;
-import com.fabienit.flyingclub.model.beans.BorrowBean;
-import com.fabienit.flyingclub.model.beans.RegisteredUserBean;
-import com.fabienit.flyingclub.model.beans.ReservationBean;
 import org.springframework.http.ResponseEntity;
 
 import java.util.Date;
@@ -56,5 +53,11 @@ public interface WebappService {
 
 
     List<RegisteredUserReservationDto> getAllRegisteredUsersDTO();
+
+
+    WorkshopBean getWorkshopBeanById (int id);
+
+    ResponseEntity<Void> createWorkshop(WorkshopBean workshopBean);
+    WorkshopBean updateWorkshopBean (int id, WorkshopBean workshopBean);
 
 }

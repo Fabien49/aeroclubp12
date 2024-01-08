@@ -16,28 +16,18 @@
             crossorigin="anonymous"
     />
 
-    <title>Formulaire d'ajout d'un avion</title>
+    <title>Formulaire d'ajout d'heures</title>
 </head>
 
 <body>
 <div class="container-fluid px-0">
     <div th:replace="Header :: header"></div>
-
-<!--    <div class="container">
-        <div class="row">
-            <div class="col">
-                <div class="card">
-                    <div class="col-md-2 mb-3">
-                        <a class="btn btn-info" href="/reservations">Retour</a>
-                    </div>
-                </div>-->
                 <div class="container">
                     <div class="row">
                         <div class="col">
                             <div sec:authorize="isAuthenticated()" class="border-secondary shadow jumbotron">
                                 <div class="card-body">
-                                <a class="btn btn-info mb-4" href="/reservations">Retour</a>
-                                <h2 class="mb-2">Veuillez renseigner les dates de réservations souhaitées</h2>
+                                <h2 class="mb-2">Veuillez renseigner les heures de vols lors de la réservation</h2>
                                 <form class="form-row align-items-end mt-4" th:action="@{/saveReservation}" th:object="${reservationDto}" method="post">
                                     <input type="hidden" th:field="${reservationDto.registeredUserId}"/>
                                     <input type="hidden" th:value="*{aircraftDto == null}"/>

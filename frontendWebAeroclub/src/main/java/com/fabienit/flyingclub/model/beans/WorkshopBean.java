@@ -1,5 +1,7 @@
 package com.fabienit.flyingclub.model.beans;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.util.Date;
 
 public class WorkshopBean {
@@ -12,7 +14,11 @@ public class WorkshopBean {
 
     private String other;
 
-    private Date date;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private Date entryDate;
+
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private Date exitDate;
 
     private AircraftBean aircraft;
 
@@ -23,12 +29,13 @@ public class WorkshopBean {
         this.id = id;
     }
 
-    public WorkshopBean(Integer id, Boolean motorChange, Boolean helixChange, String other, Date date, AircraftBean aircraft) {
+    public WorkshopBean(Integer id, Boolean motorChange, Boolean helixChange, String other, Date entryDate, Date exitDate, AircraftBean aircraft) {
         this.id = id;
         this.motorChange = motorChange;
         this.helixChange = helixChange;
         this.other = other;
-        this.date = date;
+        this.entryDate = entryDate;
+        this.exitDate = exitDate;
         this.aircraft = aircraft;
     }
 
@@ -64,12 +71,20 @@ public class WorkshopBean {
         this.other = other;
     }
 
-    public Date getDate() {
-        return date;
+    public Date getEntryDate() {
+        return entryDate;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
+    public void setEntryDate(Date entryDate) {
+        this.entryDate = entryDate;
+    }
+
+    public Date getExitDate() {
+        return exitDate;
+    }
+
+    public void setExitDate(Date exitDate) {
+        this.exitDate = exitDate;
     }
 
     public AircraftBean getAircraft() {
@@ -87,7 +102,8 @@ public class WorkshopBean {
                 ", motorChange=" + motorChange +
                 ", helixChange=" + helixChange +
                 ", other='" + other + '\'' +
-                ", date=" + date +
+                ", entryDate=" + entryDate +
+                ", exitDate=" + exitDate +
                 ", aircraft=" + aircraft +
                 '}';
     }
