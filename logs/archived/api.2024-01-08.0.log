@@ -1,0 +1,301 @@
+2024-01-08 01:00:28,555 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-2] Search user by email: test1@gmail.com
+2024-01-08 08:52:29,656 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Starting AeroclubApiApplication on FABPC with PID 9492 (started by FaB PC in C:\Users\FaB\Git\Projet 12\aeroclubp12)
+2024-01-08 08:52:29,660 DEBUG com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2024-01-08 08:52:29,660 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] The following profiles are active: dev
+2024-01-08 08:52:39,375 DEBUG com.fabienit.flyingclub.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$26ee9477 [restartedMain] Set Swagger2 documentation
+2024-01-08 08:52:40,454 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Started AeroclubApiApplication in 11.475 seconds (JVM running for 14.532)
+2024-01-08 09:27:34,376 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Starting AeroclubApiApplication on FABPC with PID 6796 (started by FaB PC in C:\Users\FaB\Git\Projet 12\aeroclubp12)
+2024-01-08 09:27:34,380 DEBUG com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2024-01-08 09:27:34,380 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] The following profiles are active: dev
+2024-01-08 09:27:39,305 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Initialization of bean failed; nested exception is org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #5 of URL [file:/C:/Users/FaB/Git/Projet%2012/aeroclubp12/backendApiAeroclub/target/classes/data.sql]: insert into workshop ( motor_change, helix_change, other, entry_date, exxit_date, aircraft_id ) VALUES ( true, true, '', '2023-09-13', '2023-09-14', 1 ), ( true, true, '', '2023-09-29', '2023-09-30', 3 ), ( true, true, '', '2023-10-09', '2023-10-11', 2 ), ( true, true, '', '2023-10-30', '2023-11-02', 4 ); nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Colonne "EXXIT_DATE" non trouvée
+Column "EXXIT_DATE" not found; SQL statement:
+insert into workshop ( motor_change, helix_change, other, entry_date, exxit_date, aircraft_id ) VALUES ( true, true, '', '2023-09-13', '2023-09-14', 1 ), ( true, true, '', '2023-09-29', '2023-09-30', 3 ), ( true, true, '', '2023-10-09', '2023-10-11', 2 ), ( true, true, '', '2023-10-30', '2023-11-02', 4 ) [42122-200]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1108)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:868)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at com.fabienit.flyingclub.AeroclubApiApplication.main(AeroclubApiApplication.java:19)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #5 of URL [file:/C:/Users/FaB/Git/Projet%2012/aeroclubp12/backendApiAeroclub/target/classes/data.sql]: insert into workshop ( motor_change, helix_change, other, entry_date, exxit_date, aircraft_id ) VALUES ( true, true, '', '2023-09-13', '2023-09-14', 1 ), ( true, true, '', '2023-09-29', '2023-09-30', 3 ), ( true, true, '', '2023-10-09', '2023-10-11', 2 ), ( true, true, '', '2023-10-30', '2023-11-02', 4 ); nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Colonne "EXXIT_DATE" non trouvée
+Column "EXXIT_DATE" not found; SQL statement:
+insert into workshop ( motor_change, helix_change, other, entry_date, exxit_date, aircraft_id ) VALUES ( true, true, '', '2023-09-13', '2023-09-14', 1 ), ( true, true, '', '2023-09-29', '2023-09-30', 3 ), ( true, true, '', '2023-10-09', '2023-10-11', 2 ), ( true, true, '', '2023-10-30', '2023-11-02', 4 ) [42122-200]
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:626)
+	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254)
+	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:49)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializer.runScripts(DataSourceInitializer.java:202)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializer.initSchema(DataSourceInitializer.java:119)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker.onApplicationEvent(DataSourceInitializerInvoker.java:91)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker.onApplicationEvent(DataSourceInitializerInvoker.java:38)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:403)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:360)
+	at org.springframework.boot.autoconfigure.orm.jpa.DataSourceInitializedPublisher.publishEventIfRequired(DataSourceInitializedPublisher.java:99)
+	at org.springframework.boot.autoconfigure.orm.jpa.DataSourceInitializedPublisher.postProcessAfterInitialization(DataSourceInitializedPublisher.java:90)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595)
+	... 20 common frames omitted
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Colonne "EXXIT_DATE" non trouvée
+Column "EXXIT_DATE" not found; SQL statement:
+insert into workshop ( motor_change, helix_change, other, entry_date, exxit_date, aircraft_id ) VALUES ( true, true, '', '2023-09-13', '2023-09-14', 1 ), ( true, true, '', '2023-09-29', '2023-09-30', 3 ), ( true, true, '', '2023-10-09', '2023-10-11', 2 ), ( true, true, '', '2023-10-30', '2023-11-02', 4 ) [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.table.Table.getColumn(Table.java:703)
+	at org.h2.command.Parser.parseColumn(Parser.java:1450)
+	at org.h2.command.Parser.parseColumnList(Parser.java:1435)
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1804)
+	at org.h2.command.Parser.parseInsert(Parser.java:1749)
+	at org.h2.command.Parser.parsePrepared(Parser.java:954)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:605)
+	... 36 common frames omitted
+2024-01-08 09:28:01,595 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Starting AeroclubApiApplication on FABPC with PID 11496 (started by FaB PC in C:\Users\FaB\Git\Projet 12\aeroclubp12)
+2024-01-08 09:28:01,599 DEBUG com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2024-01-08 09:28:01,599 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] The following profiles are active: dev
+2024-01-08 09:28:08,230 DEBUG com.fabienit.flyingclub.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$758b8756 [restartedMain] Set Swagger2 documentation
+2024-01-08 09:28:08,999 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Started AeroclubApiApplication in 7.869 seconds (JVM running for 9.365)
+2024-01-08 09:37:49,350 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-7] Search user by email: test1@gmail.com
+2024-01-08 09:37:50,797 INFO com.fabienit.flyingclub.web.controllers.WorkshopController [http-nio-8001-exec-2] Providing revision resource from database: all revisions list
+2024-01-08 10:00:25,694 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Starting AeroclubApiApplication on FABPC with PID 12420 (started by FaB PC in C:\Users\FaB\Git\Projet 12\aeroclubp12)
+2024-01-08 10:00:25,698 DEBUG com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2024-01-08 10:00:25,698 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] The following profiles are active: dev
+2024-01-08 10:00:30,632 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Initialization of bean failed; nested exception is org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #5 of URL [file:/C:/Users/FaB/Git/Projet%2012/aeroclubp12/backendApiAeroclub/target/classes/data.sql]: insert into workshop ( motor_change, helix_change, other, entry_date, exit_date, aircraft_id ) VALUES ( true, true, '', '2023-09-13', '2023-09-14', 1 ), ( true, true, '', '2023-09-29', '2023-09-30', 3 ), ( true, true, '', '2023-10-09', '2023-10-11', 2 ), ( true, true, '', '2024-01-08', '', 4 ); nested exception is org.h2.jdbc.JdbcSQLDataException: Impossible d'analyser "TIMESTAMP" constante 
+Cannot parse "TIMESTAMP" constant ; SQL statement:
+insert into workshop ( motor_change, helix_change, other, entry_date, exit_date, aircraft_id ) VALUES ( true, true, '', '2023-09-13', '2023-09-14', 1 ), ( true, true, '', '2023-09-29', '2023-09-30', 3 ), ( true, true, '', '2023-10-09', '2023-10-11', 2 ), ( true, true, '', '2024-01-08', '', 4 ) [22007-200]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1108)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:868)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at com.fabienit.flyingclub.AeroclubApiApplication.main(AeroclubApiApplication.java:19)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #5 of URL [file:/C:/Users/FaB/Git/Projet%2012/aeroclubp12/backendApiAeroclub/target/classes/data.sql]: insert into workshop ( motor_change, helix_change, other, entry_date, exit_date, aircraft_id ) VALUES ( true, true, '', '2023-09-13', '2023-09-14', 1 ), ( true, true, '', '2023-09-29', '2023-09-30', 3 ), ( true, true, '', '2023-10-09', '2023-10-11', 2 ), ( true, true, '', '2024-01-08', '', 4 ); nested exception is org.h2.jdbc.JdbcSQLDataException: Impossible d'analyser "TIMESTAMP" constante 
+Cannot parse "TIMESTAMP" constant ; SQL statement:
+insert into workshop ( motor_change, helix_change, other, entry_date, exit_date, aircraft_id ) VALUES ( true, true, '', '2023-09-13', '2023-09-14', 1 ), ( true, true, '', '2023-09-29', '2023-09-30', 3 ), ( true, true, '', '2023-10-09', '2023-10-11', 2 ), ( true, true, '', '2024-01-08', '', 4 ) [22007-200]
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:626)
+	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254)
+	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:49)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializer.runScripts(DataSourceInitializer.java:202)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializer.initSchema(DataSourceInitializer.java:119)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker.onApplicationEvent(DataSourceInitializerInvoker.java:91)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker.onApplicationEvent(DataSourceInitializerInvoker.java:38)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:403)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:360)
+	at org.springframework.boot.autoconfigure.orm.jpa.DataSourceInitializedPublisher.publishEventIfRequired(DataSourceInitializedPublisher.java:99)
+	at org.springframework.boot.autoconfigure.orm.jpa.DataSourceInitializedPublisher.postProcessAfterInitialization(DataSourceInitializedPublisher.java:90)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595)
+	... 20 common frames omitted
+Caused by: org.h2.jdbc.JdbcSQLDataException: Impossible d'analyser "TIMESTAMP" constante 
+Cannot parse "TIMESTAMP" constant ; SQL statement:
+insert into workshop ( motor_change, helix_change, other, entry_date, exit_date, aircraft_id ) VALUES ( true, true, '', '2023-09-13', '2023-09-14', 1 ), ( true, true, '', '2023-09-29', '2023-09-30', 3 ), ( true, true, '', '2023-10-09', '2023-10-11', 2 ), ( true, true, '', '2024-01-08', '', 4 ) [22007-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:457)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:194)
+	at org.h2.value.ValueTimestamp.parse(ValueTimestamp.java:136)
+	at org.h2.value.Value.convertToTimestamp(Value.java:1169)
+	at org.h2.value.Value.convertTo(Value.java:822)
+	at org.h2.value.Value.convertTo(Value.java:772)
+	at org.h2.value.TypeInfo.cast(TypeInfo.java:515)
+	at org.h2.table.Column.validateConvertUpdateSequence(Column.java:378)
+	at org.h2.table.Table.validateConvertUpdateSequence(Table.java:845)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:187)
+	at org.h2.command.dml.Insert.update(Insert.java:151)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:198)
+	at org.h2.command.Command.executeUpdate(Command.java:251)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:228)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:605)
+	... 36 common frames omitted
+Caused by: java.lang.StringIndexOutOfBoundsException: String index out of range: 0
+	at java.base/java.lang.StringLatin1.charAt(StringLatin1.java:47)
+	at java.base/java.lang.String.charAt(String.java:693)
+	at org.h2.util.DateTimeUtils.parseDateValue(DateTimeUtils.java:145)
+	at org.h2.util.DateTimeUtils.parseTimestamp(DateTimeUtils.java:316)
+	at org.h2.value.ValueTimestamp.parse(ValueTimestamp.java:134)
+	... 51 common frames omitted
+2024-01-08 10:01:10,902 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Starting AeroclubApiApplication on FABPC with PID 9336 (started by FaB PC in C:\Users\FaB\Git\Projet 12\aeroclubp12)
+2024-01-08 10:01:10,907 DEBUG com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2024-01-08 10:01:10,907 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] The following profiles are active: dev
+2024-01-08 10:01:17,249 DEBUG com.fabienit.flyingclub.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$36812497 [restartedMain] Set Swagger2 documentation
+2024-01-08 10:01:18,006 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Started AeroclubApiApplication in 7.561 seconds (JVM running for 9.092)
+2024-01-08 10:01:23,886 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-1] Search user by email: test1@gmail.com
+2024-01-08 10:01:25,844 INFO com.fabienit.flyingclub.web.controllers.WorkshopController [http-nio-8001-exec-2] Providing revision resource from database: all revisions list
+2024-01-08 10:01:29,755 INFO com.fabienit.flyingclub.web.controllers.WorkshopController [http-nio-8001-exec-3] Providing workshop resource from database: revision id: 4
+2024-01-08 10:01:33,049 INFO com.fabienit.flyingclub.web.controllers.WorkshopController [http-nio-8001-exec-4] Providing revision resource from database: all revisions list
+2024-01-08 10:01:34,086 INFO com.fabienit.flyingclub.web.controllers.WorkshopController [http-nio-8001-exec-5] Providing workshop resource from database: revision id: 1
+2024-01-08 10:01:35,331 INFO com.fabienit.flyingclub.web.controllers.WorkshopController [http-nio-8001-exec-6] Providing revision resource from database: all revisions list
+2024-01-08 10:19:05,796 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-8] Search user by email: test1@gmail.com
+2024-01-08 10:19:08,126 INFO com.fabienit.flyingclub.web.controllers.WorkshopController [http-nio-8001-exec-9] Providing revision resource from database: all revisions list
+2024-01-08 10:19:09,270 INFO com.fabienit.flyingclub.web.controllers.WorkshopController [http-nio-8001-exec-10] Providing workshop resource from database: revision id: 1
+2024-01-08 10:19:27,086 INFO com.fabienit.flyingclub.web.controllers.WorkshopController [http-nio-8001-exec-1] Updating workshop in database, id: 1
+2024-01-08 10:19:27,283 INFO com.fabienit.flyingclub.web.controllers.WorkshopController [http-nio-8001-exec-2] Providing revision resource from database: all revisions list
+2024-01-08 10:19:55,132 INFO com.fabienit.flyingclub.web.controllers.WorkshopController [http-nio-8001-exec-3] Providing workshop resource from database: revision id: 2
+2024-01-08 10:20:04,836 INFO com.fabienit.flyingclub.web.controllers.WorkshopController [http-nio-8001-exec-4] Providing revision resource from database: all revisions list
+2024-01-08 10:20:43,896 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Starting AeroclubApiApplication on FABPC with PID 12184 (started by FaB PC in C:\Users\FaB\Git\Projet 12\aeroclubp12)
+2024-01-08 10:20:43,900 DEBUG com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2024-01-08 10:20:43,901 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] The following profiles are active: dev
+2024-01-08 10:20:51,586 DEBUG com.fabienit.flyingclub.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$d1bc636b [restartedMain] Set Swagger2 documentation
+2024-01-08 10:20:52,584 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Started AeroclubApiApplication in 9.18 seconds (JVM running for 10.794)
+2024-01-08 10:22:18,767 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Starting AeroclubApiApplication on FABPC with PID 6248 (started by FaB PC in C:\Users\FaB\Git\Projet 12\aeroclubp12)
+2024-01-08 10:22:18,771 DEBUG com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2024-01-08 10:22:18,771 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] The following profiles are active: dev
+2024-01-08 10:22:25,140 DEBUG com.fabienit.flyingclub.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$5945dec2 [restartedMain] Set Swagger2 documentation
+2024-01-08 10:22:25,925 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Started AeroclubApiApplication in 7.607 seconds (JVM running for 9.204)
+2024-01-08 10:22:34,145 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-1] Search user by email: test1@gmail.com
+2024-01-08 10:22:36,307 INFO com.fabienit.flyingclub.web.controllers.WorkshopController [http-nio-8001-exec-2] Providing revision resource from database: all revisions list
+2024-01-08 10:22:47,538 INFO com.fabienit.flyingclub.web.controllers.WorkshopController [http-nio-8001-exec-3] Providing workshop resource from database: revision id: 5
+2024-01-08 10:23:08,558 INFO com.fabienit.flyingclub.web.controllers.WorkshopController [http-nio-8001-exec-4] Updating workshop in database, id: 5
+2024-01-08 10:23:08,750 INFO com.fabienit.flyingclub.web.controllers.WorkshopController [http-nio-8001-exec-5] Providing revision resource from database: all revisions list
+2024-01-08 10:33:17,263 INFO com.fabienit.flyingclub.web.controllers.WorkshopController [http-nio-8001-exec-7] Providing workshop resource from database: revision id: 5
+2024-01-08 10:33:26,183 INFO com.fabienit.flyingclub.web.controllers.WorkshopController [http-nio-8001-exec-8] Providing revision resource from database: all revisions list
+2024-01-08 11:22:33,766 INFO com.fabienit.flyingclub.web.controllers.WorkshopController [http-nio-8001-exec-10] Providing workshop resource from database: revision id: 1
+2024-01-08 11:22:39,710 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-1] Search user by email: test1@gmail.com
+2024-01-08 11:30:10,170 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-3] Search user by email: test1@gmail.com
+2024-01-08 11:30:15,703 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-4] Providing aircraft resource from database: all aircraft list
+2024-01-08 11:30:15,859 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-5] Providing reservation list for registered user from database: user id: 2
+2024-01-08 11:30:18,980 INFO com.fabienit.flyingclub.web.controllers.WorkshopController [http-nio-8001-exec-6] Providing revision resource from database: all revisions list
+2024-01-08 11:32:55,678 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-8] Providing registeredUser resource from database: registeredUser id: 2
+2024-01-08 11:34:02,039 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-10] Search user by email: test1@gmail.com
+2024-01-08 13:38:02,794 INFO com.fabienit.flyingclub.web.controllers.FlyingClubController [http-nio-8001-exec-2] Providing aircraft resource from database: all aircraft list
+2024-01-08 13:38:07,297 INFO com.fabienit.flyingclub.web.controllers.FlyingClubController [http-nio-8001-exec-3] Providing aircraft resource from database: all aircraft list
+2024-01-08 13:38:10,509 INFO com.fabienit.flyingclub.web.controllers.FlyingClubController [http-nio-8001-exec-4] Providing aircraft resource from database: all aircraft list
+2024-01-08 13:38:13,461 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-5] Search user by email: test1@gmail.com
+2024-01-08 13:38:14,725 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-6] Providing aircraft resource from database: all aircraft list
+2024-01-08 13:38:14,872 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-7] Providing reservation list for registered user from database: user id: 2
+2024-01-08 13:38:16,294 INFO com.fabienit.flyingclub.web.controllers.WorkshopController [http-nio-8001-exec-8] Providing revision resource from database: all revisions list
+2024-01-08 13:38:17,392 INFO com.fabienit.flyingclub.web.controllers.WorkshopController [http-nio-8001-exec-9] Providing workshop resource from database: revision id: 1
+2024-01-08 13:38:18,528 INFO com.fabienit.flyingclub.web.controllers.WorkshopController [http-nio-8001-exec-10] Providing revision resource from database: all revisions list
+2024-01-08 13:38:20,877 INFO com.fabienit.flyingclub.web.controllers.FlyingClubController [http-nio-8001-exec-1] Providing aircraft resource from database: all aircraft list
+2024-01-08 13:38:22,167 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-2] Providing registeredUser resource from database: registeredUser id: 2
+2024-01-08 13:38:26,726 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-3] Providing registeredUser resource from database: registeredUser id: 2
+2024-01-08 13:38:28,379 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-4] Providing registeredUser resource from database: registeredUser id: 2
+2024-01-08 13:38:29,508 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-5] Updating registeredUser in database, id: 2
+2024-01-08 13:38:29,690 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-6] Providing registeredUser resource from database: registeredUser id: 2
+2024-01-08 13:38:32,245 INFO com.fabienit.flyingclub.web.controllers.FlyingClubController [http-nio-8001-exec-7] Providing aircraft resource from database: all aircraft list
+2024-01-08 13:38:33,089 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-8] Providing registeredUser resource from database: registeredUser id: 2
+2024-01-08 13:38:34,715 INFO com.fabienit.flyingclub.web.controllers.FlyingClubController [http-nio-8001-exec-9] Providing aircraft resource from database: all aircraft list
+2024-01-08 13:49:02,538 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-1] Search user by email: test1@gmail.com
+2024-01-08 13:49:03,417 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-2] Providing aircraft resource from database: all aircraft list
+2024-01-08 13:49:03,554 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-3] Providing reservation list for registered user from database: user id: 2
+2024-01-08 13:49:18,486 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-4] Providing aircraft resource from database: all aircraft list
+2024-01-08 13:49:20,519 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-5] Providing aircraft resource from database: all aircraft list
+2024-01-08 13:49:20,651 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-6] Providing reservation list for registered user from database: user id: 2
+2024-01-08 13:49:23,486 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-7] Providing aircraft resource from database: all aircraft list
+2024-01-08 13:56:38,596 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Starting AeroclubApiApplication on FABPC with PID 16512 (started by FaB PC in C:\Users\FaB\Git\Projet 12\aeroclubp12)
+2024-01-08 13:56:38,600 DEBUG com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2024-01-08 13:56:38,601 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] The following profiles are active: dev
+2024-01-08 13:56:44,812 DEBUG com.fabienit.flyingclub.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$10998a28 [restartedMain] Set Swagger2 documentation
+2024-01-08 13:56:45,531 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Started AeroclubApiApplication in 7.386 seconds (JVM running for 8.818)
+2024-01-08 13:58:47,438 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-2] Search user by email: test1@gmail.com
+2024-01-08 13:58:49,729 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-8] Providing aircraft resource from database: all aircraft list
+2024-01-08 13:58:49,944 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-6] Providing reservation list for registered user from database: user id: 2
+2024-01-08 14:00:38,166 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-4] Search user by email: test1@gmail.com
+2024-01-08 14:00:39,704 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-10] Providing aircraft resource from database: all aircraft list
+2024-01-08 14:00:39,836 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-5] Providing reservation list for registered user from database: user id: 2
+2024-01-08 14:00:57,353 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-7] Providing aircraft resource from database: all aircraft list
+2024-01-08 14:00:57,476 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-1] Providing reservation list for registered user from database: user id: 2
+2024-01-08 15:54:40,886 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-2] Search user by email: test1@gmail.com
+2024-01-08 15:54:43,118 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-8] Providing aircraft resource from database: all aircraft list
+2024-01-08 15:54:43,261 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-6] Providing reservation list for registered user from database: user id: 2
+2024-01-08 15:55:45,669 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Starting AeroclubApiApplication on FABPC with PID 11224 (started by FaB PC in C:\Users\FaB\Git\Projet 12\aeroclubp12)
+2024-01-08 15:55:45,713 DEBUG com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2024-01-08 15:55:45,713 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] The following profiles are active: dev
+2024-01-08 15:56:00,440 DEBUG com.fabienit.flyingclub.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$f9c07353 [restartedMain] Set Swagger2 documentation
+2024-01-08 15:56:01,473 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Started AeroclubApiApplication in 16.746 seconds (JVM running for 19.075)
+2024-01-08 15:56:03,687 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-1] Search user by email: test1@gmail.com
+2024-01-08 15:56:05,804 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-2] Providing aircraft resource from database: all aircraft list
+2024-01-08 15:56:06,140 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-3] Providing reservation list for registered user from database: user id: 2
+2024-01-08 15:58:23,334 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Starting AeroclubApiApplication on FABPC with PID 9712 (started by FaB PC in C:\Users\FaB\Git\Projet 12\aeroclubp12)
+2024-01-08 15:58:23,338 DEBUG com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2024-01-08 15:58:23,338 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] The following profiles are active: dev
+2024-01-08 15:58:32,092 DEBUG com.fabienit.flyingclub.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$ee8e320e [restartedMain] Set Swagger2 documentation
+2024-01-08 15:58:33,332 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Started AeroclubApiApplication in 10.467 seconds (JVM running for 12.011)
+2024-01-08 15:58:39,002 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-10] Search user by email: test1@gmail.com
+2024-01-08 15:58:40,319 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-9] Providing aircraft resource from database: all aircraft list
+2024-01-08 15:58:40,513 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-8] Providing reservation list for registered user from database: user id: 2
+2024-01-08 15:58:42,632 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-7] Providing aircraft resource from database: all aircraft list
+2024-01-08 15:58:43,940 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-6] Providing aircraft resource from database: all aircraft list
+2024-01-08 15:58:44,091 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-5] Providing reservation list for registered user from database: user id: 2
+2024-01-08 20:49:59,449 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-3] Search user by email: test1@gmail.com
+2024-01-08 20:52:00,973 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-1] Providing aircraft resource from database: all aircraft list
+2024-01-08 20:52:01,160 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-10] Providing reservation list for registered user from database: user id: 2
+2024-01-08 20:52:15,578 INFO com.fabienit.flyingclub.web.controllers.WorkshopController [http-nio-8001-exec-9] Providing revision resource from database: all revisions list
+2024-01-08 20:52:18,300 INFO com.fabienit.flyingclub.web.controllers.WorkshopController [http-nio-8001-exec-8] Providing workshop resource from database: revision id: 1
+2024-01-08 20:54:58,480 INFO com.fabienit.flyingclub.web.controllers.FlyingClubController [http-nio-8001-exec-6] Providing aircraft resource from database: all aircraft list
+2024-01-08 20:55:00,216 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-5] Providing registeredUser resource from database: registeredUser id: 2
+2024-01-08 20:55:01,673 INFO com.fabienit.flyingclub.web.controllers.FlyingClubController [http-nio-8001-exec-4] Providing aircraft resource from database: all aircraft list
+2024-01-08 21:21:05,204 INFO com.fabienit.flyingclub.web.controllers.WorkshopController [http-nio-8001-exec-2] Providing revision resource from database: all revisions list
+2024-01-08 21:26:31,180 INFO com.fabienit.flyingclub.web.controllers.FlyingClubController [http-nio-8001-exec-10] Providing aircraft resource from database: all aircraft list
+2024-01-08 21:26:36,864 INFO com.fabienit.flyingclub.web.controllers.FlyingClubController [http-nio-8001-exec-9] Providing aircraft resource from database: all aircraft list
+2024-01-08 21:26:42,194 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-8] Providing aircraft resource from database: all aircraft list
+2024-01-08 21:27:05,116 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-7] Providing aircraft resource from database: aircraft id: 1
+2024-01-08 21:27:06,944 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-6] Providing aircraft resource from database: all aircraft list
+2024-01-08 21:27:12,934 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-5] Providing aircraft resource from database: aircraft id: 1
+2024-01-08 21:27:14,364 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-4] Providing aircraft resource from database: all aircraft list
+2024-01-08 21:27:15,921 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-3] Providing aircraft resource from database: aircraft id: 1
+2024-01-08 21:27:17,381 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-2] Providing aircraft resource from database: all aircraft list
+2024-01-08 21:28:38,011 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-10] Providing registeredUser resource from database: registeredUser id: 2
+2024-01-08 21:28:42,676 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-9] Providing registeredUser resource from database: registeredUser id: 2
+2024-01-08 21:30:45,897 INFO com.fabienit.flyingclub.web.controllers.WorkshopController [http-nio-8001-exec-7] Providing revision resource from database: all revisions list
+2024-01-08 21:30:47,354 INFO com.fabienit.flyingclub.web.controllers.WorkshopController [http-nio-8001-exec-6] Providing workshop resource from database: revision id: 1
+2024-01-08 21:30:50,607 INFO com.fabienit.flyingclub.web.controllers.WorkshopController [http-nio-8001-exec-5] Updating workshop in database, id: 1
+2024-01-08 21:30:50,871 INFO com.fabienit.flyingclub.web.controllers.WorkshopController [http-nio-8001-exec-4] Providing revision resource from database: all revisions list
+2024-01-08 21:30:56,534 INFO com.fabienit.flyingclub.web.controllers.WorkshopController [http-nio-8001-exec-3] Providing workshop resource from database: revision id: 2
+2024-01-08 21:31:00,431 INFO com.fabienit.flyingclub.web.controllers.WorkshopController [http-nio-8001-exec-2] Updating workshop in database, id: 2
+2024-01-08 21:31:00,583 INFO com.fabienit.flyingclub.web.controllers.WorkshopController [http-nio-8001-exec-1] Providing revision resource from database: all revisions list
+2024-01-08 22:00:26,607 INFO com.fabienit.flyingclub.web.controllers.WorkshopController [http-nio-8001-exec-1] Providing revision resource from database: all revisions list
+2024-01-08 22:18:25,110 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-6] Search user by email: test1@gmail.com
+2024-01-08 22:18:27,533 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-3] Providing aircraft resource from database: all aircraft list
+2024-01-08 22:18:27,683 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-2] Providing reservation list for registered user from database: user id: 2
+2024-01-08 22:18:37,115 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-5] Providing registeredUser resource from database: registeredUser id: 2

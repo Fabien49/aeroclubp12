@@ -78,6 +78,23 @@ public class ReservationController {
         return ResponseEntity.created(location).build();
     }
 
+    @PutMapping(value = "/canceledReservation/{id}")
+    public ResponseEntity<Void> canceledReservation(@PathVariable @Min(value = 1) int id, @Valid @RequestBody Reservation reservationDetails) throws FunctionnalException {
+
+        logger.info("Canceling reservation in database, id: " + id);
+
+        try {
+            reservationManager.findById(reservationDetails.getId()).get();
+        }catch (NoSuchElementException e){
+            logger.debug("The requested reservation entity doesn't exist, id: " + reservationDetails.getId());
+            throw new RessourceNotFoundException("The requested reservation entity doesn't exist, id: " + reservationDetails.getId());
+        }
+
+        reservationManager.save(reservationDetails);
+
+        return ResponseEntity.ok().build();
+    }
+
     @PutMapping(value = "/reservations/{id}")
     public ResponseEntity<Void> updateReservation(@PathVariable @Min(value = 1) int id, @Valid @RequestBody Reservation reservationDetails) throws FunctionnalException {
 
@@ -125,11 +142,6 @@ public class ReservationController {
         return reservationManager.getAvailableAircraftsToday();
     }
 
-    @GetMapping(value = "/updateAircraftsAvailable")
-    public List<Aircraft> getAvailableAircraftsBetweenDates(Date startDate, Date endDate) {
 
-        logger.info("Providing aircraft resource from database: available between dates aircraft list");
-        return reservationManager.getAvailableAircraftsBetweenDates(startDate, endDate);
-    }
 
 }

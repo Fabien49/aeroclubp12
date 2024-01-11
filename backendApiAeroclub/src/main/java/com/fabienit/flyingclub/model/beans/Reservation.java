@@ -7,6 +7,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.Objects;
 
@@ -27,11 +28,17 @@ public class Reservation implements Serializable {
 
     @DateTimeFormat(pattern = "dd-MMMM-yy")
     @Column(name = "borrowing_date")
-    private Date borrowingDate;
+    private LocalDate borrowingDate;
 
     @DateTimeFormat(pattern = "dd-MMMM-yy")
     @Column(name = "return_date")
-    private Date returnDate;
+    private LocalDate returnDate;
+
+    @Column(name = "finished")
+    private boolean finished;
+
+    @Column(name = "canceled")
+    private boolean canceled;
 
     @ManyToOne
     @JoinColumn(name = "aircraft_id")
@@ -45,10 +52,12 @@ public class Reservation implements Serializable {
     public Reservation() {
     }
 
-    public Reservation(int id, Date borrowingDate, Date returnDate, Aircraft aircraft, RegisteredUser registeredUser) {
+    public Reservation(int id, LocalDate borrowingDate, LocalDate returnDate, boolean finished, boolean canceled, Aircraft aircraft, RegisteredUser registeredUser) {
         this.id = id;
         this.borrowingDate = borrowingDate;
         this.returnDate = returnDate;
+        this.finished = finished;
+        this.canceled = canceled;
         this.aircraft = aircraft;
         this.registeredUser = registeredUser;
     }
@@ -61,20 +70,36 @@ public class Reservation implements Serializable {
         this.id = id;
     }
 
-    public Date getBorrowingDate() {
+    public LocalDate getBorrowingDate() {
         return borrowingDate;
     }
 
-    public void setBorrowingDate(Date borrowingDate) {
+    public void setBorrowingDate(LocalDate borrowingDate) {
         this.borrowingDate = borrowingDate;
     }
 
-    public Date getReturnDate() {
+    public LocalDate getReturnDate() {
         return returnDate;
     }
 
-    public void setReturnDate(Date returnDate) {
+    public void setReturnDate(LocalDate returnDate) {
         this.returnDate = returnDate;
+    }
+
+    public boolean isFinished() {
+        return finished;
+    }
+
+    public void setFinished(boolean finished) {
+        this.finished = finished;
+    }
+
+    public boolean isCanceled() {
+        return canceled;
+    }
+
+    public void setCanceled(boolean canceled) {
+        this.canceled = canceled;
     }
 
     public Aircraft getAircraft() {
@@ -116,6 +141,8 @@ public class Reservation implements Serializable {
                 "id=" + id +
                 ", borrowingDate=" + borrowingDate +
                 ", returnDate=" + returnDate +
+                ", finished=" + finished +
+                ", canceled=" + canceled +
                 ", aircraft=" + aircraft +
                 ", registeredUser=" + registeredUser +
                 '}';

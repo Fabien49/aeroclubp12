@@ -2,21 +2,29 @@
 package com.fabienit.flyingclub.manager.impl;
 
 import com.fabienit.flyingclub.dao.AircraftDao;
+import com.fabienit.flyingclub.dao.ReservationDao;
 import com.fabienit.flyingclub.manager.AircraftManager;
 import com.fabienit.flyingclub.model.beans.Aircraft;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.fabienit.flyingclub.model.beans.Reservation;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 @Service
 public class AircraftManagerImpl implements AircraftManager {
 
-    @Autowired
-    private AircraftDao aircraftDao;
+    private final AircraftDao aircraftDao;
+    private final ReservationDao reservationDao;
 
+    public AircraftManagerImpl(AircraftDao aircraftDao, ReservationDao reservationDao) {
+        this.aircraftDao = aircraftDao;
+        this.reservationDao = reservationDao;
+    }
 
 
 
@@ -50,6 +58,35 @@ public class AircraftManagerImpl implements AircraftManager {
         System.out.println("La deuxième liste d'avions est là : " + aircraftAvailableList);
 
         return aircraftAvailableList;
+    }
+
+    @Override
+    public List<Aircraft> getAvailableAircraftsBetweenDates(LocalDate startDate, LocalDate endDate) {
+
+
+        System.out.println(startDate);
+        System.out.println(endDate);
+        List<Aircraft> availableAircrafts = aircraftDao.findAllByIsAvailableTrue();
+        System.out.println("Available Aircrafts:");
+        availableAircrafts.forEach(aircraft -> System.out.println(aircraft.toString()));
+        List<Reservation> testList = reservationDao.findAll();
+        System.out.println("\ntoutes les Reservations:");
+        testList.forEach(reservation -> System.out.println(reservation.toString()));
+        List<Reservation> existingReservations = reservationDao.findAllReservationBetweenTwoDates(startDate, endDate);
+        System.out.println("\nExisting Reservations:");
+        existingReservations.forEach(reservation -> System.out.println(reservation.toString()));
+
+        Set<Integer> reservedAircraftIds = existingReservations.stream()
+                .map(reservation -> reservation.getAircraft().getId())
+                .collect(Collectors.toSet());
+
+
+
+        return availableAircrafts.stream()
+                .filter(aircraft -> !reservedAircraftIds.contains(aircraft.getId()))
+                .collect(Collectors.toList());
+
+
     }
 
     @Override

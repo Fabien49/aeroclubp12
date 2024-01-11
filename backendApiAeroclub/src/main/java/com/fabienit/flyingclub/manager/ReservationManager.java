@@ -5,6 +5,7 @@ import com.fabienit.flyingclub.model.beans.Reservation;
 import com.fabienit.flyingclub.web.exceptions.FunctionnalException;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
@@ -25,15 +26,15 @@ public interface ReservationManager {
 
     Optional<Reservation> findById(int id);
 
-    List<Reservation> findAllByBorrowwingDate(Date borrowingDate);
+    List<Reservation> findAllByBorrowwingDate(LocalDate borrowingDate);
 
-    List<Reservation> findAllByReturnDate(Date returnDate);
+    List<Reservation> findAllByReturnDate(LocalDate returnDate);
 
     List<Reservation> findAllByRegisteredUser(int registeredUser);
 
-    boolean isAircraftAvailable(Date date, List<Reservation> reservations);
-
-    List<Aircraft> getAvailableAircraftsBetweenDates(Date startDate, Date endDate);
+    boolean isAircraftAvailable(LocalDate date, List<Reservation> reservations);
 
     List<Aircraft> getAvailableAircraftsToday();
+
+    Reservation canceledReservationAfterNotification(Reservation reservation) throws FunctionnalException;
 }

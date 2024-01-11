@@ -6,6 +6,7 @@ import org.hibernate.annotations.CacheConcurrencyStrategy;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
+import java.util.Objects;
 
 /**
  * Workshop
@@ -20,7 +21,7 @@ public class Workshop implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private Integer id;
+    private int id;
 
     @Column(name = "motor_change")
     private Boolean motorChange;
@@ -31,29 +32,34 @@ public class Workshop implements Serializable {
     @Column(name = "other")
     private String other;
 
-    @Column(name = "date")
-    private Date date;
+    @Column(name = "entry_date")
+    private Date entryDate;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @Column(name = "exit_date")
+    private Date exitDate;
+
+    @ManyToOne
+    @JoinColumn(name = "aircraft_id")
     private Aircraft aircraft;
 
     public Workshop() {
     }
 
-    public Workshop(Integer id, Boolean motorChange, Boolean helixChange, String other, Date date, Aircraft aircraft) {
+    public Workshop(int id, Boolean motorChange, Boolean helixChange, String other, Date entryDate, Date exitDate, Aircraft aircraft) {
         this.id = id;
         this.motorChange = motorChange;
         this.helixChange = helixChange;
         this.other = other;
-        this.date = date;
+        this.entryDate = entryDate;
+        this.exitDate = exitDate;
         this.aircraft = aircraft;
     }
 
-    public Integer getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -81,12 +87,20 @@ public class Workshop implements Serializable {
         this.other = other;
     }
 
-    public Date getDate() {
-        return date;
+    public Date getEntryDate() {
+        return entryDate;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
+    public void setEntryDate(Date entryDate) {
+        this.entryDate = entryDate;
+    }
+
+    public Date getExitDate() {
+        return exitDate;
+    }
+
+    public void setExitDate(Date exitDate) {
+        this.exitDate = exitDate;
     }
 
     public Aircraft getAircraft() {
@@ -105,7 +119,7 @@ public class Workshop implements Serializable {
         if (!(o instanceof Workshop)) {
             return false;
         }
-        return id != null && id.equals(((Workshop) o).id);
+        return Objects.equals(id, ((Workshop) o).id);
     }
 
     @Override
@@ -116,6 +130,7 @@ public class Workshop implements Serializable {
 
     // prettier-ignore
 
+
     @Override
     public String toString() {
         return "Workshop{" +
@@ -123,7 +138,8 @@ public class Workshop implements Serializable {
                 ", motorChange=" + motorChange +
                 ", helixChange=" + helixChange +
                 ", other='" + other + '\'' +
-                ", date=" + date +
+                ", entryDate=" + entryDate +
+                ", exitDate=" + exitDate +
                 ", aircraft=" + aircraft +
                 '}';
     }

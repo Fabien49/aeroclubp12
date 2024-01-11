@@ -12,9 +12,6 @@ import java.util.List;
 public class AeroclubApiApplication implements CommandLineRunner{
 
 
-
-
-
 	public static void main(String[] args) {
 
 

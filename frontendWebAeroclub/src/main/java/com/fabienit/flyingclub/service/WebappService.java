@@ -1,13 +1,10 @@
 package com.fabienit.flyingclub.service;
 
 import com.fabienit.flyingclub.model.beans.*;
-import com.fabienit.flyingclub.model.dto.ReservationDto;
-import com.fabienit.flyingclub.model.dto.AircraftDto;
-import com.fabienit.flyingclub.model.dto.RegisteredUserDto;
-import com.fabienit.flyingclub.model.dto.RegisteredUserReservationDto;
+import com.fabienit.flyingclub.model.dto.*;
 import org.springframework.http.ResponseEntity;
 
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.List;
 
 /**
@@ -15,7 +12,7 @@ import java.util.List;
  */
 public interface WebappService {
 
-    ResponseEntity<Void> createUser(RegisteredUserDto accountDto);
+        ResponseEntity<Void> createUser(RegisteredUserDto accountDto);
 
     int getAuthenticatedRegisteredUserId();
 
@@ -35,6 +32,8 @@ public interface WebappService {
 
     ResponseEntity<Void> createReservation(ReservationDto reservationDto);
 
+    ResponseEntity<Void> canceledReservation(int id);
+
     AircraftBean createAircraft(AircraftBean aircraftBean);
 
     AircraftBean getAircraftById (int id);
@@ -49,7 +48,7 @@ public interface WebappService {
 
     List<AircraftDto> getAvailableAircrafts();
 
-    List<AircraftDto> getAvailableAircraftsBetweenDates(Date startDate, Date endDate);
+    List<AircraftDto> getAvailableAircraftsBetweenDates(LocalDate startDate, LocalDate endDate);
 
 
     List<RegisteredUserReservationDto> getAllRegisteredUsersDTO();

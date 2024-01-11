@@ -1,5 +1,6 @@
 package com.fabienit.flyingclub.web.controllers;
 
+import com.fabienit.flyingclub.model.dto.CanceledReservationDto;
 import com.fabienit.flyingclub.model.dto.RegisteredUserDto;
 import com.fabienit.flyingclub.model.dto.ReservationDto;
 import com.fabienit.flyingclub.service.WebappService;
@@ -21,6 +22,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.validation.Valid;
+import java.time.LocalDate;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -387,11 +389,16 @@ public class WebappController {
             List<ReservationBean> currentUserReservations = webappService.getReservationsByRegisteredUserId();
             System.out.println("*************Liste des reservations de l'utilisateur qui a pour id : " + id + "******" + currentUserReservations);
 
+            model.addAttribute("currentDate", LocalDate.now());
             model.addAttribute("currentUserReservations", currentUserReservations);
 
             ReservationDto reservationDto = new ReservationDto();
             reservationDto.setRegisteredUserId(id);
             model.addAttribute("reservationDto", reservationDto);
+
+            CanceledReservationDto canceledReservationDto = new CanceledReservationDto();
+            canceledReservationDto.setCanceled(true);
+            model.addAttribute("canceledReservationDto",canceledReservationDto);
 
             System.out.println("/////////////********************------------- reservation avec l'utisateur connecte : " + reservationDto);
 
@@ -401,8 +408,8 @@ public class WebappController {
         return "Reservations";
     }
 
-    @GetMapping(value = "/addReservation")
-    public String getAddReservationPage(Model model) {
+    @GetMapping(value = "/addDateReservation")
+    public String getAddDateReservationPage(Model model) {
 
         logger.info("Reach url: /reservations - GET");
 
@@ -428,14 +435,55 @@ public class WebappController {
             ReservationDto reservationDto = new ReservationDto();
             reservationDto.setRegisteredUserId(id);
             model.addAttribute("reservationDto", reservationDto);
+            model.addAttribute("currentDate", LocalDate.now());
 
             System.out.println("/////////////********************------------- reservation avec l'utisateur connecte : " + reservationDto);
 
 
         }
 
-        return "AddReservation";
+        return "AddDateReservation";
     }
+
+    @GetMapping(value = "/addAircraftReservation")
+    public String getAddAircraftReservationPage(@ModelAttribute("reservationDto") ReservationDto reservationDto, Model model) {
+
+        logger.info("Reach url: /addAircraftReservation - GET");
+
+
+        Boolean isAuthenticated = webappService.getIsAuthenticated();
+
+        if (isAuthenticated) {
+            int id = webappService.getAuthenticatedRegisteredUserId();
+            RegisteredUserBean registeredUserBean = new RegisteredUserBean();
+            registeredUserBean.setId(id);
+
+
+/*            // Get available aircrafts
+            List<AircraftDto> availableAircrafts = webappService.getAvailableAircrafts();
+            model.addAttribute("availableAircrafts", availableAircrafts);
+
+
+            // Get reservations list for current user
+            List<ReservationBean> currentUserReservations = webappService.getReservationsByRegisteredUserId();
+            System.out.println("*************Liste des reservations de l'utilisateur qui a pour id : " + id + "******" + currentUserReservations);
+
+            model.addAttribute("currentUserReservations", currentUserReservations);*/
+
+
+            reservationDto.setRegisteredUserId(id);
+            model.addAttribute("reservationDto", reservationDto);
+            System.out.println("methode de la mort qui tue : " + reservationDto);
+            List<AircraftDto> aircraftList = webappService.getAvailableAircraftsBetweenDates(reservationDto.getBorrowingDate(), reservationDto.getReturnDate());
+            model.addAttribute("aircraftList", aircraftList);
+
+
+        }
+
+        return "AddAircraftReservation";
+    }
+
+
 
 
     @GetMapping("/getAvailableAircrafts")
@@ -523,7 +571,7 @@ public class WebappController {
 
 
     @PostMapping(value = "/saveReservation")
-    public String saveReservation(@ModelAttribute ("reservationDto") @Valid ReservationDto reservationDto, Model model, RedirectAttributes redirectAttributes, BindingResult bindingResult){
+    public String saveReservation(@ModelAttribute ("reservationDto") ReservationDto reservationDto, Model model, RedirectAttributes redirectAttributes, BindingResult bindingResult){
         System.out.println("test : " + reservationDto.toString());
 
         if (bindingResult.hasErrors()) {
@@ -536,7 +584,7 @@ public class WebappController {
 
         System.out.println("objet reservation depuis *****WebappController*****" + reservationDto);
 
-        logger.info("Reach url: /reservations - POST");
+        logger.info("Reach url: /saveReservation - POST");
 
 
 
@@ -556,6 +604,20 @@ public class WebappController {
         if(status == 201){
             redirectAttributes.addAttribute("reservationStatus", "success");
         }
+        return "redirect:/reservations";
+    }
+
+    /**
+     *
+     */
+    @PostMapping(value = "/canceledReservation/{id}")
+    public String canceledReservation(@PathVariable int id, RedirectAttributes redirectAttributes) {
+
+        logger.info("Reach url: /canceledReservation - POST");
+        webappService.canceledReservation(id);
+
+        System.out.println("La réservation que l'on veut annuler à l'ID suivant : " + id + "::::::::::::::::::::::::::::::");
+        redirectAttributes.addAttribute("canceledReservation", true);
         return "redirect:/reservations";
     }
 

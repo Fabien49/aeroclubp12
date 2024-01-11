@@ -75,7 +75,7 @@ public class WorkshopController {
 
         Optional<Workshop> workshop = workshopDao.findById(id);
 
-        if(!workshop.isPresent()) throw new RessourceNotFoundException("the revision workshop doesn't exists, id: " + id);
+        if(!workshop.isPresent()) throw new RessourceNotFoundException("the workshop doesn't exists, id: " + id);
 
         return workshop;
     }
@@ -83,10 +83,10 @@ public class WorkshopController {
     @PostMapping(value = "/workshop")
     public ResponseEntity<Void> addWorkshop(@Valid @RequestBody Workshop workshop) {
      
-        logger.info("Adding new revision in database");
+        logger.info("Adding new workshop in database");
         
         if(workshopDao.existsWorkshopById(workshop.getId()))
-            throw new EntityAlreadyExistsException("The revision entity already exists , id: " + workshop.getId());
+            throw new EntityAlreadyExistsException("The workshop entity already exists , id: " + workshop.getId());
 
         Workshop workshopAdded = workshopDao.save(workshop);
 
@@ -97,7 +97,7 @@ public class WorkshopController {
     }
 
     @PutMapping(value = "/workshop/{id}")
-    public ResponseEntity<Void> updateWorkshop(@PathVariable @Min(value = 1) Integer id, @Valid @RequestBody Workshop workshopDetails) {
+    public ResponseEntity<Void> updateWorkshop(@PathVariable @Min(value = 1) int id, @Valid @RequestBody Workshop workshopDetails) {
 
         logger.info("Updating workshop in database, id: " + id);
 
@@ -107,7 +107,8 @@ public class WorkshopController {
             logger.debug("The requested workshop entity doesn't exist, id: " + workshopDetails.getId());
             throw new RessourceNotFoundException("The requested workshop entity doesn't exist, id: " + workshopDetails.getId());
         }
-        
+
+        System.out.println(workshopDetails.getAircraft());
         workshopDao.save(workshopDetails);
 
         return ResponseEntity.ok().build();

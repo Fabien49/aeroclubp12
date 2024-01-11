@@ -15,66 +15,11 @@
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
-    <link type="text/css" rel="stylesheet" href="/static/css/bootstrap.min.css" />
-    <link type="text/css" rel="stylesheet" href="/static/css/style.css" />
 
 
     <title>Réservations</title>
   </head>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-
-  <script th:inline="javascript">
-      $(document).ready(function() {
-          $('#borrowingDate, #returnDate').change(function() {
-              updateAvailableAircrafts();
-          });
-
-          function updateAvailableAircrafts() {
-              var borrowingDate = $('#borrowingDate').val();
-              var returnDate = $('#returnDate').val();
-
-              borrowingDate = formatDateString(borrowingDate);
-              returnDate = formatDateString(returnDate);
-
-              var requestData = {
-                  borrowingDate: borrowingDate,
-                  returnDate: returnDate
-              };
-
-              var queryString = $.param(requestData);
-
-              if (borrowingDate && returnDate) {
-                  $.ajax({
-                      type: 'GET',
-                      url: '/getAvailableAircrafts?' + queryString,
-                      success: function (data) {
-                          updateAircraftDropdown(data);
-                      },
-                      error: function (xhr, status, error) {
-                          console.error('Error fetching available aircrafts: ', error);
-                          console.error('Status:', status);
-                          console.error('Error:', error);
-                          console.error('XHR:', xhr.responseText);
-                      }
-                  });
-              }}
-
-          function formatDateString(dateString) {
-              var formattedDate = moment(dateString).format('YYYY-MM-DD');
-              return formattedDate;
-          }
-
-          function updateAircraftDropdown(aircrafts) {
-              var dropdown = $('#aircraftDropdown');
-              dropdown.empty();
-              $.each(aircrafts, function(index, aircraft) {
-                  dropdown.append($('<option>').val(aircraft.id).text(aircraft.mark));
-              });
-          }
-      });
-  </script>
 
 
   <body>
@@ -82,7 +27,7 @@
       <div th:replace="Header :: header"></div>
       <div class="container">
         <div class="row">
-          <div class="col">
+          <!--<div class="col">
         <div sec:authorize="isAuthenticated()" class="border-secondary shadow jumbotron">
                 <form class="form-row" th:action="@{/saveReservation}" th:object="${reservationDto}" method="post">
                     <input type="hidden" th:field="${reservationDto.registeredUserId}"/>
@@ -101,7 +46,7 @@
                         </select>
                     </div>
 
-<!--                        <div class="col-md-4 mb-3">
+&lt;!&ndash;                        <div class="col-md-4 mb-3">
                             <div th:if="${#fields.hasErrors('aircraftDto')}">
                                 <p th:each="err : ${#fields.errors('aircraftDto')}" th:text="${err}"></p>
                             </div>
@@ -111,7 +56,7 @@
                                 <option th:each="aircraft : ${availableAircrafts}" th:value="${aircraft.id}" th:text="${aircraft.mark}">
                                 </option>
                             </select>
-                        </div>-->
+                        </div>&ndash;&gt;
                         <div class="col-md-3 mb-3">
                             <button type="submit" class="form-control btn btn-warning text-center font-weight-bold">Réserver</button>
                         </div>
@@ -121,12 +66,12 @@
           </div>
         </div>
       </div>
-
+-->
 
       <div class="col-12">
           <div class="border-secondary shadow card h-100">
               <div class="card-body">
-                  <a class="btn btn-info" th:href="@{/addReservation}">Réserver un avion</a>
+                  <a class="btn btn-warning" th:href="@{/addDateReservation}">Réserver un avion</a>
                   <div class="table-responsive-sm table-responsive-md table-responsive-lg">
                       <CAPTION> <h1 class="text-center">Mes réservations </h1></CAPTION>
                       <table th:object="${role}" class="table table-bordered table-striped table">
@@ -141,23 +86,26 @@
                           </thead>
 
                           <tr th:each="r:${currentUserReservations}">
-                                  <td th:text="${#dates.format(r.getBorrowingDate(), 'dd-MMMM-yyyy')}"></td>
-                                  <td th:text="${#dates.format(r.getReturnDate(), 'dd-MMMM-yyyy')}"></td>
-                                  <td th:text="${r.aircraft.mark}"></td>
-                                  <td>
-                                      <span th:if="${#dates.createNow().before(r.getReturnDate())}">En cours</span>
-                                      <span th:unless="${#dates.createNow().before(r.getReturnDate())}">Terminé</span>
+                                  <td class="align-middle" th:text="${r.getBorrowingDate()}"></td>
+                                  <td class="align-middle" th:text="${r.getReturnDate()}"></td>
+                                  <td class="align-middle" th:text="${r.aircraft.mark}"></td>
+                                  <td class="align-middle">
+                                      <span th:if="${r.finished}">Terminé</span>
+                                      <span th:if="${!r.finished and !r.canceled}">En cours</span>
+                                      <span th:if="${r.canceled}">Annulé</span>
                                   </td>
-<!--                                  <td th:unless="${#dates.createNow().after(r.getReturnDate())}">
-                                      <div class="d-flex justify-content-between">
-                                          <a class="btn btn-success" th:href="@{/editerTopo/(id=${r.id})}">Editer</a>
-                                          <span th:unless="${#dates.createNow().after(r.borrowindDate)}">
-                                          <a onclick="return confirm('Etes-vous sur de vouloir annuler votre réservation ?')" th:href="@{'/reservations/' + ${r.id}}" class="btn btn-danger" >Annuler</a>
-                                          </span>
+                                  <td class="align-middle">
+                                          <div th:if="${r.returnDate.isEqual(currentDate) or currentDate.isAfter(r.returnDate) and !r.finished and !r.canceled}">
+                                              <a class="btn btn-warning btn-block mb-2" th:href="@{/addHours}">Terminer</a>
+                                          </div>
+                                      <div th:if="${!r.finished and !r.canceled}">
+                                          <form th:action="@{'/canceledReservation/' + ${r.id}}" method="post" >
+                                              <input type="hidden" name="canceledReservationDto" th:value="${canceledReservationDto}"/>
+                                              <button class="btn btn-danger btn-block mt-2" type="submit" onclick="return confirm('Etes-vous sûr de vouloir annuler cette réservation ?')">Annuler</button>
+                                          </form>
                                       </div>
-                                  </td>-->
+                                  </td>
                           </tr>
-
                   </table>
                   <ul class="nav nav-pills">
                       <li  th:each="page,status:${pages}">
@@ -181,8 +129,6 @@
             </table>
           </div>
         </div>
-      </div>
-    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

@@ -18,6 +18,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import javax.validation.Valid;
 import javax.validation.constraints.Min;
 import java.net.URI;
+import java.time.LocalDate;
 import java.util.*;
 
 /**
@@ -157,6 +158,15 @@ public class AircraftController {
             logger.debug("the aircraft entity doesn't exists, id: " + id);
             throw new RessourceNotFoundException("the aircraft entity doesn't exists, id: " + id);
         }
-    }    
+    }
+
+    @GetMapping(value = "/updateAircraftsAvailable")
+    public List<Aircraft> getAvailableAircraftsBetweenDates(@RequestParam("borrowingDate") LocalDate borrowingDate,
+                                                            @RequestParam("returnDate") LocalDate returnDate) {
+
+        logger.info("Providing aircraft resource from database: available between dates aircraft list");
+        System.out.println("les deuxx dates sont : " + borrowingDate + "ddddd" + returnDate);
+        return aircraftManager.getAvailableAircraftsBetweenDates(borrowingDate, returnDate);
+    }
 
 }

@@ -1,10 +1,7 @@
 package com.fabienit.flyingclub.service.impl;
 
 import com.fabienit.flyingclub.model.beans.*;
-import com.fabienit.flyingclub.model.dto.ReservationDto;
-import com.fabienit.flyingclub.model.dto.AircraftDto;
-import com.fabienit.flyingclub.model.dto.RegisteredUserDto;
-import com.fabienit.flyingclub.model.dto.RegisteredUserReservationDto;
+import com.fabienit.flyingclub.model.dto.*;
 import com.fabienit.flyingclub.security.UserPrincipal;
 import com.fabienit.flyingclub.service.WebappService;
 import com.fabienit.flyingclub.web.proxies.ApiProxy;
@@ -18,9 +15,11 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestBody;
 
+import javax.persistence.EntityNotFoundException;
+import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 /**
@@ -291,7 +290,7 @@ public class WebappServiceImpl implements WebappService {
     }
 
     @Override
-    public List<AircraftDto> getAvailableAircraftsBetweenDates(Date startDate, Date endDate) {
+    public List<AircraftDto> getAvailableAircraftsBetweenDates(LocalDate startDate, LocalDate endDate) {
         return apiProxy.getAvailableAircraftsBetweenDates(startDate, endDate).stream()
                 .map(this::convertToDTO)
                 .collect(Collectors.toList());
@@ -396,6 +395,28 @@ public class WebappServiceImpl implements WebappService {
 
         return    apiProxy.addReservation(reservationBean);
     }
+
+    @Override
+    public ResponseEntity<Void> canceledReservation(int id) {
+        Optional<ReservationBean> optionalReservation = apiProxy.getReservationById(id);
+
+        if (optionalReservation.isPresent()) {
+            ReservationBean reservation = optionalReservation.get();
+            reservation.setCanceled(true);
+
+            // Sauvegarde de la réservation mise à jour dans la base de données
+            apiProxy.updateReservation(id, reservation);
+            return ResponseEntity.noContent().build();
+        } else {
+            // Gérer le cas où la réservation n'est pas trouvée
+            throw new EntityNotFoundException("La réservation avec l'ID " + id + " n'a pas été trouvée.");
+        }
+
+    }
+
+
+
+
 
     private ReservationBean convertToEntity(ReservationDto reservationDto) {
         ReservationBean reservationBean = new ReservationBean();

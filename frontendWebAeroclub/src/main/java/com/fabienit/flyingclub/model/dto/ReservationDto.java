@@ -3,34 +3,35 @@ package com.fabienit.flyingclub.model.dto;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.validation.constraints.NotNull;
+import java.time.LocalDate;
 import java.util.Date;
 
 public class ReservationDto {
 
     @NotNull(message = "La date d'emprunt ne peut pas être nulle")
     @DateTimeFormat(pattern = "yyyy-MM-dd", iso = DateTimeFormat.ISO.DATE)
-    private Date borrowingDate;
+    private LocalDate borrowingDate;
     @NotNull(message = "La date de retour ne peut pas être nulle")
     @DateTimeFormat(pattern = "yyyy-MM-dd", iso = DateTimeFormat.ISO.DATE)
-    private Date returnDate;
+    private LocalDate returnDate;
 
     private AircraftDto aircraftDto;
 
     private int registeredUserId;
 
-    public Date getBorrowingDate() {
+    public LocalDate getBorrowingDate() {
         return borrowingDate;
     }
 
-    public void setBorrowingDate(Date borrowingDate) {
+    public void setBorrowingDate(LocalDate borrowingDate) {
         this.borrowingDate = borrowingDate;
     }
 
-    public Date getReturnDate() {
+    public LocalDate getReturnDate() {
         return returnDate;
     }
 
-    public void setReturnDate(Date returnDate) {
+    public void setReturnDate(LocalDate returnDate) {
         this.returnDate = returnDate;
     }
 

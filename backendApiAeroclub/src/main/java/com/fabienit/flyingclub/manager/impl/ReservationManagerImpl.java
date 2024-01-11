@@ -15,6 +15,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import java.time.LocalDate;
 import java.util.*;
 
 @Service
@@ -205,12 +206,12 @@ public class ReservationManagerImpl implements ReservationManager {
     }
 
     @Override
-    public List<Reservation> findAllByBorrowwingDate(Date borrowingDate) {
+    public List<Reservation> findAllByBorrowwingDate(LocalDate borrowingDate) {
         return null;
     }
 
     @Override
-    public List<Reservation> findAllByReturnDate(Date returnDate) {
+    public List<Reservation> findAllByReturnDate(LocalDate returnDate) {
         return null;
     }
 
@@ -224,10 +225,10 @@ public class ReservationManagerImpl implements ReservationManager {
         return reservationDao.findAllByRegisteredUser(registeredUser);
     }
     @Override
-    public boolean isAircraftAvailable(Date date, List<Reservation> reservations) {
+    public boolean isAircraftAvailable(LocalDate date, List<Reservation> reservations) {
         for (Reservation reservation : reservations) {
-            Date startDate = reservation.getBorrowingDate();
-            Date endDate = reservation.getReturnDate();
+            LocalDate startDate = reservation.getBorrowingDate();
+            LocalDate endDate = reservation.getReturnDate();
 
             // Vérifiez si la date spécifiée est exactement égale à startDate ou endDate
             if (date.equals(startDate) || date.equals(endDate)) {
@@ -235,7 +236,7 @@ public class ReservationManagerImpl implements ReservationManager {
             }
 
             // Vérifiez si la date spécifiée est entre startDate et endDate
-            if (date.after(startDate) && date.before(endDate)) {
+            if (date.isAfter(startDate) && date.isBefore(endDate)) {
                 return false; // Avion indisponible à la date spécifiée
             }
         }
@@ -243,39 +244,7 @@ public class ReservationManagerImpl implements ReservationManager {
         return true; // Avion disponible à la date spécifiée
     }
 
-    @Override
-    public List<Aircraft> getAvailableAircraftsBetweenDates(Date startDate, Date endDate) {
-        List<Aircraft> availableAircrafts = new ArrayList<>();
-        /*List<Reservation> reservations = reservationDao.findAll();*/
-        List<Aircraft> allAircrafts = aircraftDao.findAll();
 
-        Calendar calendar = Calendar.getInstance();
-        calendar.setTime(startDate);
-        Date currentDate = calendar.getTime();
-        for (Aircraft aircraft:allAircrafts
-             ) {
-           if (isAircraftAvailable(currentDate, aircraft.getReservations())){
-               availableAircrafts.add(aircraft);
-            }
-        }
-
-
-
-       /* while (!calendar.getTime().after(endDate)) {
-
-
-            // Vérifiez si l'avion est disponible à la date actuelle
-            if (isAircraftAvailable(currentDate, reservations)) {
-                // Si disponible, ajoutez-le à la liste des avions disponibles
-                availableAircrafts.addAll(aircraftDao.findAll());
-            }
-
-            // Passez à la date suivante
-            calendar.add(Calendar.DATE, 1);
-        }*/
-
-        return availableAircrafts;
-    }
 
 
     @Override
@@ -286,7 +255,7 @@ public class ReservationManagerImpl implements ReservationManager {
         List<Reservation> reservations = reservationDao.findAll();
 
         // Obtenez la date du jour
-        Date currentDate = new Date();
+        LocalDate currentDate = LocalDate.now();
         System.out.println(currentDate);
 
         // Vérifiez si la liste des réservations est vide
@@ -298,7 +267,7 @@ public class ReservationManagerImpl implements ReservationManager {
             // Parcourez les réservations
             for (Reservation reservation : reservations) {
                 // Vérifiez si la date de retour est passée
-                if (reservation.getReturnDate().before(currentDate) && !reservation.getReturnDate().equals(currentDate)) {
+                if (reservation.getReturnDate().isBefore(currentDate) && !reservation.getReturnDate().equals(currentDate)) {
                     // Si la date de retour est passée, récupérez l'avion associé à cette réservation
                     Aircraft aircraft = aircraftDao.findById(reservation.getAircraft().getId()).orElse(null);
 
@@ -313,6 +282,20 @@ public class ReservationManagerImpl implements ReservationManager {
 
             return availableAircrafts;
         }
+
+    /**
+     * Update bean reservation with NotificationIsSent parameter set to true and AvailabilityDate set to today's date
+     *
+     * @return
+     */
+    @Override
+    public Reservation canceledReservationAfterNotification(Reservation reservation) throws FunctionnalException {
+        reservationDao.save(reservation);
+        return reservation;
+    }
+
+
+
     }
 
 

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+            crossorigin="anonymous"
+    />
+
+    <title>Formulaire d'ajout d'un avion</title>
+</head>
+
+<body>
+<div class="container-fluid px-0">
+    <div th:replace="Header :: header"></div>
+
+<!--    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="col-md-2 mb-3">
+                        <a class="btn btn-info" href="/reservations">Retour</a>
+                    </div>
+                </div>-->
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div sec:authorize="isAuthenticated()" class="border-secondary shadow jumbotron">
+                    <div class="card-body">
+                        <a class="btn btn-info mb-4" href="/reservations">Retour</a>
+                        <h2 class="mb-2">Veuillez sélectionner un avion</h2>
+                        <form th:action="@{/saveReservation}" th:object="${reservationDto}" method="post">
+                            <input type="hidden" th:field="*{registeredUserId}"/>
+                            <!-- Champs de date -->
+                            <div class="form-row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="borrowingDate">Date d'emprunt</label>
+                                    <input type="date" class="form-control" id="borrowingDate" th:field="*{borrowingDate}" required readonly/>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="returnDate">Date de retour</label>
+                                    <input type="date" class="form-control" id="returnDate" th:field="*{returnDate}" required readonly/>
+                                </div>
+                            </div>
+                            <!-- Liste des avions disponibles -->
+                            <div class="form-group">
+                                <label for="aircraftList">Avions disponibles</label>
+                                <div th:each="aircraft : ${aircraftList}" class="form-check">
+                                    <input class="form-check-input" id="aircraftList" type="radio" th:field="*{aircraftDto.id}" th:value="${aircraft.id}" name="aircraftId" />
+                                    <label class="form-check-label" th:text="${aircraft.mark}"></label>
+                                </div>
+                            </div>
+                            <!-- Bouton de soumission -->
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-success text-center font-weight-bold">Réserver</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

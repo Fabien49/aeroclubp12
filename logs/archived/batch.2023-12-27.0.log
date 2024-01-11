@@ -1,0 +1,24 @@
+2023-12-27 12:53:17,917 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Starting AeroclubApiApplication on FABPC with PID 12936 (started by FaB PC in C:\Users\FaB\Git\Projet 12\aeroclubp12)
+2023-12-27 12:53:17,928 DEBUG com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2023-12-27 12:53:17,928 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] The following profiles are active: dev
+2023-12-27 12:53:24,914 DEBUG com.fabienit.flyingclub.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$be43c2da [restartedMain] Set Swagger2 documentation
+2023-12-27 12:53:25,882 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Started AeroclubApiApplication in 8.561 seconds (JVM running for 10.459)
+2023-12-27 12:54:26,594 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-1] Search user by email: test1@gmail.com
+2023-12-27 12:56:20,340 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-3] Providing aircraft resource from database: all aircraft list
+2023-12-27 12:56:20,567 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-4] Providing reservation list for registered user from database: user id: 2
+2023-12-27 12:56:35,540 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-5] Providing aircraft resource from database: all aircraft list
+2023-12-27 12:56:35,681 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-6] Providing reservation list for registered user from database: user id: 2
+2023-12-27 12:56:38,931 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-7] Providing aircraft resource from database: all aircraft list
+2023-12-27 12:56:39,070 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-8] Providing reservation list for registered user from database: user id: 2
+2023-12-27 12:57:57,378 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-10] Providing aircraft resource from database: all aircraft list
+2023-12-27 12:57:57,550 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-1] Providing reservation list for registered user from database: user id: 2
+2023-12-27 13:01:30,974 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-3] Search user by email: test1@gmail.com
+2023-12-27 13:02:55,248 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-5] Search user by email: test1@gmail.com
+2023-12-27 13:02:56,778 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-6] Providing aircraft resource from database: all aircraft list
+2023-12-27 13:02:56,912 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-7] Providing reservation list for registered user from database: user id: 2
+2023-12-27 13:02:58,605 INFO com.fabienit.flyingclub.web.controllers.FlyingClubController [http-nio-8001-exec-8] Providing aircraft resource from database: all aircraft list
+2023-12-27 13:03:00,454 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-9] Providing registeredUser resource from database: registeredUser id: 2
+2023-12-27 13:03:03,430 INFO com.fabienit.flyingclub.web.controllers.FlyingClubController [http-nio-8001-exec-10] Providing aircraft resource from database: all aircraft list
+2023-12-27 13:14:55,700 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-2] Search user by email: test1@gmail.com
+2023-12-27 13:37:54,688 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-4] Search user by email: test1@gmail.com
+2023-12-27 22:44:07,652 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-6] Search user by email: test1@gmail.com

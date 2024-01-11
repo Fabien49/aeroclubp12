@@ -28,8 +28,8 @@ public class WorkshopManagerImpl implements WorkshopManager {
     }
 
     @Override
-    public Workshop save(Workshop revision) {
-        return workshopDao.save(revision);
+    public Workshop save(Workshop workshop) {
+        return workshopDao.save(workshop);
     }
 
     @Override

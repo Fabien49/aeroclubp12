@@ -174,7 +174,8 @@ insert into workshop (
     motor_change,
     helix_change,
     other,
-    date,
+    entry_date,
+    exit_date,
     aircraft_id
 )
 VALUES
@@ -183,6 +184,7 @@ VALUES
         true,
         '',
         '2023-09-13',
+        '2023-09-14',
         1
     ),
     (
@@ -190,6 +192,7 @@ VALUES
         true,
         '',
         '2023-09-29',
+        '2023-09-30',
         3
     ),
     (
@@ -197,25 +200,36 @@ VALUES
         true,
         '',
         '2023-10-09',
+        '2023-10-11',
         2
     ),
     (
         true,
         true,
         '',
-        '2023-10-30',
+        '2024-01-08',
+        null,
         4
+    ),
+    (
+        false,
+        false,
+        '',
+        '2024-01-08',
+        null,
+        2
     );
 
 
 
     -- Create Reservation
  insert into reservations
-(borrowing_date, return_date, aircraft_id, registered_user_id)
+(borrowing_date, return_date,finished,canceled, aircraft_id, registered_user_id)
 VALUES
-('2023-09-26', '2023-09-26', 1, 1),
-('2023-10-09', '2023-10-09', 2, 2),
-('2023-10-10', '2023-10-10', 1, 3),
-('2023-10-11', '2023-10-11', 3, 4),
-('2023-12-05', '2023-12-05', 1, 1),
-('2023-12-11', '2023-12-12', 3, 2);
+('2023-09-26', '2023-09-26', true, false, 1, 1),
+('2023-10-09', '2023-10-09', true, false,2, 2),
+('2023-10-10', '2023-10-10', false, true,2, 2),
+('2023-10-10', '2023-10-10', true, false,1, 3),
+('2023-10-11', '2023-10-11', true, false,3, 4),
+('2023-12-05', '2023-12-05', true, false,1, 1),
+('2024-01-06', '2024-01-07', false,false,3, 2);

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+            crossorigin="anonymous"
+    />
+
+    <title>Formulaire d'ajout d'un avion en atelier</title>
+</head>
+
+<body>
+<div class="container-fluid px-0">
+    <div th:replace="Header :: header"></div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="col-md-2 mb-3">
+                        <a class="btn btn-primary" href="/workshop">Retour à l'atelier'</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <h2>Formulaire d'ajout d'un avion à l'atelier</h2>
+
+                    <form class="form-row" th:action="@{/addWorkshop}" th:object="${workshopBean}" method="post">
+                        <input type="hidden" th:field="*{id}"/>
+                        <div class="col-md-6 mb-3">
+                            <label for="mark">Avion </label>
+                            <select class="form-control" id="mark" th:field="*{aircraft.mark}">
+                                <option value="" disabled selected>Sélectionnez un avion</option>
+                                <!-- Boucle Thymeleaf pour parcourir la liste des avions disponibles -->
+                                <option th:each="aircraftDto : ${aircraftAvailable}" th:value="${aircraftDto.mark}" th:text="${aircraftDto.mark}"></option>
+                            </select>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <button type="submit" class="form-control btn btn-primary">Ajouter</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -58,7 +58,7 @@ public class Aircraft {
     private List<Revision> revisions;
 
     @JsonIgnore
-    @OneToMany(mappedBy = "aircraft", cascade = CascadeType.REMOVE)
+    @OneToMany(mappedBy = "aircraft", cascade = CascadeType.ALL)
     private List<Workshop> workshops;
 
     public Aircraft() {

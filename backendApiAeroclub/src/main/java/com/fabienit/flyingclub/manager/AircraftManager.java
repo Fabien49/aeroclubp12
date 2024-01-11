@@ -3,6 +3,8 @@ package com.fabienit.flyingclub.manager;
 
 import com.fabienit.flyingclub.model.beans.Aircraft;
 
+import java.time.LocalDate;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -13,5 +15,7 @@ public interface AircraftManager {
     Aircraft save(Aircraft aircraft);
     List<Aircraft> checkIfAircraftIsAvailable();
     Aircraft deleteById(int id);
+
+    List<Aircraft> getAvailableAircraftsBetweenDates(LocalDate startDate, LocalDate endDate);
 }
 

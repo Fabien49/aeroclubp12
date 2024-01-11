@@ -71,7 +71,7 @@
       <div class="col-12">
           <div class="border-secondary shadow card h-100">
               <div class="card-body">
-                  <a class="btn btn-warning" th:href="@{/addReservation}">Réserver un avion</a>
+                  <a class="btn btn-warning" th:href="@{/addDateReservation}">Réserver un avion</a>
                   <div class="table-responsive-sm table-responsive-md table-responsive-lg">
                       <CAPTION> <h1 class="text-center">Mes réservations </h1></CAPTION>
                       <table th:object="${role}" class="table table-bordered table-striped table">
@@ -86,28 +86,26 @@
                           </thead>
 
                           <tr th:each="r:${currentUserReservations}">
-                                  <td th:text="${#dates.format(r.getBorrowingDate(), 'dd-MMMM-yyyy')}"></td>
-                                  <td th:text="${#dates.format(r.getReturnDate(), 'dd-MMMM-yyyy')}"></td>
-                                  <td th:text="${r.aircraft.mark}"></td>
-                                  <td>
+                                  <td class="align-middle" th:text="${r.getBorrowingDate()}"></td>
+                                  <td class="align-middle" th:text="${r.getReturnDate()}"></td>
+                                  <td class="align-middle" th:text="${r.aircraft.mark}"></td>
+                                  <td class="align-middle">
                                       <span th:if="${r.finished}">Terminé</span>
-                                      <span th:unless="${r.finished}">En cours</span>
+                                      <span th:if="${!r.finished and !r.canceled}">En cours</span>
+                                      <span th:if="${r.canceled}">Annulé</span>
                                   </td>
-                                  <td>
-                                          <div th:if="${#dates.createNow().after(r.getReturnDate()) and !r.finished}">
-                                              <a class="btn btn-warning" th:href="@{/addHours}">Terminer</a>
+                                  <td class="align-middle">
+                                          <div th:if="${r.returnDate.isEqual(currentDate) or currentDate.isAfter(r.returnDate) and !r.finished and !r.canceled}">
+                                              <a class="btn btn-warning btn-block mb-2" th:href="@{/addHours}">Terminer</a>
                                           </div>
-                                  </td>
-<!--                                  <td th:unless="${#dates.createNow().after(r.getReturnDate())}">
-                                      <div class="d-flex justify-content-between">
-                                          <a class="btn btn-success" th:href="@{/editerTopo/(id=${r.id})}">Editer</a>
-                                          <span th:unless="${#dates.createNow().after(r.borrowindDate)}">
-                                          <a onclick="return confirm('Etes-vous sur de vouloir annuler votre réservation ?')" th:href="@{'/reservations/' + ${r.id}}" class="btn btn-danger" >Annuler</a>
-                                          </span>
+                                      <div th:if="${!r.finished and !r.canceled}">
+                                          <form th:action="@{'/canceledReservation/' + ${r.id}}" method="post" >
+                                              <input type="hidden" name="canceledReservationDto" th:value="${canceledReservationDto}"/>
+                                              <button class="btn btn-danger btn-block mt-2" type="submit" onclick="return confirm('Etes-vous sûr de vouloir annuler cette réservation ?')">Annuler</button>
+                                          </form>
                                       </div>
-                                  </td>-->
+                                  </td>
                           </tr>
-
                   </table>
                   <ul class="nav nav-pills">
                       <li  th:each="page,status:${pages}">
