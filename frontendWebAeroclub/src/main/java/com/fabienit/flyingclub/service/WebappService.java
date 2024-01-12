@@ -6,13 +6,14 @@ import org.springframework.http.ResponseEntity;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Optional;
 
 /**
  * WebappService
  */
 public interface WebappService {
 
-        ResponseEntity<Void> createUser(RegisteredUserDto accountDto);
+    ResponseEntity<Void> createUser(RegisteredUserDto accountDto);
 
     int getAuthenticatedRegisteredUserId();
 
@@ -28,9 +29,13 @@ public interface WebappService {
 
     List<BorrowBean> getActiveBorrowsByRegisteredUserId();
 
+    ReservationBean getReservationById(int id);
+
     List<ReservationBean> getReservationsByRegisteredUserId();
 
     ResponseEntity<Void> createReservation(ReservationDto reservationDto);
+
+    ResponseEntity<Void> updateReservation(int id, ReservationBean reservationBean);
 
     ResponseEntity<Void> canceledReservation(int id);
 

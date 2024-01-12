@@ -161,6 +161,11 @@ public class WebappServiceImpl implements WebappService {
         return currentUserActiveBorrows;
     }
 
+    @Override
+    public ReservationBean getReservationById(int id) {
+        return apiProxy.getReservationById(id);
+    }
+
     /**
      * Get reservation list for authenticated user
      *
@@ -397,15 +402,19 @@ public class WebappServiceImpl implements WebappService {
     }
 
     @Override
-    public ResponseEntity<Void> canceledReservation(int id) {
-        Optional<ReservationBean> optionalReservation = apiProxy.getReservationById(id);
+    public ResponseEntity<Void> updateReservation(int id, ReservationBean reservationBean) {
+        return apiProxy.updateReservation(id, reservationBean);
+    }
 
-        if (optionalReservation.isPresent()) {
-            ReservationBean reservation = optionalReservation.get();
-            reservation.setCanceled(true);
+    @Override
+    public ResponseEntity<Void> canceledReservation(int id) {
+        ReservationBean reservationBean = apiProxy.getReservationById(id);
+
+        if (reservationBean != null) {
+            reservationBean.setCanceled(true);
 
             // Sauvegarde de la réservation mise à jour dans la base de données
-            apiProxy.updateReservation(id, reservation);
+            apiProxy.updateReservation(id,reservationBean);
             return ResponseEntity.noContent().build();
         } else {
             // Gérer le cas où la réservation n'est pas trouvée

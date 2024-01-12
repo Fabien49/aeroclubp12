@@ -637,12 +637,46 @@ public class WebappController {
     public String getAddHoursPage(Model model){
 
         logger.info("Reach url: /addHours - GET");
+        RegisteredUserBean registeredUserBean = new RegisteredUserBean();
+        model.addAttribute("RegisteredUserBean", registeredUserBean);
         WorkshopBean workshopBean = new WorkshopBean();
         model.addAttribute("workshopBean", workshopBean);
         List<AircraftDto> aircraftDtoList = webappService.getAvailableAircrafts();
         model.addAttribute("aircraftAvailable", aircraftDtoList);
 
-        return "AddHours";
+        return "ConfirmFinishReservation";
+    }
+
+
+    @GetMapping("/confirmFinishReservation/{id}")
+    public String getConfirmFinishPage(@PathVariable int id, Model model) {
+        ReservationBean reservation = webappService.getReservationById(id);
+        model.addAttribute("reservation", reservation);
+        return "ConfirmFinishReservation";
+    }
+
+    @PostMapping("/confirmFinishReservation/{id}")
+    public String confirmFinish(@PathVariable int id, @RequestParam("hours") int hours, Model model) {
+        ReservationBean reservation = webappService.getReservationById(id);
+
+        // Mettez à jour les heures du pilote
+        RegisteredUserBean pilot = reservation.getRegisteredUser();
+        pilot.setHours(pilot.getHours() + hours);
+        webappService.updateRegisteredUser(reservation.getRegisteredUser().getId(), pilot);
+
+
+        // Mettez à jour les heures de l'avion
+        AircraftBean aircraft = reservation.getAircraft();
+        aircraft.setHours(aircraft.getHours() + hours);
+        webappService.updateAircraft(reservation.getAircraft().getId(), aircraft);
+
+        // Marquez la réservation comme terminée
+        reservation.setFinished(true);
+
+        // Mettez à jour la réservation
+        webappService.updateReservation(id, reservation);
+
+        return "redirect:/reservations";
     }
 
     @PostMapping("/updateHours/{id}")

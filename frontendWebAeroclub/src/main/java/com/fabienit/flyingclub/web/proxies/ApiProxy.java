@@ -1,16 +1,13 @@
 package com.fabienit.flyingclub.web.proxies;
 
 import com.fabienit.flyingclub.model.beans.*;
-import com.fabienit.flyingclub.model.dto.CanceledReservationDto;
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import java.time.LocalDate;
-import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -140,7 +137,7 @@ public interface ApiProxy {
                                                               @RequestParam("returnDate") LocalDate returnDate);
 
         @GetMapping(value = "/reservations/{id}")
-        Optional<ReservationBean> getReservationById(@PathVariable @Min(value = 1) int id);
+        ReservationBean getReservationById(@PathVariable @Min(value = 1) int id);
 
         @PostMapping(value = "/reservations")
         ResponseEntity<Void> addReservation(@RequestBody ReservationBean reservationBean);
@@ -149,7 +146,7 @@ public interface ApiProxy {
         ResponseEntity<Void> canceledReservation(@PathVariable @Min(value = 1) int id);
 
         @PutMapping(value = "/reservations/{id}")
-        ResponseEntity<Void> updateReservation(@PathVariable @Min(value = 1) int id, @Valid @RequestBody ReservationBean reservationDetails);
+        ResponseEntity<Void> updateReservation(@PathVariable @Min(value = 1) int id, @RequestBody ReservationBean reservationDetails);
 
         @DeleteMapping(value="/reservations/{id}")
         void deleteReservation(@PathVariable @Min(value = 1) int id);

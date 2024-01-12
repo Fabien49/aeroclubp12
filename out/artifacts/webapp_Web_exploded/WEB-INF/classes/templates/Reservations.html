@@ -95,9 +95,11 @@
                                       <span th:if="${r.canceled}">Annulé</span>
                                   </td>
                                   <td class="align-middle">
-                                          <div th:if="${r.returnDate.isEqual(currentDate) or currentDate.isAfter(r.returnDate) and !r.finished and !r.canceled}">
-                                              <a class="btn btn-warning btn-block mb-2" th:href="@{/addHours}">Terminer</a>
+                                      <div th:if="${!r.finished and !r.canceled}">
+                                          <div th:if="${r.returnDate.isEqual(currentDate) or currentDate.isAfter(r.returnDate)}">
+                                              <a class="btn btn-warning btn-block mb-2" th:href="@{'/confirmFinishReservation/' + ${r.id}}">Terminer</a>
                                           </div>
+                                      </div>
                                       <div th:if="${!r.finished and !r.canceled}">
                                           <form th:action="@{'/canceledReservation/' + ${r.id}}" method="post" >
                                               <input type="hidden" name="canceledReservationDto" th:value="${canceledReservationDto}"/>

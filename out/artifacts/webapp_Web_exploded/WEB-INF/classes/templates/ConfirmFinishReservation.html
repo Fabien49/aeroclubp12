@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+            crossorigin="anonymous"
+    />
+
+    <title>Formulaire d'ajout d'heures</title>
+</head>
+
+<body>
+<div class="container-fluid px-0">
+    <div th:replace="Header :: header"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div sec:authorize="isAuthenticated()" class="border-secondary shadow jumbotron">
+                                <div class="card-body">
+                                <h1 class="text-center">Réservation du <span th:text="${reservation.getBorrowingDate()}"></span> au <span th:text="${reservation.getReturnDate()}"></span></h1>
+                                    <hr class="my-4">
+                                <h2 class="mb-2">Veuillez renseigner les heures de vols lors de votre réservation avant de confirmer la fin de cette dernière</h2>
+                                <form class="form-row align-items-end mt-4" th:action="@{'/confirmFinishReservation/' + ${reservation.id}}" method="post">
+                                    <div class="col-md-4 mb-3 mx-auto">
+                                        <label for="hours">Nombre d'heures de vol :</label>
+                                        <input type="number" class="form-control" name="hours" id="hours" min="1" max="100" required/>
+                                    </div>
+                                    <div class="col-md-4 mb-3 mx-auto">
+                                        <label for="confirmer"></label><br>
+                                        <button type="submit" class="form-control btn btn-warning text-center font-weight-bold" name="confirmer" id="confirmer">Confimer</button>
+                                    </div>
+                                </form>
+                                <div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+            </div>
+</div>
+    </div>
+</div>
+</div>
+</body>
+</html>
