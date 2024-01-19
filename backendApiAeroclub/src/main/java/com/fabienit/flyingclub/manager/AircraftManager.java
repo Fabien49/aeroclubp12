@@ -15,7 +15,7 @@ public interface AircraftManager {
     Aircraft save(Aircraft aircraft);
     List<Aircraft> checkIfAircraftIsAvailable();
     Aircraft deleteById(int id);
-
     List<Aircraft> getAvailableAircraftsBetweenDates(LocalDate startDate, LocalDate endDate);
+    Aircraft getAircraftByReservationId(int id);
 }
 

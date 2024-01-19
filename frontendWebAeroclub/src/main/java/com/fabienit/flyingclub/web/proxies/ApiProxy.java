@@ -31,6 +31,9 @@ public interface ApiProxy {
         @GetMapping(value = "/aircrafts/mark")
         Optional<AircraftBean> getAircraftByMark(@PathVariable @NotNull String mark);
 
+        @GetMapping(value = "/aircrafts/reservation/{id}")
+        AircraftBean getAircraftByReservationId(@PathVariable int id);
+
         @PostMapping(value = "/aircrafts")
         ResponseEntity<Void> addAircraft(@Valid @RequestBody AircraftBean aircraft);
 
@@ -136,6 +139,10 @@ public interface ApiProxy {
         List<AircraftBean> getAvailableAircraftsBetweenDates( @RequestParam("borrowingDate") LocalDate borrowingDate,
                                                               @RequestParam("returnDate") LocalDate returnDate);
 
+    @GetMapping(value = "/existingReservation")
+    boolean getReservationByIdAndDate(@RequestParam int id,  @RequestParam("borrowingDate") LocalDate borrowingDate,
+                                                          @RequestParam("returnDate") LocalDate returnDate);
+
         @GetMapping(value = "/reservations/{id}")
         ReservationBean getReservationById(@PathVariable @Min(value = 1) int id);
 
@@ -144,6 +151,9 @@ public interface ApiProxy {
 
         @PutMapping(value = "/canceledReservation/{id}")
         ResponseEntity<Void> canceledReservation(@PathVariable @Min(value = 1) int id);
+
+        @PutMapping(value = "/saveUpdateAircraftReservation/{id}")
+        ResponseEntity<Void> updateAircraftReservation(@PathVariable int id, @Valid @RequestBody ReservationBean reservation);
 
         @PutMapping(value = "/reservations/{id}")
         ResponseEntity<Void> updateReservation(@PathVariable @Min(value = 1) int id, @RequestBody ReservationBean reservationDetails);
@@ -170,6 +180,13 @@ public interface ApiProxy {
         WorkshopBean updateWorkshop(@PathVariable
                                             @Min(value = 1) int id, @Valid @RequestBody WorkshopBean workshopDetails);
 
+@PutMapping(value = "workshop/{id}")
+    WorkshopBean saveIntervention(@PathVariable
+                                  @Min(value = 1) int id, @Valid @RequestBody WorkshopBean workshopDetails);
+
         @DeleteMapping(value = "/workshop/{id}")
         void deleteWorkshop(@PathVariable @Min(value = 1) int id);
+
+
+
 }

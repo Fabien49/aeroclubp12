@@ -70,7 +70,8 @@ insert into aircrafts (
     seats,
     autonomy,
     use,
-    hours,
+    aircraft_hours,
+    motor_hours,
     is_available
   )
 VALUES
@@ -83,17 +84,19 @@ VALUES
       4,
       'ecole',
       4589,
+      4589,
       true
     ),
     (
-        'Diamond Aircraft',
+        'Diamond Aircraft 40',
         'DA 40',
         'Rotax 912 S',
         '180 ch',
         4,
         4,
         'voyage',
-        378,
+        20008,
+        10005,
         false
   ),
   (
@@ -104,6 +107,7 @@ VALUES
       2,
       5,
       'voyage',
+      7810,
       7810,
       true
   ),
@@ -116,6 +120,7 @@ VALUES
       5,
       'voyage',
       429,
+      429,
       true
   ),
     (
@@ -126,7 +131,8 @@ VALUES
       2,
       4,
       'ecole et voyage',
-      7875,
+      10011,
+      10011,
       false
     );
 
@@ -204,18 +210,18 @@ VALUES
         2
     ),
     (
-        true,
-        true,
+        false,
+        false,
         '',
-        '2024-01-08',
+        '2024-01-15',
         null,
-        4
+        5
     ),
     (
         false,
         false,
         '',
-        '2024-01-08',
+        '2024-01-13',
         null,
         2
     );

@@ -8,6 +8,7 @@ import java.util.Date;
 
 public class ReservationDto {
 
+    private int id;
     @NotNull(message = "La date d'emprunt ne peut pas être nulle")
     @DateTimeFormat(pattern = "yyyy-MM-dd", iso = DateTimeFormat.ISO.DATE)
     private LocalDate borrowingDate;
@@ -18,6 +19,14 @@ public class ReservationDto {
     private AircraftDto aircraftDto;
 
     private int registeredUserId;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public LocalDate getBorrowingDate() {
         return borrowingDate;

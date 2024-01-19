@@ -29,12 +29,11 @@
               <div class="col">
                   <div class="card">
                       <div class="col-md-2 mb-3">
-                          <a class="btn btn-primary" href="/workshop">Retour à l'atelier'</a>
+                          <a class="btn btn-info" href="/workshop">Retour à l'atelier</a>
                       </div>
                   </div>
                   <div class="card">
-                      <h2>Modifier un avion</h2>
-
+                      <h2>Modification de l'intervention</h2>
                       <form class="form-row" th:action="@{/updateWorkshop/{id}(id=${workshop.id})}" th:object="${workshop}" method="post">
                           <input type="hidden" th:field="*{aircraft.id}"/>
                           <div class="col-md-6 mb-3">
@@ -42,12 +41,18 @@
                               <input type="text" class="form-control" id="seats" th:field="*{aircraft.mark}" th:placeholder="${workshop.aircraft.mark}" readonly/>
                           </div>
                           <div class="col-md-6 mb-3">
-                              <label for="helix_change">Changement de l'hélisse </label>
-                              <input type="text" class="form-control" id="helix_change" th:field="*{helixChange}" th:placeholder="${workshop.helixChange}"/>
+                              <label for="helix_change">Changement de l'hélice </label>
+                              <select class="form-control" id="helix_change" th:field="*{helixChange}">
+                                  <option th:value="false">A remplacer</option>
+                                  <option th:value="true">Remplacée</option>
+                              </select>
                           </div>
                           <div class="col-md-6 mb-3">
                               <label for="motor_change">Changement du moteur </label>
-                              <input type="text" class="form-control" id="motor_change" th:field="*{motorChange}" th:placeholder="${workshop.motorChange}"/>
+                              <select class="form-control" id="motor_change" th:field="*{motorChange}">
+                                  <option th:value="false">A remplacer</option>
+                                  <option th:value="true">Remplacé</option>
+                              </select>
                           </div>
                           <div class="col-md-6 mb-3">
                               <label for="other">Autre </label>
@@ -55,14 +60,14 @@
                           </div>
                           <div class="col-md-6 mb-3">
                               <label for="entry_date">Date d'entrée</label>
-                              <input type="text" class="form-control" id="entry_date" th:field="*{entryDate}" th:placeholder="${workshop.entryDate}" th:format="${#dates.format(workshop.entryDate, 'yyyy-MM-dd')}"/>
+                              <input type="text" class="form-control" id="entry_date" th:field="*{entryDate}" th:placeholder="${workshop.entryDate}"/>
                           </div>
                           <div class="col-md-6 mb-3">
                               <label for="exit_date">Date de sortie</label>
-                              <input type="text" class="form-control" id="exit_date" th:field="*{exitDate}" th:placeholder="${workshop.exitDate}" th:format="${#dates.format(workshop.exitDate, 'yyyy-MM-dd')}"/>
+                              <input type="text" class="form-control" id="exit_date" th:field="*{exitDate}" th:placeholder="${workshop.exitDate}"/>
                           </div>
                           <div class="col-md-3 mb-3">
-                              <button type="submit" class="form-control btn btn-primary">Modifier</button>
+                              <button type="submit" class="form-control btn btn-info">Modifier</button>
                           </div>
                       </form>
 

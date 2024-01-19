@@ -4,8 +4,8 @@ package com.fabienit.flyingclub.manager.impl;
 import com.fabienit.flyingclub.model.beans.Workshop;
 import com.fabienit.flyingclub.dao.WorkshopDao;
 import com.fabienit.flyingclub.manager.WorkshopManager;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
@@ -13,9 +13,11 @@ import java.util.Optional;
 @Service
 public class WorkshopManagerImpl implements WorkshopManager {
 
-    @Autowired
-    private WorkshopDao workshopDao;
+    private final WorkshopDao workshopDao;
 
+    public WorkshopManagerImpl(WorkshopDao workshopDao) {
+        this.workshopDao = workshopDao;
+    }
 
     @Override
     public List<Workshop> findAll() {
@@ -37,4 +39,5 @@ public class WorkshopManagerImpl implements WorkshopManager {
         workshopDao.deleteById(id);
         return null;
     }
+
 }

@@ -64,17 +64,9 @@ public class AircraftManagerImpl implements AircraftManager {
     public List<Aircraft> getAvailableAircraftsBetweenDates(LocalDate startDate, LocalDate endDate) {
 
 
-        System.out.println(startDate);
-        System.out.println(endDate);
+
         List<Aircraft> availableAircrafts = aircraftDao.findAllByIsAvailableTrue();
-        System.out.println("Available Aircrafts:");
-        availableAircrafts.forEach(aircraft -> System.out.println(aircraft.toString()));
-        List<Reservation> testList = reservationDao.findAll();
-        System.out.println("\ntoutes les Reservations:");
-        testList.forEach(reservation -> System.out.println(reservation.toString()));
-        List<Reservation> existingReservations = reservationDao.findAllReservationBetweenTwoDates(startDate, endDate);
-        System.out.println("\nExisting Reservations:");
-        existingReservations.forEach(reservation -> System.out.println(reservation.toString()));
+        List<Reservation> existingReservations = reservationDao.findAllReservationForAircraftReservation(startDate, endDate);
 
         Set<Integer> reservedAircraftIds = existingReservations.stream()
                 .map(reservation -> reservation.getAircraft().getId())
@@ -87,6 +79,11 @@ public class AircraftManagerImpl implements AircraftManager {
                 .collect(Collectors.toList());
 
 
+    }
+
+    @Override
+    public Aircraft getAircraftByReservationId(int id) {
+        return aircraftDao.findAircraftByReservationId(id);
     }
 
     @Override

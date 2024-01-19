@@ -17,7 +17,6 @@ public class ReservationBean {
     private LocalDate returnDate;
 
     private boolean finished;
-
     private boolean canceled;
     private RegisteredUserBean registeredUser;
     private AircraftBean aircraft;

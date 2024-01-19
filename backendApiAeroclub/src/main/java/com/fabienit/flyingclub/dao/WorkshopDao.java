@@ -11,6 +11,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface WorkshopDao extends JpaRepository<Workshop, Integer>{
 
-    boolean existsWorkshopById(Integer id);
 
 }

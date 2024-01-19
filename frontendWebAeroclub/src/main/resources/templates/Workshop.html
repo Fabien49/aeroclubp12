@@ -34,22 +34,29 @@
                       <thead class="bg-info text-white">
                       <tr>
                           <th>Avion</th>
-                          <th>Hélice changée</th>
-                          <th>Moteur changé</th>
+                          <th>Etat Hélice</th>
+                          <th>Etat Moteur</th>
                           <th>Autre</th>
                           <th>Date d'entrée</th>
                           <th>Date de sortie</th>
+                          <th>Etat</th>
+                          <th>Action</th>
                       </tr>
                       </thead>
 
                       <tr th:each="w:${workshop}">
-                          <td th:text="${w.getAircraft().getMark()}"></td>
-                          <td th:text="${w.helixChange ? 'oui' : 'non'}"></td>
-                          <td th:text="${w.motorChange ? 'oui' : 'non'}"></td>
-                          <td th:text="${#strings.isEmpty(w.other) ? 'non' : w.other}"></td>
-                          <td th:text="${#dates.format(w.getEntryDate(), 'dd-MMMM-yyyy')}"></td>
-                          <td th:text="${#dates.format(w.getExitDate(), 'dd-MMMM-yyyy')}"></td>
+                          <td class="align-middle" th:text="${w.getAircraft().getMark()}"></td>
+                          <td class="align-middle" th:text="${w.helixChange ? 'Remplacé' : 'A remplacer'}"></td>
+                          <td class="align-middle" th:text="${w.motorChange ? 'Remplacé' : 'A remplacer'}"></td>
+                          <td class="align-middle" th:text="${#strings.isEmpty(w.other) ? '' : w.other}"></td>
+                          <td class="align-middle" th:text="${w.getEntryDate()}"></td>
+                          <td class="align-middle" th:text="${w.getExitDate()}"></td>
+                          <td class="align-middle">
+                              <span th:if="${w.getExitDate()}">Terminé</span>
+                              <span th:unless="${w.getExitDate()}">En cours</span>
+                          </td>
                           <td>
+                              <a th:if="${w.getExitDate() == null}" class="btn btn-warning btn-block" th:href="@{/intervention/{id}(id=${w.id})}">Intervenir</a>
                               <a class="btn btn-success btn-block" th:href="@{/updateWorkshop/{id}(id=${w.id})}">Éditer</a>
                               <a onclick="return confirm('Etes-vous sur de vouloir supprimer cet avion ?')" th:href="@{'/workshop/' + ${w.id}}" class="btn btn-danger btn-block" >Supprimer</a>
                           </td>

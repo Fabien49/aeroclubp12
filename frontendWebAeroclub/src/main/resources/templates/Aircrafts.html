@@ -40,9 +40,10 @@
                           <th class="align-middle text-center">Places</th>
                           <th class="align-middle text-center">Autonomie</th>
                           <th class="align-middle text-center">Heures de vol</th>
+                          <th class="align-middle text-center">Heures du moteur</th>
                           <th class="align-middle text-center">Disponible</th>
                           <th class="align-middle text-center">Utilisation</th>
-                          <th class="align-middle text-center"></th>
+                          <th class="align-middle text-center">Action</th>
                       </tr>
                       </thead>
 
@@ -53,7 +54,8 @@
                           <td th:text="${a.getPower()}"></td>
                           <td th:text="${a.getSeats()}"></td>
                           <td th:text="${a.getAutonomy()}"></td>
-                          <td th:text="${a.getHours()}"></td>
+                          <td th:text="${a.getAircraftHours()}"></td>
+                          <td th:text="${a.getMotorHours()}"></td>
                           <td th:text="${a.getAvailable()}"></td>
                           <td th:text="${a.getUse()}"></td>
                           <td>

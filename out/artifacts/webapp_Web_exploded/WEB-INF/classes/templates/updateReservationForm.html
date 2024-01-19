@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+            crossorigin="anonymous"
+    />
+
+    <title>Formulaire de modification de la réservation</title>
+</head>
+
+<body>
+<div class="container-fluid px-0">
+    <div th:replace="Header :: header"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div sec:authorize="isAuthenticated()" class="border-secondary shadow jumbotron">
+                                <div class="card-body">
+                                <a class="btn btn-info mb-4" href="/reservations">Retour</a>
+                                <h2 class="mb-2">Veuillez renseigner les dates de réservations souhaitées</h2>
+                                <form class="form-row align-items-end mt-4" th:action="@{/updateAircraftReservation/{id}(id=${reservationDto.id})}" th:object="${reservationDto}" method="get">
+                                    <input type="hidden" th:value="${reservationDto.registeredUserId}"/>
+                                    <div class="col-md-4 mb-3">
+                                        <label for="borrowingDate">Date d'emprunt</label>
+                                        <input type="date" class="form-control" name="borrowingDate" id="borrowingDate" th:field="${reservationDto.borrowingDate}" th:min="${currentDate}" required/>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <label for="returnDate">Date de retour</label>
+                                        <input type="date" class="form-control" name="returnDate" id="returnDate" th:field="${reservationDto.returnDate}" th:min="${currentDate}" required/>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <label for="availableAircraft"></label><br>
+                                        <button type="submit" class="form-control btn btn-warning text-center font-weight-bold" name="availableAircraft" id="availableAircraft">Avions disponibles</button>
+                                    </div>
+                                </form>
+                                <div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+</div>
+    </div>
+</body>
+</html>

@@ -2,24 +2,23 @@ package com.fabienit.flyingclub.service.impl;
 
 import com.fabienit.flyingclub.model.beans.*;
 import com.fabienit.flyingclub.model.dto.*;
+import com.fabienit.flyingclub.model.mappers.AircraftMapper;
+import com.fabienit.flyingclub.model.mappers.ReservationMapper;
 import com.fabienit.flyingclub.security.UserPrincipal;
 import com.fabienit.flyingclub.service.WebappService;
 import com.fabienit.flyingclub.web.proxies.ApiProxy;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AnonymousAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestBody;
 
 import javax.persistence.EntityNotFoundException;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 /**
@@ -28,11 +27,19 @@ import java.util.stream.Collectors;
 @Service
 public class WebappServiceImpl implements WebappService {
 
-    @Autowired
-    private ApiProxy apiProxy;
+    private final ReservationMapper reservationMapper;
+
+    private final AircraftMapper aircraftMapper;
+    private final ApiProxy apiProxy;
 
 
     Logger logger = LoggerFactory.getLogger(this.getClass());
+
+    public WebappServiceImpl(ReservationMapper reservationMapper, AircraftMapper aircraftMapper, ApiProxy apiProxy) {
+        this.reservationMapper = reservationMapper;
+        this.aircraftMapper = aircraftMapper;
+        this.apiProxy = apiProxy;
+    }
 
     /**
      * Create Registered user bean with user input, call proxy api method to
@@ -196,32 +203,10 @@ public class WebappServiceImpl implements WebappService {
         return authenticatedUserReservationsList;
     }
 
-    /**
-     * Create reservation bean
-     */
-/*    @Override
-    public ReservationDto createReservation(ReservationDto reservationDto) {
-        Date borrowingDate = reservationDto.getBorrowingDate();
-        Date returnDate = reservationDto.getReturnDate();
-        String aircraftMark = reservationDto.getAircraftMark();
-
-       *//* AircraftBean aircraftBean = reservationBean.getAircraft();*//*
-
-        RegisteredUserBean registeredUser = new RegisteredUserBean();
-        registeredUser.setId(getAuthenticatedRegisteredUserId());
-         int registeredUserId = registeredUser.getId();
-
-
-
-        reservationDto.setReturnDate(returnDate);
-        reservationDto.setBorrowingDate(borrowingDate);
-        reservationDto.setRegisteredUserId(registeredUserId);
-        reservationDto.setAircraftMark(aircraftMark);
-
-        System.out.println("88888888888888888888888888888888888888888" + reservationDto);
-
-        return reservationDto;
-    }*/
+    @Override
+    public boolean getReservationByIdAndDate(int id, LocalDate startDate, LocalDate endDate) {
+        return apiProxy.getReservationByIdAndDate(id, startDate, endDate);
+    }
 
     @Override
     public AircraftBean createAircraft(AircraftBean aircraftBean) {
@@ -236,9 +221,14 @@ public class WebappServiceImpl implements WebappService {
         return aircraftBean;
     }
 
+    @Override
+    public AircraftBean getAircraftByReservationId(int id) {
+        return apiProxy.getAircraftByReservationId(id);
+    }
+
 
     /**
-     * Get list of book already reserved by authenticated user
+     * Get list of aircraft already reserved by authenticated user
      *
      * @param authenticatedUserId
      * @return
@@ -260,7 +250,19 @@ public class WebappServiceImpl implements WebappService {
     @Override
     public AircraftBean updateAircraft(int id, AircraftBean aircraftBean) {
 
-        aircraftBean = apiProxy.updateAircraft(id, aircraftBean);
+        if(aircraftBean.getMotorHours()>= 10000){
+            aircraftBean.setAvailable(false);
+            aircraftBean = apiProxy.updateAircraft(id, aircraftBean);
+            WorkshopBean workshopBean = new WorkshopBean();
+            workshopBean.setAircraft(apiProxy.getAircraftById(id));
+            workshopBean.setEntryDate(LocalDate.now());
+            workshopBean.setMotorChange(false);
+            workshopBean.setHelixChange(false);
+            apiProxy.addWorkshop(workshopBean);
+        }else {
+            aircraftBean = apiProxy.updateAircraft(id, aircraftBean);
+        }
+
 
         return aircraftBean;
     }
@@ -277,36 +279,20 @@ public class WebappServiceImpl implements WebappService {
     }
 
 
-
-
-    /**
-     * Get AvailableCopie list and set nearestReturnDateString for each instance
-     */
-/*    @Override
-    public List<AvailableCopieBean> getAvailableCopies() {
-        List<AvailableCopieBean> copiesList = apiProxy.getAvailableCopies();
-        return copiesList;
-    }*/
     @Override
     public List<AircraftDto> getAvailableAircrafts() {
         return apiProxy.getAvailableAircrafts().stream()
-                .map(this::convertToDTO)
+                .map(aircraftMapper::convertToDTO)
                 .collect(Collectors.toList());
     }
 
     @Override
     public List<AircraftDto> getAvailableAircraftsBetweenDates(LocalDate startDate, LocalDate endDate) {
         return apiProxy.getAvailableAircraftsBetweenDates(startDate, endDate).stream()
-                .map(this::convertToDTO)
+                .map(aircraftMapper::convertToDTO)
                 .collect(Collectors.toList());
     }
 
-    public List<RegisteredUserReservationDto> getAllRegisteredUsersDTO() {
-        List<RegisteredUserBean> registeredUsers = apiProxy.getUsers();
-        return registeredUsers.stream()
-                .map(this::convertToDTO)
-                .collect(Collectors.toList());
-    }
 
     @Override
     public WorkshopBean getWorkshopBeanById(int id) {
@@ -328,10 +314,12 @@ public class WebappServiceImpl implements WebappService {
 
     @Override
     public WorkshopBean updateWorkshopBean(int id, WorkshopBean workshopBean) {
+        return apiProxy.updateWorkshop(id, workshopBean);
+    }
 
-        workshopBean = apiProxy.updateWorkshop(id, workshopBean);
-
-        return null;
+    @Override
+    public WorkshopBean saveIntervention(int id, WorkshopBean workshopBean) {
+        return apiProxy.saveIntervention(id, workshopBean);
     }
 
     public RegisteredUserReservationDto convertToDTO(RegisteredUserBean registeredUserBean) {
@@ -340,65 +328,20 @@ public class WebappServiceImpl implements WebappService {
         // Ajoutez d'autres champs si nécessaire
         return registeredUserReservationDto;
     }
-    public List<ReservationDto> getAllReservationsDTO(@RequestBody List<AircraftBean> availableAircrafts ) {
-        List<ReservationBean> reservations = apiProxy.getReservations(availableAircrafts);
-        return reservations.stream()
-                .map(this::convertToDTO)
-                .collect(Collectors.toList());
-    }
-
-    public ReservationDto convertToDTO(ReservationBean reservationBean) {
-        ReservationDto reservationDTO = new ReservationDto();
-        reservationDTO.setBorrowingDate(reservationBean.getBorrowingDate());
-        reservationDTO.setReturnDate(reservationBean.getReturnDate());
-
-        if (reservationBean.getRegisteredUser() != null) {
-            reservationDTO.setRegisteredUserId( reservationBean.getRegisteredUser().getId());
-        }
-
-        if (reservationBean.getAircraft() != null) {
-
-            reservationDTO.setAircraftDto(convertToDTO(apiProxy.getAircraftById(reservationBean.getAircraft().getId())));
-        }
-
-        return reservationDTO;
-    }
-
-    public AircraftDto convertToDTO(AircraftBean aircraft){
-        AircraftDto aircraftDto = new AircraftDto();
-        aircraftDto.setId(aircraft.getId());
-        aircraftDto.setMark(aircraft.getMark());
-        return aircraftDto;
-    }
-
-/*    public ResponseEntity<Void> createReservation(ReservationDto reservationDTO, String mark) {
-        ReservationBean reservationBean = new ReservationBean();
-        AircraftBean aircraftBean = new AircraftBean();
-        reservationBean.setBorrowingDate(reservationDTO.getBorrowingDate());
-        reservationBean.setReturnDate(reservationDTO.getReturnDate());
-        reservationBean.setAircraft(aircraftBean);
-
-*//*        if (reservationDTO.getRegisteredUserId() != null) {
-            Optional<RegisteredUserBean> registeredUserBean = apiProxy.getRegisteredUserById(reservationDTO.getRegisteredUserId());
-            reservationBean.setRegisteredUser();
-        }
-
-        if (reservationDTO.getAircraftMark() != null) {
-            Optional<AircraftBean> aircraftBean = apiProxy.getAircraftByMark(reservationDTO.getAircraftMark());
-            reservationBean.setAircraft(aircraftBean);
-        }*//*
-
-        return apiProxy.addReservation(reservationDTO);
-    }*/
 
     @Override
     public  ResponseEntity<Void> createReservation(ReservationDto reservationDto) {
 
-        ReservationBean reservationBean = convertToEntity(reservationDto);
+        ReservationBean reservationBean = reservationMapper.convertToEntity(reservationDto);
         System.out.println("reservationBean dans le webappService : " + reservationBean.toString());
 
 
         return    apiProxy.addReservation(reservationBean);
+    }
+
+    @Override
+    public ResponseEntity<Void> updateAircraftReservation(int id, ReservationBean reservationBean) {
+        return apiProxy.updateAircraftReservation(id, reservationBean);
     }
 
     @Override
@@ -425,16 +368,6 @@ public class WebappServiceImpl implements WebappService {
 
 
 
-
-
-    private ReservationBean convertToEntity(ReservationDto reservationDto) {
-        ReservationBean reservationBean = new ReservationBean();
-        reservationBean.setRegisteredUser(apiProxy.getRegisteredUserById(reservationDto.getRegisteredUserId()));
-        reservationBean.setBorrowingDate(reservationDto.getBorrowingDate());
-        reservationBean.setReturnDate(reservationDto.getReturnDate());
-        reservationBean.setAircraft(apiProxy.getAircraftById(reservationDto.getAircraftDto().getId()));
-        return reservationBean;
-    }
 }
 
 

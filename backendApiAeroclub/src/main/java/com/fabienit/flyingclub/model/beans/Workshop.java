@@ -5,6 +5,7 @@ import org.hibernate.annotations.CacheConcurrencyStrategy;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ import java.util.Objects;
  */
 @Entity
 @Table(name = "workshop")
-@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
+/*@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)*/
 public class Workshop implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -33,19 +34,19 @@ public class Workshop implements Serializable {
     private String other;
 
     @Column(name = "entry_date")
-    private Date entryDate;
+    private LocalDate entryDate;
 
     @Column(name = "exit_date")
-    private Date exitDate;
+    private LocalDate exitDate;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "aircraft_id")
     private Aircraft aircraft;
 
     public Workshop() {
     }
 
-    public Workshop(int id, Boolean motorChange, Boolean helixChange, String other, Date entryDate, Date exitDate, Aircraft aircraft) {
+    public Workshop(int id, Boolean motorChange, Boolean helixChange, String other, LocalDate entryDate, LocalDate exitDate, Aircraft aircraft) {
         this.id = id;
         this.motorChange = motorChange;
         this.helixChange = helixChange;
@@ -87,19 +88,19 @@ public class Workshop implements Serializable {
         this.other = other;
     }
 
-    public Date getEntryDate() {
+    public LocalDate getEntryDate() {
         return entryDate;
     }
 
-    public void setEntryDate(Date entryDate) {
+    public void setEntryDate(LocalDate entryDate) {
         this.entryDate = entryDate;
     }
 
-    public Date getExitDate() {
+    public LocalDate getExitDate() {
         return exitDate;
     }
 
-    public void setExitDate(Date exitDate) {
+    public void setExitDate(LocalDate exitDate) {
         this.exitDate = exitDate;
     }
 
@@ -127,8 +128,6 @@ public class Workshop implements Serializable {
         // see https://vladmihalcea.com/how-to-implement-equals-and-hashcode-using-the-jpa-entity-identifier/
         return getClass().hashCode();
     }
-
-    // prettier-ignore
 
 
     @Override

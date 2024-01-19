@@ -8,7 +8,6 @@ import com.fabienit.flyingclub.web.exceptions.EntityAlreadyExistsException;
 import com.fabienit.flyingclub.web.exceptions.RessourceNotFoundException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
@@ -29,17 +28,17 @@ import java.util.*;
 @RestController
 @Validated
 public class AircraftController {
-
-    @Autowired
-    private AircraftDao aircraftDao;
-
-    @Autowired
-    private AircraftManager aircraftManager;
-
-    @Autowired
-    private UtilsManager utilsManager;
+    private final AircraftDao aircraftDao;
+    private final AircraftManager aircraftManager;
+    private final UtilsManager utilsManager;
 
     Logger logger = LoggerFactory.getLogger(this.getClass());
+
+    public AircraftController(AircraftDao aircraftDao, AircraftManager aircraftManager, UtilsManager utilsManager) {
+        this.aircraftDao = aircraftDao;
+        this.aircraftManager = aircraftManager;
+        this.utilsManager = utilsManager;
+    }
 
     @GetMapping(value = "/aircrafts")
     public List<Aircraft> getAircrafts(@RequestParam(required = false) String query) {
@@ -75,7 +74,6 @@ public class AircraftController {
     public List<Aircraft> getAircraftsAvailable(/*@RequestParam(required = false) String query*/) {
 
         logger.info("Providing aircraft resource from database: all aircraft list");
-        List<Aircraft> aircrafts = aircraftManager.checkIfAircraftIsAvailable();
         List<Aircraft> availableAircraft = aircraftDao.findAllByIsAvailableTrue();
         /*
         if (query == null) return aircrafts;
@@ -112,6 +110,12 @@ public class AircraftController {
         if(!aircraft.isPresent()) throw new RessourceNotFoundException("the aircraft entity doesn't exists, id: " + id);
 
         return aircraft;
+    }
+
+    @GetMapping(value = "/aircrafts/reservation/{id}")
+    public Aircraft getAircraftByReservationId(@PathVariable int id){
+
+        return aircraftManager.getAircraftByReservationId(id);
     }
 
     @PostMapping(value = "/aircrafts")
@@ -165,7 +169,7 @@ public class AircraftController {
                                                             @RequestParam("returnDate") LocalDate returnDate) {
 
         logger.info("Providing aircraft resource from database: available between dates aircraft list");
-        System.out.println("les deuxx dates sont : " + borrowingDate + "ddddd" + returnDate);
+        System.out.println("les deux dates sont : " + borrowingDate + "ddddd" + returnDate);
         return aircraftManager.getAvailableAircraftsBetweenDates(borrowingDate, returnDate);
     }
 

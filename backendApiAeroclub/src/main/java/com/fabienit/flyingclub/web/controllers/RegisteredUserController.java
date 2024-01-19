@@ -6,7 +6,6 @@ import com.fabienit.flyingclub.web.exceptions.EntityAlreadyExistsException;
 import com.fabienit.flyingclub.web.exceptions.RessourceNotFoundException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -29,10 +28,14 @@ import java.util.Optional;
 @Validated
 public class RegisteredUserController {
 
-    @Autowired
-    private RegisteredUserDao registeredUserDao;
+
+    private final RegisteredUserDao registeredUserDao;
 
     Logger logger = LoggerFactory.getLogger(this.getClass());
+
+    public RegisteredUserController(RegisteredUserDao registeredUserDao) {
+        this.registeredUserDao = registeredUserDao;
+    }
 
     @GetMapping(value = "/users")
     public List<RegisteredUser> getRegisteredUsers() {

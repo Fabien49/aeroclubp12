@@ -26,29 +26,47 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <div class="card">
+<!--                <div class="card">
                     <div class="col-md-2 mb-3">
-                        <a class="btn btn-primary" href="/workshop">Retour à l'atelier'</a>
+                        <a class="btn btn-info" href="/workshop">Retour à l'atelier</a>
                     </div>
-                </div>
+                </div>-->
                 <div class="card">
-                    <h2>Formulaire d'ajout d'un avion à l'atelier</h2>
+                    <div class="card-body">
+                    <a class="btn btn-info" href="/workshop">Retour à l'atelier</a>
+                    <h2 class="text-center">Formulaire d'ajout d'un avion à l'atelier</h2>
+                    <div class="card-body">
+                    <form class="form-row align-items-center mx-auto" th:action="@{/addWorkshop}" th:object="${workshopBean}" method="post">
+                        <input type="hidden" th:field="*{id}" />
 
-                    <form class="form-row" th:action="@{/addWorkshop}" th:object="${workshopBean}" method="post">
-                        <input type="hidden" th:field="*{id}"/>
-                        <div class="col-md-6 mb-3">
-                            <label for="mark">Avion </label>
+                        <div class="col-md-6 mb-3 mx-auto">
+                            <label for="mark">Sélectionnez un avion</label>
                             <select class="form-control" id="mark" th:field="*{aircraft.mark}">
                                 <option value="" disabled selected>Sélectionnez un avion</option>
-                                <!-- Boucle Thymeleaf pour parcourir la liste des avions disponibles -->
                                 <option th:each="aircraftDto : ${aircraftAvailable}" th:value="${aircraftDto.mark}" th:text="${aircraftDto.mark}"></option>
                             </select>
                         </div>
-                        <div class="col-md-3 mb-3">
-                            <button type="submit" class="form-control btn btn-primary">Ajouter</button>
+
+                        <div class="col-md-6 mb-3 mx-auto">
+                            <label> </label>
+                            <div class="custom-control custom-checkbox custom-control-lg">
+                                <input type="checkbox" class="custom-control-input" id="helix_change" th:field="*{helixChange}" />
+                                <label class="custom-control-label" for="helix_change">Changement de l'hélice</label>
+                            </div>
+                            <div class="custom-control custom-checkbox custom-control-lg">
+                                <input type="checkbox" class="custom-control-input" id="motor_change" th:field="*{motorChange}" />
+                                <label class="custom-control-label" for="motor_change">Changement du moteur</label>
+                            </div>
+                        </div>
+
+                        <input type="hidden" th:field="${currentDate}" />
+
+                        <div class="col-md-3 mx-auto">
+                            <button type="submit" class="btn btn-warning btn-block">Ajouter</button>
                         </div>
                     </form>
-
+                    </div>
+                    </div>
                 </div>
             </div>
         </div>

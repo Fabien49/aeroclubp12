@@ -3,7 +3,6 @@ package com.fabienit.flyingclub.manager.impl;
 import com.fabienit.flyingclub.dao.FlyingClubDao;
 import com.fabienit.flyingclub.manager.FlyingClubManager;
 import com.fabienit.flyingclub.model.beans.FlyingClub;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -12,8 +11,11 @@ import java.util.Optional;
 @Service
 public class FlyingClubManagerImpl implements FlyingClubManager {
 
-    @Autowired
-    private FlyingClubDao flyingClubDao;
+    private final FlyingClubDao flyingClubDao;
+
+    public FlyingClubManagerImpl(FlyingClubDao flyingClubDao) {
+        this.flyingClubDao = flyingClubDao;
+    }
 
     @Override
     public List<FlyingClub> findAll() {
@@ -26,8 +28,8 @@ public class FlyingClubManagerImpl implements FlyingClubManager {
     }
 
     @Override
-    public FlyingClub save(FlyingClub library) {
-        return flyingClubDao.save(library);
+    public FlyingClub save(FlyingClub flyingClub) {
+        return flyingClubDao.save(flyingClub);
     }
 
     @Override

@@ -1,0 +1,1168 @@
+2024-01-15 08:55:26,211 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Starting AeroclubApiApplication on FABPC with PID 12948 (started by FaB PC in C:\Users\FaB\Git\Projet 12\aeroclubp12)
+2024-01-15 08:55:26,228 DEBUG com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2024-01-15 08:55:26,229 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] The following profiles are active: dev
+2024-01-15 08:55:34,982 DEBUG com.fabienit.flyingclub.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$cb81846f [restartedMain] Set Swagger2 documentation
+2024-01-15 08:55:36,311 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Started AeroclubApiApplication in 10.739 seconds (JVM running for 13.646)
+2024-01-15 08:56:05,367 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-1] Search user by email: test1@gmail.com
+2024-01-15 08:56:08,862 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-2] Providing aircraft resource from database: all aircraft list
+2024-01-15 08:56:09,088 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-3] Providing reservation list for registered user from database: user id: 2
+2024-01-15 08:56:17,637 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-4] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 08:56:19,497 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-10] Providing aircraft resource from database: all aircraft list
+2024-01-15 08:56:19,648 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-9] Providing reservation list for registered user from database: user id: 2
+2024-01-15 08:56:26,519 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-8] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 08:56:28,808 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-7] Providing registeredUser resource from database: registeredUser id: 2
+2024-01-15 08:56:28,991 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-7] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 08:56:29,239 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-5] Adding new reservation in database
+2024-01-15 08:56:29,516 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-6] Providing aircraft resource from database: all aircraft list
+2024-01-15 08:56:29,668 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-1] Providing reservation list for registered user from database: user id: 2
+2024-01-15 08:56:31,689 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-2] Providing reservation resource from database: reservation id: 8
+2024-01-15 08:56:31,893 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-3] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 08:56:33,433 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-4] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 08:56:33,603 ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] [http-nio-8001-exec-10] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.aop.AopInvocationException: Null return value from advice does not match primitive return type for: public abstract boolean com.fabienit.flyingclub.dao.ReservationDao.existsReservationByIdAndDateTest(int,java.time.LocalDate,java.time.LocalDate)] with root cause
+org.springframework.aop.AopInvocationException: Null return value from advice does not match primitive return type for: public abstract boolean com.fabienit.flyingclub.dao.ReservationDao.existsReservationByIdAndDateTest(int,java.time.LocalDate,java.time.LocalDate)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:226)
+	at com.sun.proxy.$Proxy127.existsReservationByIdAndDateTest(Unknown Source)
+	at com.fabienit.flyingclub.manager.impl.ReservationManagerImpl.existsReservationByIdAndDate(ReservationManagerImpl.java:249)
+	at com.fabienit.flyingclub.manager.impl.ReservationManagerImpl$$FastClassBySpringCGLIB$$b422f1f0.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:685)
+	at com.fabienit.flyingclub.manager.impl.ReservationManagerImpl$$EnhancerBySpringCGLIB$$76660911.existsReservationByIdAndDate(<generated>)
+	at com.fabienit.flyingclub.web.controllers.ReservationController.getReservationByIdAndDate(ReservationController.java:149)
+	at com.fabienit.flyingclub.web.controllers.ReservationController$$FastClassBySpringCGLIB$$2c17ce79.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:769)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747)
+	at org.springframework.validation.beanvalidation.MethodValidationInterceptor.invoke(MethodValidationInterceptor.java:120)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:689)
+	at com.fabienit.flyingclub.web.controllers.ReservationController$$EnhancerBySpringCGLIB$$3e6408a.getReservationByIdAndDate(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:126)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:90)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:118)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:158)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:203)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1591)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2024-01-15 09:06:34,732 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-9] Search user by email: test1@gmail.com
+2024-01-15 09:06:36,033 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-8] Providing aircraft resource from database: all aircraft list
+2024-01-15 09:06:36,178 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-7] Providing reservation list for registered user from database: user id: 2
+2024-01-15 09:06:37,380 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-5] Providing reservation resource from database: reservation id: 8
+2024-01-15 09:06:37,513 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-6] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 09:06:39,208 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-1] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 09:08:41,942 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Starting AeroclubApiApplication on FABPC with PID 17420 (started by FaB PC in C:\Users\FaB\Git\Projet 12\aeroclubp12)
+2024-01-15 09:08:41,965 DEBUG com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2024-01-15 09:08:41,966 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] The following profiles are active: dev
+2024-01-15 09:08:49,742 DEBUG com.fabienit.flyingclub.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$a7cf4585 [restartedMain] Set Swagger2 documentation
+2024-01-15 09:08:50,553 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Started AeroclubApiApplication in 9.53 seconds (JVM running for 12.295)
+2024-01-15 09:09:07,506 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-1] Search user by email: test1@gmail.com
+2024-01-15 09:09:08,749 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-2] Providing aircraft resource from database: all aircraft list
+2024-01-15 09:09:08,953 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-3] Providing reservation list for registered user from database: user id: 2
+2024-01-15 09:09:15,756 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-4] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 09:09:17,641 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-5] Providing registeredUser resource from database: registeredUser id: 2
+2024-01-15 09:09:17,776 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-6] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 09:09:17,950 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-7] Adding new reservation in database
+2024-01-15 09:09:18,136 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-8] Providing aircraft resource from database: all aircraft list
+2024-01-15 09:09:18,366 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-9] Providing reservation list for registered user from database: user id: 2
+2024-01-15 09:09:21,625 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-10] Providing reservation resource from database: reservation id: 8
+2024-01-15 09:09:21,755 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-1] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 09:09:27,638 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-2] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 09:09:27,772 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-3] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 09:09:27,788 ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] [http-nio-8001-exec-3] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.aop.AopInvocationException: Null return value from advice does not match primitive return type for: public abstract boolean com.fabienit.flyingclub.dao.ReservationDao.existsReservationByIdAndDateTest(int,java.time.LocalDate,java.time.LocalDate)] with root cause
+org.springframework.aop.AopInvocationException: Null return value from advice does not match primitive return type for: public abstract boolean com.fabienit.flyingclub.dao.ReservationDao.existsReservationByIdAndDateTest(int,java.time.LocalDate,java.time.LocalDate)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:226)
+	at com.sun.proxy.$Proxy127.existsReservationByIdAndDateTest(Unknown Source)
+	at com.fabienit.flyingclub.manager.impl.ReservationManagerImpl.existsReservationByIdAndDate(ReservationManagerImpl.java:249)
+	at com.fabienit.flyingclub.manager.impl.ReservationManagerImpl$$FastClassBySpringCGLIB$$b422f1f0.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:685)
+	at com.fabienit.flyingclub.manager.impl.ReservationManagerImpl$$EnhancerBySpringCGLIB$$9f733bdc.existsReservationByIdAndDate(<generated>)
+	at com.fabienit.flyingclub.web.controllers.ReservationController.getReservationByIdAndDate(ReservationController.java:152)
+	at com.fabienit.flyingclub.web.controllers.ReservationController$$FastClassBySpringCGLIB$$2c17ce79.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:769)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747)
+	at org.springframework.validation.beanvalidation.MethodValidationInterceptor.invoke(MethodValidationInterceptor.java:120)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:689)
+	at com.fabienit.flyingclub.web.controllers.ReservationController$$EnhancerBySpringCGLIB$$e6a83dd7.getReservationByIdAndDate(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:126)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:90)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:118)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:158)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:203)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1591)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2024-01-15 09:12:00,772 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Starting AeroclubApiApplication on FABPC with PID 13800 (started by FaB PC in C:\Users\FaB\Git\Projet 12\aeroclubp12)
+2024-01-15 09:12:00,775 DEBUG com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2024-01-15 09:12:00,775 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] The following profiles are active: dev
+2024-01-15 09:12:07,204 DEBUG com.fabienit.flyingclub.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$f178d292 [restartedMain] Set Swagger2 documentation
+2024-01-15 09:12:08,103 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Started AeroclubApiApplication in 7.765 seconds (JVM running for 9.235)
+2024-01-15 09:12:08,876 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-2] Providing aircraft resource from database: all aircraft list
+2024-01-15 09:12:09,198 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-1] Providing reservation list for registered user from database: user id: 2
+2024-01-15 09:12:17,376 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-3] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 09:12:19,124 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-4] Providing registeredUser resource from database: registeredUser id: 2
+2024-01-15 09:12:19,252 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-5] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 09:12:19,427 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-6] Adding new reservation in database
+2024-01-15 09:12:19,596 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-7] Providing aircraft resource from database: all aircraft list
+2024-01-15 09:12:19,746 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-8] Providing reservation list for registered user from database: user id: 2
+2024-01-15 09:12:20,793 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-9] Providing reservation resource from database: reservation id: 8
+2024-01-15 09:12:20,923 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-10] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 09:12:23,409 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-2] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 09:12:23,540 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-1] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 09:12:23,707 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-3] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 09:14:44,885 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Starting AeroclubApiApplication on FABPC with PID 17500 (started by FaB PC in C:\Users\FaB\Git\Projet 12\aeroclubp12)
+2024-01-15 09:14:44,889 DEBUG com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2024-01-15 09:14:44,889 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] The following profiles are active: dev
+2024-01-15 09:14:51,132 DEBUG com.fabienit.flyingclub.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$ef6c084a [restartedMain] Set Swagger2 documentation
+2024-01-15 09:14:51,863 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Started AeroclubApiApplication in 7.416 seconds (JVM running for 8.866)
+2024-01-15 09:15:02,489 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-4] Search user by email: test1@gmail.com
+2024-01-15 09:15:03,577 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-10] Providing aircraft resource from database: all aircraft list
+2024-01-15 09:15:03,822 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-5] Providing reservation list for registered user from database: user id: 2
+2024-01-15 09:15:09,635 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-3] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 09:15:11,697 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-8] Providing registeredUser resource from database: registeredUser id: 2
+2024-01-15 09:15:11,821 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-6] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 09:15:11,976 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-7] Adding new reservation in database
+2024-01-15 09:15:12,142 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-1] Providing aircraft resource from database: all aircraft list
+2024-01-15 09:15:12,268 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-9] Providing reservation list for registered user from database: user id: 2
+2024-01-15 09:15:13,718 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-2] Providing reservation resource from database: reservation id: 8
+2024-01-15 09:15:13,852 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-4] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 09:15:16,239 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-10] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 09:15:16,362 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-5] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 09:15:16,492 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-3] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 09:25:29,035 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-6] Providing aircraft resource from database: all aircraft list
+2024-01-15 09:25:29,157 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-9] Providing reservation list for registered user from database: user id: 2
+2024-01-15 09:28:20,223 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Starting AeroclubApiApplication on FABPC with PID 10228 (started by FaB PC in C:\Users\FaB\Git\Projet 12\aeroclubp12)
+2024-01-15 09:28:20,227 DEBUG com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2024-01-15 09:28:20,227 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] The following profiles are active: dev
+2024-01-15 09:28:26,753 DEBUG com.fabienit.flyingclub.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$73bb2f8c [restartedMain] Set Swagger2 documentation
+2024-01-15 09:28:27,628 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Started AeroclubApiApplication in 7.863 seconds (JVM running for 9.325)
+2024-01-15 09:28:33,034 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-1] Search user by email: test1@gmail.com
+2024-01-15 09:28:33,989 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-2] Providing aircraft resource from database: all aircraft list
+2024-01-15 09:28:34,173 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-3] Providing reservation list for registered user from database: user id: 2
+2024-01-15 09:28:41,843 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-4] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 09:28:44,200 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-5] Providing registeredUser resource from database: registeredUser id: 2
+2024-01-15 09:28:44,326 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-6] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 09:28:44,511 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-7] Adding new reservation in database
+2024-01-15 09:28:44,679 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-8] Providing aircraft resource from database: all aircraft list
+2024-01-15 09:28:44,803 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-9] Providing reservation list for registered user from database: user id: 2
+2024-01-15 09:28:46,010 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-10] Providing reservation resource from database: reservation id: 8
+2024-01-15 09:28:46,134 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-1] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 09:28:47,439 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-2] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 09:28:47,566 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-3] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 09:28:47,695 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-4] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 09:31:16,473 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-6] Search user by email: test1@gmail.com
+2024-01-15 09:31:17,757 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-7] Providing aircraft resource from database: all aircraft list
+2024-01-15 09:31:17,924 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-8] Providing reservation list for registered user from database: user id: 2
+2024-01-15 09:31:19,420 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-9] Providing reservation resource from database: reservation id: 8
+2024-01-15 09:31:19,545 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-10] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 09:31:21,255 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-1] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 09:31:21,386 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-2] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 09:31:21,512 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-3] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 09:37:47,243 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-5] Search user by email: test1@gmail.com
+2024-01-15 09:37:48,358 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-6] Providing aircraft resource from database: all aircraft list
+2024-01-15 09:37:48,501 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-7] Providing reservation list for registered user from database: user id: 2
+2024-01-15 09:37:50,139 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-8] Providing reservation resource from database: reservation id: 8
+2024-01-15 09:37:50,269 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-9] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 09:37:50,402 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-10] Providing registeredUser resource from database: registeredUser id: 2
+2024-01-15 09:37:50,528 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-1] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 09:37:50,676 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-2] Updating reservation in database, id: 8
+2024-01-15 09:37:50,679 DEBUG com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-2] The requested reservation entity doesn't exist, id: 0
+2024-01-15 09:37:57,260 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-3] Providing aircraft resource from database: all aircraft list
+2024-01-15 09:37:57,393 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-4] Providing reservation list for registered user from database: user id: 2
+2024-01-15 09:38:48,464 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-6] Search user by email: test1@gmail.com
+2024-01-15 09:38:49,336 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-7] Providing aircraft resource from database: all aircraft list
+2024-01-15 09:38:49,466 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-8] Providing reservation list for registered user from database: user id: 2
+2024-01-15 09:38:50,697 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-9] Providing reservation resource from database: reservation id: 8
+2024-01-15 09:38:50,826 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-10] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 09:38:57,329 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-1] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 09:38:57,465 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-2] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 09:38:57,590 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-3] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 09:48:01,784 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Starting AeroclubApiApplication on FABPC with PID 3308 (started by FaB PC in C:\Users\FaB\Git\Projet 12\aeroclubp12)
+2024-01-15 09:48:01,788 DEBUG com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2024-01-15 09:48:01,788 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] The following profiles are active: dev
+2024-01-15 09:48:08,074 DEBUG com.fabienit.flyingclub.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$fdae4f04 [restartedMain] Set Swagger2 documentation
+2024-01-15 09:48:08,816 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Started AeroclubApiApplication in 7.579 seconds (JVM running for 9.119)
+2024-01-15 09:48:25,855 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-1] Search user by email: test1@gmail.com
+2024-01-15 09:48:26,840 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-2] Providing aircraft resource from database: all aircraft list
+2024-01-15 09:48:27,025 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-3] Providing reservation list for registered user from database: user id: 2
+2024-01-15 09:48:33,703 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-4] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 09:48:35,768 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-5] Providing registeredUser resource from database: registeredUser id: 2
+2024-01-15 09:48:35,895 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-6] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 09:48:36,075 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-7] Adding new reservation in database
+2024-01-15 09:48:36,245 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-8] Providing aircraft resource from database: all aircraft list
+2024-01-15 09:48:36,369 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-9] Providing reservation list for registered user from database: user id: 2
+2024-01-15 09:48:37,648 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-10] Providing reservation resource from database: reservation id: 8
+2024-01-15 09:48:37,775 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-1] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 09:48:39,223 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-2] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 09:48:39,349 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-3] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 09:48:39,481 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-3] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 09:51:53,054 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-6] Search user by email: test1@gmail.com
+2024-01-15 09:51:54,664 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-7] Providing aircraft resource from database: all aircraft list
+2024-01-15 09:51:54,806 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-8] Providing reservation list for registered user from database: user id: 2
+2024-01-15 09:51:56,277 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-9] Providing reservation resource from database: reservation id: 8
+2024-01-15 09:51:56,448 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-10] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 09:51:57,934 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-1] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 09:51:58,074 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-2] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 09:51:58,224 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-3] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 09:53:15,310 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-7] Search user by email: test1@gmail.com
+2024-01-15 09:53:16,381 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-8] Providing aircraft resource from database: all aircraft list
+2024-01-15 09:53:16,513 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-9] Providing reservation list for registered user from database: user id: 2
+2024-01-15 09:53:17,675 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-10] Providing reservation resource from database: reservation id: 8
+2024-01-15 09:53:17,797 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-1] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 09:53:19,239 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-2] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 09:53:19,366 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-3] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 09:53:19,488 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-4] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 10:10:22,226 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-8] Providing registeredUser resource from database: registeredUser id: 2
+2024-01-15 10:10:22,349 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-9] Providing aircraft resource from database: aircraft id: 4
+2024-01-15 10:10:22,489 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-10] Adding new reservation in database
+2024-01-15 10:10:22,627 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-1] Providing aircraft resource from database: all aircraft list
+2024-01-15 10:10:22,749 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-2] Providing reservation list for registered user from database: user id: 2
+2024-01-15 10:46:36,378 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-4] Search user by email: test1@gmail.com
+2024-01-15 10:46:37,940 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-5] Providing aircraft resource from database: all aircraft list
+2024-01-15 10:46:38,071 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-6] Providing reservation list for registered user from database: user id: 2
+2024-01-15 10:46:46,345 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-7] Providing reservation resource from database: reservation id: 9
+2024-01-15 10:46:46,496 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-8] Updating reservation in database, id: 9
+2024-01-15 10:46:46,658 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-9] Providing aircraft resource from database: all aircraft list
+2024-01-15 10:46:46,784 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-10] Providing reservation list for registered user from database: user id: 2
+2024-01-15 10:46:48,262 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-1] Providing reservation resource from database: reservation id: 8
+2024-01-15 10:46:48,398 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-2] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 10:46:49,826 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-3] Deleting reservation from database: id: 8
+2024-01-15 10:46:49,978 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-4] Providing aircraft resource from database: all aircraft list
+2024-01-15 10:46:50,102 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-5] Providing reservation list for registered user from database: user id: 2
+2024-01-15 10:48:27,829 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Starting AeroclubApiApplication on FABPC with PID 13496 (started by FaB PC in C:\Users\FaB\Git\Projet 12\aeroclubp12)
+2024-01-15 10:48:27,833 DEBUG com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2024-01-15 10:48:27,833 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] The following profiles are active: dev
+2024-01-15 10:48:35,551 DEBUG com.fabienit.flyingclub.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$64ac506 [restartedMain] Set Swagger2 documentation
+2024-01-15 10:48:36,358 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Started AeroclubApiApplication in 9.017 seconds (JVM running for 10.654)
+2024-01-15 10:49:49,457 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-1] Search user by email: test1@gmail.com
+2024-01-15 10:49:50,741 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-2] Providing aircraft resource from database: all aircraft list
+2024-01-15 10:49:50,948 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-3] Providing reservation list for registered user from database: user id: 2
+2024-01-15 10:49:57,052 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-4] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 10:49:59,434 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-5] Providing registeredUser resource from database: registeredUser id: 2
+2024-01-15 10:49:59,574 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-6] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 10:49:59,754 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-7] Adding new reservation in database
+2024-01-15 10:49:59,934 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-8] Providing aircraft resource from database: all aircraft list
+2024-01-15 10:50:00,064 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-9] Providing reservation list for registered user from database: user id: 2
+2024-01-15 10:50:02,108 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-10] Providing reservation resource from database: reservation id: 8
+2024-01-15 10:50:02,249 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-1] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 10:50:03,563 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-2] Deleting reservation from database: id: 8
+2024-01-15 10:50:03,723 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-3] Providing aircraft resource from database: all aircraft list
+2024-01-15 10:50:03,850 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-4] Providing reservation list for registered user from database: user id: 2
+2024-01-15 10:50:59,280 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-6] Search user by email: test1@gmail.com
+2024-01-15 10:51:00,117 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-7] Providing aircraft resource from database: all aircraft list
+2024-01-15 10:51:00,252 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-8] Providing reservation list for registered user from database: user id: 2
+2024-01-15 10:51:07,785 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-9] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 10:51:10,557 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-10] Providing registeredUser resource from database: registeredUser id: 2
+2024-01-15 10:51:10,688 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-1] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 10:51:10,841 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-2] Adding new reservation in database
+2024-01-15 10:51:10,975 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-3] Providing aircraft resource from database: all aircraft list
+2024-01-15 10:51:11,100 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-4] Providing reservation list for registered user from database: user id: 2
+2024-01-15 10:51:12,415 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-5] Providing reservation resource from database: reservation id: 9
+2024-01-15 10:51:12,539 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-6] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 10:51:14,868 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-7] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 10:51:15,004 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-8] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 10:51:15,143 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-9] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 10:51:20,389 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-1] Deleting reservation from database: id: 9
+2024-01-15 10:51:20,537 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-2] Providing aircraft resource from database: all aircraft list
+2024-01-15 10:51:20,689 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-2] Providing reservation list for registered user from database: user id: 2
+2024-01-15 10:55:17,229 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Starting AeroclubApiApplication on FABPC with PID 14552 (started by FaB PC in C:\Users\FaB\Git\Projet 12\aeroclubp12)
+2024-01-15 10:55:17,233 DEBUG com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2024-01-15 10:55:17,233 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] The following profiles are active: dev
+2024-01-15 10:55:24,455 DEBUG com.fabienit.flyingclub.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$eb3ee312 [restartedMain] Set Swagger2 documentation
+2024-01-15 10:55:25,400 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Started AeroclubApiApplication in 8.731 seconds (JVM running for 10.419)
+2024-01-15 10:55:39,125 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-1] Search user by email: test1@gmail.com
+2024-01-15 10:55:40,705 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-2] Providing aircraft resource from database: all aircraft list
+2024-01-15 10:55:40,900 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-3] Providing reservation list for registered user from database: user id: 2
+2024-01-15 10:55:48,904 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-4] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 10:55:52,562 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-5] Providing registeredUser resource from database: registeredUser id: 2
+2024-01-15 10:55:52,742 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-7] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 10:55:52,930 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-8] Adding new reservation in database
+2024-01-15 10:55:53,111 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-6] Providing aircraft resource from database: all aircraft list
+2024-01-15 10:55:53,236 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-9] Providing reservation list for registered user from database: user id: 2
+2024-01-15 10:55:54,877 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-10] Providing reservation resource from database: reservation id: 8
+2024-01-15 10:55:55,010 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-1] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 10:55:56,578 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-2] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 10:55:56,709 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-3] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 10:55:56,848 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-4] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 11:00:49,009 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-9] Search user by email: test1@gmail.com
+2024-01-15 11:00:50,125 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-3] Providing aircraft resource from database: all aircraft list
+2024-01-15 11:00:50,258 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-1] Providing reservation list for registered user from database: user id: 2
+2024-01-15 11:00:51,868 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-10] Providing reservation resource from database: reservation id: 8
+2024-01-15 11:00:51,994 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-2] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 11:00:53,563 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-5] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 11:00:53,690 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-8] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 11:00:53,812 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-6] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 11:04:22,358 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Starting AeroclubApiApplication on FABPC with PID 17876 (started by FaB PC in C:\Users\FaB\Git\Projet 12\aeroclubp12)
+2024-01-15 11:04:22,363 DEBUG com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2024-01-15 11:04:22,363 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] The following profiles are active: dev
+2024-01-15 11:04:29,522 DEBUG com.fabienit.flyingclub.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$d2b61d38 [restartedMain] Set Swagger2 documentation
+2024-01-15 11:04:30,328 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Started AeroclubApiApplication in 8.428 seconds (JVM running for 10.038)
+2024-01-15 11:05:35,464 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-1] Search user by email: test1@gmail.com
+2024-01-15 11:05:36,635 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-3] Providing aircraft resource from database: all aircraft list
+2024-01-15 11:05:36,834 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-2] Providing reservation list for registered user from database: user id: 2
+2024-01-15 11:05:44,891 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-4] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 11:05:47,098 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-5] Providing registeredUser resource from database: registeredUser id: 2
+2024-01-15 11:05:47,234 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-6] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 11:05:47,405 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-7] Adding new reservation in database
+2024-01-15 11:05:47,589 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-8] Providing aircraft resource from database: all aircraft list
+2024-01-15 11:05:47,718 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-9] Providing reservation list for registered user from database: user id: 2
+2024-01-15 11:05:49,164 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-10] Providing reservation resource from database: reservation id: 8
+2024-01-15 11:05:49,299 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-1] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 11:05:50,625 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-3] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 11:05:50,766 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-2] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 11:05:50,899 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-4] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 11:07:18,877 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-8] Search user by email: test1@gmail.com
+2024-01-15 11:07:21,946 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-9] Providing aircraft resource from database: all aircraft list
+2024-01-15 11:07:22,083 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-10] Providing reservation list for registered user from database: user id: 2
+2024-01-15 11:07:25,429 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-1] Providing reservation resource from database: reservation id: 8
+2024-01-15 11:07:25,563 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-3] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 11:07:26,921 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-2] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 11:07:27,063 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-4] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 11:07:27,192 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-5] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 11:10:21,810 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-9] Search user by email: test1@gmail.com
+2024-01-15 11:10:22,819 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-10] Providing aircraft resource from database: all aircraft list
+2024-01-15 11:10:22,951 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-1] Providing reservation list for registered user from database: user id: 2
+2024-01-15 11:10:24,119 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-3] Providing reservation resource from database: reservation id: 8
+2024-01-15 11:10:24,241 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-2] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 11:10:26,129 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-4] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 11:10:26,257 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-5] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 11:10:26,382 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-6] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 11:19:00,472 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-10] Providing aircraft resource from database: all aircraft list
+2024-01-15 11:19:00,605 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-1] Providing reservation list for registered user from database: user id: 2
+2024-01-15 11:19:04,279 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-3] Providing reservation resource from database: reservation id: 8
+2024-01-15 11:19:04,400 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-2] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 11:19:09,500 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-4] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 11:19:09,623 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-5] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 11:19:09,744 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-6] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 11:22:35,729 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-10] Search user by email: test1@gmail.com
+2024-01-15 11:22:36,767 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-1] Providing aircraft resource from database: all aircraft list
+2024-01-15 11:22:36,897 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-3] Providing reservation list for registered user from database: user id: 2
+2024-01-15 11:22:38,236 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-2] Providing reservation resource from database: reservation id: 8
+2024-01-15 11:22:38,370 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-4] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 11:22:39,582 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-5] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 11:22:39,737 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-6] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 11:22:39,904 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-7] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 11:23:20,225 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-10] Providing aircraft resource from database: all aircraft list
+2024-01-15 11:23:20,349 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-1] Providing reservation list for registered user from database: user id: 2
+2024-01-15 11:23:28,242 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-3] Providing reservation resource from database: reservation id: 8
+2024-01-15 11:23:28,364 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-2] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 11:23:33,303 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-4] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 11:23:33,466 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-5] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 11:23:33,606 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-6] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 11:28:36,431 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-10] Search user by email: test1@gmail.com
+2024-01-15 11:28:38,588 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-1] Providing aircraft resource from database: all aircraft list
+2024-01-15 11:28:38,722 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-3] Providing reservation list for registered user from database: user id: 2
+2024-01-15 11:28:40,059 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-2] Providing reservation resource from database: reservation id: 8
+2024-01-15 11:28:40,188 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-4] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 11:28:43,405 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-5] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 11:28:43,538 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-6] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 11:28:43,664 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-7] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 11:32:41,347 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-1] Search user by email: test1@gmail.com
+2024-01-15 11:32:42,370 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-3] Providing aircraft resource from database: all aircraft list
+2024-01-15 11:32:42,502 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-2] Providing reservation list for registered user from database: user id: 2
+2024-01-15 11:32:43,956 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-4] Providing reservation resource from database: reservation id: 8
+2024-01-15 11:32:44,090 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-5] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 11:32:45,251 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-6] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 11:32:45,379 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-7] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 11:32:45,506 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-8] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 11:33:29,514 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-3] Search user by email: test1@gmail.com
+2024-01-15 11:33:30,418 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-2] Providing aircraft resource from database: all aircraft list
+2024-01-15 11:33:30,552 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-4] Providing reservation list for registered user from database: user id: 2
+2024-01-15 11:33:31,617 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-5] Providing reservation resource from database: reservation id: 8
+2024-01-15 11:33:31,749 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-6] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 11:33:33,100 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-7] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 11:33:33,227 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-8] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 11:33:33,351 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-9] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 11:33:35,696 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-3] Providing registeredUser resource from database: registeredUser id: 2
+2024-01-15 11:33:35,818 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-2] Providing aircraft resource from database: aircraft id: 1
+2024-01-15 11:34:24,898 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-6] Search user by email: test1@gmail.com
+2024-01-15 11:34:25,973 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-7] Providing aircraft resource from database: all aircraft list
+2024-01-15 11:34:26,103 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-8] Providing reservation list for registered user from database: user id: 2
+2024-01-15 11:34:27,339 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-9] Providing reservation resource from database: reservation id: 8
+2024-01-15 11:34:27,465 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-10] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 11:34:28,303 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-1] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 11:34:28,461 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-3] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 11:34:28,604 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-2] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 11:35:23,041 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-7] Search user by email: test1@gmail.com
+2024-01-15 11:35:23,870 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-8] Providing aircraft resource from database: all aircraft list
+2024-01-15 11:35:23,996 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-9] Providing reservation list for registered user from database: user id: 2
+2024-01-15 11:35:24,950 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-10] Providing reservation resource from database: reservation id: 8
+2024-01-15 11:35:25,078 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-1] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 11:35:26,648 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-3] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 11:35:26,783 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-2] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 11:35:26,906 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-4] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 11:35:29,780 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-7] Providing registeredUser resource from database: registeredUser id: 2
+2024-01-15 11:35:29,902 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-8] Providing aircraft resource from database: aircraft id: 1
+2024-01-15 11:36:58,130 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-1] Search user by email: test1@gmail.com
+2024-01-15 11:36:59,234 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-3] Providing aircraft resource from database: all aircraft list
+2024-01-15 11:36:59,380 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-2] Providing reservation list for registered user from database: user id: 2
+2024-01-15 11:37:00,417 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-4] Providing reservation resource from database: reservation id: 8
+2024-01-15 11:37:00,550 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-5] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 11:37:01,432 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-6] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 11:37:01,593 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-7] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 11:37:01,746 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-7] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 11:38:05,388 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-1] Search user by email: test1@gmail.com
+2024-01-15 11:38:06,645 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-3] Providing aircraft resource from database: all aircraft list
+2024-01-15 11:38:06,774 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-2] Providing reservation list for registered user from database: user id: 2
+2024-01-15 11:38:08,052 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-4] Providing reservation resource from database: reservation id: 8
+2024-01-15 11:38:08,177 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-5] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 11:38:09,536 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-6] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 11:38:09,665 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-8] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 11:38:09,795 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-7] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 11:38:12,102 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-1] Providing registeredUser resource from database: registeredUser id: 2
+2024-01-15 11:38:12,231 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-3] Providing aircraft resource from database: aircraft id: 1
+2024-01-15 11:38:12,381 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-2] Update reservation, reservation id: 0
+2024-01-15 11:39:06,598 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-3] Providing aircraft resource from database: all aircraft list
+2024-01-15 11:39:06,726 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-1] Providing reservation list for registered user from database: user id: 2
+2024-01-15 11:43:52,404 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Starting AeroclubApiApplication on FABPC with PID 17884 (started by FaB PC in C:\Users\FaB\Git\Projet 12\aeroclubp12)
+2024-01-15 11:43:52,409 DEBUG com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2024-01-15 11:43:52,409 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] The following profiles are active: dev
+2024-01-15 11:43:59,463 DEBUG com.fabienit.flyingclub.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$72fa3f48 [restartedMain] Set Swagger2 documentation
+2024-01-15 11:44:00,287 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Started AeroclubApiApplication in 8.512 seconds (JVM running for 10.099)
+2024-01-15 11:44:12,128 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-1] Search user by email: test1@gmail.com
+2024-01-15 11:44:13,140 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-2] Providing aircraft resource from database: all aircraft list
+2024-01-15 11:44:13,337 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-3] Providing reservation list for registered user from database: user id: 2
+2024-01-15 11:44:19,340 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-4] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 11:44:21,290 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-5] Providing registeredUser resource from database: registeredUser id: 2
+2024-01-15 11:44:21,422 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-6] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 11:44:21,606 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-7] Adding new reservation in database
+2024-01-15 11:44:21,785 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-8] Providing aircraft resource from database: all aircraft list
+2024-01-15 11:44:21,909 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-9] Providing reservation list for registered user from database: user id: 2
+2024-01-15 11:44:23,303 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-10] Providing reservation resource from database: reservation id: 8
+2024-01-15 11:44:23,445 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-1] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 11:44:24,778 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-2] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 11:44:24,908 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-3] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 11:44:25,043 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-4] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 11:44:55,470 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-7] Providing aircraft resource from database: all aircraft list
+2024-01-15 11:44:55,596 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-8] Providing reservation list for registered user from database: user id: 2
+2024-01-15 11:45:42,893 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-10] Providing reservation resource from database: reservation id: 8
+2024-01-15 11:45:43,064 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-1] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 11:45:46,123 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-2] Search user by email: test1@gmail.com
+2024-01-15 11:45:47,548 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-3] Providing aircraft resource from database: all aircraft list
+2024-01-15 11:45:47,676 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-4] Providing reservation list for registered user from database: user id: 2
+2024-01-15 11:45:48,691 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-5] Providing reservation resource from database: reservation id: 8
+2024-01-15 11:45:48,824 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-6] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 11:45:50,048 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-7] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 11:45:50,177 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-8] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 11:45:50,304 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-9] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 11:49:26,440 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-3] Search user by email: test1@gmail.com
+2024-01-15 11:49:27,547 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-4] Providing aircraft resource from database: all aircraft list
+2024-01-15 11:49:27,676 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-5] Providing reservation list for registered user from database: user id: 2
+2024-01-15 11:49:28,876 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-6] Providing reservation resource from database: reservation id: 8
+2024-01-15 11:49:29,007 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-7] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 11:49:30,047 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-8] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 11:49:30,176 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-9] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 11:49:30,299 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-10] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 11:51:24,460 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Starting AeroclubApiApplication on FABPC with PID 13328 (started by FaB PC in C:\Users\FaB\Git\Projet 12\aeroclubp12)
+2024-01-15 11:51:24,465 DEBUG com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2024-01-15 11:51:24,465 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] The following profiles are active: dev
+2024-01-15 11:51:31,586 DEBUG com.fabienit.flyingclub.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$10998a28 [restartedMain] Set Swagger2 documentation
+2024-01-15 11:51:32,418 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Started AeroclubApiApplication in 8.501 seconds (JVM running for 9.927)
+2024-01-15 12:17:34,929 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-1] Search user by email: test1@gmail.com
+2024-01-15 12:17:35,943 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-2] Providing aircraft resource from database: all aircraft list
+2024-01-15 12:17:36,147 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-3] Providing reservation list for registered user from database: user id: 2
+2024-01-15 12:17:42,906 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-4] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 12:17:45,418 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-5] Providing registeredUser resource from database: registeredUser id: 2
+2024-01-15 12:17:45,551 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-6] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 12:17:45,736 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-7] Adding new reservation in database
+2024-01-15 12:17:45,927 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-8] Providing aircraft resource from database: all aircraft list
+2024-01-15 12:17:46,054 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-9] Providing reservation list for registered user from database: user id: 2
+2024-01-15 12:17:47,359 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-10] Providing reservation resource from database: reservation id: 8
+2024-01-15 12:17:47,487 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-1] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 12:17:48,761 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-2] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 12:17:48,898 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-3] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 12:17:49,052 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-4] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 12:18:59,891 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-8] Search user by email: test1@gmail.com
+2024-01-15 12:19:00,889 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-9] Providing aircraft resource from database: all aircraft list
+2024-01-15 12:19:01,017 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-10] Providing reservation list for registered user from database: user id: 2
+2024-01-15 12:19:02,199 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-1] Providing reservation resource from database: reservation id: 8
+2024-01-15 12:19:02,362 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-2] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 12:19:03,228 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-3] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 12:19:03,377 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-4] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 12:19:03,523 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-5] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 12:19:05,619 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-8] Providing registeredUser resource from database: registeredUser id: 2
+2024-01-15 12:19:05,746 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-9] Providing aircraft resource from database: aircraft id: 1
+2024-01-15 12:19:05,889 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-10] Update reservation, reservation id: 0
+2024-01-15 14:14:37,862 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-2] Search user by email: test1@gmail.com
+2024-01-15 14:14:38,787 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-3] Providing aircraft resource from database: all aircraft list
+2024-01-15 14:14:38,911 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-4] Providing reservation list for registered user from database: user id: 2
+2024-01-15 14:14:43,474 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-5] Providing reservation resource from database: reservation id: 9
+2024-01-15 14:14:43,596 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-6] Providing aircraft resource from database: aircraft id: 1
+2024-01-15 14:14:45,155 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-7] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 14:14:45,277 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-8] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 14:14:45,405 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-9] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 14:14:56,099 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-2] Providing registeredUser resource from database: registeredUser id: 2
+2024-01-15 14:14:56,218 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-3] Providing aircraft resource from database: aircraft id: 4
+2024-01-15 14:14:56,350 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-4] Update reservation, reservation id: 0
+2024-01-15 14:14:59,640 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-5] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 14:14:59,767 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-6] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 14:14:59,893 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-7] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 14:15:01,451 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-10] Providing aircraft resource from database: all aircraft list
+2024-01-15 14:15:01,571 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-1] Providing reservation list for registered user from database: user id: 2
+2024-01-15 14:15:04,682 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-2] Providing reservation resource from database: reservation id: 9
+2024-01-15 14:15:04,819 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-3] Update reservation, reservation id: 9
+2024-01-15 14:15:05,017 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-4] Providing aircraft resource from database: all aircraft list
+2024-01-15 14:15:05,136 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-5] Providing reservation list for registered user from database: user id: 2
+2024-01-15 14:15:06,852 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-6] Providing reservation resource from database: reservation id: 10
+2024-01-15 14:15:07,006 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-7] Update reservation, reservation id: 10
+2024-01-15 14:15:07,168 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-8] Providing aircraft resource from database: all aircraft list
+2024-01-15 14:15:07,291 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-9] Providing reservation list for registered user from database: user id: 2
+2024-01-15 14:16:16,958 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-1] Providing aircraft resource from database: all aircraft list
+2024-01-15 14:16:17,096 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-2] Providing reservation list for registered user from database: user id: 2
+2024-01-15 14:16:40,199 INFO com.fabienit.flyingclub.web.controllers.WorkshopController [http-nio-8001-exec-3] Providing revision resource from database: all revisions list
+2024-01-15 14:16:41,656 INFO com.fabienit.flyingclub.web.controllers.WorkshopController [http-nio-8001-exec-4] Providing workshop resource from database: revision id: 2
+2024-01-15 14:16:52,873 INFO com.fabienit.flyingclub.web.controllers.WorkshopController [http-nio-8001-exec-5] Updating workshop in database, id: 2
+2024-01-15 14:16:53,021 INFO com.fabienit.flyingclub.web.controllers.WorkshopController [http-nio-8001-exec-6] Providing revision resource from database: all revisions list
+2024-01-15 14:28:23,234 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Starting AeroclubApiApplication on FABPC with PID 13784 (started by FaB PC in C:\Users\FaB\Git\Projet 12\aeroclubp12)
+2024-01-15 14:28:23,243 DEBUG com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2024-01-15 14:28:23,244 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] The following profiles are active: dev
+2024-01-15 14:28:30,079 DEBUG com.fabienit.flyingclub.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$58ecb9b [restartedMain] Set Swagger2 documentation
+2024-01-15 14:28:30,884 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Started AeroclubApiApplication in 8.459 seconds (JVM running for 10.095)
+2024-01-15 14:28:46,482 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-1] Search user by email: test1@gmail.com
+2024-01-15 14:28:47,488 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-2] Providing aircraft resource from database: all aircraft list
+2024-01-15 14:28:47,687 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-3] Providing reservation list for registered user from database: user id: 2
+2024-01-15 14:28:53,138 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-4] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 14:28:56,232 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-5] Providing registeredUser resource from database: registeredUser id: 2
+2024-01-15 14:28:56,371 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-6] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 14:28:56,549 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-7] Adding new reservation in database
+2024-01-15 14:28:56,725 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-8] Providing aircraft resource from database: all aircraft list
+2024-01-15 14:28:56,855 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-9] Providing reservation list for registered user from database: user id: 2
+2024-01-15 14:28:58,969 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-10] Providing reservation resource from database: reservation id: 8
+2024-01-15 14:28:59,126 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-1] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 14:29:00,174 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-2] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 14:29:00,309 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-3] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 14:29:00,450 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-4] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 14:30:49,572 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-8] Search user by email: test1@gmail.com
+2024-01-15 14:30:50,395 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-9] Providing aircraft resource from database: all aircraft list
+2024-01-15 14:30:50,529 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-10] Providing reservation list for registered user from database: user id: 2
+2024-01-15 14:30:51,564 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-1] Providing reservation resource from database: reservation id: 8
+2024-01-15 14:30:51,740 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-2] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 14:30:52,836 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-3] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 14:30:52,965 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-4] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 14:30:53,125 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-5] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 14:30:55,373 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-8] Providing registeredUser resource from database: registeredUser id: 2
+2024-01-15 14:30:55,494 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-9] Providing aircraft resource from database: aircraft id: 1
+2024-01-15 14:30:55,819 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-1] Providing aircraft resource from database: all aircraft list
+2024-01-15 14:30:55,943 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-2] Providing reservation list for registered user from database: user id: 2
+2024-01-15 14:33:21,019 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-4] Search user by email: test1@gmail.com
+2024-01-15 14:33:22,022 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-5] Providing aircraft resource from database: all aircraft list
+2024-01-15 14:33:22,149 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-6] Providing reservation list for registered user from database: user id: 2
+2024-01-15 14:33:23,285 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-7] Providing reservation resource from database: reservation id: 8
+2024-01-15 14:33:23,407 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-8] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 14:33:24,696 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-9] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 14:33:24,821 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-10] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 14:33:24,943 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-1] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 14:33:28,730 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-4] Providing registeredUser resource from database: registeredUser id: 2
+2024-01-15 14:33:28,855 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-5] Providing aircraft resource from database: aircraft id: 1
+2024-01-15 14:33:29,136 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-7] Providing aircraft resource from database: all aircraft list
+2024-01-15 14:33:29,257 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-8] Providing reservation list for registered user from database: user id: 2
+2024-01-15 14:40:01,383 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-10] Providing reservation resource from database: reservation id: 8
+2024-01-15 14:40:01,506 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-1] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 14:40:02,712 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-2] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 14:40:02,834 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-3] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 14:40:02,956 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-4] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 14:40:05,784 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-7] Providing registeredUser resource from database: registeredUser id: 2
+2024-01-15 14:40:05,902 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-8] Providing aircraft resource from database: aircraft id: 4
+2024-01-15 14:40:06,150 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-10] Providing aircraft resource from database: all aircraft list
+2024-01-15 14:40:06,269 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-1] Providing reservation list for registered user from database: user id: 2
+2024-01-15 14:48:08,959 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-3] Search user by email: test1@gmail.com
+2024-01-15 14:48:09,895 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-4] Providing aircraft resource from database: all aircraft list
+2024-01-15 14:48:10,025 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-5] Providing reservation list for registered user from database: user id: 2
+2024-01-15 14:48:11,039 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-6] Providing reservation resource from database: reservation id: 8
+2024-01-15 14:48:11,165 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-7] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 14:48:12,176 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-8] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 14:48:12,329 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-9] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 14:48:12,482 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-10] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 14:48:52,375 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-2] Search user by email: test1@gmail.com
+2024-01-15 14:48:53,264 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-3] Providing aircraft resource from database: all aircraft list
+2024-01-15 14:48:53,392 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-4] Providing reservation list for registered user from database: user id: 2
+2024-01-15 14:48:54,744 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-5] Providing reservation resource from database: reservation id: 8
+2024-01-15 14:48:54,865 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-6] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 14:48:56,044 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-7] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 14:48:56,170 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-8] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 14:48:56,291 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-9] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 14:48:58,648 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-2] Providing registeredUser resource from database: registeredUser id: 2
+2024-01-15 14:48:58,770 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-3] Providing aircraft resource from database: aircraft id: 1
+2024-01-15 14:48:59,071 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-5] Providing aircraft resource from database: all aircraft list
+2024-01-15 14:48:59,199 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-6] Providing reservation list for registered user from database: user id: 2
+2024-01-15 14:51:27,659 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-8] Search user by email: test1@gmail.com
+2024-01-15 14:51:28,480 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-9] Providing aircraft resource from database: all aircraft list
+2024-01-15 14:51:28,616 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-10] Providing reservation list for registered user from database: user id: 2
+2024-01-15 14:51:29,567 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-1] Providing reservation resource from database: reservation id: 8
+2024-01-15 14:51:29,694 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-2] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 14:51:30,910 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-3] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 14:51:31,047 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-4] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 14:51:31,174 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-5] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 14:51:33,347 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-8] Providing registeredUser resource from database: registeredUser id: 2
+2024-01-15 14:51:33,469 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-9] Providing aircraft resource from database: aircraft id: 1
+2024-01-15 14:51:33,755 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-1] Providing aircraft resource from database: all aircraft list
+2024-01-15 14:51:33,880 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-2] Providing reservation list for registered user from database: user id: 2
+2024-01-15 14:54:00,777 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-4] Search user by email: test1@gmail.com
+2024-01-15 14:54:01,849 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-5] Providing aircraft resource from database: all aircraft list
+2024-01-15 14:54:01,979 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-6] Providing reservation list for registered user from database: user id: 2
+2024-01-15 14:54:03,458 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-7] Providing reservation resource from database: reservation id: 8
+2024-01-15 14:54:03,577 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-8] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 14:54:04,757 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-9] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 14:54:04,886 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-10] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 14:54:05,010 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-1] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 14:54:06,958 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-4] Providing registeredUser resource from database: registeredUser id: 2
+2024-01-15 14:54:07,081 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-5] Providing aircraft resource from database: aircraft id: 1
+2024-01-15 14:54:07,364 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-7] Providing aircraft resource from database: all aircraft list
+2024-01-15 14:54:07,490 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-8] Providing reservation list for registered user from database: user id: 2
+2024-01-15 14:55:54,201 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-10] Search user by email: test1@gmail.com
+2024-01-15 14:55:55,227 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-1] Providing aircraft resource from database: all aircraft list
+2024-01-15 14:55:55,355 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-2] Providing reservation list for registered user from database: user id: 2
+2024-01-15 14:55:56,595 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-3] Providing reservation resource from database: reservation id: 8
+2024-01-15 14:55:56,716 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-4] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 14:55:57,802 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-5] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 14:55:57,930 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-6] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 14:55:58,052 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-7] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 14:59:50,567 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-1] Search user by email: test1@gmail.com
+2024-01-15 14:59:51,709 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-2] Providing aircraft resource from database: all aircraft list
+2024-01-15 14:59:51,839 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-3] Providing reservation list for registered user from database: user id: 2
+2024-01-15 14:59:52,863 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-4] Providing reservation resource from database: reservation id: 8
+2024-01-15 14:59:52,987 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-5] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 14:59:54,135 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-6] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 14:59:54,322 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-7] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 14:59:54,449 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-8] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 14:59:56,335 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-1] Providing registeredUser resource from database: registeredUser id: 2
+2024-01-15 14:59:56,459 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-2] Providing aircraft resource from database: aircraft id: 0
+2024-01-15 14:59:56,623 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-3] Providing aircraft resource from database: all aircraft list
+2024-01-15 14:59:56,759 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-4] Providing reservation list for registered user from database: user id: 2
+2024-01-15 15:01:47,367 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-6] Search user by email: test1@gmail.com
+2024-01-15 15:01:48,479 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-7] Providing aircraft resource from database: all aircraft list
+2024-01-15 15:01:48,610 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-8] Providing reservation list for registered user from database: user id: 2
+2024-01-15 15:01:49,635 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-9] Providing reservation resource from database: reservation id: 8
+2024-01-15 15:01:49,761 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-10] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 15:01:51,020 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-1] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 15:01:51,152 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-2] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 15:01:51,277 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-3] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 15:01:53,584 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-6] Providing registeredUser resource from database: registeredUser id: 2
+2024-01-15 15:01:53,704 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-7] Providing aircraft resource from database: aircraft id: 0
+2024-01-15 15:01:53,849 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-8] Providing aircraft resource from database: all aircraft list
+2024-01-15 15:01:53,976 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-9] Providing reservation list for registered user from database: user id: 2
+2024-01-15 15:03:38,386 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-1] Search user by email: test1@gmail.com
+2024-01-15 15:03:39,485 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-2] Providing aircraft resource from database: all aircraft list
+2024-01-15 15:03:39,611 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-3] Providing reservation list for registered user from database: user id: 2
+2024-01-15 15:03:41,241 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-4] Providing reservation resource from database: reservation id: 8
+2024-01-15 15:03:41,361 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-5] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 15:03:42,339 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-6] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 15:03:42,461 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-7] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 15:03:42,584 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-8] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 15:08:33,835 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-2] Search user by email: test1@gmail.com
+2024-01-15 15:08:34,699 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-3] Providing aircraft resource from database: all aircraft list
+2024-01-15 15:08:34,829 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-4] Providing reservation list for registered user from database: user id: 2
+2024-01-15 15:08:35,922 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-5] Providing reservation resource from database: reservation id: 8
+2024-01-15 15:08:36,047 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-6] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 15:08:37,307 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-7] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 15:08:37,452 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-8] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 15:08:37,588 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-9] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 15:08:39,633 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-2] Providing registeredUser resource from database: registeredUser id: 2
+2024-01-15 15:08:39,761 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-3] Providing aircraft resource from database: aircraft id: 0
+2024-01-15 15:08:39,915 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-4] Providing aircraft resource from database: all aircraft list
+2024-01-15 15:08:40,053 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-5] Providing reservation list for registered user from database: user id: 2
+2024-01-15 15:09:24,235 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-7] Search user by email: test1@gmail.com
+2024-01-15 15:09:25,219 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-8] Providing aircraft resource from database: all aircraft list
+2024-01-15 15:09:25,353 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-9] Providing reservation list for registered user from database: user id: 2
+2024-01-15 15:09:26,368 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-10] Providing reservation resource from database: reservation id: 8
+2024-01-15 15:09:26,494 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-1] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 15:09:27,619 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-2] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 15:09:27,769 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-3] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 15:09:27,912 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-4] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 15:09:29,946 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-6] Providing registeredUser resource from database: registeredUser id: 2
+2024-01-15 15:09:30,073 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-7] Providing aircraft resource from database: aircraft id: 1
+2024-01-15 15:09:30,351 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-9] Providing aircraft resource from database: all aircraft list
+2024-01-15 15:09:30,477 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-10] Providing reservation list for registered user from database: user id: 2
+2024-01-15 15:10:30,464 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-2] Search user by email: test1@gmail.com
+2024-01-15 15:10:31,379 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-3] Providing aircraft resource from database: all aircraft list
+2024-01-15 15:10:31,515 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-4] Providing reservation list for registered user from database: user id: 2
+2024-01-15 15:10:32,382 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-5] Providing reservation resource from database: reservation id: 8
+2024-01-15 15:10:32,516 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-6] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 15:10:33,509 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-7] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 15:10:33,654 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-8] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 15:10:33,784 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-9] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 15:10:36,513 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-2] Providing registeredUser resource from database: registeredUser id: 2
+2024-01-15 15:10:36,633 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-3] Providing aircraft resource from database: aircraft id: 1
+2024-01-15 15:10:36,921 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-5] Providing aircraft resource from database: all aircraft list
+2024-01-15 15:10:37,046 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-6] Providing reservation list for registered user from database: user id: 2
+2024-01-15 15:13:20,131 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-8] Search user by email: test1@gmail.com
+2024-01-15 15:13:21,318 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-9] Providing aircraft resource from database: all aircraft list
+2024-01-15 15:13:21,452 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-10] Providing reservation list for registered user from database: user id: 2
+2024-01-15 15:13:22,678 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-1] Providing reservation resource from database: reservation id: 8
+2024-01-15 15:13:22,799 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-2] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 15:13:24,067 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-3] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 15:13:24,266 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-4] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 15:13:24,396 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-5] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 15:21:37,422 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-9] Search user by email: test1@gmail.com
+2024-01-15 15:21:38,985 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-10] Providing aircraft resource from database: all aircraft list
+2024-01-15 15:21:39,125 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-1] Providing reservation list for registered user from database: user id: 2
+2024-01-15 15:21:40,489 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-2] Providing reservation resource from database: reservation id: 8
+2024-01-15 15:21:40,610 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-3] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 15:21:41,594 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-4] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 15:21:41,722 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-5] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 15:21:41,845 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-6] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 15:21:43,705 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-9] Providing aircraft resource from database: aircraft id: 1
+2024-01-15 15:21:43,825 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-10] Providing registeredUser resource from database: registeredUser id: 2
+2024-01-15 15:21:43,954 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-1] Providing aircraft resource from database: aircraft id: 1
+2024-01-15 15:21:44,241 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-3] Providing aircraft resource from database: all aircraft list
+2024-01-15 15:21:44,372 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-4] Providing reservation list for registered user from database: user id: 2
+2024-01-15 15:25:26,845 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-6] Search user by email: test1@gmail.com
+2024-01-15 15:25:28,225 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-7] Providing aircraft resource from database: all aircraft list
+2024-01-15 15:25:28,366 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-8] Providing reservation list for registered user from database: user id: 2
+2024-01-15 15:25:29,760 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-9] Providing reservation resource from database: reservation id: 8
+2024-01-15 15:25:29,881 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-10] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 15:25:31,248 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-1] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 15:25:31,374 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-2] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 15:25:31,496 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-3] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 15:25:33,862 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-6] Providing aircraft resource from database: aircraft id: 1
+2024-01-15 15:25:33,990 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-7] Providing registeredUser resource from database: registeredUser id: 2
+2024-01-15 15:25:34,114 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-8] Providing aircraft resource from database: aircraft id: 1
+2024-01-15 15:25:34,417 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-10] Providing aircraft resource from database: all aircraft list
+2024-01-15 15:25:34,540 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-1] Providing reservation list for registered user from database: user id: 2
+2024-01-15 15:27:54,670 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-3] Search user by email: test1@gmail.com
+2024-01-15 15:27:55,680 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-4] Providing aircraft resource from database: all aircraft list
+2024-01-15 15:27:55,817 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-5] Providing reservation list for registered user from database: user id: 2
+2024-01-15 15:27:57,146 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-6] Providing reservation resource from database: reservation id: 8
+2024-01-15 15:27:57,279 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-7] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 15:27:58,351 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-8] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 15:27:58,485 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-9] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 15:27:58,612 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-9] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 15:28:00,788 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-3] Providing aircraft resource from database: aircraft id: 0
+2024-01-15 15:28:37,834 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-5] Search user by email: test1@gmail.com
+2024-01-15 15:28:38,889 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-6] Providing aircraft resource from database: all aircraft list
+2024-01-15 15:28:39,021 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-7] Providing reservation list for registered user from database: user id: 2
+2024-01-15 15:28:40,215 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-8] Providing reservation resource from database: reservation id: 8
+2024-01-15 15:28:40,339 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-10] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 15:28:41,420 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-9] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 15:28:41,550 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-1] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 15:28:41,673 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-2] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 15:28:43,959 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-5] Providing registeredUser resource from database: registeredUser id: 2
+2024-01-15 15:28:44,082 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-6] Providing aircraft resource from database: aircraft id: 0
+2024-01-15 15:28:44,231 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-7] Providing aircraft resource from database: all aircraft list
+2024-01-15 15:28:44,377 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-8] Providing reservation list for registered user from database: user id: 2
+2024-01-15 15:31:39,640 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-9] Search user by email: test1@gmail.com
+2024-01-15 15:31:40,584 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-1] Providing aircraft resource from database: all aircraft list
+2024-01-15 15:31:40,709 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-2] Providing reservation list for registered user from database: user id: 2
+2024-01-15 15:31:41,956 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-3] Providing reservation resource from database: reservation id: 8
+2024-01-15 15:31:42,080 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-4] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 15:31:42,874 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-5] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 15:31:43,036 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-6] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 15:31:43,178 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-7] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 15:31:45,271 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-9] Providing registeredUser resource from database: registeredUser id: 2
+2024-01-15 15:31:45,398 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-1] Providing aircraft resource from database: aircraft id: 0
+2024-01-15 15:31:45,544 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-2] Providing aircraft resource from database: all aircraft list
+2024-01-15 15:31:45,670 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-3] Providing reservation list for registered user from database: user id: 2
+2024-01-15 15:33:20,523 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-5] Providing reservation resource from database: reservation id: 8
+2024-01-15 15:33:20,643 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-6] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 15:33:22,451 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-7] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 15:33:22,570 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-8] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 15:33:22,689 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-10] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 15:33:29,571 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-2] Providing registeredUser resource from database: registeredUser id: 2
+2024-01-15 15:33:29,686 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-3] Providing aircraft resource from database: aircraft id: 0
+2024-01-15 15:33:29,812 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-4] Providing aircraft resource from database: all aircraft list
+2024-01-15 15:33:29,929 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-5] Providing reservation list for registered user from database: user id: 2
+2024-01-15 16:49:18,220 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-7] Search user by email: test1@gmail.com
+2024-01-15 16:49:19,617 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-8] Providing aircraft resource from database: all aircraft list
+2024-01-15 16:49:19,746 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-10] Providing reservation list for registered user from database: user id: 2
+2024-01-15 16:49:20,833 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-9] Providing reservation resource from database: reservation id: 8
+2024-01-15 16:49:21,015 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-1] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 16:49:22,268 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-2] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 16:49:22,427 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-3] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 16:49:22,547 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-4] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 16:49:24,343 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-7] Providing registeredUser resource from database: registeredUser id: 2
+2024-01-15 16:49:24,471 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-8] Providing aircraft resource from database: aircraft id: 1
+2024-01-15 16:49:24,761 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-9] Providing aircraft resource from database: all aircraft list
+2024-01-15 16:49:24,885 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-1] Providing reservation list for registered user from database: user id: 2
+2024-01-15 16:54:00,246 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-3] Search user by email: test1@gmail.com
+2024-01-15 16:54:01,329 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-4] Providing aircraft resource from database: all aircraft list
+2024-01-15 16:54:01,458 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-5] Providing reservation list for registered user from database: user id: 2
+2024-01-15 16:54:02,933 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-6] Providing reservation resource from database: reservation id: 8
+2024-01-15 16:54:03,054 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-7] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 16:54:04,140 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-8] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 16:54:04,266 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-10] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 16:54:04,389 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-9] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 16:59:45,249 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-4] Search user by email: test1@gmail.com
+2024-01-15 16:59:46,617 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-5] Providing aircraft resource from database: all aircraft list
+2024-01-15 16:59:46,755 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-6] Providing reservation list for registered user from database: user id: 2
+2024-01-15 16:59:47,838 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-7] Providing reservation resource from database: reservation id: 8
+2024-01-15 16:59:47,970 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-8] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 16:59:49,321 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-10] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 16:59:49,440 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-9] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 16:59:49,562 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-1] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 16:59:53,512 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-4] Providing aircraft resource from database: all aircraft list
+2024-01-15 16:59:53,639 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-5] Providing reservation list for registered user from database: user id: 2
+2024-01-15 17:00:54,133 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-7] Search user by email: test1@gmail.com
+2024-01-15 17:00:55,179 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-8] Providing aircraft resource from database: all aircraft list
+2024-01-15 17:00:55,343 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-10] Providing reservation list for registered user from database: user id: 2
+2024-01-15 17:00:56,436 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-9] Providing reservation resource from database: reservation id: 8
+2024-01-15 17:00:56,595 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-1] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 17:00:57,637 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-2] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 17:00:57,762 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-3] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 17:00:57,884 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-4] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 17:02:39,187 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-8] Search user by email: test1@gmail.com
+2024-01-15 17:02:40,056 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-10] Providing aircraft resource from database: all aircraft list
+2024-01-15 17:02:40,184 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-9] Providing reservation list for registered user from database: user id: 2
+2024-01-15 17:02:41,519 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-1] Providing reservation resource from database: reservation id: 8
+2024-01-15 17:02:41,641 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-2] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 17:02:42,859 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-3] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 17:02:42,979 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-4] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 17:02:43,101 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-5] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 17:02:46,190 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-7] Providing registeredUser resource from database: registeredUser id: 2
+2024-01-15 17:02:46,314 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-8] Providing aircraft resource from database: aircraft id: 1
+2024-01-15 17:02:46,600 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-9] Providing aircraft resource from database: all aircraft list
+2024-01-15 17:02:46,727 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-1] Providing reservation list for registered user from database: user id: 2
+2024-01-15 17:36:14,057 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-3] Search user by email: test1@gmail.com
+2024-01-15 17:36:15,108 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-4] Providing aircraft resource from database: all aircraft list
+2024-01-15 17:36:15,283 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-5] Providing reservation list for registered user from database: user id: 2
+2024-01-15 17:36:16,954 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-6] Providing reservation resource from database: reservation id: 8
+2024-01-15 17:36:17,081 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-7] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 17:36:18,372 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-8] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 17:36:18,495 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-10] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 17:36:18,640 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-9] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 17:36:20,879 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-3] Providing registeredUser resource from database: registeredUser id: 2
+2024-01-15 17:36:20,999 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-4] Providing aircraft resource from database: aircraft id: 1
+2024-01-15 17:36:21,297 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-6] Providing aircraft resource from database: all aircraft list
+2024-01-15 17:36:21,422 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-7] Providing reservation list for registered user from database: user id: 2
+2024-01-15 17:38:28,066 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-6] Providing reservation resource from database: reservation id: 8
+2024-01-15 17:38:28,216 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-1] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 17:38:29,544 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-7] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 17:38:29,683 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-2] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 17:38:29,809 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-9] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 17:38:32,798 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-8] Providing registeredUser resource from database: registeredUser id: 2
+2024-01-15 17:38:32,916 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-4] Providing aircraft resource from database: aircraft id: 4
+2024-01-15 17:38:33,174 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-6] Providing aircraft resource from database: all aircraft list
+2024-01-15 17:38:33,292 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-1] Providing reservation list for registered user from database: user id: 2
+2024-01-15 17:42:25,231 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-2] Search user by email: test1@gmail.com
+2024-01-15 17:42:26,273 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-9] Providing aircraft resource from database: all aircraft list
+2024-01-15 17:42:26,404 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-5] Providing reservation list for registered user from database: user id: 2
+2024-01-15 17:42:27,629 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-10] Providing reservation resource from database: reservation id: 8
+2024-01-15 17:42:27,751 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-8] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 17:42:28,686 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-4] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 17:42:28,830 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-3] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 17:42:28,952 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-6] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 17:43:33,792 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-9] Search user by email: test1@gmail.com
+2024-01-15 17:43:34,869 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-5] Providing aircraft resource from database: all aircraft list
+2024-01-15 17:43:35,014 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-10] Providing reservation list for registered user from database: user id: 2
+2024-01-15 17:43:36,195 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-8] Providing reservation resource from database: reservation id: 8
+2024-01-15 17:43:36,331 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-4] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 17:43:37,369 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-3] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 17:43:37,499 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-6] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 17:43:37,625 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-1] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 17:45:30,352 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-5] Search user by email: test1@gmail.com
+2024-01-15 17:45:31,252 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-10] Providing aircraft resource from database: all aircraft list
+2024-01-15 17:45:31,381 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-8] Providing reservation list for registered user from database: user id: 2
+2024-01-15 17:45:32,613 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-4] Providing reservation resource from database: reservation id: 8
+2024-01-15 17:45:32,733 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-3] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 17:45:33,934 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-6] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 17:45:34,068 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-1] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 17:45:34,202 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-1] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 17:45:36,465 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-9] Providing registeredUser resource from database: registeredUser id: 2
+2024-01-15 17:45:36,586 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-5] Providing aircraft resource from database: aircraft id: 1
+2024-01-15 17:45:36,883 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-8] Providing aircraft resource from database: all aircraft list
+2024-01-15 17:45:37,007 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-4] Providing reservation list for registered user from database: user id: 2
+2024-01-15 17:47:07,374 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-6] Search user by email: test1@gmail.com
+2024-01-15 17:47:08,439 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-1] Providing aircraft resource from database: all aircraft list
+2024-01-15 17:47:08,576 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-7] Providing reservation list for registered user from database: user id: 2
+2024-01-15 17:47:09,869 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-2] Providing reservation resource from database: reservation id: 8
+2024-01-15 17:47:09,991 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-9] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 17:47:11,252 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-5] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 17:47:11,423 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-10] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 17:47:11,555 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-8] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 17:47:13,440 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-6] Providing registeredUser resource from database: registeredUser id: 2
+2024-01-15 17:47:13,565 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-1] Providing aircraft resource from database: aircraft id: 1
+2024-01-15 17:47:13,865 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-2] Providing aircraft resource from database: all aircraft list
+2024-01-15 17:47:13,987 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-9] Providing reservation list for registered user from database: user id: 2
+2024-01-15 17:51:02,447 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-10] Search user by email: test1@gmail.com
+2024-01-15 17:51:03,425 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-8] Providing aircraft resource from database: all aircraft list
+2024-01-15 17:51:03,557 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-4] Providing reservation list for registered user from database: user id: 2
+2024-01-15 17:51:05,514 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-3] Providing reservation resource from database: reservation id: 8
+2024-01-15 17:51:05,637 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-6] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 17:51:06,933 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-1] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 17:51:07,059 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-7] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 17:51:07,181 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-2] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 17:51:11,078 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-10] Providing registeredUser resource from database: registeredUser id: 2
+2024-01-15 17:51:11,204 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-8] Providing aircraft resource from database: aircraft id: 1
+2024-01-15 17:51:11,494 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-3] Providing aircraft resource from database: all aircraft list
+2024-01-15 17:51:11,616 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-6] Providing reservation list for registered user from database: user id: 2
+2024-01-15 17:51:27,162 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-1] Providing reservation resource from database: reservation id: 8
+2024-01-15 17:51:27,293 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-7] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 17:51:28,501 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-2] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 17:51:28,635 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-9] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 17:51:28,769 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-5] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 17:51:30,799 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-4] Providing registeredUser resource from database: registeredUser id: 2
+2024-01-15 17:51:30,922 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-3] Providing aircraft resource from database: aircraft id: 4
+2024-01-15 17:51:31,168 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-1] Providing aircraft resource from database: all aircraft list
+2024-01-15 17:51:31,284 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-7] Providing reservation list for registered user from database: user id: 2
+2024-01-15 17:52:38,326 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-9] Providing reservation resource from database: reservation id: 8
+2024-01-15 17:52:38,447 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-5] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 17:52:40,351 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-10] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 17:52:40,473 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-8] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 17:52:40,596 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-4] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 17:52:46,470 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-1] Providing registeredUser resource from database: registeredUser id: 2
+2024-01-15 17:52:46,592 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-7] Providing aircraft resource from database: aircraft id: 4
+2024-01-15 17:52:46,848 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-9] Providing aircraft resource from database: all aircraft list
+2024-01-15 17:52:46,966 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-5] Providing reservation list for registered user from database: user id: 2
+2024-01-15 17:53:25,300 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-10] Providing reservation resource from database: reservation id: 7
+2024-01-15 17:53:28,435 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-8] Providing reservation resource from database: reservation id: 7
+2024-01-15 17:53:28,597 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-4] Updating registeredUser in database, id: 2
+2024-01-15 17:53:28,773 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-3] Updating aircraft in database, id: 3
+2024-01-15 17:59:02,519 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-7] Providing aircraft resource from database: all aircraft list
+2024-01-15 17:59:02,646 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-2] Providing reservation list for registered user from database: user id: 2
+2024-01-15 17:59:04,114 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-9] Providing reservation resource from database: reservation id: 7
+2024-01-15 17:59:06,664 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-5] Providing reservation resource from database: reservation id: 7
+2024-01-15 17:59:06,784 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-10] Updating registeredUser in database, id: 2
+2024-01-15 17:59:06,911 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-8] Updating aircraft in database, id: 3
+2024-01-15 18:00:39,629 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-6] Search user by email: test1@gmail.com
+2024-01-15 18:00:40,706 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-1] Providing aircraft resource from database: all aircraft list
+2024-01-15 18:00:40,835 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-7] Providing reservation list for registered user from database: user id: 2
+2024-01-15 18:00:42,145 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-2] Providing reservation resource from database: reservation id: 7
+2024-01-15 18:00:44,546 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-9] Providing reservation resource from database: reservation id: 7
+2024-01-15 18:00:44,675 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-5] Updating registeredUser in database, id: 2
+2024-01-15 18:00:44,808 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-10] Updating aircraft in database, id: 3
+2024-01-15 18:00:44,934 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-8] Updating reservation in database, id: 7
+2024-01-15 18:00:45,079 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-4] Providing aircraft resource from database: all aircraft list
+2024-01-15 18:00:45,204 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-3] Providing reservation list for registered user from database: user id: 2
+2024-01-15 18:01:26,242 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-6] Providing registeredUser resource from database: registeredUser id: 2
+2024-01-15 18:01:34,748 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-1] Providing registeredUser resource from database: registeredUser id: 2
+2024-01-15 18:01:36,266 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-7] Providing registeredUser resource from database: registeredUser id: 2
+2024-01-15 18:01:38,957 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-2] Providing aircraft resource from database: all aircraft list
+2024-01-15 18:01:39,082 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-9] Providing reservation list for registered user from database: user id: 2
+2024-01-15 18:14:48,706 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-10] Search user by email: test1@gmail.com
+2024-01-15 18:14:49,846 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-8] Providing aircraft resource from database: all aircraft list
+2024-01-15 18:14:50,005 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-4] Providing reservation list for registered user from database: user id: 2
+2024-01-15 18:14:52,817 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-3] Providing reservation resource from database: reservation id: 8
+2024-01-15 18:14:52,939 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-6] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 18:14:54,202 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-1] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 18:14:54,338 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-7] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 18:14:54,463 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-2] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 18:16:12,284 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-8] Search user by email: test1@gmail.com
+2024-01-15 18:16:13,435 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-4] Providing aircraft resource from database: all aircraft list
+2024-01-15 18:16:13,581 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-3] Providing reservation list for registered user from database: user id: 2
+2024-01-15 18:16:14,794 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-6] Providing reservation resource from database: reservation id: 8
+2024-01-15 18:16:14,938 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-1] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 18:16:16,187 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-7] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 18:16:16,321 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-2] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 18:16:16,443 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-9] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 18:16:18,635 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-8] Providing registeredUser resource from database: registeredUser id: 2
+2024-01-15 18:16:18,773 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-4] Providing aircraft resource from database: aircraft id: 1
+2024-01-15 18:16:18,916 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-3] Updating reservation in database, id: 8
+2024-01-15 18:16:18,918 DEBUG com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-3] The requested reservation entity doesn't exist, id: 0
+2024-01-15 18:16:19,113 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-6] Providing aircraft resource from database: all aircraft list
+2024-01-15 18:16:19,244 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-1] Providing reservation list for registered user from database: user id: 2
+2024-01-15 18:17:25,462 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-2] Search user by email: test1@gmail.com
+2024-01-15 18:17:31,776 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-9] Providing aircraft resource from database: all aircraft list
+2024-01-15 18:17:31,924 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-5] Providing reservation list for registered user from database: user id: 2
+2024-01-15 18:17:32,970 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-10] Providing reservation resource from database: reservation id: 8
+2024-01-15 18:17:33,108 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-8] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 18:17:34,072 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-4] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 18:17:34,204 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-3] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 18:17:34,355 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-6] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 18:20:11,791 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-9] Search user by email: test1@gmail.com
+2024-01-15 18:20:12,839 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-5] Providing aircraft resource from database: all aircraft list
+2024-01-15 18:20:12,970 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-10] Providing reservation list for registered user from database: user id: 2
+2024-01-15 18:20:14,074 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-8] Providing reservation resource from database: reservation id: 8
+2024-01-15 18:20:14,200 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-4] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 18:20:15,376 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-3] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 18:20:15,504 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-6] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 18:20:15,624 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-1] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 18:21:04,377 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-5] Search user by email: test1@gmail.com
+2024-01-15 18:21:05,384 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-10] Providing aircraft resource from database: all aircraft list
+2024-01-15 18:21:05,510 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-8] Providing reservation list for registered user from database: user id: 2
+2024-01-15 18:21:06,823 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-4] Providing reservation resource from database: reservation id: 8
+2024-01-15 18:21:06,946 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-3] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 18:21:08,114 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-6] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 18:21:08,245 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-1] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 18:21:08,389 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-7] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 18:23:46,001 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-10] Search user by email: test1@gmail.com
+2024-01-15 18:23:47,004 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-8] Providing aircraft resource from database: all aircraft list
+2024-01-15 18:23:47,131 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-4] Providing reservation list for registered user from database: user id: 2
+2024-01-15 18:23:48,335 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-3] Providing reservation resource from database: reservation id: 8
+2024-01-15 18:23:48,457 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-6] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 18:23:49,579 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-1] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 18:23:49,707 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-7] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 18:23:49,828 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-2] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 18:24:38,995 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-8] Search user by email: test1@gmail.com
+2024-01-15 18:24:40,000 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-4] Providing aircraft resource from database: all aircraft list
+2024-01-15 18:24:40,129 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-3] Providing reservation list for registered user from database: user id: 2
+2024-01-15 18:24:41,164 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-6] Providing reservation resource from database: reservation id: 8
+2024-01-15 18:24:41,291 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-1] Providing aircraft resource from database: aircraft id: 3
+2024-01-15 18:24:42,291 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-7] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 18:24:42,422 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-2] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 18:24:42,558 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-9] Providing reservation resource from database: existing reservation by id and dates
+2024-01-15 18:26:35,263 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-4] Providing aircraft resource from database: all aircraft list
+2024-01-15 18:26:35,390 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-3] Providing reservation list for registered user from database: user id: 2
+2024-01-15 20:03:32,068 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-1] Search user by email: test1@gmail.com
+2024-01-15 20:03:36,495 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-7] Providing aircraft resource from database: all aircraft list
+2024-01-15 20:03:36,613 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-2] Providing reservation list for registered user from database: user id: 2
+2024-01-15 20:03:46,343 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-9] Providing aircraft resource from database: available between dates aircraft list
+2024-01-15 20:03:49,470 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-5] Providing registeredUser resource from database: registeredUser id: 2
+2024-01-15 20:03:49,590 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-10] Providing aircraft resource from database: aircraft id: 1
+2024-01-15 20:03:49,726 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-8] Adding new reservation in database
+2024-01-15 20:03:49,862 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-4] Providing aircraft resource from database: all aircraft list
+2024-01-15 20:03:49,982 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-3] Providing reservation list for registered user from database: user id: 2
+2024-01-15 20:03:52,446 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-6] Providing reservation resource from database: reservation id: 9
+2024-01-15 20:03:56,953 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-1] Providing reservation resource from database: reservation id: 9
+2024-01-15 20:03:57,072 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-7] Updating registeredUser in database, id: 2
+2024-01-15 20:03:57,193 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-2] Updating aircraft in database, id: 1
+2024-01-15 20:03:57,314 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-9] Updating reservation in database, id: 9
+2024-01-15 20:03:57,441 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-5] Providing aircraft resource from database: all aircraft list
+2024-01-15 20:03:57,558 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-10] Providing reservation list for registered user from database: user id: 2
+2024-01-15 20:04:00,348 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-8] Providing registeredUser resource from database: registeredUser id: 2

@@ -81,7 +81,7 @@
                               <th>Date de retour</th>
                               <th>Avion</th>
                               <th>Etat</th>
-                              <th>Gestion</th>
+                              <th>Action</th>
                           </tr>
                           </thead>
 
@@ -97,7 +97,7 @@
                                   <td class="align-middle">
                                       <div th:if="${!r.finished and !r.canceled}">
                                           <div th:if="${r.returnDate.isEqual(currentDate) or currentDate.isAfter(r.returnDate)}">
-                                              <a class="btn btn-warning btn-block mb-2" th:href="@{'/confirmFinishReservation/' + ${r.id}}">Terminer</a>
+                                              <a class="btn btn-warning btn-block mb-2" th:href="@{'/confirmFinishReservation/' + ${r.id}}">Clôturer</a>
                                           </div>
                                       </div>
                                       <div th:if="${!r.finished and !r.canceled}">
@@ -105,6 +105,9 @@
                                               <input type="hidden" name="canceledReservationDto" th:value="${canceledReservationDto}"/>
                                               <button class="btn btn-danger btn-block mt-2" type="submit" onclick="return confirm('Etes-vous sûr de vouloir annuler cette réservation ?')">Annuler</button>
                                           </form>
+                                      </div>
+                                      <div th:if="${!r.finished and !r.canceled and !(r.returnDate.isEqual(currentDate) or currentDate.isAfter(r.returnDate))}">
+                                            <a type="button" th:href="@{'/updateReservation/' + ${r.id}}" class="btn btn-info btn-block mt-2" >Modifier</a>
                                       </div>
                                   </td>
                           </tr>

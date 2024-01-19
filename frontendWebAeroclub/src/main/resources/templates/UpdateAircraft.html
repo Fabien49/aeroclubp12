@@ -26,59 +26,63 @@
       <div th:replace="Header :: header"></div>
       <div class="container">
           <div class="row">
-              <div class="col">
-                  <div class="card">
-                      <div class="col-md-2 mb-3">
-                          <a class="btn btn-primary" href="/aircrafts">Retour à la liste des avions</a>
-                      </div>
-                  </div>
-                  <div class="card">
-                      <h2>Modifier un avion</h2>
+              <div class="col-12">
+                  <div class="border-secondary shadow card h-100">
+                  <div class="card-body">
+                          <a class="btn btn-info" href="/aircrafts">Retour à la liste des avions</a>
 
-                      <form class="form-row" th:action="@{/aircrafts/updateAircraft/{id}(id=${aircraft.id})}" th:object="${aircraft}" method="post">
-                          <!--<input type="hidden" th:field="*{id}"/>-->
-                          <div class="col-md-6 mb-3">
+                      <form th:action="@{/aircrafts/updateAircraft/{id}(id=${aircraft.id})}" th:object="${aircraft}" method="post">
+                          <div class="row">
+                              <div class="col-md-6">
+                          <div class="form-group">
                               <label for="mark">Marque </label>
                               <input type="text" class="form-control" id="mark" th:field="*{mark}" th:placeholder="${aircraft.mark}"/>
                           </div>
-                          <div class="col-md-6 mb-3">
+                          <div class="form-group">
                               <label for="type">Type </label>
                               <input type="text" class="form-control" id="type" th:field="*{type}" th:placeholder="${aircraft.type}"/>
                           </div>
-                          <div class="col-md-6 mb-3">
+                          <div class="form-group">
                               <label for="motor">Moteur </label>
                               <input type="text" class="form-control" id="motor" th:field="*{motor}" th:placeholder="${aircraft.motor}"/>
                           </div>
-                          <div class="col-md-6 mb-3">
+                          <div class="form-group">
                               <label for="power">Puissance </label>
                               <input type="text" class="form-control" id="power" th:field="*{power}" th:placeholder="${aircraft.power}"/>
                           </div>
-                          <div class="col-md-6 mb-3">
+                          <div class="form-group">
                               <label for="seats">Nombre de places </label>
                               <input type="number" class="form-control" id="seats" th:field="*{seats}" th:placeholder="${aircraft.seats}"/>
                           </div>
-                          <div class="col-md-6 mb-3">
+                              </div>
+                              <div class="col-md-6">
+                          <div class="form-group">
                               <label for="autonomy">Autonomie </label>
                               <input type="number" class="form-control" id="autonomy" th:field="*{autonomy}" th:placeholder="${aircraft.autonomy}"/>
                           </div>
-                          <div class="col-md-6 mb-3">
+                          <div class="form-group">
                               <label for="hours">Heures de vol </label>
-                              <input type="number" class="form-control" id="hours" th:field="*{hours}" th:placeholder="${aircraft.hours}"/>
+                              <input type="number" class="form-control" id="hours" th:field="*{aircraftHours}" th:placeholder="${aircraft.aircraftHours}"/>
                           </div>
-                          <div class="col-md-6 mb-3">
+                           <div class="form-group">
+                              <label for="motor_hours">Heures du moteur </label>
+                              <input type="number" class="form-control" id="motor_hours" th:field="*{motorHours}" th:placeholder="${aircraft.motorHours}"/>
+                          </div>
+                          <div class="form-group">
                               <label for="use">Utilisation </label>
                               <input type="text" class="form-control" id="use" th:field="*{use}" th:placeholder="${aircraft.use}"/>
                           </div>
-                          <div class="col-md-1 mb-3 mt-1">
+                          <div class="form-group">
                               <label for="available">Disponible </label>
                           </div>
-                          <div class="col-md-3 mb-3">
+                          <div class="form-group">
                               <select class="form-control" id="available" th:field="*{available}" th:placeholder="${aircraft.available}">
                                   <option th:value="true">Oui</option>
                                   <option th:value="false">Non</option>
                               </select>
                           </div>
-                          <div class="col-md-3 mb-3">
+                              </div>
+                          <div class="form-group">
                               <button type="submit" class="form-control btn btn-primary">Modifier</button>
                           </div>
                       </form>

@@ -3,6 +3,8 @@ package com.fabienit.flyingclub.web.controllers;
 import com.fabienit.flyingclub.model.dto.CanceledReservationDto;
 import com.fabienit.flyingclub.model.dto.RegisteredUserDto;
 import com.fabienit.flyingclub.model.dto.ReservationDto;
+import com.fabienit.flyingclub.model.mappers.AircraftMapper;
+import com.fabienit.flyingclub.model.mappers.ReservationMapper;
 import com.fabienit.flyingclub.service.WebappService;
 import com.fabienit.flyingclub.web.proxies.ApiProxy;
 import com.fabienit.flyingclub.model.beans.*;
@@ -10,7 +12,6 @@ import com.fabienit.flyingclub.model.dto.AircraftDto;
 import feign.FeignException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -24,7 +25,6 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import javax.validation.Valid;
 import java.time.LocalDate;
 import java.util.*;
-import java.util.stream.Collectors;
 
 /**
  * WebappController
@@ -32,13 +32,22 @@ import java.util.stream.Collectors;
 @Controller
 public class WebappController {
 
-    @Autowired
-    private ApiProxy apiProxy;
 
-    @Autowired
-    private WebappService webappService;
+    private final ApiProxy apiProxy;
+    private final WebappService webappService;
+
+    private final AircraftMapper aircraftMapper;
+
+    private final ReservationMapper reservationMapper;
 
     Logger logger = LoggerFactory.getLogger(this.getClass());
+
+    public WebappController(ApiProxy apiProxy, WebappService webappService, AircraftMapper aircraftMapper, ReservationMapper reservationMapper) {
+        this.apiProxy = apiProxy;
+        this.webappService = webappService;
+        this.aircraftMapper = aircraftMapper;
+        this.reservationMapper = reservationMapper;
+    }
 
     @GetMapping(value = "/")
     public String mainPage() {
@@ -153,7 +162,7 @@ public class WebappController {
         updateAircraftFormDto.setPower(updateAircraftFormDto.getPower());
         updateAircraftFormDto.setSeats(updateAircraftFormDto.getSeats());
         updateAircraftFormDto.setAutonomy(updateAircraftFormDto.getAutonomy());
-        updateAircraftFormDto.setHours(updateAircraftFormDto.getHours());
+        updateAircraftFormDto.setAircraftHours(updateAircraftFormDto.getAircraftHours());
         updateAircraftFormDto.setAvailable(updateAircraftFormDto.getAvailable());
 
         // Mettre à jour l'utilisateur
@@ -387,7 +396,6 @@ public class WebappController {
 
             // Get reservations list for current user
             List<ReservationBean> currentUserReservations = webappService.getReservationsByRegisteredUserId();
-            System.out.println("*************Liste des reservations de l'utilisateur qui a pour id : " + id + "******" + currentUserReservations);
 
             model.addAttribute("currentDate", LocalDate.now());
             model.addAttribute("currentUserReservations", currentUserReservations);
@@ -400,8 +408,6 @@ public class WebappController {
             canceledReservationDto.setCanceled(true);
             model.addAttribute("canceledReservationDto",canceledReservationDto);
 
-            System.out.println("/////////////********************------------- reservation avec l'utisateur connecte : " + reservationDto);
-
 
         }
 
@@ -411,7 +417,7 @@ public class WebappController {
     @GetMapping(value = "/addDateReservation")
     public String getAddDateReservationPage(Model model) {
 
-        logger.info("Reach url: /reservations - GET");
+        logger.info("Reach url: /addDateReservation - GET");
 
         Boolean isAuthenticated = webappService.getIsAuthenticated();
 
@@ -420,24 +426,10 @@ public class WebappController {
             RegisteredUserBean registeredUserBean = new RegisteredUserBean();
             registeredUserBean.setId(id);
 
-
-/*            // Get available aircrafts
-            List<AircraftDto> availableAircrafts = webappService.getAvailableAircrafts();
-            model.addAttribute("availableAircrafts", availableAircrafts);
-
-
-            // Get reservations list for current user
-            List<ReservationBean> currentUserReservations = webappService.getReservationsByRegisteredUserId();
-            System.out.println("*************Liste des reservations de l'utilisateur qui a pour id : " + id + "******" + currentUserReservations);
-
-            model.addAttribute("currentUserReservations", currentUserReservations);*/
-
             ReservationDto reservationDto = new ReservationDto();
             reservationDto.setRegisteredUserId(id);
             model.addAttribute("reservationDto", reservationDto);
             model.addAttribute("currentDate", LocalDate.now());
-
-            System.out.println("/////////////********************------------- reservation avec l'utisateur connecte : " + reservationDto);
 
 
         }
@@ -450,7 +442,6 @@ public class WebappController {
 
         logger.info("Reach url: /addAircraftReservation - GET");
 
-
         Boolean isAuthenticated = webappService.getIsAuthenticated();
 
         if (isAuthenticated) {
@@ -458,25 +449,10 @@ public class WebappController {
             RegisteredUserBean registeredUserBean = new RegisteredUserBean();
             registeredUserBean.setId(id);
 
-
-/*            // Get available aircrafts
-            List<AircraftDto> availableAircrafts = webappService.getAvailableAircrafts();
-            model.addAttribute("availableAircrafts", availableAircrafts);
-
-
-            // Get reservations list for current user
-            List<ReservationBean> currentUserReservations = webappService.getReservationsByRegisteredUserId();
-            System.out.println("*************Liste des reservations de l'utilisateur qui a pour id : " + id + "******" + currentUserReservations);
-
-            model.addAttribute("currentUserReservations", currentUserReservations);*/
-
-
             reservationDto.setRegisteredUserId(id);
             model.addAttribute("reservationDto", reservationDto);
-            System.out.println("methode de la mort qui tue : " + reservationDto);
             List<AircraftDto> aircraftList = webappService.getAvailableAircraftsBetweenDates(reservationDto.getBorrowingDate(), reservationDto.getReturnDate());
             model.addAttribute("aircraftList", aircraftList);
-
 
         }
 
@@ -510,64 +486,6 @@ public class WebappController {
         }
 
 
-
-    private List<AircraftDto> filterAvailableAircrafts(List<AircraftDto> allAircrafts, List<ReservationDto> reservations) {
-        // Filtrer les avions disponibles en fonction des réservations pour les dates spécifiées
-        List<AircraftDto> reservedAircraftIds = reservations.stream()
-                .map(ReservationDto::getAircraftDto)
-                .collect(Collectors.toList());
-
-        List<AircraftDto> availableAircrafts = allAircrafts.stream()
-                .filter(aircraft -> !reservedAircraftIds.contains(aircraft))
-                .collect(Collectors.toList());
-
-        return availableAircrafts;
-    }
-
-/*    @GetMapping("/updateAircrafts/{borrowingDate}")
-    @ResponseBody
-    public List<AircraftBean> updateAircraftList(@PathVariable String borrowingDate,
-                                                @RequestParam(required = false) String returnDate) {
-
-        try {
-            // Votre logique pour obtenir la liste d'avions disponibles en fonction des dates
-            SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-            Date parsedBorrowingDate = dateFormat.parse(borrowingDate);
-            Date parsedReturnDate = (returnDate != null) ? dateFormat.parse(returnDate) : null;
-
-            List<AircraftBean> availableAircrafts = apiProxy.getAvailableAircraftsBetweenDates(parsedBorrowingDate, returnDate);
-
-            return availableAircrafts;
-        } catch (DateTimeParseException e) {
-            // Gérer l'erreur de format de date si nécessaire
-            e.printStackTrace();
-            return Collections.emptyList(); // Ou retourner une liste vide ou une erreur appropriée
-        } catch (ParseException e) {
-            throw new RuntimeException(e);
-        }
-    }*/
-
-
-
-/*    @GetMapping(value = "/reservation")
-    public String reservation(Model model){
-
-        // Get available aircrafts
-*//*        List<AircraftBean> availableAircrafs = webappService.getAvailableAircrafts();
-        model.addAttribute("availableAircrafts", availableAircrafs);*//*
-
-
-        model.addAttribute("reservationDto",  new ReservationDto());
-
-        return "saveReservation";
-    }*/
-
-/*    @PostMapping("/saveReservation")
-    public String saveReservation(@ModelAttribute("reservationDto") @RequestBody ReservationDto reservationDto, Model model) {
-        model.addAttribute("reservationDto", reservationDto);
-        System.out.println("=================================== c'est ici que ça se passe : " + reservationDto);
-        return "/Home";
-    }*/
 
 
     @PostMapping(value = "/saveReservation")
@@ -657,6 +575,7 @@ public class WebappController {
 
     @PostMapping("/confirmFinishReservation/{id}")
     public String confirmFinish(@PathVariable int id, @RequestParam("hours") int hours, Model model) {
+
         ReservationBean reservation = webappService.getReservationById(id);
 
         // Mettez à jour les heures du pilote
@@ -665,10 +584,13 @@ public class WebappController {
         webappService.updateRegisteredUser(reservation.getRegisteredUser().getId(), pilot);
 
 
-        // Mettez à jour les heures de l'avion
+        // Mettez à jour les heures de l'avion et les heures du moteur
         AircraftBean aircraft = reservation.getAircraft();
-        aircraft.setHours(aircraft.getHours() + hours);
+        aircraft.setAircraftHours(aircraft.getAircraftHours() + hours);
+        aircraft.setMotorHours(aircraft.getMotorHours() + hours);
         webappService.updateAircraft(reservation.getAircraft().getId(), aircraft);
+
+
 
         // Marquez la réservation comme terminée
         reservation.setFinished(true);
@@ -678,6 +600,93 @@ public class WebappController {
 
         return "redirect:/reservations";
     }
+
+    @GetMapping("/updateReservation/{id}")
+    public String updateReservationForm(@PathVariable int id, Model model){
+
+        ReservationDto reservationDto = reservationMapper.convertToDTO(webappService.getReservationById(id));
+
+
+        model.addAttribute("reservationDto", reservationDto);
+        model.addAttribute("currentDate", LocalDate.now());
+        System.out.println("La date d'emprunt est : " + reservationDto.getBorrowingDate());
+        System.out.println("La date de retour est : " + reservationDto.getReturnDate());
+
+
+        return "updateReservationForm";
+    }
+
+    @GetMapping(value = "/updateAircraftReservation/{id}")
+    public String getUpdateAircraftReservationPage(@PathVariable int id, @ModelAttribute("reservationDto") ReservationDto reservationDto, Model model) {
+
+        logger.info("Reach url: /updateAircraftReservation - GET");
+
+        Boolean isAuthenticated = webappService.getIsAuthenticated();
+
+        if (isAuthenticated) {
+            int registeredUserId = webappService.getAuthenticatedRegisteredUserId();
+            RegisteredUserBean registeredUserBean = new RegisteredUserBean();
+            registeredUserBean.setId(registeredUserId);
+
+            reservationDto.setRegisteredUserId(registeredUserId);
+            model.addAttribute("reservationDto", reservationDto);
+            System.out.println(reservationDto);
+            List<AircraftDto> aircraftList = webappService.getAvailableAircraftsBetweenDates(reservationDto.getBorrowingDate(), reservationDto.getReturnDate());
+
+            System.out.println("reseration existante : " + webappService.getReservationByIdAndDate(registeredUserId, reservationDto.getBorrowingDate(), reservationDto.getReturnDate()));
+
+           if (webappService.getReservationByIdAndDate(registeredUserId, reservationDto.getBorrowingDate(), reservationDto.getReturnDate())){
+               System.out.println(aircraftList);
+               System.out.println("L'avion que l'on veut ajouter est  " + aircraftMapper.convertToDTO(webappService.getAircraftByReservationId(id)) );
+               aircraftList.add(aircraftMapper.convertToDTO(webappService.getAircraftByReservationId(id)));
+           }
+
+            model.addAttribute("aircraftList", aircraftList);
+
+        }
+
+        return "updateAircraftReservation";
+    }
+
+    @PostMapping("/saveUpdateAircraftReservation/{id}")
+    public String saveUpdateAircraftReservation (@PathVariable int id, @ModelAttribute("reservationDto") ReservationDto reservationDto, RedirectAttributes redirectAttributes,Model model, BindingResult result){
+
+        logger.info("Reach url: /saveUpdateAircraftReservation - POST");
+
+        if (result.hasErrors()) {
+            for (ObjectError error : result.getAllErrors()) {
+                System.out.println(error.getDefaultMessage());
+            }
+            System.out.println("il y a une ou des erreurs de validation");
+            return "updateAircraftReservation";
+        }
+
+        reservationDto.setId(reservationDto.getId());
+        reservationDto.setBorrowingDate(reservationDto.getBorrowingDate());
+        reservationDto.setReturnDate(reservationDto.getReturnDate());
+        AircraftDto aircraftDto = aircraftMapper.convertToDTO(webappService.getAircraftById(reservationDto.getAircraftDto().getId()));
+        reservationDto.setAircraftDto(aircraftDto);
+        model.addAttribute("reservationDto", reservationDto);
+        System.out.println("ICI SE TROUVE LA MARQUE DE l'AVION : " + reservationDto.getAircraftDto().getMark());
+        System.out.println("ICI SE TROUVE L'ID DE l'AVION : " + reservationDto.getAircraftDto().getId());
+
+        System.out.println("Voici le détail de la réservation que l'on veut mettre à jour : " + reservationDto);
+
+
+        try {
+            webappService.updateAircraftReservation(id, reservationMapper.convertToEntity(reservationDto));
+            redirectAttributes.addFlashAttribute("successMessage", "Utilisateur mis à jour avec succès!");
+        } catch (FeignException e) {
+
+            redirectAttributes.addFlashAttribute("errorMessage", "Erreur lors de la mise à jour de l'utilisateur.");
+        }
+
+        return "redirect:/reservations";
+    }
+
+
+
+
 
     @PostMapping("/updateHours/{id}")
     public String updateHours(@PathVariable int id, @ModelAttribute("registeredUser") RegisteredUserBean updateRegisteredUserFormDto, BindingResult result, RedirectAttributes redirectAttributes, Model model){
@@ -730,6 +739,8 @@ public class WebappController {
     public String getAddWorkshopPage(Model model){
 
         logger.info("Reach url: /addWorkshop - GET");
+        LocalDate currentDate = LocalDate.now();
+        model.addAttribute("currentDate", currentDate);
         WorkshopBean workshopBean = new WorkshopBean();
         model.addAttribute("workshopBean", workshopBean);
         List<AircraftDto> aircraftDtoList = webappService.getAvailableAircrafts();
@@ -751,6 +762,7 @@ public class WebappController {
         int status = 0;
 
         try {
+            workshopBean.setEntryDate(LocalDate.now());
             response = webappService.createWorkshop(workshopBean);
             status = response.getStatusCodeValue();
         } catch (FeignException e) {
@@ -765,6 +777,63 @@ public class WebappController {
         }
         return "redirect:/workshop";
     }
+
+    @GetMapping("/intervention/{id}")
+    public String interventionForm(Model model, @PathVariable int id){
+        logger.info("Reach url: /interventionForm - GET");
+
+        WorkshopBean workshopBean = webappService.getWorkshopBeanById(id);
+
+        model.addAttribute("intervention", workshopBean);
+
+
+        return "Intervention";
+    }
+
+    @PostMapping("/saveIntervention/{id}")
+    public String saveIntervention(@PathVariable int id, @ModelAttribute("intervention") WorkshopBean workshopBean, BindingResult result, RedirectAttributes redirectAttributes, Model model){
+
+
+        if (result.hasErrors()) {
+            // Si des erreurs de validation existent, retourner à la page de mise à jour avec les erreurs
+            for (ObjectError error : result.getAllErrors()) {
+                System.out.println(error.getDefaultMessage());
+            }
+            System.out.println("il y a une ou des erreurs de validation");
+            return "Intervention";
+        }
+
+        LocalDate currentDate = LocalDate.now();
+        model.addAttribute("currentDate", currentDate);
+
+        workshopBean.setHelixChange(workshopBean.getHelixChange());
+        workshopBean.setMotorChange(workshopBean.getMotorChange());
+        workshopBean.setOther(workshopBean.getOther());
+        workshopBean.setEntryDate(workshopBean.getEntryDate());
+        workshopBean.setExitDate(currentDate);
+        workshopBean.setAircraft(workshopBean.getAircraft());
+
+        AircraftBean aircraftBean = webappService.getAircraftById(workshopBean.getAircraft().getId());
+        aircraftBean.setAvailable(true);
+        aircraftBean.setMotorHours(0);
+        webappService.updateAircraft(aircraftBean.getId(), aircraftBean);
+        System.out.println("L'avion que l'on veut rendre disponible est : " + aircraftBean);
+
+
+        // Mettre à jour l'utilisateur
+        try {
+            webappService.saveIntervention(id, workshopBean);
+            redirectAttributes.addFlashAttribute("successMessage", "Utilisateur mis à jour avec succès!");
+        } catch (FeignException e) {
+            // Gérer les erreurs liées à la mise à jour de l'utilisateur
+            redirectAttributes.addFlashAttribute("errorMessage", "Erreur lors de la mise à jour de l'utilisateur.");
+        }
+
+        model.addAttribute("intervention", workshopBean);
+
+        return "redirect:/workshop";
+    }
+
 
     @GetMapping("/updateWorkshop/{id}")
     public String updateWorkshopForm(Model model, @PathVariable int id){
@@ -822,30 +891,5 @@ public class WebappController {
 
         return "redirect:/connexion?logout=true";
     }
-
-/*    @GetMapping("/greeting")
-    public String greetingForm(Model model) {
-        model.addAttribute("greeting", new Greeting());
-        return "Greeting";
-    }
-
-    @PostMapping("/greeting")
-    public String greetingSubmit(@ModelAttribute Greeting greeting, Model model) {
-        model.addAttribute("greeting", greeting);
-        return "result";
-    }
-
-    @GetMapping("/student")
-    public String student(Model model) {
-        model.addAttribute("student", new Student());
-        return "Student";
-    }
-
-    @PostMapping("/saveStudent")
-    public String saveStudent(@ModelAttribute Student student, Model model) {
-        model.addAttribute("student", student);
-        System.out.println("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&la date d'anniversaire de l'étudiant est : " + student);
-        return "displayDate";
-    }*/
 
 }

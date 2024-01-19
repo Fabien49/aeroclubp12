@@ -1,5 +1,6 @@
 package com.fabienit.flyingclub.web.controllers;
 
+import com.fabienit.flyingclub.manager.WorkshopManager;
 import com.fabienit.flyingclub.model.beans.Workshop;
 import com.fabienit.flyingclub.dao.WorkshopDao;
 import com.fabienit.flyingclub.manager.UtilsManager;
@@ -7,9 +8,9 @@ import com.fabienit.flyingclub.web.exceptions.EntityAlreadyExistsException;
 import com.fabienit.flyingclub.web.exceptions.RessourceNotFoundException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.http.ResponseEntity;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
@@ -28,19 +29,22 @@ import java.util.*;
 @Validated
 public class WorkshopController {
 
-    @Autowired
-    private WorkshopDao workshopDao;
 
-    @Autowired
-    private UtilsManager utilsManager;
+    private final WorkshopManager workshopManager;
+    private final UtilsManager utilsManager;
 
     Logger logger = LoggerFactory.getLogger(this.getClass());
+
+    public WorkshopController(WorkshopManager workshopManager, UtilsManager utilsManager) {
+        this.workshopManager = workshopManager;
+        this.utilsManager = utilsManager;
+    }
 
     @GetMapping(value = "/workshop")
     public List<Workshop> getWorkshops(@RequestParam(required = false) String query) {
 
         logger.info("Providing revision resource from database: all revisions list");
-        List<Workshop> workshops = workshopDao.findAll();
+        List<Workshop> workshops = workshopManager.findAll();
          
         if (query == null) return workshops;
 
@@ -73,22 +77,23 @@ public class WorkshopController {
 
         logger.info("Providing workshop resource from database: revision id: " + id);
 
-        Optional<Workshop> workshop = workshopDao.findById(id);
+        Optional<Workshop> workshop = workshopManager.findById(id);
 
         if(!workshop.isPresent()) throw new RessourceNotFoundException("the workshop doesn't exists, id: " + id);
 
         return workshop;
     }
 
+
+    @Transactional
     @PostMapping(value = "/workshop")
     public ResponseEntity<Void> addWorkshop(@Valid @RequestBody Workshop workshop) {
      
         logger.info("Adding new workshop in database");
-        
-        if(workshopDao.existsWorkshopById(workshop.getId()))
-            throw new EntityAlreadyExistsException("The workshop entity already exists , id: " + workshop.getId());
 
-        Workshop workshopAdded = workshopDao.save(workshop);
+        System.out.println("ICI SE TROUVE LE NOUVEAU WORKSHOP : " + workshop);
+
+        Workshop workshopAdded = workshopManager.save(workshop);
 
         URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(workshopAdded.getId())
                 .toUri();
@@ -102,14 +107,14 @@ public class WorkshopController {
         logger.info("Updating workshop in database, id: " + id);
 
         try {
-            workshopDao.findById(workshopDetails.getId());
+            workshopManager.findById(workshopDetails.getId());
         } catch (NoSuchElementException e) {
             logger.debug("The requested workshop entity doesn't exist, id: " + workshopDetails.getId());
             throw new RessourceNotFoundException("The requested workshop entity doesn't exist, id: " + workshopDetails.getId());
         }
 
         System.out.println(workshopDetails.getAircraft());
-        workshopDao.save(workshopDetails);
+        workshopManager.save(workshopDetails);
 
         return ResponseEntity.ok().build();
     }
@@ -120,7 +125,7 @@ public class WorkshopController {
         logger.info("Deleting workshop from database: id: "+ id);
 
         try {
-            workshopDao.deleteById(id);
+            workshopManager.deleteById(id);
         } catch (EmptyResultDataAccessException e) {
             logger.debug("the workshop entity doesn't exists, id: " + id);
             throw new RessourceNotFoundException("the workshop entity doesn't exists, id: " + id);

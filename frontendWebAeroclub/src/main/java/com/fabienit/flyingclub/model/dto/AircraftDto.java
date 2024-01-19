@@ -7,7 +7,6 @@ public class AircraftDto {
 
     public AircraftDto() {
     }
-
     public int getId() {
         return id;
     }

@@ -22,6 +22,17 @@ public interface ReservationDao extends JpaRepository<Reservation, Integer> {
     @Query(value = "SELECT * FROM reservations WHERE registered_user_id = ?", nativeQuery = true)
     List<Reservation> findAllByRegisteredUser(Integer registered_user_id);
 
+    Reservation findById(int id);
+
     @Query("SELECT r FROM Reservation r WHERE r.borrowingDate <= :endDate AND r.returnDate >= :startDate")
     List<Reservation> findAllReservationBetweenTwoDates(@Param("startDate") LocalDate startDate, @Param("endDate") LocalDate endDate);
+
+    @Query("SELECT r FROM Reservation r WHERE r.borrowingDate <= :endDate AND r.returnDate >= :startDate AND r.canceled = false")
+    List<Reservation> findAllReservationForAircraftReservation(@Param("startDate") LocalDate startDate, @Param("endDate") LocalDate endDate);
+
+    @Query("SELECT COUNT(r) > 0 FROM Reservation r WHERE r.registeredUser.id = :registeredUserId AND r.borrowingDate <= :endDate AND r.returnDate >= :startDate AND r.canceled = false")
+    boolean existsReservationByIdAndDate(@Param("registeredUserId") int registeredUserId, @Param("startDate") LocalDate startDate, @Param("endDate") LocalDate endDate);
+
+    @Query("SELECT r FROM Reservation r WHERE r.registeredUser.id = :registeredUserId AND r.borrowingDate <= :endDate AND r.returnDate >= :startDate AND r.canceled = false")
+    boolean existsReservationByIdAndDateTest(@Param("registeredUserId") int registeredUserId, @Param("startDate") LocalDate startDate, @Param("endDate") LocalDate endDate);
 }

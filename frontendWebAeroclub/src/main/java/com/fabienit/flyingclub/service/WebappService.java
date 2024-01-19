@@ -33,15 +33,20 @@ public interface WebappService {
 
     List<ReservationBean> getReservationsByRegisteredUserId();
 
+    boolean getReservationByIdAndDate(int id, LocalDate startDate, LocalDate endDate);
     ResponseEntity<Void> createReservation(ReservationDto reservationDto);
 
     ResponseEntity<Void> updateReservation(int id, ReservationBean reservationBean);
+
+    ResponseEntity<Void> updateAircraftReservation(int id, ReservationBean reservationBean);
 
     ResponseEntity<Void> canceledReservation(int id);
 
     AircraftBean createAircraft(AircraftBean aircraftBean);
 
     AircraftBean getAircraftById (int id);
+
+    AircraftBean getAircraftByReservationId (int id);
 
     List<Integer> getAircraftIdReservationsList(int authenticatedUserId);
 
@@ -55,13 +60,10 @@ public interface WebappService {
 
     List<AircraftDto> getAvailableAircraftsBetweenDates(LocalDate startDate, LocalDate endDate);
 
-
-    List<RegisteredUserReservationDto> getAllRegisteredUsersDTO();
-
-
     WorkshopBean getWorkshopBeanById (int id);
 
     ResponseEntity<Void> createWorkshop(WorkshopBean workshopBean);
     WorkshopBean updateWorkshopBean (int id, WorkshopBean workshopBean);
+    WorkshopBean saveIntervention (int id, WorkshopBean workshopBean);
 
 }

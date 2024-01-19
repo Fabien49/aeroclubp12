@@ -2,6 +2,7 @@ package com.fabienit.flyingclub.model.beans;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public class WorkshopBean {
@@ -15,10 +16,10 @@ public class WorkshopBean {
     private String other;
 
     @DateTimeFormat(pattern = "yyyy-MM-dd")
-    private Date entryDate;
+    private LocalDate entryDate;
 
     @DateTimeFormat(pattern = "yyyy-MM-dd")
-    private Date exitDate;
+    private LocalDate exitDate;
 
     private AircraftBean aircraft;
 
@@ -29,7 +30,7 @@ public class WorkshopBean {
         this.id = id;
     }
 
-    public WorkshopBean(Integer id, Boolean motorChange, Boolean helixChange, String other, Date entryDate, Date exitDate, AircraftBean aircraft) {
+    public WorkshopBean(Integer id, Boolean motorChange, Boolean helixChange, String other, LocalDate entryDate, LocalDate exitDate, AircraftBean aircraft) {
         this.id = id;
         this.motorChange = motorChange;
         this.helixChange = helixChange;
@@ -71,19 +72,19 @@ public class WorkshopBean {
         this.other = other;
     }
 
-    public Date getEntryDate() {
+    public LocalDate getEntryDate() {
         return entryDate;
     }
 
-    public void setEntryDate(Date entryDate) {
+    public void setEntryDate(LocalDate entryDate) {
         this.entryDate = entryDate;
     }
 
-    public Date getExitDate() {
+    public LocalDate getExitDate() {
         return exitDate;
     }
 
-    public void setExitDate(Date exitDate) {
+    public void setExitDate(LocalDate exitDate) {
         this.exitDate = exitDate;
     }
 

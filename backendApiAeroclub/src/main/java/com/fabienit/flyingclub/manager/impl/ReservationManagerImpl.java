@@ -58,7 +58,7 @@ public class ReservationManagerImpl implements ReservationManager {
     @Override
     @Transactional
     public Reservation deleteById(int id) {
-        Reservation reservationToDelete = reservationDao.findById(id).get();
+        Reservation reservationToDelete = reservationDao.findById(id);
         reservationDao.deleteById(id);
         return reservationToDelete;
     }
@@ -184,9 +184,14 @@ public class ReservationManagerImpl implements ReservationManager {
      * @return
      */
     @Override
-    public Reservation updateReservationAfterNotification(Reservation reservation) throws FunctionnalException {
+    public Reservation updateReservation(int id, Reservation reservation) throws FunctionnalException {
         //TODO à sauver en base non ?
-        return reservation;
+        return reservationDao.save(reservation);
+    }
+
+    @Override
+    public Reservation updateAircraftReservation(Reservation reservationBean) throws FunctionnalException {
+        return reservationDao.save(reservationBean);
     }
 
     /**
@@ -201,7 +206,7 @@ public class ReservationManagerImpl implements ReservationManager {
      *
      */
     @Override
-    public Optional<Reservation> findById(int id) {
+    public Reservation findById(int id) {
         return reservationDao.findById(id);
     }
 
@@ -244,7 +249,11 @@ public class ReservationManagerImpl implements ReservationManager {
         return true; // Avion disponible à la date spécifiée
     }
 
-
+    @Override
+    public boolean existsReservationByIdAndDate(int id, LocalDate startDate, LocalDate endDate) {
+        System.out.println( "TEST DAO : " + reservationDao.existsReservationByIdAndDate(id, startDate, endDate));
+        return reservationDao.existsReservationByIdAndDate(id, startDate, endDate);
+    }
 
 
     @Override

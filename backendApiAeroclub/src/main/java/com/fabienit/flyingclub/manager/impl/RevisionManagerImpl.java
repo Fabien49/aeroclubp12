@@ -4,7 +4,6 @@ package com.fabienit.flyingclub.manager.impl;
 import com.fabienit.flyingclub.manager.RevisionManager;
 import com.fabienit.flyingclub.model.beans.Revision;
 import com.fabienit.flyingclub.dao.RevisionDao;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -13,8 +12,11 @@ import java.util.Optional;
 @Service
 public class RevisionManagerImpl implements RevisionManager {
 
-    @Autowired
-    private RevisionDao revisionDao;
+    private final RevisionDao revisionDao;
+
+    public RevisionManagerImpl(RevisionDao revisionDao) {
+        this.revisionDao = revisionDao;
+    }
 
 
     @Override

@@ -20,11 +20,13 @@ public interface ReservationManager {
 
     Reservation save(Reservation reservation) throws FunctionnalException;
 
-    Reservation updateReservationAfterNotification(Reservation reservationBean) throws FunctionnalException;
+    Reservation updateReservation(int id, Reservation reservationBean) throws FunctionnalException;
+
+    Reservation updateAircraftReservation(Reservation reservationBean) throws FunctionnalException;
 
     List<Reservation> findAll();
 
-    Optional<Reservation> findById(int id);
+    Reservation findById(int id);
 
     List<Reservation> findAllByBorrowwingDate(LocalDate borrowingDate);
 
@@ -33,6 +35,8 @@ public interface ReservationManager {
     List<Reservation> findAllByRegisteredUser(int registeredUser);
 
     boolean isAircraftAvailable(LocalDate date, List<Reservation> reservations);
+
+    boolean existsReservationByIdAndDate(int id, LocalDate startDate, LocalDate endDate);
 
     List<Aircraft> getAvailableAircraftsToday();
 

@@ -8,7 +8,6 @@ import com.fabienit.flyingclub.web.exceptions.EntityAlreadyExistsException;
 import com.fabienit.flyingclub.web.exceptions.RessourceNotFoundException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
@@ -29,16 +28,18 @@ import java.util.*;
 @Validated
 public class FlyingClubController {
 
-    @Autowired
-    private FlyingClubDao flyingClubDao;
 
-    @Autowired
-    private AircraftManager aircraftManager;
-
-    @Autowired
-    private UtilsManager utilsManager;
+    private final FlyingClubDao flyingClubDao;
+    private final AircraftManager aircraftManager;
+    private final UtilsManager utilsManager;
 
     Logger logger = LoggerFactory.getLogger(this.getClass());
+
+    public FlyingClubController(FlyingClubDao flyingClubDao, AircraftManager aircraftManager, UtilsManager utilsManager) {
+        this.flyingClubDao = flyingClubDao;
+        this.aircraftManager = aircraftManager;
+        this.utilsManager = utilsManager;
+    }
 
     @GetMapping(value = "/flyingClub")
     public List<FlyingClub> getFlyingClub(@RequestParam(required = false) String query) {

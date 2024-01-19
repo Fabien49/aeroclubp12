@@ -13,7 +13,8 @@ public class AircraftBean {
     private String power;
     private int seats;
     private int autonomy;
-    private int hours;
+    private int aircraftHours;
+    private int motorHours;
     private Boolean isAvailable;
     private String use;
 
@@ -76,12 +77,20 @@ public class AircraftBean {
         this.autonomy = autonomy;
     }
 
-    public int getHours() {
-        return hours;
+    public int getAircraftHours() {
+        return aircraftHours;
     }
 
-    public void setHours(int hours) {
-        this.hours = hours;
+    public void setAircraftHours(int aircraftHours) {
+        this.aircraftHours = aircraftHours;
+    }
+
+    public int getMotorHours() {
+        return motorHours;
+    }
+
+    public void setMotorHours(int motorHours) {
+        this.motorHours = motorHours;
     }
 
     public Boolean getAvailable() {
@@ -110,7 +119,8 @@ public class AircraftBean {
                 ", power='" + power + '\'' +
                 ", seats=" + seats +
                 ", autonomy=" + autonomy +
-                ", hours=" + hours +
+                ", aircraftHours=" + aircraftHours +
+                ", motorHours=" + motorHours +
                 ", isAvailable=" + isAvailable +
                 ", use='" + use + '\'' +
                 '}';

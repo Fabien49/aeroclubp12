@@ -42,12 +42,14 @@ public class Aircraft {
     @Column(name = "use")
     private String use;
 
-    @Column(name = "hours", nullable = false)
-    private int hours;
+    @Column(name = "aircraft_hours", nullable = false)
+    private int aircraftHours;
+
+    @Column(name = "motor_hours", nullable = false)
+    private int motorHours;
 
     @Column(name = "is_available")
     private Boolean isAvailable;
-
 
     @OneToMany(mappedBy = "aircraft", cascade = CascadeType.REMOVE)
     @JsonIgnore
@@ -61,6 +63,7 @@ public class Aircraft {
     @OneToMany(mappedBy = "aircraft", cascade = CascadeType.ALL)
     private List<Workshop> workshops;
 
+
     public Aircraft() {
     }
 
@@ -68,7 +71,7 @@ public class Aircraft {
         this.id = id;
     }
 
-    public Aircraft(int id, String mark, String type, String motor, String power, int seats, int autonomy, String use, int hours, Boolean isAvailable, List<Reservation> reservations, List<Revision> revisions, List<Workshop> workshops) {
+    public Aircraft(int id, String mark, String type, String motor, String power, int seats, int autonomy, String use, int aircraftHours, int motorHours, Boolean isAvailable, List<Reservation> reservations, List<Revision> revisions, List<Workshop> workshops) {
         this.id = id;
         this.mark = mark;
         this.type = type;
@@ -77,7 +80,8 @@ public class Aircraft {
         this.seats = seats;
         this.autonomy = autonomy;
         this.use = use;
-        this.hours = hours;
+        this.aircraftHours = aircraftHours;
+        this.motorHours = motorHours;
         this.isAvailable = isAvailable;
         this.reservations = reservations;
         this.revisions = revisions;
@@ -148,12 +152,20 @@ public class Aircraft {
         this.use = use;
     }
 
-    public int getHours() {
-        return hours;
+    public int getAircraftHours() {
+        return aircraftHours;
     }
 
-    public void setHours(int hours) {
-        this.hours = hours;
+    public void setAircraftHours(int aircraftHours) {
+        this.aircraftHours = aircraftHours;
+    }
+
+    public int getMotorHours() {
+        return motorHours;
+    }
+
+    public void setMotorHours(int motorHours) {
+        this.motorHours = motorHours;
     }
 
     public Boolean getAvailable() {
@@ -199,7 +211,8 @@ public class Aircraft {
                 ", seats=" + seats +
                 ", autonomy=" + autonomy +
                 ", use='" + use + '\'' +
-                ", hours=" + hours +
+                ", aircraftHours=" + aircraftHours +
+                ", motorHours=" + motorHours +
                 ", isAvailable=" + isAvailable +
                 '}';
     }

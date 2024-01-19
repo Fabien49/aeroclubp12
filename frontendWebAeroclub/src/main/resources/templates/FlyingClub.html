@@ -34,7 +34,7 @@
             <!-- flyingclub -->
             <div class="card mb-4">
                 <div class="card-header" th:each="f:${flyingClub}">
-                    <h2 th:text="*{f.name}"></h2>
+                    <h2 class="text-center" th:text="*{f.name}"></h2>
                 </div>
                 <div class="card-block">
                     <div class="table-responsive">
@@ -65,9 +65,9 @@
                                 <td class="col-md-6 text-center" th:text="*{f.city}"></td>
                             </tr>
                             <tr>
-                                <th scope="row" >Modifier profile</th>
-                                <td>
-                                    <a class="btn btn-warning " href="/profile/updateRegisteredUser" role="button">Modifier</a>
+                                <th scope="row" >Nos avions</th>
+                                <td class="text-center">
+                                    <a class="btn btn-info" href="/aircrafts" role="button">Nos Avions</a>
                                 </td>
                             </tr>
                             </tbody>

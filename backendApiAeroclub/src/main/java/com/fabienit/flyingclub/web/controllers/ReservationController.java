@@ -7,7 +7,6 @@ import com.fabienit.flyingclub.web.exceptions.FunctionnalException;
 import com.fabienit.flyingclub.web.exceptions.RessourceNotFoundException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
@@ -17,16 +16,21 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import javax.validation.Valid;
 import javax.validation.constraints.Min;
 import java.net.URI;
+import java.time.LocalDate;
 import java.util.*;
 
 @RestController
 @Validated
 public class ReservationController {
 
-    @Autowired
-    private ReservationManager reservationManager;
+
+    private final ReservationManager reservationManager;
 
     Logger logger = LoggerFactory.getLogger(this.getClass());
+
+    public ReservationController(ReservationManager reservationManager) {
+        this.reservationManager = reservationManager;
+    }
 
     @GetMapping(value = "/reservations")
     public List<Reservation> getReservations() {
@@ -38,13 +42,14 @@ public class ReservationController {
     }
 
     @GetMapping(value = "/reservations/{id}")
-    public Optional<Reservation> getReservationById(@PathVariable @Min(value = 1) int id) {
+    public Reservation getReservationById(@PathVariable @Min(value = 1) int id) {
 
         logger.info("Providing reservation resource from database: reservation id: " + id);
-        Optional<Reservation> reservation = reservationManager.findById(id);
+        Reservation reservation = reservationManager.findById(id);
 
-        if (!reservation.isPresent())
+        if (reservation == null) {
             throw new RessourceNotFoundException("The reservation entity doesn't exist, id: " + id);
+        }
 
         return reservation;
     }
@@ -84,7 +89,7 @@ public class ReservationController {
         logger.info("Canceling reservation in database, id: " + id);
 
         try {
-            reservationManager.findById(reservationDetails.getId()).get();
+            reservationManager.findById(reservationDetails.getId());
         }catch (NoSuchElementException e){
             logger.debug("The requested reservation entity doesn't exist, id: " + reservationDetails.getId());
             throw new RessourceNotFoundException("The requested reservation entity doesn't exist, id: " + reservationDetails.getId());
@@ -101,7 +106,7 @@ public class ReservationController {
         logger.info("Updating reservation in database, id: " + id);
 
         try {
-            reservationManager.findById(reservationDetails.getId()).get();
+            reservationManager.findById(reservationDetails.getId());
         }catch (NoSuchElementException e){
             logger.debug("The requested reservation entity doesn't exist, id: " + reservationDetails.getId());
             throw new RessourceNotFoundException("The requested reservation entity doesn't exist, id: " + reservationDetails.getId());
@@ -127,11 +132,21 @@ public class ReservationController {
     }
 
 
-    @PostMapping(value= "reservations/notifications/update")
-    public ResponseEntity<Void> updateReservationAfterNotification(@Valid @RequestBody Reservation reservation) throws FunctionnalException {
-        logger.info("Update reservation after notfications is sent, reservation id: " + reservation.getId());
-        Reservation reservationToUpdate = reservationManager.updateReservationAfterNotification(reservation);
-        reservationManager.save(reservationToUpdate);
+    @PutMapping(value= "saveUpdateAircraftReservation/{id}")
+    public ResponseEntity<Void> updateAircraftReservation(@PathVariable int id, @Valid @RequestBody Reservation reservation) throws FunctionnalException {
+        logger.info("Updating reservation in database, id: " + id);
+
+        try {
+            reservationManager.findById(id);
+        } catch (NoSuchElementException e) {
+            logger.debug("The requested reservation entity doesn't exist, id: " + id);
+            throw new RessourceNotFoundException("The requested reservation entity doesn't exist, id: " + id);
+        }
+
+
+        System.out.println("L'avion que l'on veut mettre à jour dans la réservation avec l'id : " + reservation.getId() + "est : " + reservation.getAircraft());
+        reservationManager.updateAircraftReservation(reservation);
+
         return ResponseEntity.ok().build();
     }
 
@@ -140,6 +155,15 @@ public class ReservationController {
 
         logger.info("Providing aircraft resource from database: available today aircraft list");
         return reservationManager.getAvailableAircraftsToday();
+    }
+
+    @GetMapping(value = "/existingReservation")
+    public boolean getReservationByIdAndDate(int id, LocalDate borrowingDate, LocalDate returnDate){
+        logger.info("Providing reservation resource from database: existing reservation by id and dates");
+        System.out.println("l'ID de l'utilisateur est : " + id);
+        System.out.println("La DATE d'emprunt est : " + borrowingDate);
+        System.out.println("La DATE de retour est : " + returnDate);
+        return reservationManager.existsReservationByIdAndDate(id, borrowingDate, returnDate);
     }
 
 
