@@ -1,6 +1,7 @@
 package com.fabienit.flyingclub.web.controllers;
 
 import com.fabienit.flyingclub.dao.FlyingClubDao;
+import com.fabienit.flyingclub.manager.FlyingClubManager;
 import com.fabienit.flyingclub.model.beans.FlyingClub;
 import com.fabienit.flyingclub.manager.AircraftManager;
 import com.fabienit.flyingclub.manager.UtilsManager;
@@ -28,61 +29,30 @@ import java.util.*;
 @Validated
 public class FlyingClubController {
 
-
-    private final FlyingClubDao flyingClubDao;
-    private final AircraftManager aircraftManager;
-    private final UtilsManager utilsManager;
-
+    private final FlyingClubManager flyingClubManager;
     Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    public FlyingClubController(FlyingClubDao flyingClubDao, AircraftManager aircraftManager, UtilsManager utilsManager) {
-        this.flyingClubDao = flyingClubDao;
-        this.aircraftManager = aircraftManager;
-        this.utilsManager = utilsManager;
+    public FlyingClubController(FlyingClubManager flyingClubManager) {
+        this.flyingClubManager = flyingClubManager;
     }
 
     @GetMapping(value = "/flyingClub")
-    public List<FlyingClub> getFlyingClub(@RequestParam(required = false) String query) {
+    public List<FlyingClub> getFlyingClub() {
 
-        logger.info("Providing aircraft resource from database: all aircraft list");
-        List<FlyingClub> flyingClubs = flyingClubDao.findAll();
-        return flyingClubs;
+        logger.info("Providing aircraft resource from database: all flyingClub list");
 
-
-         
-/*        if (query == null) return flyingClubs;
-
-        // Split query
-        logger.debug("Splitting query, query: " + query);
-        String[] splitedQueries = utilsManager.splitQueryString(query);
-
-        List<FlyingClub> searchResultFlyingClubs = new ArrayList<FlyingClub>();
-
-        //Match aircraft with queries
-        for (String splitedQuery : splitedQueries) {
-            for (FlyingClub flyingClub : flyingClubs) {
-                if (flyingClub.getName().toLowerCase().contains(splitedQuery.toLowerCase())
-                        || flyingClub.getCity().toLowerCase().contains(splitedQuery.toLowerCase())) {
-                    searchResultFlyingClubs.add(flyingClub);
-                }
-            }
-        }
-
-        // Create new list without duplicates aircraft
-        List<FlyingClub> searchResultFlyingClubsWithoutDuplicates = new ArrayList<>(new HashSet<>(searchResultFlyingClubs));
-
-        return searchResultFlyingClubsWithoutDuplicates;*/
+        return flyingClubManager.findAll();
     }
 
 
     @GetMapping(value = "/flyingClub/{id}")
     public Optional<FlyingClub> getFlyingClubById(@PathVariable @Min(value = 1) Integer id) {
 
-        logger.info("Providing aircraft resource from database: aircraft id: " + id);
+        logger.info("Providing aircraft resource from database: flyingClub id: " + id);
 
-        Optional<FlyingClub> flyingClub = flyingClubDao.findById(id);
+        Optional<FlyingClub> flyingClub = flyingClubManager.findById(id);
 
-        if(!flyingClub.isPresent()) throw new RessourceNotFoundException("the aircraft entity doesn't exists, id: " + id);
+        if(!flyingClub.isPresent()) throw new RessourceNotFoundException("the flyingClub entity doesn't exists, id: " + id);
 
         return flyingClub;
     }
@@ -92,10 +62,10 @@ public class FlyingClubController {
      
         logger.info("Adding new flyingClub in database");
         
-        if(flyingClubDao.existsFlyingClubById(flyingClub.getId()))
+        if(flyingClubManager.existsFlyingClubById(flyingClub.getId()))
             throw new EntityAlreadyExistsException("The flyingClub entity already exists , id: " + flyingClub.getId());
 
-        FlyingClub flyingClubAdded = flyingClubDao.save(flyingClub);
+        FlyingClub flyingClubAdded = flyingClubManager.save(flyingClub);
 
         URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(flyingClubAdded.getId())
                 .toUri();
@@ -109,13 +79,13 @@ public class FlyingClubController {
         logger.info("Updating aircraft in database, id: " + id);
 
         try {
-            flyingClubDao.findById(flyingClubDetails.getId());
+            flyingClubManager.findById(flyingClubDetails.getId());
         } catch (NoSuchElementException e) {
             logger.debug("The requested flyingClub entity doesn't exist, id: " + flyingClubDetails.getId());
             throw new RessourceNotFoundException("The requested flyingClub entity doesn't exist, id: " + flyingClubDetails.getId());
         }
         
-        flyingClubDao.save(flyingClubDetails);
+        flyingClubManager.save(flyingClubDetails);
 
         return ResponseEntity.ok().build();
     }
@@ -126,7 +96,7 @@ public class FlyingClubController {
         logger.info("Deleting flyingClub from database: id: "+ id);
 
         try {
-            flyingClubDao.deleteById(id);
+            flyingClubManager.deleteById(id);
         } catch (EmptyResultDataAccessException e) {
             logger.debug("the flyingClub entity doesn't exists, id: " + id);
             throw new RessourceNotFoundException("the flyingClub entity doesn't exists, id: " + id);

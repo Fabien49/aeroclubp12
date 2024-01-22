@@ -1,0 +1,83 @@
+2024-01-19 13:53:35,245 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Starting AeroclubApiApplication on FABPC with PID 14448 (started by FaB PC in C:\Users\FaB\Git\Projet 12\aeroclubp12)
+2024-01-19 13:53:35,271 DEBUG com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2024-01-19 13:53:35,272 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] The following profiles are active: dev
+2024-01-19 13:53:42,555 DEBUG com.fabienit.flyingclub.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$3504de70 [restartedMain] Set Swagger2 documentation
+2024-01-19 13:53:43,371 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Started AeroclubApiApplication in 8.633 seconds (JVM running for 10.642)
+2024-01-19 13:55:38,899 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-1] Search user by email: test1@gmail.com
+2024-01-19 14:00:33,507 INFO com.fabienit.flyingclub.web.controllers.FlyingClubController [http-nio-8001-exec-3] Providing aircraft resource from database: all aircraft list
+2024-01-19 14:00:34,815 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-4] Providing aircraft resource from database: all aircraft list
+2024-01-19 14:00:39,833 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-5] Adding new aircraft in database
+2024-01-19 14:00:40,050 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-6] Providing aircraft resource from database: all aircraft list
+2024-01-19 14:00:45,728 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-7] Deleting aircraft from database: id: 6
+2024-01-19 14:00:45,914 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-8] Providing aircraft resource from database: all aircraft list
+2024-01-19 14:01:04,066 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-9] Providing aircraft resource from database: all aircraft list
+2024-01-19 14:12:21,961 INFO com.fabienit.flyingclub.web.controllers.FlyingClubController [http-nio-8001-exec-1] Providing aircraft resource from database: all aircraft list
+2024-01-19 14:12:23,000 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-2] Providing aircraft resource from database: all aircraft list
+2024-01-19 14:12:24,282 INFO com.fabienit.flyingclub.web.controllers.FlyingClubController [http-nio-8001-exec-3] Providing aircraft resource from database: all aircraft list
+2024-01-19 14:12:29,022 INFO com.fabienit.flyingclub.web.controllers.FlyingClubController [http-nio-8001-exec-4] Providing aircraft resource from database: all aircraft list
+2024-01-19 14:13:21,063 INFO com.fabienit.flyingclub.web.controllers.FlyingClubController [http-nio-8001-exec-5] Providing aircraft resource from database: all aircraft list
+2024-01-19 14:27:17,057 INFO com.fabienit.flyingclub.web.controllers.WorkshopController [http-nio-8001-exec-7] Providing revision resource from database: all revisions list
+2024-01-19 14:33:37,274 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-9] Providing aircraft resource from database: all aircraft list
+2024-01-19 14:33:40,118 INFO com.fabienit.flyingclub.web.controllers.WorkshopController [http-nio-8001-exec-10] Adding new workshop in database
+2024-01-19 14:33:40,261 INFO com.fabienit.flyingclub.web.controllers.WorkshopController [http-nio-8001-exec-1] Providing revision resource from database: all revisions list
+2024-01-19 14:33:42,521 INFO com.fabienit.flyingclub.web.controllers.FlyingClubController [http-nio-8001-exec-2] Providing aircraft resource from database: all aircraft list
+2024-01-19 14:33:43,673 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-3] Providing aircraft resource from database: all aircraft list
+2024-01-19 14:33:51,594 INFO com.fabienit.flyingclub.web.controllers.WorkshopController [http-nio-8001-exec-4] Providing revision resource from database: all revisions list
+2024-01-19 14:33:54,697 INFO com.fabienit.flyingclub.web.controllers.WorkshopController [http-nio-8001-exec-5] Providing workshop resource from database: revision id: 5
+2024-01-19 14:33:58,663 INFO com.fabienit.flyingclub.web.controllers.WorkshopController [http-nio-8001-exec-6] Updating workshop in database, id: 5
+2024-01-19 14:33:58,817 INFO com.fabienit.flyingclub.web.controllers.WorkshopController [http-nio-8001-exec-7] Providing revision resource from database: all revisions list
+2024-01-19 14:34:07,049 INFO com.fabienit.flyingclub.web.controllers.FlyingClubController [http-nio-8001-exec-8] Providing aircraft resource from database: all aircraft list
+2024-01-19 14:34:08,208 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-9] Providing aircraft resource from database: all aircraft list
+2024-01-19 14:37:27,664 INFO com.fabienit.flyingclub.web.controllers.WorkshopController [http-nio-8001-exec-1] Providing revision resource from database: all revisions list
+2024-01-19 15:03:08,826 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-3] Search user by email: test1@gmail.com
+2024-01-19 15:03:10,729 INFO com.fabienit.flyingclub.web.controllers.WorkshopController [http-nio-8001-exec-4] Providing revision resource from database: all revisions list
+2024-01-19 15:03:12,067 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-5] Providing aircraft resource from database: all aircraft list
+2024-01-19 15:06:56,103 INFO com.fabienit.flyingclub.web.controllers.WorkshopController [http-nio-8001-exec-7] Providing revision resource from database: all revisions list
+2024-01-19 15:06:58,397 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-8] Search user by email: test1@gmail.com
+2024-01-19 15:07:00,912 INFO com.fabienit.flyingclub.web.controllers.WorkshopController [http-nio-8001-exec-9] Providing revision resource from database: all revisions list
+2024-01-19 15:07:02,006 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-10] Providing aircraft resource from database: all aircraft list
+2024-01-19 15:07:05,118 INFO com.fabienit.flyingclub.web.controllers.WorkshopController [http-nio-8001-exec-1] Adding new workshop in database
+2024-01-19 15:07:05,289 INFO com.fabienit.flyingclub.web.controllers.WorkshopController [http-nio-8001-exec-2] Providing revision resource from database: all revisions list
+2024-01-19 15:14:00,301 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-4] Search user by email: test1@gmail.com
+2024-01-19 15:14:01,546 INFO com.fabienit.flyingclub.web.controllers.WorkshopController [http-nio-8001-exec-5] Providing revision resource from database: all revisions list
+2024-01-19 15:14:03,022 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-6] Providing aircraft resource from database: all aircraft list
+2024-01-19 15:14:18,009 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-7] Providing aircraft resource from database: all aircraft list
+2024-01-19 15:20:56,723 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-9] Search user by email: test1@gmail.com
+2024-01-19 15:20:58,193 INFO com.fabienit.flyingclub.web.controllers.WorkshopController [http-nio-8001-exec-10] Providing revision resource from database: all revisions list
+2024-01-19 15:20:59,215 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-1] Providing aircraft resource from database: all aircraft list
+2024-01-19 15:21:52,649 INFO com.fabienit.flyingclub.web.controllers.WorkshopController [http-nio-8001-exec-3] Providing revision resource from database: all revisions list
+2024-01-19 15:21:55,263 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-4] Search user by email: test1@gmail.com
+2024-01-19 15:21:56,442 INFO com.fabienit.flyingclub.web.controllers.WorkshopController [http-nio-8001-exec-5] Providing revision resource from database: all revisions list
+2024-01-19 15:21:57,431 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-6] Providing aircraft resource from database: all aircraft list
+2024-01-19 15:28:19,241 INFO com.fabienit.flyingclub.web.controllers.WorkshopController [http-nio-8001-exec-8] Providing revision resource from database: all revisions list
+2024-01-19 15:28:21,108 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-9] Providing aircraft resource from database: all aircraft list
+2024-01-19 15:28:24,035 INFO com.fabienit.flyingclub.web.controllers.WorkshopController [http-nio-8001-exec-10] Adding new workshop in database
+2024-01-19 15:28:24,185 INFO com.fabienit.flyingclub.web.controllers.WorkshopController [http-nio-8001-exec-1] Providing revision resource from database: all revisions list
+2024-01-19 15:28:36,910 INFO com.fabienit.flyingclub.web.controllers.WorkshopController [http-nio-8001-exec-2] Providing revision resource from database: all revisions list
+2024-01-19 15:29:24,242 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Starting AeroclubApiApplication on FABPC with PID 10720 (started by FaB PC in C:\Users\FaB\Git\Projet 12\aeroclubp12)
+2024-01-19 15:29:24,245 DEBUG com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2024-01-19 15:29:24,246 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] The following profiles are active: dev
+2024-01-19 15:29:35,730 DEBUG com.fabienit.flyingclub.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$cf157e35 [restartedMain] Set Swagger2 documentation
+2024-01-19 15:29:36,753 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Started AeroclubApiApplication in 13.093 seconds (JVM running for 15.962)
+2024-01-19 15:32:56,969 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-1] Search user by email: test1@gmail.com
+2024-01-19 15:32:58,957 INFO com.fabienit.flyingclub.web.controllers.WorkshopController [http-nio-8001-exec-2] Providing revision resource from database: all revisions list
+2024-01-19 15:33:00,008 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-3] Providing aircraft resource from database: all aircraft list
+2024-01-19 15:33:02,684 INFO com.fabienit.flyingclub.web.controllers.WorkshopController [http-nio-8001-exec-4] Adding new workshop in database
+2024-01-19 15:33:02,883 INFO com.fabienit.flyingclub.web.controllers.WorkshopController [http-nio-8001-exec-5] Providing revision resource from database: all revisions list
+2024-01-19 15:35:50,065 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-7] Providing aircraft resource from database: all aircraft list
+2024-01-19 16:48:50,218 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-9] Search user by email: test1@gmail.com
+2024-01-19 17:01:58,633 INFO com.fabienit.flyingclub.web.controllers.WorkshopController [http-nio-8001-exec-1] Providing revision resource from database: all revisions list
+2024-01-19 17:02:06,701 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-2] Search user by email: test1@gmail.com
+2024-01-19 18:03:57,173 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-4] Search user by email: test1@gmail.com
+2024-01-19 18:04:00,277 INFO com.fabienit.flyingclub.web.controllers.WorkshopController [http-nio-8001-exec-5] Providing revision resource from database: all revisions list
+2024-01-19 18:04:03,440 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-6] Providing aircraft resource from database: all aircraft list
+2024-01-19 18:05:13,613 INFO com.fabienit.flyingclub.web.controllers.WorkshopController [http-nio-8001-exec-8] Providing revision resource from database: all revisions list
+2024-01-19 18:05:17,446 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-9] Providing aircraft resource from database: all aircraft list
+2024-01-19 18:21:21,593 INFO com.fabienit.flyingclub.web.controllers.WorkshopController [http-nio-8001-exec-1] Providing revision resource from database: all revisions list
+2024-01-19 18:21:24,343 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-2] Search user by email: test1@gmail.com
+2024-01-19 18:21:25,287 INFO com.fabienit.flyingclub.web.controllers.WorkshopController [http-nio-8001-exec-3] Providing revision resource from database: all revisions list
+2024-01-19 18:21:26,241 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-4] Providing aircraft resource from database: all aircraft list
+2024-01-19 18:21:28,307 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-5] Providing aircraft resource from database: all aircraft list
+2024-01-19 18:21:28,488 INFO com.fabienit.flyingclub.web.controllers.WorkshopController [http-nio-8001-exec-6] Providing revision resource from database: all revisions list
+2024-01-19 18:21:33,919 INFO com.fabienit.flyingclub.web.controllers.FlyingClubController [http-nio-8001-exec-7] Providing aircraft resource from database: all aircraft list
+2024-01-19 18:21:35,283 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-8] Providing aircraft resource from database: all aircraft list

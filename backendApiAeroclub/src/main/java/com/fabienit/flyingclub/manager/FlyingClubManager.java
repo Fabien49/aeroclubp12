@@ -11,5 +11,6 @@ public interface FlyingClubManager {
     Optional<FlyingClub> findById(int id);
     FlyingClub save(FlyingClub library);
     FlyingClub deleteById(int id);
+    boolean existsFlyingClubById(int id);
 }
 

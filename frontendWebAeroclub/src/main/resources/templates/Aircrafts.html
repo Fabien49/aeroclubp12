@@ -27,7 +27,7 @@
   <div class="col-12">
       <div class="border-secondary shadow card h-100">
           <div class="card-body">
-              <a class="btn btn-info" th:href="@{/addAircraft}">Ajouter un avion</a>
+              <a th:if="${#authorization.expression('hasRole(''ADMIN'')')}" class="btn btn-info" th:href="@{/addAircraft}">Ajouter un avion</a>
               <div class="table-responsive-sm table-responsive-md table-responsive-lg">
                   <CAPTION> <h1 class="text-center">Nos Avions </h1></CAPTION>
                   <table th:object="${role}" class="table table-bordered table-striped table">
@@ -43,7 +43,7 @@
                           <th class="align-middle text-center">Heures du moteur</th>
                           <th class="align-middle text-center">Disponible</th>
                           <th class="align-middle text-center">Utilisation</th>
-                          <th class="align-middle text-center">Action</th>
+                          <th th:if="${#authorization.expression('hasRole(''ADMIN'')')}" class="align-middle text-center">Action</th>
                       </tr>
                       </thead>
 
@@ -58,7 +58,7 @@
                           <td th:text="${a.getMotorHours()}"></td>
                           <td th:text="${a.getAvailable()}"></td>
                           <td th:text="${a.getUse()}"></td>
-                          <td>
+                          <td th:if="${#authorization.expression('hasRole(''ADMIN'')')}">
                              <a class="btn btn-success btn-block" th:href="@{/aircrafts/updateAircraft/{id}(id=${a.id})}">Éditer</a>
                              <a onclick="return confirm('Etes-vous sur de vouloir supprimer cet avion ?')" th:href="@{'/aircrafts/' + ${a.id}}" class="btn btn-danger btn-block" >Supprimer</a>
                           </td>

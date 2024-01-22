@@ -39,7 +39,7 @@ public class Workshop implements Serializable {
     @Column(name = "exit_date")
     private LocalDate exitDate;
 
-    @ManyToOne(cascade = CascadeType.PERSIST)
+    @ManyToOne
     @JoinColumn(name = "aircraft_id")
     private Aircraft aircraft;
 

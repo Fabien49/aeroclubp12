@@ -26,11 +26,6 @@
     <div class="container">
         <div class="row">
             <div class="col">
-<!--                <div class="card">
-                    <div class="col-md-2 mb-3">
-                        <a class="btn btn-info" href="/workshop">Retour à l'atelier</a>
-                    </div>
-                </div>-->
                 <div class="card">
                     <div class="card-body">
                     <a class="btn btn-info" href="/workshop">Retour à l'atelier</a>
@@ -38,15 +33,12 @@
                     <div class="card-body">
                     <form class="form-row align-items-center mx-auto" th:action="@{/addWorkshop}" th:object="${workshopBean}" method="post">
                         <input type="hidden" th:field="*{id}" />
-
                         <div class="col-md-6 mb-3 mx-auto">
                             <label for="mark">Sélectionnez un avion</label>
-                            <select class="form-control" id="mark" th:field="*{aircraft.mark}">
-                                <option value="" disabled selected>Sélectionnez un avion</option>
-                                <option th:each="aircraftDto : ${aircraftAvailable}" th:value="${aircraftDto.mark}" th:text="${aircraftDto.mark}"></option>
+                            <select class="form-control" id="mark" th:field="*{aircraft.id}">
+                                <option th:each="aircraftDto : ${aircraftAvailable}" th:value="${aircraftDto.id}" th:text="${aircraftDto.mark}"></option>
                             </select>
                         </div>
-
                         <div class="col-md-6 mb-3 mx-auto">
                             <label> </label>
                             <div class="custom-control custom-checkbox custom-control-lg">

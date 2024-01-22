@@ -23,9 +23,7 @@ import java.util.*;
 @Validated
 public class ReservationController {
 
-
     private final ReservationManager reservationManager;
-
     Logger logger = LoggerFactory.getLogger(this.getClass());
 
     public ReservationController(ReservationManager reservationManager) {
@@ -36,15 +34,15 @@ public class ReservationController {
     public List<Reservation> getReservations() {
 
         logger.info("Providing reservation resource from database: all reservation list");
-        List<Reservation> reservationList = reservationManager.findAll();
 
-        return reservationList;
+        return reservationManager.findAll();
     }
 
     @GetMapping(value = "/reservations/{id}")
     public Reservation getReservationById(@PathVariable @Min(value = 1) int id) {
 
         logger.info("Providing reservation resource from database: reservation id: " + id);
+
         Reservation reservation = reservationManager.findById(id);
 
         if (reservation == null) {
@@ -58,17 +56,16 @@ public class ReservationController {
     public List<Reservation> getReservationByRegisteredUser(@PathVariable @Min(value = 1) int id) {
 
         logger.info("Providing reservation list for registered user from database: user id: " + id);
-        List<Reservation> reservationList = reservationManager.findAllByRegisteredUser(id);
-        return reservationList;
+
+        return reservationManager.findAllByRegisteredUser(id);
     }
 
     @PostMapping(value = "/reservations")
     public ResponseEntity<Void> addReservation(@RequestBody Reservation reservation) {
 
         logger.info("Adding new reservation in database");
-        Reservation reservationAdded;
         try {
-            reservationAdded = reservationManager.save(reservation);
+        Reservation  reservationAdded = reservationManager.save(reservation);
         } catch (FunctionnalException e) {
             logger.info(e.getLocalizedMessage());
             return ResponseEntity.badRequest().build();
@@ -134,6 +131,7 @@ public class ReservationController {
 
     @PutMapping(value= "saveUpdateAircraftReservation/{id}")
     public ResponseEntity<Void> updateAircraftReservation(@PathVariable int id, @Valid @RequestBody Reservation reservation) throws FunctionnalException {
+
         logger.info("Updating reservation in database, id: " + id);
 
         try {
@@ -154,15 +152,15 @@ public class ReservationController {
     public List<Aircraft> getAvailableAircraftsToday() {
 
         logger.info("Providing aircraft resource from database: available today aircraft list");
+
         return reservationManager.getAvailableAircraftsToday();
     }
 
     @GetMapping(value = "/existingReservation")
     public boolean getReservationByIdAndDate(int id, LocalDate borrowingDate, LocalDate returnDate){
+
         logger.info("Providing reservation resource from database: existing reservation by id and dates");
-        System.out.println("l'ID de l'utilisateur est : " + id);
-        System.out.println("La DATE d'emprunt est : " + borrowingDate);
-        System.out.println("La DATE de retour est : " + returnDate);
+
         return reservationManager.existsReservationByIdAndDate(id, borrowingDate, returnDate);
     }
 

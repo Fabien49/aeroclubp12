@@ -27,7 +27,7 @@
   <div class="col-12">
       <div class="border-secondary shadow card h-100">
           <div class="card-body">
-              <a class="btn btn-info" th:href="@{/addWorkshop}">Ajouter un avion à l'atelier</a>
+              <a th:if="${#authorization.expression('hasAnyRole(''MECHANIC'', ''ADMIN'')')}" class="btn btn-info" th:href="@{/addWorkshop}">Ajouter un avion à l'atelier</a>
               <div class="table-responsive-sm table-responsive-md table-responsive-lg">
                   <CAPTION> <h1 class="text-center">Atelier </h1></CAPTION>
                   <table th:object="${role}" class="table table-bordered table-striped table">
@@ -40,7 +40,7 @@
                           <th>Date d'entrée</th>
                           <th>Date de sortie</th>
                           <th>Etat</th>
-                          <th>Action</th>
+                          <th th:if="${#authorization.expression('hasAnyRole(''MECHANIC'', ''ADMIN'')')}">Action</th>
                       </tr>
                       </thead>
 
@@ -55,10 +55,10 @@
                               <span th:if="${w.getExitDate()}">Terminé</span>
                               <span th:unless="${w.getExitDate()}">En cours</span>
                           </td>
-                          <td>
-                              <a th:if="${w.getExitDate() == null}" class="btn btn-warning btn-block" th:href="@{/intervention/{id}(id=${w.id})}">Intervenir</a>
-                              <a class="btn btn-success btn-block" th:href="@{/updateWorkshop/{id}(id=${w.id})}">Éditer</a>
-                              <a onclick="return confirm('Etes-vous sur de vouloir supprimer cet avion ?')" th:href="@{'/workshop/' + ${w.id}}" class="btn btn-danger btn-block" >Supprimer</a>
+                          <td th:if="${#authorization.expression('hasAnyRole(''MECHANIC'', ''ADMIN'')')}">
+                                <a th:if="${w.getExitDate() == null}" class="btn btn-warning btn-block" th:href="@{/intervention/{id}(id=${w.id})}">Intervenir</a>
+                              <a th:if="${#authorization.expression('hasRole(''ADMIN'')')}" class="btn btn-success btn-block" th:href="@{/updateWorkshop/{id}(id=${w.id})}">Éditer</a>
+                              <a th:if="${#authorization.expression('hasRole(''ADMIN'')')}" onclick="return confirm('Etes-vous sur de vouloir supprimer cet avion ?')" th:href="@{'/workshop/' + ${w.id}}" class="btn btn-danger btn-block" >Supprimer</a>
                           </td>
                       </tr>
 

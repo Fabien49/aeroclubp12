@@ -19,6 +19,7 @@ import javax.persistence.EntityNotFoundException;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 /**
@@ -176,29 +177,15 @@ public class WebappServiceImpl implements WebappService {
     /**
      * Get reservation list for authenticated user
      *
-     * @return
      */
     @Override
     public List<ReservationBean> getReservationsByRegisteredUserId() {
 
         logger.debug("Getting reservations for current authenticated user");
 
-        // Get authenticated user id
         int authenticatedUserId = getAuthenticatedRegisteredUserId();
 
-        // Init current user reservation list
-        /*List<ReservationBean> currentUserReservations = new ArrayList<>();*/
-
-        // Get list of reservation by user id
         List<ReservationBean> authenticatedUserReservationsList = apiProxy.getReservationByRegisteredUser(authenticatedUserId);
-
-/*        for (Reservation reservation : authenticatedUserReservationsList) {
-            // Récupérer l'avion associé à chaque réservation (exemple)
-            AircraftBean aircraft = apiProxy.getAircrafts().get(authenticatedUserId);
-                    reservation.setAircraft(aircraft);
-        }*/
-
-        System.out.println("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&" + authenticatedUserReservationsList);
 
         return authenticatedUserReservationsList;
     }
@@ -225,6 +212,7 @@ public class WebappServiceImpl implements WebappService {
     public AircraftBean getAircraftByReservationId(int id) {
         return apiProxy.getAircraftByReservationId(id);
     }
+
 
 
     /**
@@ -305,7 +293,6 @@ public class WebappServiceImpl implements WebappService {
     @Override
     public ResponseEntity<Void> createWorkshop(WorkshopBean workshopBean) {
 
-        workshopBean.setAircraft(workshopBean.getAircraft());
         workshopBean.setHelixChange(!workshopBean.getHelixChange());
         workshopBean.setMotorChange(!workshopBean.getMotorChange());
 

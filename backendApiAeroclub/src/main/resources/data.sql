@@ -3,8 +3,26 @@
 -- Create user
 INSERT INTO registered_user ( id , email, first_name, last_name, password, hours, roles)
 VALUES
+    (
+        1,
+        'admin@admin.com',
+        'ad',
+        'min',
+        '$2a$10$jPUTDV6/9AkC7NRPPzmvXuLJlfnKoAYo.uJuZc0aeJHGum.LpxO0a',
+        10000,
+        'ADMIN'
+    ),
+    (
+        2,
+        'mechanic@mechanic.com',
+        'mech',
+        'anic',
+        '$2a$10$jPUTDV6/9AkC7NRPPzmvXuLJlfnKoAYo.uJuZc0aeJHGum.LpxO0a',
+        0,
+        'MECHANIC'
+    ),
   (
-    1,
+    3,
   	'fabien@gmail.com',
     'Fabien',
     'Chapeau',
@@ -13,7 +31,7 @@ VALUES
     'USER'
   ),
   (
-    2,
+    4,
   	'test1@gmail.com',
     'userName',
     'userLastName',
@@ -22,7 +40,7 @@ VALUES
     'USER'
   ),
   (
-    3,
+    5,
   	'test2@gmail.com',
     'userName',
     'userLastName',
@@ -31,7 +49,7 @@ VALUES
     'USER'
   ),
   (
-    4,
+    6,
   	'test3@gmail.com',
     'userName',
     'userLastName',
@@ -232,10 +250,10 @@ VALUES
  insert into reservations
 (borrowing_date, return_date,finished,canceled, aircraft_id, registered_user_id)
 VALUES
-('2023-09-26', '2023-09-26', true, false, 1, 1),
-('2023-10-09', '2023-10-09', true, false,2, 2),
-('2023-10-10', '2023-10-10', false, true,2, 2),
+('2023-09-26', '2023-09-26', true, false, 1, 3),
+('2023-10-09', '2023-10-09', true, false,2, 4),
+('2023-10-10', '2023-10-10', false, true,2, 4),
 ('2023-10-10', '2023-10-10', true, false,1, 3),
-('2023-10-11', '2023-10-11', true, false,3, 4),
-('2023-12-05', '2023-12-05', true, false,1, 1),
+('2023-10-11', '2023-10-11', true, false,3, 6),
+('2023-12-05', '2023-12-05', true, false,1, 3),
 ('2024-01-06', '2024-01-07', false,false,3, 2);

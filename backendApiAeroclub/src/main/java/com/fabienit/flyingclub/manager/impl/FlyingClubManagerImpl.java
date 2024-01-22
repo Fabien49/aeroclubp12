@@ -37,4 +37,8 @@ public class FlyingClubManagerImpl implements FlyingClubManager {
         flyingClubDao.deleteById(id);
         return null;
     }
+    @Override
+    public boolean existsFlyingClubById(int id) {
+        return flyingClubDao.existsFlyingClubById(id);
+    }
 }

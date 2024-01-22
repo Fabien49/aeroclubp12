@@ -28,8 +28,8 @@ public interface ApiProxy {
         @GetMapping(value = "/aircrafts/{id}")
         AircraftBean getAircraftById(@PathVariable int id);
 
-        @GetMapping(value = "/aircrafts/mark")
-        Optional<AircraftBean> getAircraftByMark(@PathVariable @NotNull String mark);
+        @GetMapping(value = "/aircrafts")
+        AircraftBean getAircraftByMark(@RequestParam @NotNull String mark);
 
         @GetMapping(value = "/aircrafts/reservation/{id}")
         AircraftBean getAircraftByReservationId(@PathVariable int id);
@@ -174,7 +174,7 @@ public interface ApiProxy {
         WorkshopBean getWorkshopById(@PathVariable @Min(value = 1) int id);
 
         @PostMapping(value = "/workshop")
-        ResponseEntity<Void> addWorkshop(@Valid @RequestBody WorkshopBean workshop);
+        ResponseEntity<Void> addWorkshop(@Valid @RequestBody WorkshopBean workshopBean);
 
         @PutMapping(value = "/workshop/{id}")
         WorkshopBean updateWorkshop(@PathVariable

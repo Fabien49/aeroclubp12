@@ -19,9 +19,7 @@ import java.util.List;
 public interface AircraftDao extends JpaRepository<Aircraft, Integer>{
 
      boolean existsAircraftById(int id);
-
      List<Aircraft> findAllByIsAvailableTrue();
-
     @Query("SELECT a FROM Aircraft a INNER JOIN a.reservations r WHERE r.id = :reservationId")
     Aircraft findAircraftByReservationId(@Param("reservationId") int reservationId);
 }

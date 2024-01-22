@@ -28,14 +28,11 @@ import java.util.*;
 @RestController
 @Validated
 public class AircraftController {
-    private final AircraftDao aircraftDao;
     private final AircraftManager aircraftManager;
     private final UtilsManager utilsManager;
-
     Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    public AircraftController(AircraftDao aircraftDao, AircraftManager aircraftManager, UtilsManager utilsManager) {
-        this.aircraftDao = aircraftDao;
+    public AircraftController(AircraftManager aircraftManager, UtilsManager utilsManager) {
         this.aircraftManager = aircraftManager;
         this.utilsManager = utilsManager;
     }
@@ -44,7 +41,8 @@ public class AircraftController {
     public List<Aircraft> getAircrafts(@RequestParam(required = false) String query) {
 
         logger.info("Providing aircraft resource from database: all aircraft list");
-        List<Aircraft> aircrafts = aircraftDao.findAll();
+
+        List<Aircraft> aircrafts = aircraftManager.findAll();
          
         if (query == null) return aircrafts;
 
@@ -63,41 +61,19 @@ public class AircraftController {
                 }
             }
         }
-
         // Create new list without duplicates aircraft
         List<Aircraft> searchResultAircraftsWithoutDuplicates = new ArrayList<>(new HashSet<>(searchResultAircrafts));
 
         return searchResultAircraftsWithoutDuplicates;
     }
 
+
     @GetMapping(value = "/aircraftsAvailable")
-    public List<Aircraft> getAircraftsAvailable(/*@RequestParam(required = false) String query*/) {
+    public List<Aircraft> getAircraftsAvailable() {
 
         logger.info("Providing aircraft resource from database: all aircraft list");
-        List<Aircraft> availableAircraft = aircraftDao.findAllByIsAvailableTrue();
-        /*
-        if (query == null) return aircrafts;
 
-        // Split query
-        logger.debug("Splitting query, query: " + query);
-        String[] splitedQueries = utilsManager.splitQueryString(query);
-
-        List<Aircraft> searchResultAircrafts = new ArrayList<Aircraft>();
-
-        //Match aircraft with queries
-        for (String splitedQuery : splitedQueries) {
-            for (Aircraft aircraft : aircrafts) {
-                if (aircraft.getMark().toLowerCase().contains(splitedQuery.toLowerCase())
-                        || aircraft.getPower().toLowerCase().contains(splitedQuery.toLowerCase())) {
-                    searchResultAircrafts.add(aircraft);
-                }
-            }
-        }
-
-        // Create new list without duplicates aircraft
-        List<Aircraft> searchResultAircraftsWithoutDuplicates = new ArrayList<>(new HashSet<>(searchResultAircrafts));
-        */
-        return availableAircraft;
+        return aircraftManager.findAllByIsAvailableTrue();
     }
 
     @GetMapping(value = "/aircrafts/{id}")
@@ -105,7 +81,7 @@ public class AircraftController {
 
         logger.info("Providing aircraft resource from database: aircraft id: " + id);
 
-        Optional<Aircraft> aircraft = aircraftDao.findById(id);
+        Optional<Aircraft> aircraft = aircraftManager.findById(id);
 
         if(!aircraft.isPresent()) throw new RessourceNotFoundException("the aircraft entity doesn't exists, id: " + id);
 
@@ -123,10 +99,10 @@ public class AircraftController {
      
         logger.info("Adding new aircraft in database");
         
-        if(aircraftDao.existsAircraftById(aircraft.getId()))
+        if(aircraftManager.existsAircraftById(aircraft.getId()))
             throw new EntityAlreadyExistsException("The aircraft entity already exists , id: " + aircraft.getId());
 
-        Aircraft aircraftAdded = aircraftDao.save(aircraft);
+        Aircraft aircraftAdded = aircraftManager.save(aircraft);
 
         URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(aircraftAdded.getId())
                 .toUri();
@@ -140,13 +116,13 @@ public class AircraftController {
         logger.info("Updating aircraft in database, id: " + id);
 
         try {
-            aircraftDao.findById(aircraftDetails.getId());
+            aircraftManager.findById(aircraftDetails.getId());
         } catch (NoSuchElementException e) {
             logger.debug("The requested aircraft entity doesn't exist, id: " + aircraftDetails.getId());
             throw new RessourceNotFoundException("The requested aircraft entity doesn't exist, id: " + aircraftDetails.getId());
         }
         
-        aircraftDao.save(aircraftDetails);
+        aircraftManager.save(aircraftDetails);
 
         return ResponseEntity.ok().build();
     }
@@ -154,12 +130,12 @@ public class AircraftController {
     @DeleteMapping(value = "/aircrafts/{id}")
     public void deleteAircraft(@PathVariable @Min(value = 1) int id) {
 
-        logger.info("Deleting aircraft from database: id: "+ id);
+        logger.info("Deleting aircraft from database: id : " + id);
 
         try {
-            aircraftDao.deleteById(id);
+            aircraftManager.deleteById(id);
         } catch (EmptyResultDataAccessException e) {
-            logger.debug("the aircraft entity doesn't exists, id: " + id);
+            logger.debug("the aircraft entity doesn't exists, id : " + id);
             throw new RessourceNotFoundException("the aircraft entity doesn't exists, id: " + id);
         }
     }
@@ -169,7 +145,7 @@ public class AircraftController {
                                                             @RequestParam("returnDate") LocalDate returnDate) {
 
         logger.info("Providing aircraft resource from database: available between dates aircraft list");
-        System.out.println("les deux dates sont : " + borrowingDate + "ddddd" + returnDate);
+
         return aircraftManager.getAvailableAircraftsBetweenDates(borrowingDate, returnDate);
     }
 

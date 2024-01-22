@@ -26,8 +26,6 @@ public class AircraftManagerImpl implements AircraftManager {
         this.reservationDao = reservationDao;
     }
 
-
-
     @Override
     public List<Aircraft> findAll() {
         return aircraftDao.findAll();
@@ -44,26 +42,7 @@ public class AircraftManagerImpl implements AircraftManager {
     }
 
     @Override
-    public List<Aircraft> checkIfAircraftIsAvailable() {
-
-       List<Aircraft> aircraftAvailableList = new ArrayList<>();
-       List<Aircraft> aircraftList = aircraftDao.findAll();
-        System.out.println("La première liste d'avions est là : " + aircraftList);
-        for (Aircraft aircraft: aircraftList
-             ) {
-            if (aircraft.getAvailable()){
-               aircraftAvailableList.add(aircraft);
-            }
-        }
-        System.out.println("La deuxième liste d'avions est là : " + aircraftAvailableList);
-
-        return aircraftAvailableList;
-    }
-
-    @Override
     public List<Aircraft> getAvailableAircraftsBetweenDates(LocalDate startDate, LocalDate endDate) {
-
-
 
         List<Aircraft> availableAircrafts = aircraftDao.findAllByIsAvailableTrue();
         List<Reservation> existingReservations = reservationDao.findAllReservationForAircraftReservation(startDate, endDate);
@@ -72,18 +51,25 @@ public class AircraftManagerImpl implements AircraftManager {
                 .map(reservation -> reservation.getAircraft().getId())
                 .collect(Collectors.toSet());
 
-
-
         return availableAircrafts.stream()
                 .filter(aircraft -> !reservedAircraftIds.contains(aircraft.getId()))
                 .collect(Collectors.toList());
-
 
     }
 
     @Override
     public Aircraft getAircraftByReservationId(int id) {
         return aircraftDao.findAircraftByReservationId(id);
+    }
+
+    @Override
+    public List<Aircraft> findAllByIsAvailableTrue() {
+        return aircraftDao.findAllByIsAvailableTrue();
+    }
+
+    @Override
+    public boolean existsAircraftById(int id) {
+        return aircraftDao.existsAircraftById(id);
     }
 
     @Override

@@ -18,7 +18,6 @@ public class RevisionManagerImpl implements RevisionManager {
         this.revisionDao = revisionDao;
     }
 
-
     @Override
     public List<Revision> findAll() {
         return revisionDao.findAll();

@@ -34,17 +34,16 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
         .authorizeRequests()
-/*        .antMatchers("/static/**").permitAll()
-        .antMatchers("/images/**").permitAll()*/
         .antMatchers("/").permitAll()
-        .antMatchers("/profile").hasRole("USER")
+        .antMatchers("/profile").hasAnyRole("USER", "ADMIN")
+//        .antMatchers("/**").hasAnyRole("USER", "ADMIN")
         .antMatchers("/resources/**","/static/**","/css/**", "/img/**").permitAll()
-        .antMatchers("/reservations").permitAll()
+/*        .antMatchers("/reservations").permitAll()
         .antMatchers("/getAvailableAircrafts").permitAll()
         .antMatchers("/aircrafts").permitAll()
         .antMatchers("/aircrafts/id").permitAll()
         .antMatchers("/addAircrafts").permitAll()
-        .antMatchers("/Home").permitAll()
+        .antMatchers("/Home").permitAll()*/
         .and()
         .formLogin()
         .loginPage("/connexion").permitAll()

@@ -29,7 +29,6 @@ import java.util.*;
 @Validated
 public class WorkshopController {
 
-
     private final WorkshopManager workshopManager;
     private final UtilsManager utilsManager;
 
@@ -44,6 +43,7 @@ public class WorkshopController {
     public List<Workshop> getWorkshops(@RequestParam(required = false) String query) {
 
         logger.info("Providing revision resource from database: all revisions list");
+
         List<Workshop> workshops = workshopManager.findAll();
          
         if (query == null) return workshops;
@@ -91,8 +91,6 @@ public class WorkshopController {
      
         logger.info("Adding new workshop in database");
 
-        System.out.println("ICI SE TROUVE LE NOUVEAU WORKSHOP : " + workshop);
-
         Workshop workshopAdded = workshopManager.save(workshop);
 
         URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(workshopAdded.getId())
@@ -113,7 +111,6 @@ public class WorkshopController {
             throw new RessourceNotFoundException("The requested workshop entity doesn't exist, id: " + workshopDetails.getId());
         }
 
-        System.out.println(workshopDetails.getAircraft());
         workshopManager.save(workshopDetails);
 
         return ResponseEntity.ok().build();

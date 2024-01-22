@@ -13,9 +13,11 @@ public interface AircraftManager {
     List<Aircraft> findAll();
     Optional<Aircraft> findById(int id);
     Aircraft save(Aircraft aircraft);
-    List<Aircraft> checkIfAircraftIsAvailable();
     Aircraft deleteById(int id);
     List<Aircraft> getAvailableAircraftsBetweenDates(LocalDate startDate, LocalDate endDate);
     Aircraft getAircraftByReservationId(int id);
+    List<Aircraft> findAllByIsAvailableTrue();
+
+    boolean existsAircraftById(int id);
 }
 

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Annulation de réservation</title>
+</head>
+<body>
+<h1>Annulation de Réservation</h1>
+<p>Bonjour <span th:text="${name}">Nom</span>,</p>
+<p>Nous vous confirmons l'annulation de votre réservation qui avait pour avion : <span th:text="${aircraftName}">Nom de l'avion</span> a été confirmée.</p>
+<p>et pour date : </p>
+<p>Date de départ : <span th:text="${borrowingDate}">Date de départ</span></p>
+<p>Date de retour : <span th:text="${returnDate}">Date de retour</span></p>
+<p>A bientôt !</p>
+
+</body>
+</html>
