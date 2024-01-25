@@ -19,6 +19,10 @@ import java.net.URI;
 import java.time.LocalDate;
 import java.util.*;
 
+/**
+ * ReservationController
+ * RestController, handle client request and provide entity Reservation data
+ */
 @RestController
 @Validated
 public class ReservationController {
@@ -30,7 +34,7 @@ public class ReservationController {
         this.reservationManager = reservationManager;
     }
 
-    @GetMapping(value = "/reservations")
+    @GetMapping(value = "/allReservations")
     public List<Reservation> getReservations() {
 
         logger.info("Providing reservation resource from database: all reservation list");
@@ -148,13 +152,6 @@ public class ReservationController {
         return ResponseEntity.ok().build();
     }
 
-    @GetMapping(value = "/aircraftsAvailableToday")
-    public List<Aircraft> getAvailableAircraftsToday() {
-
-        logger.info("Providing aircraft resource from database: available today aircraft list");
-
-        return reservationManager.getAvailableAircraftsToday();
-    }
 
     @GetMapping(value = "/existingReservation")
     public boolean getReservationByIdAndDate(int id, LocalDate borrowingDate, LocalDate returnDate){

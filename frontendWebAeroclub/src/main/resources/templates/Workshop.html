@@ -54,11 +54,12 @@
                           <td class="align-middle">
                               <span th:if="${w.getExitDate()}">Terminé</span>
                               <span th:unless="${w.getExitDate()}">En cours</span>
+                              <span th:if="${w.isCanceled()}">Annulé</span>
                           </td>
                           <td th:if="${#authorization.expression('hasAnyRole(''MECHANIC'', ''ADMIN'')')}">
-                                <a th:if="${w.getExitDate() == null}" class="btn btn-warning btn-block" th:href="@{/intervention/{id}(id=${w.id})}">Intervenir</a>
+                              <a th:if="${w.getExitDate() == null}" class="btn btn-warning btn-block" th:href="@{/intervention/{id}(id=${w.id})}">Intervenir</a>
                               <a th:if="${#authorization.expression('hasRole(''ADMIN'')')}" class="btn btn-success btn-block" th:href="@{/updateWorkshop/{id}(id=${w.id})}">Éditer</a>
-                              <a th:if="${#authorization.expression('hasRole(''ADMIN'')')}" onclick="return confirm('Etes-vous sur de vouloir supprimer cet avion ?')" th:href="@{'/workshop/' + ${w.id}}" class="btn btn-danger btn-block" >Supprimer</a>
+                              <a th:if="${w.isManual()}" onclick="return confirm('Etes-vous sur de vouloir annuler cette intervention ?')" th:href="@{'/workshop/' + ${w.id}}" class="btn btn-danger btn-block" >Annuler</a>
                           </td>
                       </tr>
 

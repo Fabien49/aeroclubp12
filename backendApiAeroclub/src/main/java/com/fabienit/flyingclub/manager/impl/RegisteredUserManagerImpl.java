@@ -19,7 +19,11 @@ public class RegisteredUserManagerImpl implements RegisteredUserManager {
 
     @Override
     public List<RegisteredUser> findAll() {
-        return registeredUserDao.findAll();
+
+        List<RegisteredUser> allUsers = registeredUserDao.findAll();
+        allUsers.removeIf(user -> "ADMIN".equals(user.getRoles()));
+
+        return allUsers;
     }
 
     @Override

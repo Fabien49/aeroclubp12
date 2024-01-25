@@ -20,8 +20,8 @@ public class SwaggerConfig {
     Logger logger = LoggerFactory.getLogger(this.getClass());
 
     /**
-     * Set displayed data by the micro service documentation
-     * @return
+     * Set displayed data by the microservice documentation
+     * @return swagger
      */
     @Bean
     public Docket api() {

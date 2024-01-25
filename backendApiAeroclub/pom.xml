@@ -115,6 +115,7 @@
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
+                <version>0.8.10</version>
                 <executions>
                     <execution>
                         <goals>
@@ -127,6 +128,22 @@
                         <goals>
                             <goal>report</goal>
                         </goals>
+                        <configuration>
+                            <excludes>
+                                <exclude>
+                                    com/fabienit/flyingclub/model/beans/*.class
+                                </exclude>
+                                <exclude>
+                                    com/fabienit/flyingclub/web/**
+                                </exclude>
+                                <exclude>
+                                    com/fabienit/flyingclub/manager/*.class
+                                </exclude>
+                                <exclude>
+                                    com/fabienit/flyingclub/configuration/*.class
+                                </exclude>
+                            </excludes>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>

@@ -16,7 +16,7 @@
       crossorigin="anonymous"
     />
 
-    <title>Inscription OC-Bibliothèque</title>
+    <title>Inscription d'un utilisateur</title>
   </head>
 
   <body>
@@ -76,6 +76,22 @@
                   class="alert alert-danger mb-2"
                 >
                   Validation error matchingPassword
+                </div>
+
+                <div
+                        th:each="error : ${#fields.errors('hours')}"
+                        th:text="${error}"
+                        class="alert alert-danger mb-2"
+                >
+                  Validation error hours
+                </div>
+
+                <div
+                        th:each="error : ${#fields.errors('role')}"
+                        th:text="${error}"
+                        class="alert alert-danger mb-2"
+                >
+                  Validation error role
                 </div>
 
                 <div
@@ -152,6 +168,31 @@
                     class="form-control"
                     id="passwordConfirmInput"
                   />
+                </div>
+
+                <!-- Field hours -->
+                <div class="form-group">
+                  <label th:text="#{label.user.hours}" for="hours"
+                  >hours</label
+                  >
+                  <input
+                          th:field="*{hours}"
+                          type="number"
+                          class="form-control"
+                          id="hours"
+                          th:attr="min=0, max=100000"
+                  />
+                </div>
+
+                <!-- Field role -->
+                <div class="form-group">
+                  <label th:text="#{label.user.role}" for="role"
+                  >role</label
+                  >
+                  <select th:field="*{role}" class="form-control" id="role">
+                    <option value="USER">USER</option>
+                    <option value="MECHANIC">MECHANIC</option>
+                  </select>
                 </div>
 
                 <!-- Submit button -->

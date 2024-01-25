@@ -21,6 +21,8 @@ public class WorkshopBean {
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate exitDate;
 
+    private boolean manual;
+    private boolean canceled;
     private AircraftBean aircraft;
 
     public WorkshopBean() {
@@ -30,13 +32,15 @@ public class WorkshopBean {
         this.id = id;
     }
 
-    public WorkshopBean(Integer id, Boolean motorChange, Boolean helixChange, String other, LocalDate entryDate, LocalDate exitDate, AircraftBean aircraft) {
+    public WorkshopBean(Integer id, Boolean motorChange, Boolean helixChange, String other, LocalDate entryDate, LocalDate exitDate, boolean manual, boolean canceled, AircraftBean aircraft) {
         this.id = id;
         this.motorChange = motorChange;
         this.helixChange = helixChange;
         this.other = other;
         this.entryDate = entryDate;
         this.exitDate = exitDate;
+        this.manual = manual;
+        this.canceled = canceled;
         this.aircraft = aircraft;
     }
 
@@ -88,6 +92,22 @@ public class WorkshopBean {
         this.exitDate = exitDate;
     }
 
+    public boolean isManual() {
+        return manual;
+    }
+
+    public void setManual(boolean manual) {
+        this.manual = manual;
+    }
+
+    public boolean isCanceled() {
+        return canceled;
+    }
+
+    public void setCanceled(boolean canceled) {
+        this.canceled = canceled;
+    }
+
     public AircraftBean getAircraft() {
         return aircraft;
     }
@@ -105,6 +125,8 @@ public class WorkshopBean {
                 ", other='" + other + '\'' +
                 ", entryDate=" + entryDate +
                 ", exitDate=" + exitDate +
+                ", manual=" + manual +
+                ", canceled=" + canceled +
                 ", aircraft=" + aircraft +
                 '}';
     }

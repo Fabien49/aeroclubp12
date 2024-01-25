@@ -28,7 +28,6 @@ public class EmailService {
         Context thymeleafContext = new Context();
         thymeleafContext.setVariables(templateModel);
         String htmlBody = templateEngine.process(templateName, thymeleafContext);
-        System.out.println("voici htmlBody : " + htmlBody);
 
         MimeMessage message = mailSender.createMimeMessage();
         MimeMessageHelper helper = new MimeMessageHelper(message, "utf-8");

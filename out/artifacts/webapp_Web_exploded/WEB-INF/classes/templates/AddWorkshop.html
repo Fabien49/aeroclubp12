@@ -33,6 +33,7 @@
                     <div class="card-body">
                     <form class="form-row align-items-center mx-auto" th:action="@{/addWorkshop}" th:object="${workshopBean}" method="post">
                         <input type="hidden" th:field="*{id}" />
+                        <input type="hidden" th:field="*{manual}" th:value="true"/>
                         <div class="col-md-6 mb-3 mx-auto">
                             <label for="mark">Sélectionnez un avion</label>
                             <select class="form-control" id="mark" th:field="*{aircraft.id}">
@@ -52,6 +53,7 @@
                         </div>
 
                         <input type="hidden" th:field="${currentDate}" />
+
 
                         <div class="col-md-3 mx-auto">
                             <button type="submit" class="btn btn-warning btn-block">Ajouter</button>

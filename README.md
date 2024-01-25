@@ -1,4 +1,4 @@
-#Bibliothequep10
+#Aeroclubp12
 
 ---
 
@@ -25,13 +25,13 @@ Les fonctions suivantes sont implémentées:
 
 ### Prérequis
 
-* _Java-8_ et plus, disponible [ici](https://www.oracle.com/technetwork/pt/java/javase/downloads/jdk8-downloads-2133151.html)
-* _SpringBoot-2.2.1_ et plus, disponible [ici](https://start.spring.io/)
+* _Java-11_ et plus, disponible [ici](https://www.oracle.com/fr/java/technologies/javase/jdk11-archive-downloads.html)
+* _SpringBoot-2.2.2_ et plus, disponible [ici](https://start.spring.io/)
 * _MySQL-8.0.28_ et plus, système de gestion de base de données, disponible [ici](https://dev.mysql.com/downloads/installer/).
 * _phpmyadmin-5.1.3_ et plus, outil d'administration de MySQL, disponible [ici](https://www.phpmyadmin.net/downloads/).
 * _Maven-3.6.1_ et plus, outil de gestion et d'automatisation de production des projets logiciels, disponible [ici](https://maven.apache.org/download.cgi)
-* Le répertoire du projet, disponible [ici](https://github.com/Fabien49/bibliothequeocp7)
-* _FakeSmtp-2.0_ et plus, emulateur de serveur smtp pour tester l'envoi de mails, disponible [ici](http://nilhcem.com/FakeSMTP/download.html)
+* Le répertoire du projet, disponible [ici](https://github.com/Fabien49/aeroclubp12)
+* _FakeSmtp-2.0_ et plus, emulateur de serveur smtp pour tester l'envoi de mails, disponible [ici](https://github.com/Nilhcem/FakeSMTPl)
 
 ### Paramétrage
 
@@ -96,24 +96,12 @@ spring.security.user.name=fabien
 spring.security.user.password=123456
 ```
 
-#### Nom et URL de l'API (Webapp et Batch seulement)
+#### Nom et URL de l'API (Webapp)
 
 ```properties
-api.name=biblio-api
+api.name=aeroclub-api
 api.url=localhost:8001
 ```
-
-#### Cron expression | Heure d'envoi des mails de relance (Batch seulement)
-
-```properties
-batch.time.event=00 00 10 * * ?
-```
-
-Seconde=00  
-Minute=00  
-Heure=10
-
-Dans cet exemple, l'envoi des mails de relance ce fera tous les jours à 10h 00min 00s. Il est modifiable dans le fichier application.properties du Batch.
 
 #### Configuration du compte SMTP
 
@@ -141,7 +129,7 @@ mail.password=""
 spring.profiles.active=dev
 ``` 
 
-2. Ouvrez le répertoire du service choisi, ex: /backendApiBiblio
+2. Ouvrez le répertoire du service choisi, ex: /backendApiAeroclub
 
 3. Ouvrez un terminal à cet emplacement
 
@@ -154,14 +142,14 @@ Cette commande va compiler le code, générer le package .jar et lancer l'applic
 
 ### III. Production
 
-1. Activer le mode production dans le fichier application.properties du répertoire /backendApiBiblio
+1. Activer le mode production dans le fichier application.properties du répertoire /backendApiAeroclub
 * Mettre en commentaire la ligne (mettre un # devant la ligne comme ci-dessous) qu'on souhaite désactiver si ce n'est pas déjà le cas.
  ```properties
 spring.profiles.active=prod  
 #spring.profiles.active=dev
 ``` 
 
-2. Ouvrez le répertoire du service choisi, ex: /backendApiBiblio/target
+2. Ouvrez le répertoire du service choisi, ex: /backendApiAeroclub/target
 
 3. Ouvrez un terminal à cet emplacement
 
@@ -178,19 +166,19 @@ Cette commande va compiler le code, générer le package .jar et lancer l'applic
 
 ### Import des données de démonstration en mode développeur
 
-1. Activer le mode développeur dans le fichier application.properties du répertoire /backendApiBiblio
+1. Activer le mode développeur dans le fichier application.properties du répertoire /backendApiAeroclub
 * Mettre en commentaire la ligne (mettre un # devant la ligne comme ci-dessous) qu'on souhaite désactiver si ce n'est pas déjà le cas.  
  ```properties
 #spring.profiles.active=prod  
 spring.profiles.active=dev
 ``` 
-2. Lancer le service api pour générer les tables dans la base de données, il lira automatiquement le fichier _data.sql_ dans /ressources. Ce dernier insèrera les données dans les différentes tables créées au préalable lors de lancement de l'api.
+2. Lancer le service api pour générer les tables dans la base de données, il lira automatiquement le fichier _data.sql_ dans /resources. Ce dernier insèrera les données dans les différentes tables créées au préalable lors du lancement de l'api.
 
 ### Import des données de démonstration
 
 1. Lancer une première fois le service api pour générer les tables dans la base de données.
 
-2. À l'aide de phpMyAdmin, éxécuter le script sql _data_demo.sql_.
+2. À l'aide de phpMyAdmin, éxécuter le script sql _data.sql_.
 
 Ce fichier se trouve dans le répertoire /database
 
@@ -218,7 +206,7 @@ Mot de passe : 123456
 * Rest
 * OpenFeign
 * Swagger
-* Thymleaf
+* Thymeleaf
 * Bootstrap
 * Maven
 

@@ -17,9 +17,7 @@ import org.springframework.stereotype.Service;
 
 import javax.persistence.EntityNotFoundException;
 import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 /**
@@ -29,10 +27,8 @@ import java.util.stream.Collectors;
 public class WebappServiceImpl implements WebappService {
 
     private final ReservationMapper reservationMapper;
-
     private final AircraftMapper aircraftMapper;
     private final ApiProxy apiProxy;
-
 
     Logger logger = LoggerFactory.getLogger(this.getClass());
 
@@ -51,17 +47,15 @@ public class WebappServiceImpl implements WebappService {
 
         logger.debug("Creating RegisteredUserBean for registration");
 
-        // Create new RegisteredUserBean
         RegisteredUserBean registered = new RegisteredUserBean();
 
-        // Fill it with user input
         registered.setFirstName(accountDto.getFirstName());
         registered.setLastName(accountDto.getLastName());
         registered.setEmail(accountDto.getEmail());
         registered.setPassword(accountDto.getPassword());
-        registered.setRoles("USER");
+        registered.setHours(accountDto.getHours());
+        registered.setRoles(accountDto.getRole());
 
-        // Call api proxy method to register new user
         return apiProxy.addRegisteredUser(registered);
     }
 
@@ -88,41 +82,34 @@ public class WebappServiceImpl implements WebappService {
     /**
      * Return true if a user is authenticated
      *
-     * @return
+     * @return authentication
      */
     @Override
     public Boolean getIsAuthenticated() {
 
-        // Get authentification context
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 
-        if (authentication instanceof AnonymousAuthenticationToken) {
-            return false;
-        }
-        return true;
+        return !(authentication instanceof AnonymousAuthenticationToken);
     }
 
     @Override
     public RegisteredUserBean getRegisteredUserById(int id) {
-        // Obtient l'utilisateur enregistré à partir de votre repository
-        // Cette logique dépend de votre modèle d'utilisateur et de votre repository
-            RegisteredUserBean registeredUserBean = apiProxy.getRegisteredUserById(id);
-            return registeredUserBean;
-        }
+        return apiProxy.getRegisteredUserById(id);
+    }
+
+    @Override
+    public List<RegisteredUserBean> getAllRegisteredUsers() {
+        return apiProxy.getRegisteredUsers();
+    }
 
     @Override
     public RegisteredUserBean updateRegisteredUser(int id, RegisteredUserBean updateRegisteredUserBean) {
-
-        updateRegisteredUserBean = apiProxy.updateRegisteredUser(id, updateRegisteredUserBean);
-
-        return updateRegisteredUserBean;
+        return apiProxy.updateRegisteredUser(id, updateRegisteredUserBean);
     }
 
 
     @Override
     public ResponseEntity<Void> modifyUserHours(int id, String action, int hoursToAdd) {
-        // Effectuez la logique métier pour modifier les heures de l'utilisateur
-        // Vous pouvez utiliser le repository pour récupérer et mettre à jour les données
         RegisteredUserBean registeredUserBean = apiProxy.getRegisteredUserById(id);
 
         if ("add".equals(action)) {
@@ -132,42 +119,21 @@ public class WebappServiceImpl implements WebappService {
             registeredUserBean.setHours(Math.max(0, remainingHours));
         }
 
-       return apiProxy.modifyRegisteredUserHours(id, action, hoursToAdd);
+        return apiProxy.modifyRegisteredUserHours(id, action, hoursToAdd);
     }
 
     @Override
     public int getUserTotalHours(int id) {
-        // Utilisez le repository pour récupérer les heures actuelles de l'utilisateur
         RegisteredUserBean registeredUserBean = apiProxy.getRegisteredUserById(id);
         return registeredUserBean.getHours();
     }
 
-    /**
-     * Get active borrows (bookReturned = false) for current authenticated user
-     */
+
     @Override
-    public List<BorrowBean> getActiveBorrowsByRegisteredUserId() {
-
-        logger.debug("Getting active borrows for current authenticated user");
-
-        // Get authenticated user id
-        int authenticatedUserId = getAuthenticatedRegisteredUserId();
-
-        // Init currentUserActiveBorrows list
-        List<BorrowBean> currentUserActiveBorrows = new ArrayList<>();
-
-        // Get list of borrows by user id
-        List<BorrowBean> authenticatedUserBorrows = apiProxy.getBorrowsByUserId(authenticatedUserId);
-
-        // Record only active borrows in currentUserActiveBorrows list
-        for (BorrowBean borrowBean : authenticatedUserBorrows) {
-            if (!borrowBean.getBookReturned()) {
-                currentUserActiveBorrows.add(borrowBean);
-            }
-        }
-
-        return currentUserActiveBorrows;
+    public List<ReservationBean> getAllReservation(){
+        return apiProxy.getAllReservation();
     }
+
 
     @Override
     public ReservationBean getReservationById(int id) {
@@ -176,7 +142,6 @@ public class WebappServiceImpl implements WebappService {
 
     /**
      * Get reservation list for authenticated user
-     *
      */
     @Override
     public List<ReservationBean> getReservationsByRegisteredUserId() {
@@ -185,9 +150,7 @@ public class WebappServiceImpl implements WebappService {
 
         int authenticatedUserId = getAuthenticatedRegisteredUserId();
 
-        List<ReservationBean> authenticatedUserReservationsList = apiProxy.getReservationByRegisteredUser(authenticatedUserId);
-
-        return authenticatedUserReservationsList;
+        return apiProxy.getReservationByRegisteredUser(authenticatedUserId);
     }
 
     @Override
@@ -202,10 +165,7 @@ public class WebappServiceImpl implements WebappService {
 
     @Override
     public AircraftBean getAircraftById(int id) {
-
-        AircraftBean aircraftBean = apiProxy.getAircraftById(id);
-
-        return aircraftBean;
+        return apiProxy.getAircraftById(id);
     }
 
     @Override
@@ -214,31 +174,10 @@ public class WebappServiceImpl implements WebappService {
     }
 
 
-
-    /**
-     * Get list of aircraft already reserved by authenticated user
-     *
-     * @param authenticatedUserId
-     * @return
-     */
-    @Override
-    public List<Integer> getAircraftIdReservationsList(int authenticatedUserId) {
-
-        List<Integer> bookIdReservationList = new ArrayList<>();
-
-        List<ReservationBean> reservationList = apiProxy.getReservationByRegisteredUser(authenticatedUserId);
-
-/*        for (ReservationBean reservation : reservationList) {
-            bookIdReservationList.add(reservation);
-        }*/
-
-        return bookIdReservationList;
-    }
-
     @Override
     public AircraftBean updateAircraft(int id, AircraftBean aircraftBean) {
 
-        if(aircraftBean.getMotorHours()>= 10000){
+        if (aircraftBean.getMotorHours() >= 10000) {
             aircraftBean.setAvailable(false);
             aircraftBean = apiProxy.updateAircraft(id, aircraftBean);
             WorkshopBean workshopBean = new WorkshopBean();
@@ -246,26 +185,15 @@ public class WebappServiceImpl implements WebappService {
             workshopBean.setEntryDate(LocalDate.now());
             workshopBean.setMotorChange(false);
             workshopBean.setHelixChange(false);
+            workshopBean.setManual(false);
+            workshopBean.setCanceled(false);
             apiProxy.addWorkshop(workshopBean);
-        }else {
+        } else {
             aircraftBean = apiProxy.updateAircraft(id, aircraftBean);
         }
 
-
         return aircraftBean;
     }
-
-    @Override
-    public List<Integer> getBookIdActiveBorrowList() {
-        return null;
-    }
-
-
-    @Override
-    public List<AircraftBean> checkIfAircraftIsAvailable() {
-        return null;
-    }
-
 
     @Override
     public List<AircraftDto> getAvailableAircrafts() {
@@ -284,10 +212,7 @@ public class WebappServiceImpl implements WebappService {
 
     @Override
     public WorkshopBean getWorkshopBeanById(int id) {
-
-        WorkshopBean workshopBean = apiProxy.getWorkshopById(id);
-
-        return workshopBean;
+        return apiProxy.getWorkshopById(id);
     }
 
     @Override
@@ -312,18 +237,15 @@ public class WebappServiceImpl implements WebappService {
     public RegisteredUserReservationDto convertToDTO(RegisteredUserBean registeredUserBean) {
         RegisteredUserReservationDto registeredUserReservationDto = new RegisteredUserReservationDto();
         registeredUserReservationDto.setId(registeredUserBean.getId());
-        // Ajoutez d'autres champs si nécessaire
         return registeredUserReservationDto;
     }
 
     @Override
-    public  ResponseEntity<Void> createReservation(ReservationDto reservationDto) {
+    public ResponseEntity<Void> createReservation(ReservationDto reservationDto) {
 
         ReservationBean reservationBean = reservationMapper.convertToEntity(reservationDto);
-        System.out.println("reservationBean dans le webappService : " + reservationBean.toString());
 
-
-        return    apiProxy.addReservation(reservationBean);
+        return apiProxy.addReservation(reservationBean);
     }
 
     @Override
@@ -342,18 +264,13 @@ public class WebappServiceImpl implements WebappService {
 
         if (reservationBean != null) {
             reservationBean.setCanceled(true);
-
-            // Sauvegarde de la réservation mise à jour dans la base de données
-            apiProxy.updateReservation(id,reservationBean);
+            apiProxy.updateReservation(id, reservationBean);
             return ResponseEntity.noContent().build();
         } else {
-            // Gérer le cas où la réservation n'est pas trouvée
             throw new EntityNotFoundException("La réservation avec l'ID " + id + " n'a pas été trouvée.");
         }
 
     }
-
-
 
 }
 

@@ -28,5 +28,4 @@ public interface ReservationManager {
 
     boolean existsReservationByIdAndDate(int id, LocalDate startDate, LocalDate endDate);
 
-    List<Aircraft> getAvailableAircraftsToday();
 }

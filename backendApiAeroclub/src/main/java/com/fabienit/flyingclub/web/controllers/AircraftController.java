@@ -1,6 +1,5 @@
 package com.fabienit.flyingclub.web.controllers;
 
-import com.fabienit.flyingclub.dao.AircraftDao;
 import com.fabienit.flyingclub.manager.AircraftManager;
 import com.fabienit.flyingclub.manager.UtilsManager;
 import com.fabienit.flyingclub.model.beans.Aircraft;
@@ -22,7 +21,6 @@ import java.util.*;
 
 /**
  * AircraftController
- * 
  * RestController, handle client request and provide entity Aircraft data
  */
 @RestController

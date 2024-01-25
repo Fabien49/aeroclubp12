@@ -22,8 +22,7 @@ import java.util.*;
 
 /**
  * FlyingClubController
- * 
- * RestController, handle client request and provide entity Aircraft data
+ * RestController, handle client request and provide entity FlyingClub data
  */
 @RestController
 @Validated

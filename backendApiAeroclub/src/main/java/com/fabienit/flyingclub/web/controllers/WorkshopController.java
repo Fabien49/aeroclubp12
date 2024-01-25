@@ -22,8 +22,7 @@ import java.util.*;
 
 /**
  * WorkshopController
- * 
- * RestController, handle client request and provide entity Aircraft data
+ * RestController, handle client request and provide entity Workshop data
  */
 @RestController
 @Validated

@@ -1,10 +1,5 @@
-2023-12-03 21:07:16,828 INFO com.fabienit.flyingclub.AeroclubApiApplication [main] Starting AeroclubApiApplication on FABPC with PID 17480 (started by FaB PC in C:\Users\FaB\Git\Projet 12\aeroclubp12\backendApiAeroclub)
-2023-12-03 21:07:16,848 DEBUG com.fabienit.flyingclub.AeroclubApiApplication [main] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
-2023-12-03 21:07:16,853 INFO com.fabienit.flyingclub.AeroclubApiApplication [main] The following profiles are active: dev
-2023-12-03 21:07:24,183 DEBUG configuration.com.fabien.flyingclub.SwaggerConfig$$EnhancerBySpringCGLIB$$6ce39764 [main] Set Swagger2 documentation
-2023-12-03 21:07:25,116 INFO com.fabienit.flyingclub.AeroclubApiApplication [main] Started AeroclubApiApplication in 8.87 seconds (JVM running for 9.98)
-2023-12-03 21:08:12,178 INFO controllers.web.com.fabien.flyingclub.RegisteredUserController [http-nio-8001-exec-1] Search user by email: test1@gmail.com
-2023-12-03 21:12:04,591 INFO controllers.web.com.fabien.flyingclub.RegisteredUserController [http-nio-8001-exec-3] Search user by email: test1@gmail.com
-2023-12-03 21:18:03,152 INFO controllers.web.com.fabien.flyingclub.RegisteredUserController [http-nio-8001-exec-6] Search user by email: test1@gmail.com
-2023-12-03 21:22:38,927 INFO controllers.web.com.fabien.flyingclub.RegisteredUserController [http-nio-8001-exec-7] Search user by email: test1@gmail.com
-2023-12-03 21:22:43,727 INFO controllers.web.com.fabien.flyingclub.WorkshopController [http-nio-8001-exec-8] Providing revision resource from database: all revisions list
+2024-01-24 21:29:29,878 INFO com.fabienit.flyingclub.manager.impl.unit.UtilsManagerImplTest [main] Starting UtilsManagerImplTest on FABPC with PID 16252 (started by FaB PC in C:\Users\FaB\Git\Projet 12\aeroclubp12\backendApiAeroclub)
+2024-01-24 21:29:29,894 DEBUG com.fabienit.flyingclub.manager.impl.unit.UtilsManagerImplTest [main] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2024-01-24 21:29:29,895 INFO com.fabienit.flyingclub.manager.impl.unit.UtilsManagerImplTest [main] The following profiles are active: integration
+2024-01-24 21:29:44,055 DEBUG com.fabienit.flyingclub.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$817fe7d2 [main] Set Swagger2 documentation
+2024-01-24 21:29:46,555 INFO com.fabienit.flyingclub.manager.impl.unit.UtilsManagerImplTest [main] Started UtilsManagerImplTest in 17.557 seconds (JVM running for 21.291)

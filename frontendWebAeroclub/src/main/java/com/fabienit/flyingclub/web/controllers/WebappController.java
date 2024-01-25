@@ -32,12 +32,9 @@ import java.util.*;
 @Controller
 public class WebappController {
 
-
     private final ApiProxy apiProxy;
     private final WebappService webappService;
-
     private final AircraftMapper aircraftMapper;
-
     private final ReservationMapper reservationMapper;
 
     Logger logger = LoggerFactory.getLogger(this.getClass());
@@ -64,7 +61,6 @@ public class WebappController {
 
         List<AircraftBean> aircrafts = apiProxy.getAircrafts();
         model.addAttribute("aircrafts", aircrafts);
-        System.out.println("############################### Voici la liste des avions : " + aircrafts);
 
         Boolean isAuthenticated = webappService.getIsAuthenticated();
 
@@ -210,7 +206,7 @@ public class WebappController {
             return "Registration";
         } else {
             model.addAttribute("user", accountDto);
-            return "SuccesRegister";
+            return "redirect:allUsers";
         }
 
     }
@@ -224,6 +220,26 @@ public class WebappController {
         return "Login";
     }
 
+    @GetMapping(value = "/allUsers")
+    public String getAllRegisteredUserPage(Model model) {
+
+        logger.info("Reach url: /allUsers - GET");
+
+        Boolean isAuthenticated = webappService.getIsAuthenticated();
+
+        if (isAuthenticated) {
+            int id = webappService.getAuthenticatedRegisteredUserId();
+            RegisteredUserBean registeredUserBean = new RegisteredUserBean();
+            registeredUserBean.setId(id);
+
+            List<RegisteredUserBean> reservationBeanList = webappService.getAllRegisteredUsers();
+
+            model.addAttribute("allUsers", reservationBeanList);
+        }
+
+        return "allUsers";
+    }
+
     @GetMapping(value = "/profile")
     public String getProfilePage(Model model) {
 
@@ -235,45 +251,40 @@ public class WebappController {
             int id = webappService.getAuthenticatedRegisteredUserId();
             RegisteredUserBean registeredUserBean = new RegisteredUserBean();
             registeredUserBean.setId(id);
-
-            // Get registeredUser
-             registeredUserBean = webappService.getRegisteredUserById(id);
+            registeredUserBean = webappService.getRegisteredUserById(id);
 
             model.addAttribute("registeredUser", registeredUserBean);
         }
-
 
         return "Profile";
     }
 
     @GetMapping("/profile/updateRegisteredUser")
-    public String upddateRegisteredUserForm(Model model){
+    public String upddateRegisteredUserForm(@RequestParam(name = "id", required = false) Integer id, Model model){
         logger.info("Reach url: /profile/updateRegisteredUserForm - GET");
 
         Boolean isAuthenticated = webappService.getIsAuthenticated();
 
-        if (isAuthenticated) {
-            int id = webappService.getAuthenticatedRegisteredUserId();
-            RegisteredUserBean registeredUserBean = new RegisteredUserBean();
-            registeredUserBean.setId(id);
-
-            // Get registeredUser
-            registeredUserBean = webappService.getRegisteredUserById(id);
-
+        if (id != null) {
+            RegisteredUserBean registeredUserBean = webappService.getRegisteredUserById(id);
             model.addAttribute("registeredUser", registeredUserBean);
-
-            System.out.println("888888888888888888888888888888888888888888888888888888888888" + registeredUserBean);
+            return "UpdateRegisteredUser" ;
+        } else {
+            if (isAuthenticated) {
+                int registeredUserId = webappService.getAuthenticatedRegisteredUserId();
+                RegisteredUserBean registeredUserBean = new RegisteredUserBean();
+                registeredUserBean.setId(registeredUserId);
+                registeredUserBean = webappService.getRegisteredUserById(registeredUserId);
+                model.addAttribute("registeredUser", registeredUserBean);
+            }
         }
-
         return "UpdateRegisteredUser";
     }
 
     @PostMapping("/profile/updateRegisteredUser/{id}")
     public String updateRegisteredUser(@PathVariable int id, @ModelAttribute("registeredUser") RegisteredUserBean updateRegisteredUserFormDto, BindingResult result, RedirectAttributes redirectAttributes, Model model){
 
-// Valider les données mises à jour
         if (result.hasErrors()) {
-            // Si des erreurs de validation existent, retourner à la page de mise à jour avec les erreurs
             return "UpdateRegisteredUser";
         }
 
@@ -284,24 +295,25 @@ public class WebappController {
         updateRegisteredUserFormDto.setPassword(updateRegisteredUserFormDto.getPassword());
         updateRegisteredUserFormDto.setRoles(updateRegisteredUserFormDto.getRoles());
 
-        System.out.println(updateRegisteredUserFormDto.getRoles());
-
-
-        // Mettre à jour l'utilisateur
         try {
             webappService.updateRegisteredUser(id, updateRegisteredUserFormDto);
             redirectAttributes.addFlashAttribute("successMessage", "Utilisateur mis à jour avec succès!");
         } catch (FeignException e) {
-            // Gérer les erreurs liées à la mise à jour de l'utilisateur
             redirectAttributes.addFlashAttribute("errorMessage", "Erreur lors de la mise à jour de l'utilisateur.");
         }
 
         model.addAttribute("updateRegisteredUserFormDto", updateRegisteredUserFormDto);
 
-        System.out.println("77777777777777777777777777777777777777777777777777777777" + updateRegisteredUserFormDto);
+        int registeredUserId = webappService.getAuthenticatedRegisteredUserId();
+        RegisteredUserBean registeredUserBean = new RegisteredUserBean();
+        registeredUserBean.setId(registeredUserId);
+        registeredUserBean = webappService.getRegisteredUserById(registeredUserId);
 
-        // Rediriger vers une page de confirmation ou une autre vue
-        return "redirect:/profile";
+        if(registeredUserBean.getRoles().equals("ADMIN")){
+            return "redirect:/allUsers";
+        }
+
+       return "redirect:/profile";
     }
 
 
@@ -381,10 +393,46 @@ public class WebappController {
             canceledReservationDto.setCanceled(true);
             model.addAttribute("canceledReservationDto",canceledReservationDto);
 
-
         }
 
         return "Reservations";
+    }
+
+    @GetMapping(value = "/allReservations")
+    public String getAllReservationPage(Model model) {
+
+        logger.info("Reach url: /allReservations - GET");
+
+        Boolean isAuthenticated = webappService.getIsAuthenticated();
+
+        if (isAuthenticated) {
+            int id = webappService.getAuthenticatedRegisteredUserId();
+            RegisteredUserBean registeredUserBean = new RegisteredUserBean();
+            registeredUserBean.setId(id);
+
+
+            // Get available aircrafts
+            List<AircraftDto> availableAircrafts = webappService.getAvailableAircrafts();
+            model.addAttribute("availableAircrafts", availableAircrafts);
+
+
+            // Get all reservations list
+            List<ReservationBean> reservationsList = webappService.getAllReservation();
+
+            model.addAttribute("currentDate", LocalDate.now());
+            model.addAttribute("reservationsList", reservationsList);
+
+            ReservationDto reservationDto = new ReservationDto();
+            reservationDto.setRegisteredUserId(id);
+            model.addAttribute("reservationDto", reservationDto);
+
+            CanceledReservationDto canceledReservationDto = new CanceledReservationDto();
+            canceledReservationDto.setCanceled(true);
+            model.addAttribute("canceledReservationDto",canceledReservationDto);
+
+        }
+
+        return "allReservations";
     }
 
     @GetMapping(value = "/addDateReservation")
@@ -493,23 +541,30 @@ public class WebappController {
         return "redirect:/reservations";
     }
 
-    /**
-     *
-     */
+
     @PostMapping(value = "/canceledReservation/{id}")
     public String canceledReservation(@PathVariable int id, RedirectAttributes redirectAttributes) {
 
         logger.info("Reach url: /canceledReservation - POST");
-        webappService.canceledReservation(id);
 
-        System.out.println("La réservation que l'on veut annuler à l'ID suivant : " + id + "::::::::::::::::::::::::::::::");
-        redirectAttributes.addAttribute("canceledReservation", true);
+        Boolean isAuthenticated = webappService.getIsAuthenticated();
+
+        if (isAuthenticated) {
+            int registeredUserId = webappService.getAuthenticatedRegisteredUserId();
+            RegisteredUserBean registeredUserBean = webappService.getRegisteredUserById(registeredUserId);
+            webappService.canceledReservation(id);
+            redirectAttributes.addAttribute("canceledReservation", true);
+
+            if (Objects.equals(registeredUserBean.getRoles(), "ADMIN")){
+                return "redirect:/allReservations";
+            }
+
+        }
+
         return "redirect:/reservations";
     }
 
-    /**
-     *
-     */
+
     @RequestMapping(value = "/reservations/{id}")
     public String deleteReservation(@PathVariable int id, RedirectAttributes redirectAttributes) {
 
@@ -699,6 +754,7 @@ public class WebappController {
         LocalDate currentDate = LocalDate.now();
         model.addAttribute("currentDate", currentDate);
         WorkshopBean workshopBean = new WorkshopBean();
+        workshopBean.setManual(true);
         model.addAttribute("workshopBean", workshopBean);
         List<AircraftDto> aircraftDtoList = webappService.getAvailableAircrafts();
         model.addAttribute("aircraftAvailable", aircraftDtoList);

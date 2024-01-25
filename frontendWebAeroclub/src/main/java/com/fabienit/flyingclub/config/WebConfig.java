@@ -21,6 +21,7 @@ public class WebConfig implements WebMvcConfigurer {
 
     /**
      * Set message source to display by thymleaf in html pages, set source message.properties file src/main/resources folder
+     @return messageSource
      */
     @Bean
     @Description("Spring Message Resolver")

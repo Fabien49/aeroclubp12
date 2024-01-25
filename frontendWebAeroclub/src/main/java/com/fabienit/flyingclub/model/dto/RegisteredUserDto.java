@@ -38,6 +38,13 @@ public class RegisteredUserDto {
     @Size(min = 6, message = "La confirmation du mot de passse doit contenir au minimum 6 caractères.")
     private String matchingPassword;
 
+    @NotNull(message = "Saisir un nombre d'heures de vol (0 si nouveau pilote).")
+    private int hours;
+
+    @NotNull
+    @NotEmpty(message = "Choisir un rôle.")
+    private String role;
+
     public RegisteredUserDto() {
     }
 
@@ -81,10 +88,32 @@ public class RegisteredUserDto {
         this.matchingPassword = matchingPassword;
     }
 
-    @Override
-    public String toString() {
-        return "RegisteredUserDto [email=" + email + ", firstName=" + firstName + ", lastName=" + lastName
-                + ", matchingPassword=" + matchingPassword + ", password=" + password + "]";
+    public int getHours() {
+        return hours;
     }
 
+    public void setHours(int hours) {
+        this.hours = hours;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
+
+    @Override
+    public String toString() {
+        return "RegisteredUserDto{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", matchingPassword='" + matchingPassword + '\'' +
+                ", hours=" + hours +
+                ", role='" + role + '\'' +
+                '}';
+    }
 }

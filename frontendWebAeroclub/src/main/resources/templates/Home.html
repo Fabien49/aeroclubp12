@@ -62,7 +62,8 @@
                 <div class="border-secondary shadow card h-60">
                     <img class="card-img-top" src="http://localhost/aeroclubp12/reservation.png" alt="reservation " height="200">
                     <div class="card-body d-flex flex-column">
-                        <a class="stretched-link btn btn-warning mt-auto" role="button" href="/reservations">Réservations</a>
+                        <a th:if="${#authorization.expression('hasRole(''ADMIN'')')}" class="stretched-link btn btn-warning mt-auto" role="button" href="/allReservations">Réservations</a>
+                        <a th:unless="${#authorization.expression('hasRole(''ADMIN'')')}" class="stretched-link btn btn-warning mt-auto" role="button" href="/reservations">Réservations</a>
                     </div>
                 </div>
             </div>

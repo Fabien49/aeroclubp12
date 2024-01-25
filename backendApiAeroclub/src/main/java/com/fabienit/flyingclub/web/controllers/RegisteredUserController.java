@@ -29,13 +29,11 @@ import java.util.Optional;
 @Validated
 public class RegisteredUserController {
 
-    private final RegisteredUserDao registeredUserDao;
     private final RegisteredUserManager registeredUserManager;
 
     Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    public RegisteredUserController(RegisteredUserDao registeredUserDao, RegisteredUserManager registeredUserManager) {
-        this.registeredUserDao = registeredUserDao;
+    public RegisteredUserController(RegisteredUserManager registeredUserManager) {
         this.registeredUserManager = registeredUserManager;
     }
 

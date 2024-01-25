@@ -200,6 +200,8 @@ insert into workshop (
     other,
     entry_date,
     exit_date,
+    manual,
+    canceled,
     aircraft_id
 )
 VALUES
@@ -209,6 +211,8 @@ VALUES
         '',
         '2023-09-13',
         '2023-09-14',
+        false,
+        false,
         1
     ),
     (
@@ -217,6 +221,8 @@ VALUES
         '',
         '2023-09-29',
         '2023-09-30',
+        false,
+        false,
         3
     ),
     (
@@ -225,6 +231,8 @@ VALUES
         '',
         '2023-10-09',
         '2023-10-11',
+        false,
+        false,
         2
     ),
     (
@@ -233,6 +241,8 @@ VALUES
         '',
         '2024-01-15',
         null,
+        false,
+        false,
         5
     ),
     (
@@ -241,9 +251,10 @@ VALUES
         '',
         '2024-01-13',
         null,
+        false,
+        false,
         2
     );
-
 
 
     -- Create Reservation

@@ -21,13 +21,15 @@ public interface WebappService {
 
     RegisteredUserBean getRegisteredUserById(int id);
 
+    List<RegisteredUserBean> getAllRegisteredUsers();
+
     RegisteredUserBean updateRegisteredUser(int id, RegisteredUserBean updateRegisteredUserFormDto);
 
     ResponseEntity<Void> modifyUserHours(int id, String action, int hoursToAdd);
 
     int getUserTotalHours(int id);
 
-    List<BorrowBean> getActiveBorrowsByRegisteredUserId();
+    List<ReservationBean> getAllReservation();
 
     ReservationBean getReservationById(int id);
 
@@ -48,13 +50,7 @@ public interface WebappService {
 
     AircraftBean getAircraftByReservationId (int id);
 
-    List<Integer> getAircraftIdReservationsList(int authenticatedUserId);
-
     AircraftBean updateAircraft(int id, AircraftBean aircraftBean);
-
-    List<Integer> getBookIdActiveBorrowList();
-
-    List<AircraftBean> checkIfAircraftIsAvailable();
 
     List<AircraftDto> getAvailableAircrafts();
 
@@ -65,5 +61,6 @@ public interface WebappService {
     ResponseEntity<Void> createWorkshop(WorkshopBean workshopBean);
     WorkshopBean updateWorkshopBean (int id, WorkshopBean workshopBean);
     WorkshopBean saveIntervention (int id, WorkshopBean workshopBean);
+
 
 }

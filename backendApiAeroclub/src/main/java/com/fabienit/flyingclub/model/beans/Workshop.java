@@ -39,6 +39,12 @@ public class Workshop implements Serializable {
     @Column(name = "exit_date")
     private LocalDate exitDate;
 
+    @Column(name = "manual")
+    private boolean manual;
+
+    @Column(name = "canceled")
+    private boolean canceled;
+
     @ManyToOne
     @JoinColumn(name = "aircraft_id")
     private Aircraft aircraft;
@@ -46,13 +52,15 @@ public class Workshop implements Serializable {
     public Workshop() {
     }
 
-    public Workshop(int id, Boolean motorChange, Boolean helixChange, String other, LocalDate entryDate, LocalDate exitDate, Aircraft aircraft) {
+    public Workshop(int id, Boolean motorChange, Boolean helixChange, String other, LocalDate entryDate, LocalDate exitDate, boolean manual, boolean canceled, Aircraft aircraft) {
         this.id = id;
         this.motorChange = motorChange;
         this.helixChange = helixChange;
         this.other = other;
         this.entryDate = entryDate;
         this.exitDate = exitDate;
+        this.manual = manual;
+        this.canceled = canceled;
         this.aircraft = aircraft;
     }
 
@@ -104,6 +112,22 @@ public class Workshop implements Serializable {
         this.exitDate = exitDate;
     }
 
+    public boolean isManual() {
+        return manual;
+    }
+
+    public void setManual(boolean manual) {
+        this.manual = manual;
+    }
+
+    public boolean isCanceled() {
+        return canceled;
+    }
+
+    public void setCanceled(boolean canceled) {
+        this.canceled = canceled;
+    }
+
     public Aircraft getAircraft() {
         return aircraft;
     }
@@ -129,7 +153,6 @@ public class Workshop implements Serializable {
         return getClass().hashCode();
     }
 
-
     @Override
     public String toString() {
         return "Workshop{" +
@@ -139,6 +162,8 @@ public class Workshop implements Serializable {
                 ", other='" + other + '\'' +
                 ", entryDate=" + entryDate +
                 ", exitDate=" + exitDate +
+                ", manual=" + manual +
+                ", canceled=" + canceled +
                 ", aircraft=" + aircraft +
                 '}';
     }

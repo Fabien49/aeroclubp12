@@ -126,39 +126,7 @@ public class ReservationManagerImpl implements ReservationManager {
 
     @Override
     public boolean existsReservationByIdAndDate(int id, LocalDate startDate, LocalDate endDate) {
-        System.out.println( "TEST DAO : " + reservationDao.existsReservationByIdAndDate(id, startDate, endDate));
         return reservationDao.existsReservationByIdAndDate(id, startDate, endDate);
     }
 
-    @Override
-    public List<Aircraft> getAvailableAircraftsToday() {
-        List<Aircraft> availableAircrafts = new ArrayList<>();
-
-        List<Reservation> reservations = reservationDao.findAll();
-
-        LocalDate currentDate = LocalDate.now();
-        System.out.println(currentDate);
-
-        if (reservations.isEmpty()) {
-            availableAircrafts.addAll(aircraftDao.findAllByIsAvailableTrue());
-        } else {
-
-            for (Reservation reservation : reservations) {
-                if (reservation.getReturnDate().isBefore(currentDate) && !reservation.getReturnDate().equals(currentDate)) {
-                    Aircraft aircraft = aircraftDao.findById(reservation.getAircraft().getId()).orElse(null);
-                    if (aircraft != null && !availableAircrafts.contains(aircraft)) {
-                        availableAircrafts.add(aircraft);
-                    }
-                    System.out.println(availableAircrafts);
-                }
-            }
-        }
-            return availableAircrafts;
-    }
-
 }
-
-
-
-
-

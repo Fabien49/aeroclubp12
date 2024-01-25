@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+
+
+    <title>Réservations</title>
+  </head>
+
+
+
+  <body>
+  <div class="container-fluid px-0">
+      <div th:replace="Header :: header"></div>
+      <div class="container">
+        <div class="row">
+          <!--<div class="col">
+        <div sec:authorize="isAuthenticated()" class="border-secondary shadow jumbotron">
+                <form class="form-row" th:action="@{/saveReservation}" th:object="${reservationDto}" method="post">
+                    <input type="hidden" th:field="${reservationDto.registeredUserId}"/>
+                        <div class="col-md-4 mb-3">
+                            <label for="borrowingDate">Date d'emprunt</label>
+                            <input type="date" class="form-control" name="borrowingDate" id="borrowingDate" th:field="*{borrowingDate}" required/>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="returnDate">Date de retour</label>
+                            <input type="date" class="form-control" name="returnDate" id="returnDate" th:field="*{returnDate}" required/>
+                        </div>
+
+                    <div class="col-md-4 mb-3">
+                        <label for="aircraftDropdown">Avion:</label>
+                        <select id="aircraftDropdown" name="aircraftDropdown" class="form-control" th:field="*{aircraftDto}">
+                        </select>
+                    </div>
+
+&lt;!&ndash;                        <div class="col-md-4 mb-3">
+                            <div th:if="${#fields.hasErrors('aircraftDto')}">
+                                <p th:each="err : ${#fields.errors('aircraftDto')}" th:text="${err}"></p>
+                            </div>
+
+                            <label for="aircraft">Avion:</label>
+                            <select th:field="*{aircraftDto.id}" class="form-control" name="aircraft" id="aircraft">
+                                <option th:each="aircraft : ${availableAircrafts}" th:value="${aircraft.id}" th:text="${aircraft.mark}">
+                                </option>
+                            </select>
+                        </div>&ndash;&gt;
+                        <div class="col-md-3 mb-3">
+                            <button type="submit" class="form-control btn btn-warning text-center font-weight-bold">Réserver</button>
+                        </div>
+                </form>
+              <div>
+            </div>
+          </div>
+        </div>
+      </div>
+-->
+
+      <div class="col-12">
+          <div class="border-secondary shadow card h-100">
+              <div class="card-body">
+                  <a class="btn btn-warning" th:href="@{/addDateReservation}">Réserver un avion</a>
+                  <div class="table-responsive-sm table-responsive-md table-responsive-lg">
+                      <CAPTION> <h1 class="text-center">Liste des réservations </h1></CAPTION>
+                      <table th:object="${reservationsList}" class="table table-bordered table-striped table">
+                          <thead class="bg-info text-white">
+                          <tr>
+                              <th>Nom</th>
+                              <th>Prénom</th>
+                              <th>Date d'emprunt</th>
+                              <th>Date de retour</th>
+                              <th>Avion</th>
+                              <th>Etat</th>
+                              <th>Action</th>
+                          </tr>
+                          </thead>
+
+                          <tr th:each="r:${reservationsList}">
+                                  <td class="align-middle" th:text="${r.getRegisteredUser().lastName}"></td>
+                                  <td class="align-middle" th:text="${r.getRegisteredUser().firstName}"></td>
+                                  <td class="align-middle" th:text="${r.getBorrowingDate()}"></td>
+                                  <td class="align-middle" th:text="${r.getReturnDate()}"></td>
+                                  <td class="align-middle" th:text="${r.aircraft.mark}"></td>
+                                  <td class="align-middle">
+                                      <span th:if="${r.finished}">Terminé</span>
+                                      <span th:if="${!r.finished and !r.canceled}">En cours</span>
+                                      <span th:if="${r.canceled}">Annulé</span>
+                                  </td>
+                                  <td class="align-middle">
+                                      <div th:if="${!r.finished and !r.canceled}">
+                                          <div th:if="${r.returnDate.isEqual(currentDate) or currentDate.isAfter(r.returnDate)}">
+                                              <a class="btn btn-warning btn-block mb-2" th:href="@{'/confirmFinishReservation/' + ${r.id}}">Clôturer</a>
+                                          </div>
+                                      </div>
+                                      <div th:if="${!r.finished and !r.canceled}">
+                                          <form th:action="@{'/canceledReservation/' + ${r.id}}" method="post" >
+                                              <input type="hidden" name="canceledReservationDto" th:value="${canceledReservationDto}"/>
+                                              <button class="btn btn-danger btn-block mt-2" type="submit" onclick="return confirm('Etes-vous sûr de vouloir annuler cette réservation ?')">Annuler</button>
+                                          </form>
+                                      </div>
+                                      <div th:if="${!r.finished and !r.canceled and !(r.returnDate.isEqual(currentDate) or currentDate.isAfter(r.returnDate))}">
+                                            <a type="button" th:href="@{'/updateReservation/' + ${r.id}}" class="btn btn-info btn-block mt-2" >Modifier</a>
+                                      </div>
+                                  </td>
+                          </tr>
+                  </table>
+                  <ul class="nav nav-pills">
+                      <li  th:each="page,status:${pages}">
+                          <a  th:class="${status.index == currentPage?'btn btn-primary' : 'btn'}" th:href="@{topoListe(page=${status.index}, keyword=${keyword}, disponible=${disponible})}" th:text="${status.index + 1}"></a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </div>
+  </div>
+  </div>
+
+
+                                <div sec:authorize="isAnonymous()">
+                                    <a class="btn btn-info" th:href="@{/connexion}" role="button">Réserver</a>
+                                </div>
+                            </span>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
