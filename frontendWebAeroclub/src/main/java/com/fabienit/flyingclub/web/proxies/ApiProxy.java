@@ -2,6 +2,8 @@ package com.fabienit.flyingclub.web.proxies;
 
 import com.fabienit.flyingclub.model.beans.*;
 import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
@@ -46,9 +48,6 @@ public interface ApiProxy {
 
     // AvailableCopie methods
 
-/*        @GetMapping(value = "/availableCopies")
-        List<AvailableCopieBean> getAvailableCopies();*/
-
     @GetMapping(value = "/availableCopies/{book_id}/{library_id}")
     Optional<AvailableCopieBean> getAvailableCopieById(@PathVariable(value = "book_id") @Min(value = 1) int bookId,
                                                        @PathVariable(value = "library_id") @Min(value = 1) int libraryId);
@@ -65,6 +64,7 @@ public interface ApiProxy {
     public void deleteAvailableCopie(@PathVariable(value = "book_id") @Min(value = 1) int bookId,
                                      @PathVariable(value = "library_id") @Min(value = 1) int libraryId);
 
+    //******************************************************************************************************************************
     // FlyingClub methods
 
     @GetMapping(value = "/flyingClub")
@@ -83,6 +83,7 @@ public interface ApiProxy {
     @DeleteMapping(value = "/flyingClub/{id}")
     void deleteFlyingClub(@PathVariable @Min(value = 1) int id);
 
+    //******************************************************************************************************************************
     // RegisteredUser methods
 
     @GetMapping(value = "/users")
@@ -169,6 +170,8 @@ public interface ApiProxy {
 
     @GetMapping(value = "/workshop")
     List<WorkshopBean> getWorkshops();
+    @GetMapping(value = "/workshop")
+    List<WorkshopBean> getWorkshopsByAircraftId(@RequestParam(required = false) Integer aircraftId);
 
     @GetMapping(value = "/workshop/{id}")
     WorkshopBean getWorkshopById(@PathVariable @Min(value = 1) int id);
@@ -186,7 +189,5 @@ public interface ApiProxy {
 
     @DeleteMapping(value = "/workshop/{id}")
     void deleteWorkshop(@PathVariable @Min(value = 1) int id);
-
-
 
 }

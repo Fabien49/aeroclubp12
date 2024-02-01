@@ -60,14 +60,15 @@
                           </div>
                           <div class="col-md-6 mb-3">
                               <label for="entry_date">Date d'entrée</label>
-                              <input type="text" class="form-control" id="entry_date" th:field="*{entryDate}" th:placeholder="${workshop.entryDate}"/>
+                              <input type="text" class="form-control" id="entry_date" th:field="*{entryDate}" th:placeholder="${workshop.entryDate}" readonly/>
                           </div>
-                          <div class="col-md-6 mb-3">
+<!--                          <div class="col-md-6 mb-3">
                               <label for="exit_date">Date de sortie</label>
                               <input type="text" class="form-control" id="exit_date" th:field="*{exitDate}" th:placeholder="${workshop.exitDate}"/>
-                          </div>
-                          <div class="col-md-3 mb-3">
-                              <button type="submit" class="form-control btn btn-info">Modifier</button>
+                          </div>-->
+                          <div class="col-md-6 mb-3">
+                              <label for="submit"> </label>
+                              <button type="submit" id="submit" class="form-control btn btn-warning mt-2">Modifier</button>
                           </div>
                       </form>
 

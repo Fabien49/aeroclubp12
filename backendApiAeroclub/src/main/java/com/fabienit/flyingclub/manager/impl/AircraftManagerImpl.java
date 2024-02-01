@@ -9,7 +9,7 @@ import com.fabienit.flyingclub.model.beans.Reservation;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
@@ -35,6 +35,7 @@ public class AircraftManagerImpl implements AircraftManager {
     public Optional<Aircraft> findById(int id) {
         return aircraftDao.findById(id);
     }
+
 
     @Override
     public Aircraft save(Aircraft aircraft) {

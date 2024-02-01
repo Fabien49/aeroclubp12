@@ -5,7 +5,6 @@ import com.fabienit.flyingclub.model.beans.Workshop;
 import com.fabienit.flyingclub.dao.WorkshopDao;
 import com.fabienit.flyingclub.manager.WorkshopManager;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
@@ -38,6 +37,11 @@ public class WorkshopManagerImpl implements WorkshopManager {
     public Workshop deleteById(int id) {
         workshopDao.deleteById(id);
         return null;
+    }
+
+    @Override
+    public List<Workshop> findAllByAircraftById(Integer aircraftId) {
+        return workshopDao.findAllByAircraftId(aircraftId);
     }
 
 }

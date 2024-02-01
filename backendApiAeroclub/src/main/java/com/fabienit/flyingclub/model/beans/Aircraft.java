@@ -56,10 +56,6 @@ public class Aircraft {
     private List<Reservation> reservations;
 
     @JsonIgnore
-    @OneToMany(mappedBy = "aircraft", cascade = CascadeType.REMOVE)
-    private List<Revision> revisions;
-
-    @JsonIgnore
     @OneToMany(mappedBy = "aircraft", cascade = CascadeType.ALL)
     private List<Workshop> workshops;
 
@@ -71,7 +67,7 @@ public class Aircraft {
         this.id = id;
     }
 
-    public Aircraft(int id, String mark, String type, String motor, String power, int seats, int autonomy, String use, int aircraftHours, int motorHours, Boolean isAvailable, List<Reservation> reservations, List<Revision> revisions, List<Workshop> workshops) {
+    public Aircraft(int id, String mark, String type, String motor, String power, int seats, int autonomy, String use, int aircraftHours, int motorHours, Boolean isAvailable, List<Reservation> reservations, List<Workshop> workshops) {
         this.id = id;
         this.mark = mark;
         this.type = type;
@@ -84,7 +80,6 @@ public class Aircraft {
         this.motorHours = motorHours;
         this.isAvailable = isAvailable;
         this.reservations = reservations;
-        this.revisions = revisions;
         this.workshops = workshops;
     }
 
@@ -182,14 +177,6 @@ public class Aircraft {
 
     public void setReservations(List<Reservation> reservations) {
         this.reservations = reservations;
-    }
-
-    public List<Revision> getRevisions() {
-        return revisions;
-    }
-
-    public void setRevisions(List<Revision> revisions) {
-        this.revisions = revisions;
     }
 
     public List<Workshop> getWorkshops() {

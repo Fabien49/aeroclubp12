@@ -27,9 +27,21 @@
   <div class="col-12">
       <div class="border-secondary shadow card h-100">
           <div class="card-body">
-              <a th:if="${#authorization.expression('hasAnyRole(''MECHANIC'', ''ADMIN'')')}" class="btn btn-info" th:href="@{/addWorkshop}">Ajouter un avion à l'atelier</a>
+              <a th:if="${#authorization.expression('hasAnyRole(''MECHANIC'', ''ADMIN'')')}" class="btn btn-warning" th:href="@{/addWorkshop}">Ajouter un avion à l'atelier</a>
               <div class="table-responsive-sm table-responsive-md table-responsive-lg">
                   <CAPTION> <h1 class="text-center">Atelier </h1></CAPTION>
+                  <form th:action="@{/workshop}" method="get" class="form-inline mt-4">
+                      <div class="form-group mx-sm-3 mb-2">
+                          <label for="aircraftSelect" class="mr-2">Barre de recherche :</label>
+                          <select id="aircraftSelect" name="aircraftId" class="form-control">
+                              <option value="">Sélectionnez un avion</option>
+                              <option th:each="aircraft : ${aircrafts}" th:value="${aircraft.id}" th:text="${aircraft.mark}"></option>
+                          </select>
+                      </div>
+                      <button type="submit" class="btn btn-warning mb-2">Rechercher</button>
+                      <a th:href="@{/workshop}" class="btn btn-secondary mb-2 ml-2">Réinitialiser</a>
+                  </form>
+
                   <table th:object="${role}" class="table table-bordered table-striped table">
                       <thead class="bg-info text-white">
                       <tr>
@@ -53,13 +65,18 @@
                           <td class="align-middle" th:text="${w.getExitDate()}"></td>
                           <td class="align-middle">
                               <span th:if="${w.getExitDate()}">Terminé</span>
-                              <span th:unless="${w.getExitDate()}">En cours</span>
+                              <span th:if="${w.getExitDate() == null and !w.canceled}">En cours</span>
                               <span th:if="${w.isCanceled()}">Annulé</span>
                           </td>
-                          <td th:if="${#authorization.expression('hasAnyRole(''MECHANIC'', ''ADMIN'')')}">
-                              <a th:if="${w.getExitDate() == null}" class="btn btn-warning btn-block" th:href="@{/intervention/{id}(id=${w.id})}">Intervenir</a>
+                          <td th:if="${#authorization.expression('hasAnyRole(''MECHANIC'', ''ADMIN'')') and w.getExitDate() == null}">
+                              <a th:if="${w.getExitDate() == null and w.canceled == false}" class="btn btn-warning btn-block" th:href="@{/intervention/{id}(id=${w.id})}">Intervenir</a>
                               <a th:if="${#authorization.expression('hasRole(''ADMIN'')')}" class="btn btn-success btn-block" th:href="@{/updateWorkshop/{id}(id=${w.id})}">Éditer</a>
-                              <a th:if="${w.isManual()}" onclick="return confirm('Etes-vous sur de vouloir annuler cette intervention ?')" th:href="@{'/workshop/' + ${w.id}}" class="btn btn-danger btn-block" >Annuler</a>
+                              <div th:if="${w.isManual() and w.canceled == false}">
+                              <form th:action="@{'/canceledIntervention/' + ${w.id}}" method="post" >
+                                  <input type="hidden" name="canceledReservationDto" th:value="${canceledInterventionDto}"/>
+                                  <button class="btn btn-danger btn-block mt-2" type="submit" onclick="return confirm('Etes-vous sur de vouloir annuler cette intervention ?')">Annuler</button>
+                              </form>
+                              </div>
                           </td>
                       </tr>
 

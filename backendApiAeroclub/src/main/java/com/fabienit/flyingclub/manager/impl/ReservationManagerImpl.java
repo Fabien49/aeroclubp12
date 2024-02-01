@@ -54,7 +54,6 @@ public class ReservationManagerImpl implements ReservationManager {
                        "Annulation de Réservation",
                        "annulationReservation",
                        templateModel);
-               reservationDao.save(reservation);
            } else if (reservation.isFinished()) {
 
                Map<String, Object> templateModel = new HashMap<>();

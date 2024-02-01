@@ -60,14 +60,13 @@
                           </div>
                           <div class="col-md-6 mb-3">
                               <label for="entry_date">Date d'entrée</label>
-                              <input type="text" class="form-control" id="entry_date" th:field="*{entryDate}" th:placeholder="${intervention.entryDate}"/>
+                              <input type="text" class="form-control" id="entry_date" th:field="*{entryDate}" th:placeholder="${intervention.entryDate}" readonly/>
                           </div>
+                              <input type="hidden" class="form-control" id="exit_date" th:field="*{exitDate}" th:value="${currentDate}" th:placeholder="${currentDate}"/>
+
                           <div class="col-md-6 mb-3">
-                              <label for="exit_date">Date de sortie</label>
-                              <input type="text" class="form-control" id="exit_date" th:field="*{exitDate}" th:value="${currentDate}" th:placeholder="${currentDate}"/>
-                          </div>
-                          <div class="col-md-3 mb-3">
-                              <button type="submit" class="form-control btn btn-info">Clôturer</button>
+                              <label> </label>
+                              <button type="submit" class="form-control btn btn-warning mt-2">Clôturer</button>
                           </div>
                       </form>
 

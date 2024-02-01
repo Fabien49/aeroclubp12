@@ -22,4 +22,5 @@ public interface AircraftDao extends JpaRepository<Aircraft, Integer>{
      List<Aircraft> findAllByIsAvailableTrue();
     @Query("SELECT a FROM Aircraft a INNER JOIN a.reservations r WHERE r.id = :reservationId")
     Aircraft findAircraftByReservationId(@Param("reservationId") int reservationId);
+
 }

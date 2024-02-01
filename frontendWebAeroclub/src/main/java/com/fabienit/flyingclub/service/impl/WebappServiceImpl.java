@@ -234,10 +234,17 @@ public class WebappServiceImpl implements WebappService {
         return apiProxy.saveIntervention(id, workshopBean);
     }
 
-    public RegisteredUserReservationDto convertToDTO(RegisteredUserBean registeredUserBean) {
-        RegisteredUserReservationDto registeredUserReservationDto = new RegisteredUserReservationDto();
-        registeredUserReservationDto.setId(registeredUserBean.getId());
-        return registeredUserReservationDto;
+    @Override
+    public ResponseEntity<Void>  canceledIntervention(int id) {
+        WorkshopBean workshopBean = apiProxy.getWorkshopById(id);
+
+        if (workshopBean != null) {
+            workshopBean.setCanceled(true);
+            apiProxy.updateWorkshop(id, workshopBean);
+            return ResponseEntity.noContent().build();
+        } else {
+            throw new EntityNotFoundException("L'intervention avec l'ID " + id + " n'a pas été trouvée.");
+        }
     }
 
     @Override
@@ -269,7 +276,6 @@ public class WebappServiceImpl implements WebappService {
         } else {
             throw new EntityNotFoundException("La réservation avec l'ID " + id + " n'a pas été trouvée.");
         }
-
     }
 
 }

@@ -63,56 +63,46 @@ class ReservationManagerImplTest {
         verify(reservationDao).deleteById(id);
     }
 
-/*    @Test
-    void saveCanceledReservation() throws FunctionnalException, MessagingException {
+    @Test
+    void saveCanceledReservation() throws FunctionnalException {
         Reservation reservation = new Reservation();
         RegisteredUser registeredUser = new RegisteredUser();
         Aircraft aircraft = new Aircraft();
         aircraft.setMark("cessna");
         registeredUser.setFirstName("test1");
-        registeredUser.setEmail("test1@gmail.com");
-        registeredUser.setHours(100);
         reservation.setRegisteredUser(registeredUser);
         reservation.setAircraft(aircraft);
         reservation.setBorrowingDate(LocalDate.of(2024,1,1));
         reservation.setReturnDate(LocalDate.of(2024,1,10));
         reservation.setCanceled(true);
+        when(reservationDao.save(reservation)).thenReturn(reservation);
 
-        Map<String, Object> templateModel = new HashMap<>();
-        templateModel.put("name", reservation.getRegisteredUser().getFirstName());
-        templateModel.put("aircraftName", reservation.getAircraft().getMark());
-        templateModel.put("borrowingDate", reservation.getBorrowingDate().toString());
-        templateModel.put("returnDate", reservation.getReturnDate().toString());
-        templateModel.put("hours", reservation.getRegisteredUser().getHours());
-
-        Context thymeleafContext = new Context();
-        thymeleafContext.setVariables(templateModel);
-        String htmlBody = templateEngine.process("annulationReservation", thymeleafContext);
-
-        MimeMessage message = mailSender.createMimeMessage();
-        MimeMessageHelper helper = new MimeMessageHelper(message, "utf-8");
-        helper.setText(htmlBody, true); // Set to true to enable HTML content
-        helper.setTo("test1@gmail.com");
-        helper.setSubject("Annulation de Réservation");
-        helper.setFrom("aeroclub@localhost");
-        when(templateEngine.process(eq("annulationReservation"), any(Context.class)))
-                .thenReturn("Mocked HTML Body");
-
-        EmailService emailService1 = new EmailService(mailSender, templateEngine);
-
-        emailService1.sendHtmlMessage("test1@gmail.com", "Annulation de Réservation", "annulationReservation", templateModel);
-
-        // Configurez le comportement attendu pour les appels de méthodes simulées
-        doNothing().when(emailService).sendHtmlMessage(eq("test1@gmail.com"), eq("Annulation de Réservation"), eq("annulationReservation"),anyMap());
-
-        // Appelez la méthode à tester
         Reservation savedReservation = reservationManager.save(reservation);
 
-        // Vérifiez les résultats
         assertEquals(reservation, savedReservation);
-        verify(emailService, times(1)).sendHtmlMessage(anyString(), eq("Annulation de Réservation"), eq("annulationReservation"), anyMap());
-        verify(reservationDao, times(1)).save(reservation);
-    }*/
+        verify(reservationDao).save(reservation);
+    }
+
+    @Test
+    void saveFinishedReservation() throws FunctionnalException {
+        Reservation reservation = new Reservation();
+        RegisteredUser registeredUser = new RegisteredUser();
+        Aircraft aircraft = new Aircraft();
+        aircraft.setMark("cessna");
+        registeredUser.setFirstName("test1");
+        reservation.setRegisteredUser(registeredUser);
+        reservation.setAircraft(aircraft);
+        reservation.setBorrowingDate(LocalDate.of(2024,1,1));
+        reservation.setReturnDate(LocalDate.of(2024,1,10));
+        reservation.setFinished(true);
+        when(reservationDao.save(reservation)).thenReturn(reservation);
+
+        Reservation savedReservation = reservationManager.save(reservation);
+
+        assertEquals(reservation, savedReservation);
+        verify(reservationDao).save(reservation);
+    }
+
     @Test
     void save() throws FunctionnalException {
         Reservation reservation = new Reservation();

@@ -1,7 +1,6 @@
 package com.fabienit.flyingclub.web.controllers;
 
 import com.fabienit.flyingclub.manager.AircraftManager;
-import com.fabienit.flyingclub.manager.UtilsManager;
 import com.fabienit.flyingclub.model.beans.Aircraft;
 import com.fabienit.flyingclub.web.exceptions.EntityAlreadyExistsException;
 import com.fabienit.flyingclub.web.exceptions.RessourceNotFoundException;
@@ -27,42 +26,18 @@ import java.util.*;
 @Validated
 public class AircraftController {
     private final AircraftManager aircraftManager;
-    private final UtilsManager utilsManager;
     Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    public AircraftController(AircraftManager aircraftManager, UtilsManager utilsManager) {
+    public AircraftController(AircraftManager aircraftManager) {
         this.aircraftManager = aircraftManager;
-        this.utilsManager = utilsManager;
     }
 
     @GetMapping(value = "/aircrafts")
-    public List<Aircraft> getAircrafts(@RequestParam(required = false) String query) {
+    public List<Aircraft> getAircrafts() {
 
         logger.info("Providing aircraft resource from database: all aircraft list");
 
-        List<Aircraft> aircrafts = aircraftManager.findAll();
-         
-        if (query == null) return aircrafts;
-
-        // Split query
-        logger.debug("Splitting query, query: " + query);
-        String[] splitedQueries = utilsManager.splitQueryString(query);
-
-        List<Aircraft> searchResultAircrafts = new ArrayList<Aircraft>();
-
-        //Match aircraft with queries
-        for (String splitedQuery : splitedQueries) {
-            for (Aircraft aircraft : aircrafts) {
-                if (aircraft.getMark().toLowerCase().contains(splitedQuery.toLowerCase())
-                        || aircraft.getPower().toLowerCase().contains(splitedQuery.toLowerCase())) {
-                    searchResultAircrafts.add(aircraft);
-                }
-            }
-        }
-        // Create new list without duplicates aircraft
-        List<Aircraft> searchResultAircraftsWithoutDuplicates = new ArrayList<>(new HashSet<>(searchResultAircrafts));
-
-        return searchResultAircraftsWithoutDuplicates;
+        return aircraftManager.findAll();
     }
 
 

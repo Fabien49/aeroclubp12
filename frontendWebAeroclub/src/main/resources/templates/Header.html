@@ -16,7 +16,7 @@
       <ul class="navbar-nav">
         <li class="nav-item mb-2 mr-2 my-lg-auto">
           <div class="btn-group" role="group">
-            <a sec:authorize="isAuthenticated()" class="nav-link btn btn-light text-secondary mx-2" href="/profile" role="button">Mon profil</a>
+            <a sec:authorize="isAuthenticated()" th:if="${!#authorization.expression('hasRole(''ADMIN'')')}" class="nav-link btn btn-light text-secondary mx-2" href="/profile" role="button">Mon profil</a>
             <a th:if="${#authorization.expression('hasRole(''ADMIN'')')}" class="nav-link btn btn-light text-secondary mx-2" href="/allUsers" role="button">Liste des utilisateurs</a>
           </div>
         </li>

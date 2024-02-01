@@ -8,19 +8,13 @@ import java.util.Date;
 public class WorkshopBean {
 
     private Integer id;
-
     private Boolean motorChange;
-
     private Boolean helixChange;
-
     private String other;
-
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate entryDate;
-
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate exitDate;
-
     private boolean manual;
     private boolean canceled;
     private AircraftBean aircraft;

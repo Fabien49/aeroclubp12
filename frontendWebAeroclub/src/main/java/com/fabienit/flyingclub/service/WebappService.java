@@ -61,6 +61,7 @@ public interface WebappService {
     ResponseEntity<Void> createWorkshop(WorkshopBean workshopBean);
     WorkshopBean updateWorkshopBean (int id, WorkshopBean workshopBean);
     WorkshopBean saveIntervention (int id, WorkshopBean workshopBean);
+    ResponseEntity<Void> canceledIntervention (int id);
 
 
 }

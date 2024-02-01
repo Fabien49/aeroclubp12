@@ -2,9 +2,6 @@ package com.fabienit.flyingclub.web.controllers;
 
 import com.fabienit.flyingclub.manager.WorkshopManager;
 import com.fabienit.flyingclub.model.beans.Workshop;
-import com.fabienit.flyingclub.dao.WorkshopDao;
-import com.fabienit.flyingclub.manager.UtilsManager;
-import com.fabienit.flyingclub.web.exceptions.EntityAlreadyExistsException;
 import com.fabienit.flyingclub.web.exceptions.RessourceNotFoundException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -29,44 +26,23 @@ import java.util.*;
 public class WorkshopController {
 
     private final WorkshopManager workshopManager;
-    private final UtilsManager utilsManager;
 
     Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    public WorkshopController(WorkshopManager workshopManager, UtilsManager utilsManager) {
+    public WorkshopController(WorkshopManager workshopManager) {
         this.workshopManager = workshopManager;
-        this.utilsManager = utilsManager;
     }
 
     @GetMapping(value = "/workshop")
-    public List<Workshop> getWorkshops(@RequestParam(required = false) String query) {
+    public List<Workshop> getWorkshops(@RequestParam(required = false) Integer aircraftId) {
 
         logger.info("Providing revision resource from database: all revisions list");
 
-        List<Workshop> workshops = workshopManager.findAll();
-         
-        if (query == null) return workshops;
-
-        // Split query
-        logger.debug("Splitting query, query: " + query);
-        String[] splitedQueries = utilsManager.splitQueryString(query);
-
-        List<Workshop> searchResultWorkshops = new ArrayList<Workshop>();
-
-        //Match revision with queries
-        for (String splitedQuery : splitedQueries) {
-            for (Workshop workshop : workshops) {
-                if (workshop.getMotorChange()
-                        || workshop.getHelixChange()) {
-                    searchResultWorkshops.add(workshop);
-                }
-            }
+        if (aircraftId != null) {
+            return workshopManager.findAllByAircraftById(aircraftId);
+        } else {
+            return workshopManager.findAll();
         }
-
-        // Create new list without duplicates aircraft
-        List<Workshop> searchResultWorkshopsWithoutDuplicates = new ArrayList<>(new HashSet<>(searchResultWorkshops));
-
-        return searchResultWorkshopsWithoutDuplicates;
     }
 
 

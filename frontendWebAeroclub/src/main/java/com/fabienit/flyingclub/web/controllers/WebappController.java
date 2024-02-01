@@ -1,17 +1,15 @@
 package com.fabienit.flyingclub.web.controllers;
 
-import com.fabienit.flyingclub.model.dto.CanceledReservationDto;
-import com.fabienit.flyingclub.model.dto.RegisteredUserDto;
-import com.fabienit.flyingclub.model.dto.ReservationDto;
+import com.fabienit.flyingclub.model.dto.*;
 import com.fabienit.flyingclub.model.mappers.AircraftMapper;
 import com.fabienit.flyingclub.model.mappers.ReservationMapper;
 import com.fabienit.flyingclub.service.WebappService;
 import com.fabienit.flyingclub.web.proxies.ApiProxy;
 import com.fabienit.flyingclub.model.beans.*;
-import com.fabienit.flyingclub.model.dto.AircraftDto;
 import feign.FeignException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.data.domain.PageImpl;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -21,6 +19,8 @@ import org.springframework.validation.BindingResult;
 import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 
 import javax.validation.Valid;
 import java.time.LocalDate;
@@ -558,9 +558,7 @@ public class WebappController {
             if (Objects.equals(registeredUserBean.getRoles(), "ADMIN")){
                 return "redirect:/allReservations";
             }
-
         }
-
         return "redirect:/reservations";
     }
 
@@ -719,12 +717,10 @@ public class WebappController {
         System.out.println(updateRegisteredUserFormDto.getRoles());
 
 
-        // Mettre à jour l'utilisateur
         try {
             webappService.updateRegisteredUser(id, updateRegisteredUserFormDto);
             redirectAttributes.addFlashAttribute("successMessage", "Utilisateur mis à jour avec succès!");
         } catch (FeignException e) {
-            // Gérer les erreurs liées à la mise à jour de l'utilisateur
             redirectAttributes.addFlashAttribute("errorMessage", "Erreur lors de la mise à jour de l'utilisateur.");
         }
 
@@ -732,17 +728,25 @@ public class WebappController {
 
         System.out.println("77777777777777777777777777777777777777777777777777777777" + updateRegisteredUserFormDto);
 
-        // Rediriger vers une page de confirmation ou une autre vue
         return "redirect:/reservations";
     }
 
     @GetMapping(value = "/workshop")
-    public String getWorkshopPage(Model model) {
+    public String getWorkshopPage(Model model, @RequestParam(required = false) Integer aircraftId) {
 
         logger.info("Reach url: /workshop - GET");
 
-        List<WorkshopBean> workshopBean = apiProxy.getWorkshops();
+        List<WorkshopBean> workshopBean;
+        if (aircraftId != null) {
+            workshopBean = apiProxy.getWorkshopsByAircraftId(aircraftId);
+        } else {
+            workshopBean = apiProxy.getWorkshops();
+        }
+
+        List<AircraftBean> aircrafts = apiProxy.getAircrafts();
+        System.out.println("la liste des avions est : " + aircrafts);
         model.addAttribute("workshop", workshopBean);
+        model.addAttribute("aircrafts", aircrafts);
 
         return "Workshop";
     }
@@ -846,6 +850,26 @@ public class WebappController {
 
         model.addAttribute("intervention", workshopBean);
 
+        return "redirect:/workshop";
+    }
+
+    @PostMapping(value = "/canceledIntervention/{id}")
+    public String canceledIntervention(@PathVariable int id, RedirectAttributes redirectAttributes) {
+
+        logger.info("Reach url: /canceledIntervention - POST");
+
+        Boolean isAuthenticated = webappService.getIsAuthenticated();
+
+        if (isAuthenticated) {
+            /*int registeredUserId = webappService.getAuthenticatedRegisteredUserId();
+            RegisteredUserBean registeredUserBean = webappService.getRegisteredUserById(registeredUserId);*/
+            webappService.canceledIntervention(id);
+            redirectAttributes.addAttribute("canceledIntervention", true);
+
+/*            if (Objects.equals(registeredUserBean.getRoles(), "ADMIN")){
+                return "redirect:/allReservations";
+            }*/
+        }
         return "redirect:/workshop";
     }
 

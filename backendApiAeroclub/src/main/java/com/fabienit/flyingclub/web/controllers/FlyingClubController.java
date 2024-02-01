@@ -1,10 +1,7 @@
 package com.fabienit.flyingclub.web.controllers;
 
-import com.fabienit.flyingclub.dao.FlyingClubDao;
 import com.fabienit.flyingclub.manager.FlyingClubManager;
 import com.fabienit.flyingclub.model.beans.FlyingClub;
-import com.fabienit.flyingclub.manager.AircraftManager;
-import com.fabienit.flyingclub.manager.UtilsManager;
 import com.fabienit.flyingclub.web.exceptions.EntityAlreadyExistsException;
 import com.fabienit.flyingclub.web.exceptions.RessourceNotFoundException;
 import org.slf4j.Logger;

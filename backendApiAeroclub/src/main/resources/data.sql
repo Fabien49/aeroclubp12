@@ -154,44 +154,6 @@ VALUES
       false
     );
 
--- Create revision
-insert into revision (
-    levels,
-    pressure,
-    bodywork,
-    date,
-    aircraft_id
-)
-VALUES
-    (
-        true,
-        true,
-        false,
-        '2023-09-26',
-        1
-    ),
-    (
-        true,
-        true,
-        true,
-        '2023-09-30',
-        3
-    ),
-    (
-        true,
-        true,
-        false,
-        '2023-10-10',
-        2
-    ),
-    (
-        true,
-        true,
-        false,
-        '2023-10-26',
-        4
-    );
-
 
 -- Create workshop
 insert into workshop (

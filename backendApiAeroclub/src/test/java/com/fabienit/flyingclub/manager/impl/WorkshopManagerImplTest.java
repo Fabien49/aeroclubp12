@@ -50,6 +50,21 @@ class WorkshopManagerImplTest {
         assertEquals(expectedWorkshop, actualWorkshop);
         verify(workshopDao).findById(id);
     }
+
+    @Test
+    public void testFindAllByAircraftById() {
+        int aircraftId = 123;
+        List<Workshop> expectedWorkshops = Arrays.asList(new Workshop(), new Workshop());
+
+        when(workshopDao.findAllByAircraftId(aircraftId)).thenReturn(expectedWorkshops);
+
+        List<Workshop> actualWorkshops = workshopManager.findAllByAircraftById(aircraftId);
+
+        verify(workshopDao).findAllByAircraftId(aircraftId);
+
+        assertEquals(expectedWorkshops, actualWorkshops);
+    }
+
     @Test
     void save() {
         Workshop workshop = new Workshop();

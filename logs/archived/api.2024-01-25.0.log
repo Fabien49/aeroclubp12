@@ -1,0 +1,129 @@
+2024-01-25 11:52:28,680 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Starting AeroclubApiApplication on FABPC with PID 10636 (started by FaB PC in C:\Users\FaB\Git\Projet 12\aeroclubp12)
+2024-01-25 11:52:28,690 DEBUG com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2024-01-25 11:52:28,698 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] The following profiles are active: dev
+2024-01-25 11:52:37,553 DEBUG com.fabienit.flyingclub.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$9deb7e15 [restartedMain] Set Swagger2 documentation
+2024-01-25 11:52:38,556 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Started AeroclubApiApplication in 10.61 seconds (JVM running for 14.887)
+2024-01-25 11:54:32,401 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-9] Search user by email: test1@gmail.com
+2024-01-25 11:54:34,177 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-2] Providing aircraft resource from database: all aircraft list
+2024-01-25 11:54:34,381 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-3] Providing reservation list for registered user from database: user id: 4
+2024-01-25 11:54:44,493 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-7] Providing aircraft resource from database: available between dates aircraft list
+2024-01-25 11:54:46,756 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-9] Providing registeredUser resource from database: registeredUser id: 4
+2024-01-25 11:54:46,939 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-2] Providing aircraft resource from database: aircraft id: 3
+2024-01-25 11:54:47,144 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-3] Adding new reservation in database
+2024-01-25 11:54:48,247 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-6] Providing aircraft resource from database: all aircraft list
+2024-01-25 11:54:48,413 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-8] Providing reservation list for registered user from database: user id: 4
+2024-01-25 11:57:18,709 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-7] Providing registeredUser resource from database: registeredUser id: 4
+2024-01-25 11:57:18,846 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-9] Providing reservation resource from database: reservation id: 8
+2024-01-25 11:57:18,996 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-2] Updating reservation in database, id: 8
+2024-01-25 11:57:19,298 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-3] Providing aircraft resource from database: all aircraft list
+2024-01-25 11:57:19,443 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-6] Providing reservation list for registered user from database: user id: 4
+2024-01-25 15:28:04,993 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-9] Search user by email: admin@admin.com
+2024-01-25 15:28:07,477 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-2] Providing registeredUser resource from database: all registeredUser list
+2024-01-25 15:28:31,450 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-3] Adding new registeredUser in database
+2024-01-25 15:28:39,708 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-6] Providing registeredUser resource from database: all registeredUser list
+2024-01-25 15:29:32,930 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-6] Providing registeredUser resource from database: all registeredUser list
+2024-01-25 15:44:41,205 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-1] Search user by email: admin@admin.com
+2024-01-25 15:44:43,009 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-2] Providing registeredUser resource from database: all registeredUser list
+2024-01-25 15:47:52,794 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-10] Search user by email: admin@admin.com
+2024-01-25 15:47:53,946 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-8] Providing registeredUser resource from database: all registeredUser list
+2024-01-25 15:48:44,888 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-3] Adding new registeredUser in database
+2024-01-25 15:50:58,722 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-10] Search user by email: admin@admin.com
+2024-01-25 15:51:02,189 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-6] Providing registeredUser resource from database: all registeredUser list
+2024-01-25 15:51:24,994 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-8] Adding new registeredUser in database
+2024-01-25 15:51:25,137 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper [http-nio-8001-exec-8] Violation d'index unique ou clé primaire: "PUBLIC.UK_4QKJFWB01BH3Q0R5X8UY5O67V_INDEX_6 ON PUBLIC.REGISTERED_USER(EMAIL) VALUES 7"
+Unique index or primary key violation: "PUBLIC.UK_4QKJFWB01BH3Q0R5X8UY5O67V_INDEX_6 ON PUBLIC.REGISTERED_USER(EMAIL) VALUES 7"; SQL statement:
+insert into registered_user (id, email, first_name, hours, last_name, password, roles) values (null, ?, ?, ?, ?, ?, ?) [23505-200]
+2024-01-25 15:51:25,167 DEBUG com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-8] Cette adresse email est déjà liée à un compte utilisateur: test8@gmail.com
+2024-01-25 15:51:50,616 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Starting AeroclubApiApplication on FABPC with PID 3420 (started by FaB PC in C:\Users\FaB\Git\Projet 12\aeroclubp12)
+2024-01-25 15:51:50,622 DEBUG com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2024-01-25 15:51:50,622 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] The following profiles are active: dev
+2024-01-25 15:52:00,049 DEBUG com.fabienit.flyingclub.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$833d8566 [restartedMain] Set Swagger2 documentation
+2024-01-25 15:52:01,034 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Started AeroclubApiApplication in 11.139 seconds (JVM running for 12.781)
+2024-01-25 15:52:22,559 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-1] Search user by email: admin@admin.com
+2024-01-25 15:52:24,363 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-2] Providing registeredUser resource from database: all registeredUser list
+2024-01-25 15:52:42,418 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-3] Adding new registeredUser in database
+2024-01-25 15:52:48,106 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-4] Providing registeredUser resource from database: all registeredUser list
+2024-01-25 15:53:17,167 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-6] Adding new registeredUser in database
+2024-01-25 15:53:23,837 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-7] Providing registeredUser resource from database: all registeredUser list
+2024-01-25 15:56:05,559 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-8] Providing registeredUser resource from database: all registeredUser list
+2024-01-25 15:56:26,423 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-9] Providing registeredUser resource from database: all registeredUser list
+2024-01-25 15:59:01,988 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Starting AeroclubApiApplication on FABPC with PID 8372 (started by FaB PC in C:\Users\FaB\Git\Projet 12\aeroclubp12)
+2024-01-25 15:59:01,992 DEBUG com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2024-01-25 15:59:01,992 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] The following profiles are active: dev
+2024-01-25 15:59:12,924 DEBUG com.fabienit.flyingclub.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$69f37b74 [restartedMain] Set Swagger2 documentation
+2024-01-25 15:59:13,752 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Started AeroclubApiApplication in 12.44 seconds (JVM running for 13.936)
+2024-01-25 15:59:32,127 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-1] Search user by email: admin@admin.com
+2024-01-25 15:59:34,972 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-2] Providing registeredUser resource from database: all registeredUser list
+2024-01-25 16:00:49,081 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-4] Search user by email: admin@admin.com
+2024-01-25 16:00:51,567 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-5] Providing registeredUser resource from database: all registeredUser list
+2024-01-25 16:14:00,000 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Starting AeroclubApiApplication on FABPC with PID 2424 (started by FaB PC in C:\Users\FaB\Git\Projet 12\aeroclubp12)
+2024-01-25 16:14:00,004 DEBUG com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2024-01-25 16:14:00,004 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] The following profiles are active: dev
+2024-01-25 16:14:06,563 DEBUG com.fabienit.flyingclub.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$52588ea0 [restartedMain] Set Swagger2 documentation
+2024-01-25 16:14:07,324 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Started AeroclubApiApplication in 7.776 seconds (JVM running for 9.241)
+2024-01-25 16:15:53,652 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-1] Search user by email: admin@admin.com
+2024-01-25 16:15:55,812 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-2] Providing registeredUser resource from database: all registeredUser list
+2024-01-25 16:16:23,335 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-3] Search user by email: test1@gmail.com
+2024-01-25 16:16:27,156 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-4] Providing registeredUser resource from database: all registeredUser list
+2024-01-25 16:16:35,165 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-5] Providing registeredUser resource from database: all registeredUser list
+2024-01-25 17:53:31,040 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-7] Search user by email: test1@gmail.com
+2024-01-25 17:53:41,756 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-8] Providing registeredUser resource from database: registeredUser id: 4
+2024-01-25 17:53:50,746 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-9] Providing registeredUser resource from database: registeredUser id: 4
+2024-01-25 21:29:10,850 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Starting AeroclubApiApplication on FABPC with PID 11836 (started by FaB PC in C:\Users\FaB\Git\Projet 12\aeroclubp12)
+2024-01-25 21:29:10,855 DEBUG com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2024-01-25 21:29:10,855 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] The following profiles are active: dev
+2024-01-25 21:29:21,049 DEBUG com.fabienit.flyingclub.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$29a6d8a3 [restartedMain] Set Swagger2 documentation
+2024-01-25 21:29:21,909 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Started AeroclubApiApplication in 11.639 seconds (JVM running for 14.167)
+2024-01-25 21:29:37,582 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-1] Search user by email: admin@admin.com
+2024-01-25 21:29:39,501 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-2] Providing registeredUser resource from database: all registeredUser list
+2024-01-25 21:29:46,291 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-3] Providing registeredUser resource from database: all registeredUser list
+2024-01-25 21:29:52,842 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-4] Providing registeredUser resource from database: all registeredUser list
+2024-01-25 21:31:08,863 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-6] Search user by email: mechanic@mechanic.com
+2024-01-25 21:31:14,753 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-7] Search user by email: admin@admin.com
+2024-01-25 21:31:15,806 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-8] Providing registeredUser resource from database: all registeredUser list
+2024-01-25 21:34:20,658 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-10] Search user by email: admin@admin.com
+2024-01-25 21:34:22,547 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-1] Providing registeredUser resource from database: all registeredUser list
+2024-01-25 21:37:10,122 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-3] Search user by email: admin@admin.com
+2024-01-25 21:37:12,259 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-4] Providing registeredUser resource from database: all registeredUser list
+2024-01-25 21:42:45,200 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-6] Search user by email: admin@admin.com
+2024-01-25 21:42:46,961 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-7] Providing registeredUser resource from database: all registeredUser list
+2024-01-25 21:48:53,384 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-9] Search user by email: admin@admin.com
+2024-01-25 21:48:55,510 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-10] Providing registeredUser resource from database: all registeredUser list
+2024-01-25 21:49:53,763 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-2] Search user by email: admin@admin.com
+2024-01-25 21:49:55,429 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-3] Providing registeredUser resource from database: all registeredUser list
+2024-01-25 21:50:53,011 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-5] Search user by email: admin@admin.com
+2024-01-25 21:50:54,590 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-6] Providing registeredUser resource from database: all registeredUser list
+2024-01-25 21:51:36,926 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-8] Search user by email: admin@admin.com
+2024-01-25 21:51:38,585 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-9] Providing registeredUser resource from database: all registeredUser list
+2024-01-25 21:52:27,365 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-1] Search user by email: admin@admin.com
+2024-01-25 21:52:28,996 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-2] Providing registeredUser resource from database: all registeredUser list
+2024-01-25 21:57:13,197 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-4] Search user by email: admin@admin.com
+2024-01-25 21:57:14,822 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-5] Providing registeredUser resource from database: all registeredUser list
+2024-01-25 21:58:54,068 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-7] Search user by email: admin@admin.com
+2024-01-25 21:58:55,494 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-8] Providing registeredUser resource from database: all registeredUser list
+2024-01-25 22:03:14,289 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-10] Search user by email: admin@admin.com
+2024-01-25 22:03:15,954 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-1] Providing registeredUser resource from database: all registeredUser list
+2024-01-25 22:05:35,467 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-3] Search user by email: admin@admin.com
+2024-01-25 22:05:37,133 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-4] Providing registeredUser resource from database: all registeredUser list
+2024-01-25 22:05:38,442 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-5] Providing registeredUser resource from database: registeredUser id: 3
+2024-01-25 22:05:41,565 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-6] Providing registeredUser resource from database: all registeredUser list
+2024-01-25 22:05:42,655 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-7] Providing registeredUser resource from database: registeredUser id: 4
+2024-01-25 22:05:44,241 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-8] Providing registeredUser resource from database: all registeredUser list
+2024-01-25 22:05:45,667 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-9] Providing registeredUser resource from database: registeredUser id: 6
+2024-01-25 22:05:47,747 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-10] Providing registeredUser resource from database: all registeredUser list
+2024-01-25 22:06:17,810 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-1] Providing registeredUser resource from database: registeredUser id: 6
+2024-01-25 22:06:22,110 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-2] Updating registeredUser in database, id: 6
+2024-01-25 22:06:22,342 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-3] Providing registeredUser resource from database: registeredUser id: 1
+2024-01-25 22:06:27,097 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-4] Providing registeredUser resource from database: all registeredUser list
+2024-01-25 22:11:56,901 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-6] Search user by email: admin@admin.com
+2024-01-25 22:11:59,494 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-7] Providing registeredUser resource from database: all registeredUser list
+2024-01-25 22:12:02,603 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-8] Providing registeredUser resource from database: registeredUser id: 6
+2024-01-25 22:12:08,171 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-9] Updating registeredUser in database, id: 6
+2024-01-25 22:12:08,301 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-10] Providing registeredUser resource from database: registeredUser id: 1
+2024-01-25 22:12:08,446 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-1] Providing registeredUser resource from database: all registeredUser list
+2024-01-25 22:12:16,565 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-2] Search user by email: test1@gmail.com
+2024-01-25 22:12:18,554 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-3] Providing registeredUser resource from database: registeredUser id: 4
+2024-01-25 22:12:19,905 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-4] Providing registeredUser resource from database: registeredUser id: 4
+2024-01-25 22:12:23,238 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-5] Updating registeredUser in database, id: 4
+2024-01-25 22:12:23,369 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-6] Providing registeredUser resource from database: registeredUser id: 4
+2024-01-25 22:12:23,509 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-7] Providing registeredUser resource from database: registeredUser id: 4
