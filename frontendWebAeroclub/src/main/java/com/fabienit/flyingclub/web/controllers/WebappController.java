@@ -317,7 +317,7 @@ public class WebappController {
     }
 
 
-    @PutMapping("/modify-hours/{id}/{action}/{hoursToAdd}")
+/*    @PutMapping("/modify-hours/{id}/{action}/{hoursToAdd}")
     @ResponseBody
     public ResponseEntity<Map<String, Object>> modifyHours(
             @PathVariable int id,
@@ -344,9 +344,9 @@ public class WebappController {
 
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(errorResponse);
         }
-    }
+    }*/
 
-    @PostMapping(value = "/profile")
+/*    @PostMapping(value = "/profile")
     public String extendBorrowDuration(@RequestParam int borrowId) {
 
         logger.info("Reach url: /profile - POST");
@@ -358,7 +358,7 @@ public class WebappController {
         apiProxy.extendBorrow(borrowId, borrowBean);
 
         return "redirect:/profile";
-    }
+    }*/
 
 
     @GetMapping(value = "/reservations")
@@ -555,9 +555,11 @@ public class WebappController {
             webappService.canceledReservation(id);
             redirectAttributes.addAttribute("canceledReservation", true);
 
-            if (Objects.equals(registeredUserBean.getRoles(), "ADMIN")){
+            if(registeredUserBean.getRoles().equals("ADMIN")){
                 return "redirect:/allReservations";
             }
+
+
         }
         return "redirect:/reservations";
     }
