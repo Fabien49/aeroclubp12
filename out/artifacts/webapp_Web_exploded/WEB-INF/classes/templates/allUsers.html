@@ -55,7 +55,6 @@
                               <td th:if="${#authorization.expression('hasRole(''ADMIN'')')}">
                                   <div th:if="${a.id != null}" th:attr="data-id=${a.id}"></div>
                                   <a th:unless="${a.roles == 'ADMIN'}" class="btn btn-success btn-block" th:href="@{/profile/updateRegisteredUser(id=${a.id})}">Éditer</a>
-                                  <a th:unless="${a.roles == 'ADMIN'}" onclick="return confirm('Etes-vous sur de vouloir désactiver cet utilisateur ?')" th:href="@{'/registeredUser/' + ${a.id}}" class="btn btn-danger btn-block" >Désactiver</a>
                               </td>
                           </tr>
                   </table>

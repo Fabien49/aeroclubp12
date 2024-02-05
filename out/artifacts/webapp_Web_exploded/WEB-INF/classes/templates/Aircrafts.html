@@ -56,7 +56,7 @@
                           <td th:text="${a.getAutonomy()}"></td>
                           <td th:text="${a.getAircraftHours()}"></td>
                           <td th:text="${a.getMotorHours()}"></td>
-                          <td th:text="${a.getAvailable()}"></td>
+                          <td th:text="${a.getAvailable() ? 'oui' : 'non'}"></td>
                           <td th:text="${a.getUse()}"></td>
                           <td th:if="${#authorization.expression('hasRole(''ADMIN'')')}">
                              <a class="btn btn-success btn-block" th:href="@{/aircrafts/updateAircraft/{id}(id=${a.id})}">Éditer</a>
