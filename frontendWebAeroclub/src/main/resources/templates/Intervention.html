@@ -34,7 +34,7 @@
                   </div>
                   <div class="card">
                       <h2>Intervention Hélice et Moteur</h2>
-                      <form class="form-row" th:action="@{/saveIntervention/{id}(id=${intervention.id})}" th:object="${intervention}" method="post">
+                      <form class="form-row" th:action="@{/saveIntervention/{id}(id=${intervention.id})}" th:object="${intervention}" method="post" onsubmit="return validateForm()">
                           <input type="hidden" th:field="*{aircraft.id}"/>
                           <div class="col-md-6 mb-3">
                               <label for="seats">Avion</label>
@@ -75,12 +75,18 @@
           </div>
       </div>
 
-                  <ul class="nav nav-pills">
-                      <li  th:each="page,status:${pages}">
-                          <a  th:class="${status.index == currentPage?'btn btn-primary' : 'btn'}" th:href="@{topoListe(page=${status.index}, keyword=${keyword}, disponible=${disponible})}" th:text="${status.index + 1}"></a>
-                      </li>
-                  </ul>
-              </div>
+      <script>
+          function validateForm() {
+              var helixChange = document.getElementById("helix_change").value;
+              var motorChange = document.getElementById("motor_change").value;
+              if (helixChange === "true" && motorChange === "true") {
+                  return true;
+              } else {
+                  alert("Veuillez sélectionner 'Remplacé' pour le changement du moteur ET de l'hélice.");
+                  return false;
+              }
+          }
+      </script>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

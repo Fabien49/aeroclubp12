@@ -1783,3 +1783,607 @@ feign.FeignException$InternalServerError: status 500 reading ApiProxy#updateRese
 2024-02-05 12:25:47,752 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#getWorkshopById] keep-alive: timeout=60
 2024-02-05 12:25:47,752 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#getWorkshopById] pragma: no-cache
 2024-02-05 12:25:47,752 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#getWorkshopById] set-cookie: JSESSIONID=200E03F519932BE045B03EDD993A3DE1; Path=/; HttpOnly
+2024-02-05 12:25:47,752 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#getWorkshopById] transfer-encoding: chunked
+2024-02-05 12:25:47,752 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#getWorkshopById] x-content-type-options: nosniff
+2024-02-05 12:25:47,752 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#getWorkshopById] x-xss-protection: 1; mode=block
+2024-02-05 12:25:47,752 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#getWorkshopById] 
+2024-02-05 12:25:47,753 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#getWorkshopById] {"id":5,"motorChange":false,"helixChange":false,"other":"","entryDate":"2024-01-13","exitDate":null,"manual":false,"canceled":false,"aircraft":{"id":2,"mark":"Diamond Aircraft 40","type":"DA 40","motor":"Rotax 912 S","power":"180 ch","seats":4,"autonomy":4,"use":"voyage","aircraftHours":20008,"motorHours":10005,"available":false}}
+2024-02-05 12:25:47,753 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#getWorkshopById] <--- END HTTP (332-byte body)
+2024-02-05 12:42:49,258 INFO com.fabienit.flyingclub.AeroclubwebApplication [restartedMain] No active profile set, falling back to default profiles: default
+2024-02-05 12:42:55,293 INFO com.fabienit.flyingclub.AeroclubwebApplication [restartedMain] Started AeroclubwebApplication in 7.465 seconds (JVM running for 9.236)
+2024-02-05 12:44:15,063 INFO com.fabienit.flyingclub.AeroclubwebApplication [restartedMain] No active profile set, falling back to default profiles: default
+2024-02-05 12:44:20,240 INFO com.fabienit.flyingclub.AeroclubwebApplication [restartedMain] Started AeroclubwebApplication in 6.487 seconds (JVM running for 8.156)
+2024-02-05 12:45:00,578 INFO com.fabienit.flyingclub.web.controllers.WebappController [http-nio-8002-exec-2] Reach url: /disconnect - GET
+2024-02-05 12:45:00,620 INFO com.fabienit.flyingclub.web.controllers.WebappController [http-nio-8002-exec-3] Reach url: /connexion - GET
+2024-02-05 12:45:12,781 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] ---> POST http://localhost:8001/users/email HTTP/1.1
+2024-02-05 12:45:12,781 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] Authorization: Basic ZmFiaWVuOjEyMzQ1Ng==
+2024-02-05 12:45:12,782 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] Content-Length: 21
+2024-02-05 12:45:12,782 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] Content-Type: text/plain;charset=UTF-8
+2024-02-05 12:45:12,782 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] 
+2024-02-05 12:45:12,782 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] mechanic@mechanic.com
+2024-02-05 12:45:12,782 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] ---> END HTTP (21-byte body)
+2024-02-05 12:45:13,701 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] <--- HTTP/1.1 200 (918ms)
+2024-02-05 12:45:13,702 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] cache-control: no-cache, no-store, max-age=0, must-revalidate
+2024-02-05 12:45:13,702 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] connection: keep-alive
+2024-02-05 12:45:13,702 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] content-type: application/json
+2024-02-05 12:45:13,702 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] date: Mon, 05 Feb 2024 11:45:13 GMT
+2024-02-05 12:45:13,702 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] expires: 0
+2024-02-05 12:45:13,703 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] keep-alive: timeout=60
+2024-02-05 12:45:13,703 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] pragma: no-cache
+2024-02-05 12:45:13,703 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] set-cookie: JSESSIONID=58CEDA373F94BA0AFDCF8657C1819D81; Path=/; HttpOnly
+2024-02-05 12:45:13,703 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] transfer-encoding: chunked
+2024-02-05 12:45:13,703 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] x-content-type-options: nosniff
+2024-02-05 12:45:13,703 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] x-xss-protection: 1; mode=block
+2024-02-05 12:45:13,703 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] 
+2024-02-05 12:45:13,705 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] {"id":2,"firstName":"mech","lastName":"anic","email":"mechanic@mechanic.com","password":"$2a$10$jPUTDV6/9AkC7NRPPzmvXuLJlfnKoAYo.uJuZc0aeJHGum.LpxO0a","hours":0,"roles":"MECHANIC"}
+2024-02-05 12:45:13,705 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] <--- END HTTP (180-byte body)
+2024-02-05 12:45:13,891 INFO com.fabienit.flyingclub.web.controllers.WebappController [http-nio-8002-exec-5] Reach url: / - GET
+2024-02-05 12:45:14,860 INFO com.fabienit.flyingclub.web.controllers.WebappController [http-nio-8002-exec-6] Reach url: /workshop - GET
+2024-02-05 12:45:14,861 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getWorkshops] ---> GET http://localhost:8001/workshop HTTP/1.1
+2024-02-05 12:45:14,861 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getWorkshops] Authorization: Basic ZmFiaWVuOjEyMzQ1Ng==
+2024-02-05 12:45:14,861 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getWorkshops] ---> END HTTP (0-byte body)
+2024-02-05 12:45:15,144 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getWorkshops] <--- HTTP/1.1 200 (282ms)
+2024-02-05 12:45:15,145 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getWorkshops] cache-control: no-cache, no-store, max-age=0, must-revalidate
+2024-02-05 12:45:15,145 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getWorkshops] connection: keep-alive
+2024-02-05 12:45:15,145 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getWorkshops] content-type: application/json
+2024-02-05 12:45:15,145 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getWorkshops] date: Mon, 05 Feb 2024 11:45:15 GMT
+2024-02-05 12:45:15,145 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getWorkshops] expires: 0
+2024-02-05 12:45:15,145 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getWorkshops] keep-alive: timeout=60
+2024-02-05 12:45:15,145 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getWorkshops] pragma: no-cache
+2024-02-05 12:45:15,146 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getWorkshops] set-cookie: JSESSIONID=4F281A5D8F7C3BA076E796C30572A6CE; Path=/; HttpOnly
+2024-02-05 12:45:15,146 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getWorkshops] transfer-encoding: chunked
+2024-02-05 12:45:15,146 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getWorkshops] x-content-type-options: nosniff
+2024-02-05 12:45:15,146 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getWorkshops] x-xss-protection: 1; mode=block
+2024-02-05 12:45:15,146 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getWorkshops] 
+2024-02-05 12:45:15,146 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getWorkshops] [{"id":1,"motorChange":true,"helixChange":true,"other":"","entryDate":"2023-09-13","exitDate":"2023-09-14","manual":false,"canceled":false,"aircraft":{"id":1,"mark":"Diamond Aircraft","type":"DA 20-100 Katana","motor":"Rotax 912 S","power":"100 ch","seats":2,"autonomy":4,"use":"ecole","aircraftHours":4589,"motorHours":4589,"available":true}},{"id":2,"motorChange":true,"helixChange":true,"other":"","entryDate":"2023-09-29","exitDate":"2023-09-30","manual":false,"canceled":false,"aircraft":{"id":3,"mark":"Piper","type":"PA 28-161 Cadet","motor":"Lycoming ","power":"160 ch","seats":2,"autonomy":5,"use":"voyage","aircraftHours":7810,"motorHours":7810,"available":true}},{"id":3,"motorChange":true,"helixChange":true,"other":"","entryDate":"2023-10-09","exitDate":"2023-10-11","manual":false,"canceled":false,"aircraft":{"id":2,"mark":"Diamond Aircraft 40","type":"DA 40","motor":"Rotax 912 S","power":"180 ch","seats":4,"autonomy":4,"use":"voyage","aircraftHours":20008,"motorHours":10005,"available":false}},{"id":4,"motorChange":false,"helixChange":false,"other":"","entryDate":"2024-01-15","exitDate":"2024-02-05","manual":false,"canceled":false,"aircraft":{"id":5,"mark":"Aéro Services","type":"Super Guépard SG 10","motor":"Rotax 912 ","power":"80 ch","seats":2,"autonomy":4,"use":"ecole et voyage","aircraftHours":10011,"motorHours":0,"available":true}},{"id":5,"motorChange":false,"helixChange":false,"other":"","entryDate":"2024-01-13","exitDate":null,"manual":false,"canceled":false,"aircraft":{"id":2,"mark":"Diamond Aircraft 40","type":"DA 40","motor":"Rotax 912 S","power":"180 ch","seats":4,"autonomy":4,"use":"voyage","aircraftHours":20008,"motorHours":10005,"available":false}}]
+2024-02-05 12:45:15,147 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getWorkshops] <--- END HTTP (1699-byte body)
+2024-02-05 12:45:15,160 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getAircrafts] ---> GET http://localhost:8001/aircrafts HTTP/1.1
+2024-02-05 12:45:15,160 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getAircrafts] Authorization: Basic ZmFiaWVuOjEyMzQ1Ng==
+2024-02-05 12:45:15,160 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getAircrafts] ---> END HTTP (0-byte body)
+2024-02-05 12:45:15,324 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getAircrafts] <--- HTTP/1.1 200 (163ms)
+2024-02-05 12:45:15,325 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getAircrafts] cache-control: no-cache, no-store, max-age=0, must-revalidate
+2024-02-05 12:45:15,325 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getAircrafts] connection: keep-alive
+2024-02-05 12:45:15,325 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getAircrafts] content-type: application/json
+2024-02-05 12:45:15,325 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getAircrafts] date: Mon, 05 Feb 2024 11:45:15 GMT
+2024-02-05 12:45:15,325 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getAircrafts] expires: 0
+2024-02-05 12:45:15,325 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getAircrafts] keep-alive: timeout=60
+2024-02-05 12:45:15,325 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getAircrafts] pragma: no-cache
+2024-02-05 12:45:15,325 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getAircrafts] set-cookie: JSESSIONID=9DF3A63D1C03B4458D410E4BBA2DD0D6; Path=/; HttpOnly
+2024-02-05 12:45:15,325 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getAircrafts] transfer-encoding: chunked
+2024-02-05 12:45:15,325 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getAircrafts] x-content-type-options: nosniff
+2024-02-05 12:45:15,326 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getAircrafts] x-xss-protection: 1; mode=block
+2024-02-05 12:45:15,326 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getAircrafts] 
+2024-02-05 12:45:15,326 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getAircrafts] [{"id":1,"mark":"Diamond Aircraft","type":"DA 20-100 Katana","motor":"Rotax 912 S","power":"100 ch","seats":2,"autonomy":4,"use":"ecole","aircraftHours":4589,"motorHours":4589,"available":true},{"id":2,"mark":"Diamond Aircraft 40","type":"DA 40","motor":"Rotax 912 S","power":"180 ch","seats":4,"autonomy":4,"use":"voyage","aircraftHours":20008,"motorHours":10005,"available":false},{"id":3,"mark":"Piper","type":"PA 28-161 Cadet","motor":"Lycoming ","power":"160 ch","seats":2,"autonomy":5,"use":"voyage","aircraftHours":7810,"motorHours":7810,"available":true},{"id":4,"mark":"Cessna","type":"kyhawk C172 S","motor":"Lycoming ","power":"180 ch","seats":4,"autonomy":5,"use":"voyage","aircraftHours":429,"motorHours":429,"available":true},{"id":5,"mark":"Aéro Services","type":"Super Guépard SG 10","motor":"Rotax 912 ","power":"80 ch","seats":2,"autonomy":4,"use":"ecole et voyage","aircraftHours":10011,"motorHours":0,"available":true}]
+2024-02-05 12:45:15,326 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getAircrafts] <--- END HTTP (941-byte body)
+2024-02-05 12:45:17,049 INFO com.fabienit.flyingclub.web.controllers.WebappController [http-nio-8002-exec-7] Reach url: /interventionForm - GET
+2024-02-05 12:45:17,052 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#getWorkshopById] ---> GET http://localhost:8001/workshop/5 HTTP/1.1
+2024-02-05 12:45:17,052 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#getWorkshopById] Authorization: Basic ZmFiaWVuOjEyMzQ1Ng==
+2024-02-05 12:45:17,052 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#getWorkshopById] ---> END HTTP (0-byte body)
+2024-02-05 12:45:17,209 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#getWorkshopById] <--- HTTP/1.1 200 (156ms)
+2024-02-05 12:45:17,209 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#getWorkshopById] cache-control: no-cache, no-store, max-age=0, must-revalidate
+2024-02-05 12:45:17,210 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#getWorkshopById] connection: keep-alive
+2024-02-05 12:45:17,210 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#getWorkshopById] content-type: application/json
+2024-02-05 12:45:17,210 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#getWorkshopById] date: Mon, 05 Feb 2024 11:45:17 GMT
+2024-02-05 12:45:17,210 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#getWorkshopById] expires: 0
+2024-02-05 12:45:17,210 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#getWorkshopById] keep-alive: timeout=60
+2024-02-05 12:45:17,210 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#getWorkshopById] pragma: no-cache
+2024-02-05 12:45:17,210 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#getWorkshopById] set-cookie: JSESSIONID=9F707A55C4842843376ABB1799971E06; Path=/; HttpOnly
+2024-02-05 12:45:17,210 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#getWorkshopById] transfer-encoding: chunked
+2024-02-05 12:45:17,210 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#getWorkshopById] x-content-type-options: nosniff
+2024-02-05 12:45:17,211 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#getWorkshopById] x-xss-protection: 1; mode=block
+2024-02-05 12:45:17,211 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#getWorkshopById] 
+2024-02-05 12:45:17,211 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#getWorkshopById] {"id":5,"motorChange":false,"helixChange":false,"other":"","entryDate":"2024-01-13","exitDate":null,"manual":false,"canceled":false,"aircraft":{"id":2,"mark":"Diamond Aircraft 40","type":"DA 40","motor":"Rotax 912 S","power":"180 ch","seats":4,"autonomy":4,"use":"voyage","aircraftHours":20008,"motorHours":10005,"available":false}}
+2024-02-05 12:45:17,211 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#getWorkshopById] <--- END HTTP (332-byte body)
+2024-02-05 12:45:31,460 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-10] [ApiProxy#getAircraftById] ---> GET http://localhost:8001/aircrafts/2 HTTP/1.1
+2024-02-05 12:45:31,460 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-10] [ApiProxy#getAircraftById] Authorization: Basic ZmFiaWVuOjEyMzQ1Ng==
+2024-02-05 12:45:31,460 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-10] [ApiProxy#getAircraftById] ---> END HTTP (0-byte body)
+2024-02-05 12:45:31,598 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-10] [ApiProxy#getAircraftById] <--- HTTP/1.1 200 (137ms)
+2024-02-05 12:45:31,598 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-10] [ApiProxy#getAircraftById] cache-control: no-cache, no-store, max-age=0, must-revalidate
+2024-02-05 12:45:31,599 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-10] [ApiProxy#getAircraftById] connection: keep-alive
+2024-02-05 12:45:31,599 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-10] [ApiProxy#getAircraftById] content-type: application/json
+2024-02-05 12:45:31,599 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-10] [ApiProxy#getAircraftById] date: Mon, 05 Feb 2024 11:45:31 GMT
+2024-02-05 12:45:31,599 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-10] [ApiProxy#getAircraftById] expires: 0
+2024-02-05 12:45:31,599 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-10] [ApiProxy#getAircraftById] keep-alive: timeout=60
+2024-02-05 12:45:31,599 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-10] [ApiProxy#getAircraftById] pragma: no-cache
+2024-02-05 12:45:31,599 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-10] [ApiProxy#getAircraftById] set-cookie: JSESSIONID=FEEF1FFE7F46C34CAEC0D7F7CE514AAC; Path=/; HttpOnly
+2024-02-05 12:45:31,599 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-10] [ApiProxy#getAircraftById] transfer-encoding: chunked
+2024-02-05 12:45:31,600 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-10] [ApiProxy#getAircraftById] x-content-type-options: nosniff
+2024-02-05 12:45:31,600 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-10] [ApiProxy#getAircraftById] x-xss-protection: 1; mode=block
+2024-02-05 12:45:31,600 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-10] [ApiProxy#getAircraftById] 
+2024-02-05 12:45:31,600 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-10] [ApiProxy#getAircraftById] {"id":2,"mark":"Diamond Aircraft 40","type":"DA 40","motor":"Rotax 912 S","power":"180 ch","seats":4,"autonomy":4,"use":"voyage","aircraftHours":20008,"motorHours":10005,"available":false}
+2024-02-05 12:45:31,600 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-10] [ApiProxy#getAircraftById] <--- END HTTP (188-byte body)
+2024-02-05 12:45:31,605 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-10] [ApiProxy#updateAircraft] ---> PUT http://localhost:8001/aircrafts/2 HTTP/1.1
+2024-02-05 12:45:31,605 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-10] [ApiProxy#updateAircraft] Authorization: Basic ZmFiaWVuOjEyMzQ1Ng==
+2024-02-05 12:45:31,605 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-10] [ApiProxy#updateAircraft] Content-Length: 183
+2024-02-05 12:45:31,605 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-10] [ApiProxy#updateAircraft] Content-Type: application/json
+2024-02-05 12:45:31,606 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-10] [ApiProxy#updateAircraft] 
+2024-02-05 12:45:31,606 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-10] [ApiProxy#updateAircraft] {"id":2,"mark":"Diamond Aircraft 40","type":"DA 40","motor":"Rotax 912 S","power":"180 ch","seats":4,"autonomy":4,"aircraftHours":20008,"motorHours":0,"use":"voyage","available":true}
+2024-02-05 12:45:31,606 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-10] [ApiProxy#updateAircraft] ---> END HTTP (183-byte body)
+2024-02-05 12:45:31,775 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-10] [ApiProxy#updateAircraft] <--- HTTP/1.1 200 (169ms)
+2024-02-05 12:45:31,775 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-10] [ApiProxy#updateAircraft] cache-control: no-cache, no-store, max-age=0, must-revalidate
+2024-02-05 12:45:31,775 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-10] [ApiProxy#updateAircraft] connection: keep-alive
+2024-02-05 12:45:31,776 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-10] [ApiProxy#updateAircraft] content-length: 0
+2024-02-05 12:45:31,776 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-10] [ApiProxy#updateAircraft] date: Mon, 05 Feb 2024 11:45:31 GMT
+2024-02-05 12:45:31,776 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-10] [ApiProxy#updateAircraft] expires: 0
+2024-02-05 12:45:31,776 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-10] [ApiProxy#updateAircraft] keep-alive: timeout=60
+2024-02-05 12:45:31,776 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-10] [ApiProxy#updateAircraft] pragma: no-cache
+2024-02-05 12:45:31,776 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-10] [ApiProxy#updateAircraft] set-cookie: JSESSIONID=2434120035500008A06D0C5C7AF6BA55; Path=/; HttpOnly
+2024-02-05 12:45:31,776 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-10] [ApiProxy#updateAircraft] x-content-type-options: nosniff
+2024-02-05 12:45:31,776 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-10] [ApiProxy#updateAircraft] x-xss-protection: 1; mode=block
+2024-02-05 12:45:31,776 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-10] [ApiProxy#updateAircraft] 
+2024-02-05 12:45:31,777 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-10] [ApiProxy#updateAircraft] <--- END HTTP (0-byte body)
+2024-02-05 12:45:31,780 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-10] [ApiProxy#saveIntervention] ---> PUT http://localhost:8001/workshop/5 HTTP/1.1
+2024-02-05 12:45:31,780 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-10] [ApiProxy#saveIntervention] Authorization: Basic ZmFiaWVuOjEyMzQ1Ng==
+2024-02-05 12:45:31,781 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-10] [ApiProxy#saveIntervention] Content-Length: 309
+2024-02-05 12:45:31,781 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-10] [ApiProxy#saveIntervention] Content-Type: application/json
+2024-02-05 12:45:31,781 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-10] [ApiProxy#saveIntervention] 
+2024-02-05 12:45:31,781 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-10] [ApiProxy#saveIntervention] {"id":5,"motorChange":true,"helixChange":true,"other":"","entryDate":"2024-01-13","exitDate":"2024-02-05","manual":false,"canceled":false,"aircraft":{"id":2,"mark":"Diamond Aircraft 40","type":null,"motor":null,"power":null,"seats":0,"autonomy":0,"aircraftHours":0,"motorHours":0,"use":null,"available":null}}
+2024-02-05 12:45:31,781 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-10] [ApiProxy#saveIntervention] ---> END HTTP (309-byte body)
+2024-02-05 12:45:31,919 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-10] [ApiProxy#saveIntervention] <--- HTTP/1.1 200 (137ms)
+2024-02-05 12:45:31,920 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-10] [ApiProxy#saveIntervention] cache-control: no-cache, no-store, max-age=0, must-revalidate
+2024-02-05 12:45:31,920 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-10] [ApiProxy#saveIntervention] connection: keep-alive
+2024-02-05 12:45:31,920 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-10] [ApiProxy#saveIntervention] content-length: 0
+2024-02-05 12:45:31,920 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-10] [ApiProxy#saveIntervention] date: Mon, 05 Feb 2024 11:45:31 GMT
+2024-02-05 12:45:31,920 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-10] [ApiProxy#saveIntervention] expires: 0
+2024-02-05 12:45:31,920 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-10] [ApiProxy#saveIntervention] keep-alive: timeout=60
+2024-02-05 12:45:31,920 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-10] [ApiProxy#saveIntervention] pragma: no-cache
+2024-02-05 12:45:31,920 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-10] [ApiProxy#saveIntervention] set-cookie: JSESSIONID=5B40F5495FC7113BF27E64EEE0CE343B; Path=/; HttpOnly
+2024-02-05 12:45:31,920 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-10] [ApiProxy#saveIntervention] x-content-type-options: nosniff
+2024-02-05 12:45:31,920 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-10] [ApiProxy#saveIntervention] x-xss-protection: 1; mode=block
+2024-02-05 12:45:31,920 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-10] [ApiProxy#saveIntervention] 
+2024-02-05 12:45:31,920 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-10] [ApiProxy#saveIntervention] <--- END HTTP (0-byte body)
+2024-02-05 12:45:31,943 INFO com.fabienit.flyingclub.web.controllers.WebappController [http-nio-8002-exec-1] Reach url: /workshop - GET
+2024-02-05 12:45:31,944 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-1] [ApiProxy#getWorkshops] ---> GET http://localhost:8001/workshop HTTP/1.1
+2024-02-05 12:45:31,944 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-1] [ApiProxy#getWorkshops] Authorization: Basic ZmFiaWVuOjEyMzQ1Ng==
+2024-02-05 12:45:31,944 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-1] [ApiProxy#getWorkshops] ---> END HTTP (0-byte body)
+2024-02-05 12:45:32,093 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-1] [ApiProxy#getWorkshops] <--- HTTP/1.1 200 (148ms)
+2024-02-05 12:45:32,093 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-1] [ApiProxy#getWorkshops] cache-control: no-cache, no-store, max-age=0, must-revalidate
+2024-02-05 12:45:32,093 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-1] [ApiProxy#getWorkshops] connection: keep-alive
+2024-02-05 12:45:32,093 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-1] [ApiProxy#getWorkshops] content-type: application/json
+2024-02-05 12:45:32,094 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-1] [ApiProxy#getWorkshops] date: Mon, 05 Feb 2024 11:45:31 GMT
+2024-02-05 12:45:32,094 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-1] [ApiProxy#getWorkshops] expires: 0
+2024-02-05 12:45:32,094 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-1] [ApiProxy#getWorkshops] keep-alive: timeout=60
+2024-02-05 12:45:32,094 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-1] [ApiProxy#getWorkshops] pragma: no-cache
+2024-02-05 12:45:32,094 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-1] [ApiProxy#getWorkshops] set-cookie: JSESSIONID=AB4652B1AD965E57E67E3123CF1EF4B3; Path=/; HttpOnly
+2024-02-05 12:45:32,094 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-1] [ApiProxy#getWorkshops] transfer-encoding: chunked
+2024-02-05 12:45:32,095 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-1] [ApiProxy#getWorkshops] x-content-type-options: nosniff
+2024-02-05 12:45:32,095 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-1] [ApiProxy#getWorkshops] x-xss-protection: 1; mode=block
+2024-02-05 12:45:32,095 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-1] [ApiProxy#getWorkshops] 
+2024-02-05 12:45:32,096 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-1] [ApiProxy#getWorkshops] [{"id":1,"motorChange":true,"helixChange":true,"other":"","entryDate":"2023-09-13","exitDate":"2023-09-14","manual":false,"canceled":false,"aircraft":{"id":1,"mark":"Diamond Aircraft","type":"DA 20-100 Katana","motor":"Rotax 912 S","power":"100 ch","seats":2,"autonomy":4,"use":"ecole","aircraftHours":4589,"motorHours":4589,"available":true}},{"id":2,"motorChange":true,"helixChange":true,"other":"","entryDate":"2023-09-29","exitDate":"2023-09-30","manual":false,"canceled":false,"aircraft":{"id":3,"mark":"Piper","type":"PA 28-161 Cadet","motor":"Lycoming ","power":"160 ch","seats":2,"autonomy":5,"use":"voyage","aircraftHours":7810,"motorHours":7810,"available":true}},{"id":3,"motorChange":true,"helixChange":true,"other":"","entryDate":"2023-10-09","exitDate":"2023-10-11","manual":false,"canceled":false,"aircraft":{"id":2,"mark":"Diamond Aircraft 40","type":"DA 40","motor":"Rotax 912 S","power":"180 ch","seats":4,"autonomy":4,"use":"voyage","aircraftHours":20008,"motorHours":0,"available":true}},{"id":4,"motorChange":false,"helixChange":false,"other":"","entryDate":"2024-01-15","exitDate":"2024-02-05","manual":false,"canceled":false,"aircraft":{"id":5,"mark":"Aéro Services","type":"Super Guépard SG 10","motor":"Rotax 912 ","power":"80 ch","seats":2,"autonomy":4,"use":"ecole et voyage","aircraftHours":10011,"motorHours":0,"available":true}},{"id":5,"motorChange":true,"helixChange":true,"other":"","entryDate":"2024-01-13","exitDate":"2024-02-05","manual":false,"canceled":false,"aircraft":{"id":2,"mark":"Diamond Aircraft 40","type":"DA 40","motor":"Rotax 912 S","power":"180 ch","seats":4,"autonomy":4,"use":"voyage","aircraftHours":20008,"motorHours":0,"available":true}}]
+2024-02-05 12:45:32,096 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-1] [ApiProxy#getWorkshops] <--- END HTTP (1695-byte body)
+2024-02-05 12:45:32,105 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-1] [ApiProxy#getAircrafts] ---> GET http://localhost:8001/aircrafts HTTP/1.1
+2024-02-05 12:45:32,105 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-1] [ApiProxy#getAircrafts] Authorization: Basic ZmFiaWVuOjEyMzQ1Ng==
+2024-02-05 12:45:32,105 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-1] [ApiProxy#getAircrafts] ---> END HTTP (0-byte body)
+2024-02-05 12:45:32,231 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-1] [ApiProxy#getAircrafts] <--- HTTP/1.1 200 (125ms)
+2024-02-05 12:45:32,231 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-1] [ApiProxy#getAircrafts] cache-control: no-cache, no-store, max-age=0, must-revalidate
+2024-02-05 12:45:32,231 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-1] [ApiProxy#getAircrafts] connection: keep-alive
+2024-02-05 12:45:32,231 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-1] [ApiProxy#getAircrafts] content-type: application/json
+2024-02-05 12:45:32,231 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-1] [ApiProxy#getAircrafts] date: Mon, 05 Feb 2024 11:45:31 GMT
+2024-02-05 12:45:32,231 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-1] [ApiProxy#getAircrafts] expires: 0
+2024-02-05 12:45:32,231 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-1] [ApiProxy#getAircrafts] keep-alive: timeout=60
+2024-02-05 12:45:32,231 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-1] [ApiProxy#getAircrafts] pragma: no-cache
+2024-02-05 12:45:32,231 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-1] [ApiProxy#getAircrafts] set-cookie: JSESSIONID=5C0DF9DEF040388D428148707DBC9E38; Path=/; HttpOnly
+2024-02-05 12:45:32,232 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-1] [ApiProxy#getAircrafts] transfer-encoding: chunked
+2024-02-05 12:45:32,232 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-1] [ApiProxy#getAircrafts] x-content-type-options: nosniff
+2024-02-05 12:45:32,232 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-1] [ApiProxy#getAircrafts] x-xss-protection: 1; mode=block
+2024-02-05 12:45:32,232 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-1] [ApiProxy#getAircrafts] 
+2024-02-05 12:45:32,233 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-1] [ApiProxy#getAircrafts] [{"id":1,"mark":"Diamond Aircraft","type":"DA 20-100 Katana","motor":"Rotax 912 S","power":"100 ch","seats":2,"autonomy":4,"use":"ecole","aircraftHours":4589,"motorHours":4589,"available":true},{"id":2,"mark":"Diamond Aircraft 40","type":"DA 40","motor":"Rotax 912 S","power":"180 ch","seats":4,"autonomy":4,"use":"voyage","aircraftHours":20008,"motorHours":0,"available":true},{"id":3,"mark":"Piper","type":"PA 28-161 Cadet","motor":"Lycoming ","power":"160 ch","seats":2,"autonomy":5,"use":"voyage","aircraftHours":7810,"motorHours":7810,"available":true},{"id":4,"mark":"Cessna","type":"kyhawk C172 S","motor":"Lycoming ","power":"180 ch","seats":4,"autonomy":5,"use":"voyage","aircraftHours":429,"motorHours":429,"available":true},{"id":5,"mark":"Aéro Services","type":"Super Guépard SG 10","motor":"Rotax 912 ","power":"80 ch","seats":2,"autonomy":4,"use":"ecole et voyage","aircraftHours":10011,"motorHours":0,"available":true}]
+2024-02-05 12:45:32,233 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-1] [ApiProxy#getAircrafts] <--- END HTTP (936-byte body)
+2024-02-05 12:47:08,505 INFO com.fabienit.flyingclub.web.controllers.WebappController [http-nio-8002-exec-5] Reach url: /disconnect - GET
+2024-02-05 12:47:08,522 INFO com.fabienit.flyingclub.web.controllers.WebappController [http-nio-8002-exec-6] Reach url: /connexion - GET
+2024-02-05 12:47:11,162 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#findUserByEmail] ---> POST http://localhost:8001/users/email HTTP/1.1
+2024-02-05 12:47:11,163 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#findUserByEmail] Authorization: Basic ZmFiaWVuOjEyMzQ1Ng==
+2024-02-05 12:47:11,171 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#findUserByEmail] Content-Length: 15
+2024-02-05 12:47:11,175 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#findUserByEmail] Content-Type: text/plain;charset=UTF-8
+2024-02-05 12:47:11,177 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#findUserByEmail] 
+2024-02-05 12:47:11,178 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#findUserByEmail] admin@admin.com
+2024-02-05 12:47:11,178 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#findUserByEmail] ---> END HTTP (15-byte body)
+2024-02-05 12:47:11,375 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#findUserByEmail] <--- HTTP/1.1 200 (197ms)
+2024-02-05 12:47:11,376 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#findUserByEmail] cache-control: no-cache, no-store, max-age=0, must-revalidate
+2024-02-05 12:47:11,376 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#findUserByEmail] connection: keep-alive
+2024-02-05 12:47:11,376 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#findUserByEmail] content-type: application/json
+2024-02-05 12:47:11,376 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#findUserByEmail] date: Mon, 05 Feb 2024 11:47:11 GMT
+2024-02-05 12:47:11,376 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#findUserByEmail] expires: 0
+2024-02-05 12:47:11,376 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#findUserByEmail] keep-alive: timeout=60
+2024-02-05 12:47:11,376 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#findUserByEmail] pragma: no-cache
+2024-02-05 12:47:11,376 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#findUserByEmail] set-cookie: JSESSIONID=4CBDB4FE668E3385D6B50531DCD91B5B; Path=/; HttpOnly
+2024-02-05 12:47:11,376 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#findUserByEmail] transfer-encoding: chunked
+2024-02-05 12:47:11,377 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#findUserByEmail] x-content-type-options: nosniff
+2024-02-05 12:47:11,377 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#findUserByEmail] x-xss-protection: 1; mode=block
+2024-02-05 12:47:11,377 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#findUserByEmail] 
+2024-02-05 12:47:11,377 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#findUserByEmail] {"id":1,"firstName":"ad","lastName":"min","email":"admin@admin.com","password":"$2a$10$jPUTDV6/9AkC7NRPPzmvXuLJlfnKoAYo.uJuZc0aeJHGum.LpxO0a","hours":10000,"roles":"ADMIN"}
+2024-02-05 12:47:11,378 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#findUserByEmail] <--- END HTTP (172-byte body)
+2024-02-05 12:47:11,591 INFO com.fabienit.flyingclub.web.controllers.WebappController [http-nio-8002-exec-8] Reach url: / - GET
+2024-02-05 12:47:12,265 INFO com.fabienit.flyingclub.web.controllers.WebappController [http-nio-8002-exec-9] Reach url: /allUsers - GET
+2024-02-05 12:47:12,276 DEBUG com.fabienit.flyingclub.service.impl.WebappServiceImpl [http-nio-8002-exec-9] Getting authenticated current user id
+2024-02-05 12:47:12,277 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-9] [ApiProxy#getRegisteredUsers] ---> GET http://localhost:8001/users HTTP/1.1
+2024-02-05 12:47:12,277 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-9] [ApiProxy#getRegisteredUsers] Authorization: Basic ZmFiaWVuOjEyMzQ1Ng==
+2024-02-05 12:47:12,277 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-9] [ApiProxy#getRegisteredUsers] ---> END HTTP (0-byte body)
+2024-02-05 12:47:12,528 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-9] [ApiProxy#getRegisteredUsers] <--- HTTP/1.1 200 (250ms)
+2024-02-05 12:47:12,528 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-9] [ApiProxy#getRegisteredUsers] cache-control: no-cache, no-store, max-age=0, must-revalidate
+2024-02-05 12:47:12,528 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-9] [ApiProxy#getRegisteredUsers] connection: keep-alive
+2024-02-05 12:47:12,529 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-9] [ApiProxy#getRegisteredUsers] content-type: application/json
+2024-02-05 12:47:12,529 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-9] [ApiProxy#getRegisteredUsers] date: Mon, 05 Feb 2024 11:47:12 GMT
+2024-02-05 12:47:12,529 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-9] [ApiProxy#getRegisteredUsers] expires: 0
+2024-02-05 12:47:12,529 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-9] [ApiProxy#getRegisteredUsers] keep-alive: timeout=60
+2024-02-05 12:47:12,529 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-9] [ApiProxy#getRegisteredUsers] pragma: no-cache
+2024-02-05 12:47:12,529 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-9] [ApiProxy#getRegisteredUsers] set-cookie: JSESSIONID=F5D656CBBE8EB4CA5E36979CE05CCA13; Path=/; HttpOnly
+2024-02-05 12:47:12,529 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-9] [ApiProxy#getRegisteredUsers] transfer-encoding: chunked
+2024-02-05 12:47:12,529 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-9] [ApiProxy#getRegisteredUsers] x-content-type-options: nosniff
+2024-02-05 12:47:12,529 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-9] [ApiProxy#getRegisteredUsers] x-xss-protection: 1; mode=block
+2024-02-05 12:47:12,529 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-9] [ApiProxy#getRegisteredUsers] 
+2024-02-05 12:47:12,530 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-9] [ApiProxy#getRegisteredUsers] [{"id":2,"firstName":"mech","lastName":"anic","email":"mechanic@mechanic.com","password":"$2a$10$jPUTDV6/9AkC7NRPPzmvXuLJlfnKoAYo.uJuZc0aeJHGum.LpxO0a","hours":0,"roles":"MECHANIC"},{"id":3,"firstName":"Fabien","lastName":"Chapeau","email":"fabien@gmail.com","password":"$2a$10$jPUTDV6/9AkC7NRPPzmvXuLJlfnKoAYo.uJuZc0aeJHGum.LpxO0a","hours":1875,"roles":"USER"},{"id":4,"firstName":"userName","lastName":"userLastName","email":"test1@gmail.com","password":"$2a$10$jPUTDV6/9AkC7NRPPzmvXuLJlfnKoAYo.uJuZc0aeJHGum.LpxO0a","hours":138,"roles":"USER"},{"id":5,"firstName":"userName","lastName":"userLastName","email":"test2@gmail.com","password":"$2a$10$jPUTDV6/9AkC7NRPPzmvXuLJlfnKoAYo.uJuZc0aeJHGum.LpxO0a","hours":459,"roles":"USER"},{"id":6,"firstName":"userName","lastName":"userLastName","email":"test3@gmail.com","password":"$2a$10$jPUTDV6/9AkC7NRPPzmvXuLJlfnKoAYo.uJuZc0aeJHGum.LpxO0a","hours":38,"roles":"USER"}]
+2024-02-05 12:47:12,530 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-9] [ApiProxy#getRegisteredUsers] <--- END HTTP (916-byte body)
+2024-02-05 12:47:20,189 INFO com.fabienit.flyingclub.web.controllers.WebappController [http-nio-8002-exec-10] Reach url: /registration - GET
+2024-02-05 12:48:22,707 INFO com.fabienit.flyingclub.AeroclubwebApplication [restartedMain] No active profile set, falling back to default profiles: default
+2024-02-05 12:48:28,175 INFO com.fabienit.flyingclub.AeroclubwebApplication [restartedMain] Started AeroclubwebApplication in 7.226 seconds (JVM running for 12.065)
+2024-02-05 12:48:28,342 INFO com.fabienit.flyingclub.web.controllers.WebappController [http-nio-8002-exec-1] Reach url: /disconnect - GET
+2024-02-05 12:48:28,385 INFO com.fabienit.flyingclub.web.controllers.WebappController [http-nio-8002-exec-3] Reach url: /connexion - GET
+2024-02-05 12:48:31,489 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] ---> POST http://localhost:8001/users/email HTTP/1.1
+2024-02-05 12:48:31,490 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] Authorization: Basic ZmFiaWVuOjEyMzQ1Ng==
+2024-02-05 12:48:31,490 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] Content-Length: 15
+2024-02-05 12:48:31,490 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] Content-Type: text/plain;charset=UTF-8
+2024-02-05 12:48:31,491 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] 
+2024-02-05 12:48:31,491 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] admin@admin.com
+2024-02-05 12:48:31,491 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] ---> END HTTP (15-byte body)
+2024-02-05 12:48:31,633 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] <--- HTTP/1.1 200 (142ms)
+2024-02-05 12:48:31,634 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] cache-control: no-cache, no-store, max-age=0, must-revalidate
+2024-02-05 12:48:31,634 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] connection: keep-alive
+2024-02-05 12:48:31,634 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] content-type: application/json
+2024-02-05 12:48:31,634 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] date: Mon, 05 Feb 2024 11:48:31 GMT
+2024-02-05 12:48:31,635 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] expires: 0
+2024-02-05 12:48:31,635 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] keep-alive: timeout=60
+2024-02-05 12:48:31,635 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] pragma: no-cache
+2024-02-05 12:48:31,635 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] set-cookie: JSESSIONID=9F8A4D0F17A59457FF77BD89C3E3DB6D; Path=/; HttpOnly
+2024-02-05 12:48:31,635 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] transfer-encoding: chunked
+2024-02-05 12:48:31,635 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] x-content-type-options: nosniff
+2024-02-05 12:48:31,635 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] x-xss-protection: 1; mode=block
+2024-02-05 12:48:31,635 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] 
+2024-02-05 12:48:31,638 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] {"id":1,"firstName":"ad","lastName":"min","email":"admin@admin.com","password":"$2a$10$jPUTDV6/9AkC7NRPPzmvXuLJlfnKoAYo.uJuZc0aeJHGum.LpxO0a","hours":10000,"roles":"ADMIN"}
+2024-02-05 12:48:31,639 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] <--- END HTTP (172-byte body)
+2024-02-05 12:48:31,814 INFO com.fabienit.flyingclub.web.controllers.WebappController [http-nio-8002-exec-5] Reach url: / - GET
+2024-02-05 12:48:36,921 INFO com.fabienit.flyingclub.web.controllers.WebappController [http-nio-8002-exec-7] Reach url: /allUsers - GET
+2024-02-05 12:48:36,923 DEBUG com.fabienit.flyingclub.service.impl.WebappServiceImpl [http-nio-8002-exec-7] Getting authenticated current user id
+2024-02-05 12:48:36,925 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#getRegisteredUsers] ---> GET http://localhost:8001/users HTTP/1.1
+2024-02-05 12:48:36,925 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#getRegisteredUsers] Authorization: Basic ZmFiaWVuOjEyMzQ1Ng==
+2024-02-05 12:48:36,925 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#getRegisteredUsers] ---> END HTTP (0-byte body)
+2024-02-05 12:48:37,067 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#getRegisteredUsers] <--- HTTP/1.1 200 (135ms)
+2024-02-05 12:48:37,068 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#getRegisteredUsers] cache-control: no-cache, no-store, max-age=0, must-revalidate
+2024-02-05 12:48:37,068 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#getRegisteredUsers] connection: keep-alive
+2024-02-05 12:48:37,068 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#getRegisteredUsers] content-type: application/json
+2024-02-05 12:48:37,068 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#getRegisteredUsers] date: Mon, 05 Feb 2024 11:48:37 GMT
+2024-02-05 12:48:37,068 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#getRegisteredUsers] expires: 0
+2024-02-05 12:48:37,068 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#getRegisteredUsers] keep-alive: timeout=60
+2024-02-05 12:48:37,068 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#getRegisteredUsers] pragma: no-cache
+2024-02-05 12:48:37,069 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#getRegisteredUsers] set-cookie: JSESSIONID=307A5E719A1D9A1AE3700F4FF33F9E91; Path=/; HttpOnly
+2024-02-05 12:48:37,069 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#getRegisteredUsers] transfer-encoding: chunked
+2024-02-05 12:48:37,069 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#getRegisteredUsers] x-content-type-options: nosniff
+2024-02-05 12:48:37,069 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#getRegisteredUsers] x-xss-protection: 1; mode=block
+2024-02-05 12:48:37,069 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#getRegisteredUsers] 
+2024-02-05 12:48:37,069 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#getRegisteredUsers] [{"id":2,"firstName":"mech","lastName":"anic","email":"mechanic@mechanic.com","password":"$2a$10$jPUTDV6/9AkC7NRPPzmvXuLJlfnKoAYo.uJuZc0aeJHGum.LpxO0a","hours":0,"roles":"MECHANIC"},{"id":3,"firstName":"Fabien","lastName":"Chapeau","email":"fabien@gmail.com","password":"$2a$10$jPUTDV6/9AkC7NRPPzmvXuLJlfnKoAYo.uJuZc0aeJHGum.LpxO0a","hours":1875,"roles":"USER"},{"id":4,"firstName":"userName","lastName":"userLastName","email":"test1@gmail.com","password":"$2a$10$jPUTDV6/9AkC7NRPPzmvXuLJlfnKoAYo.uJuZc0aeJHGum.LpxO0a","hours":138,"roles":"USER"},{"id":5,"firstName":"userName","lastName":"userLastName","email":"test2@gmail.com","password":"$2a$10$jPUTDV6/9AkC7NRPPzmvXuLJlfnKoAYo.uJuZc0aeJHGum.LpxO0a","hours":459,"roles":"USER"},{"id":6,"firstName":"userName","lastName":"userLastName","email":"test3@gmail.com","password":"$2a$10$jPUTDV6/9AkC7NRPPzmvXuLJlfnKoAYo.uJuZc0aeJHGum.LpxO0a","hours":38,"roles":"USER"}]
+2024-02-05 12:48:37,070 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#getRegisteredUsers] <--- END HTTP (916-byte body)
+2024-02-05 12:48:37,965 INFO com.fabienit.flyingclub.web.controllers.WebappController [http-nio-8002-exec-8] Reach url: /registration - GET
+2024-02-05 12:50:12,388 INFO com.fabienit.flyingclub.AeroclubwebApplication [restartedMain] No active profile set, falling back to default profiles: default
+2024-02-05 12:50:18,341 INFO com.fabienit.flyingclub.AeroclubwebApplication [restartedMain] Started AeroclubwebApplication in 7.16 seconds (JVM running for 9.742)
+2024-02-05 12:50:18,570 INFO com.fabienit.flyingclub.web.controllers.WebappController [http-nio-8002-exec-2] Reach url: /disconnect - GET
+2024-02-05 12:50:18,627 INFO com.fabienit.flyingclub.web.controllers.WebappController [http-nio-8002-exec-3] Reach url: /connexion - GET
+2024-02-05 12:50:35,905 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] ---> POST http://localhost:8001/users/email HTTP/1.1
+2024-02-05 12:50:35,907 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] Authorization: Basic ZmFiaWVuOjEyMzQ1Ng==
+2024-02-05 12:50:35,908 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] Content-Length: 15
+2024-02-05 12:50:35,908 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] Content-Type: text/plain;charset=UTF-8
+2024-02-05 12:50:35,908 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] 
+2024-02-05 12:50:35,908 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] admin@admin.com
+2024-02-05 12:50:35,908 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] ---> END HTTP (15-byte body)
+2024-02-05 12:50:36,049 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] <--- HTTP/1.1 200 (140ms)
+2024-02-05 12:50:36,050 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] cache-control: no-cache, no-store, max-age=0, must-revalidate
+2024-02-05 12:50:36,050 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] connection: keep-alive
+2024-02-05 12:50:36,050 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] content-type: application/json
+2024-02-05 12:50:36,050 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] date: Mon, 05 Feb 2024 11:50:36 GMT
+2024-02-05 12:50:36,051 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] expires: 0
+2024-02-05 12:50:36,051 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] keep-alive: timeout=60
+2024-02-05 12:50:36,051 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] pragma: no-cache
+2024-02-05 12:50:36,051 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] set-cookie: JSESSIONID=2DD5A7B8D53F851C4BB2ECA4399984E8; Path=/; HttpOnly
+2024-02-05 12:50:36,051 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] transfer-encoding: chunked
+2024-02-05 12:50:36,051 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] x-content-type-options: nosniff
+2024-02-05 12:50:36,051 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] x-xss-protection: 1; mode=block
+2024-02-05 12:50:36,051 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] 
+2024-02-05 12:50:36,053 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] {"id":1,"firstName":"ad","lastName":"min","email":"admin@admin.com","password":"$2a$10$jPUTDV6/9AkC7NRPPzmvXuLJlfnKoAYo.uJuZc0aeJHGum.LpxO0a","hours":10000,"roles":"ADMIN"}
+2024-02-05 12:50:36,053 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] <--- END HTTP (172-byte body)
+2024-02-05 12:50:36,228 INFO com.fabienit.flyingclub.web.controllers.WebappController [http-nio-8002-exec-5] Reach url: / - GET
+2024-02-05 12:50:37,503 INFO com.fabienit.flyingclub.web.controllers.WebappController [http-nio-8002-exec-6] Reach url: /allUsers - GET
+2024-02-05 12:50:37,504 DEBUG com.fabienit.flyingclub.service.impl.WebappServiceImpl [http-nio-8002-exec-6] Getting authenticated current user id
+2024-02-05 12:50:37,510 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getRegisteredUsers] ---> GET http://localhost:8001/users HTTP/1.1
+2024-02-05 12:50:37,511 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getRegisteredUsers] Authorization: Basic ZmFiaWVuOjEyMzQ1Ng==
+2024-02-05 12:50:37,511 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getRegisteredUsers] ---> END HTTP (0-byte body)
+2024-02-05 12:50:37,652 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getRegisteredUsers] <--- HTTP/1.1 200 (139ms)
+2024-02-05 12:50:37,652 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getRegisteredUsers] cache-control: no-cache, no-store, max-age=0, must-revalidate
+2024-02-05 12:50:37,652 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getRegisteredUsers] connection: keep-alive
+2024-02-05 12:50:37,652 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getRegisteredUsers] content-type: application/json
+2024-02-05 12:50:37,652 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getRegisteredUsers] date: Mon, 05 Feb 2024 11:50:37 GMT
+2024-02-05 12:50:37,653 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getRegisteredUsers] expires: 0
+2024-02-05 12:50:37,653 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getRegisteredUsers] keep-alive: timeout=60
+2024-02-05 12:50:37,653 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getRegisteredUsers] pragma: no-cache
+2024-02-05 12:50:37,654 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getRegisteredUsers] set-cookie: JSESSIONID=F69988DBD64F8B4887FE35634970C5F7; Path=/; HttpOnly
+2024-02-05 12:50:37,654 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getRegisteredUsers] transfer-encoding: chunked
+2024-02-05 12:50:37,654 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getRegisteredUsers] x-content-type-options: nosniff
+2024-02-05 12:50:37,654 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getRegisteredUsers] x-xss-protection: 1; mode=block
+2024-02-05 12:50:37,654 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getRegisteredUsers] 
+2024-02-05 12:50:37,654 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getRegisteredUsers] [{"id":2,"firstName":"mech","lastName":"anic","email":"mechanic@mechanic.com","password":"$2a$10$jPUTDV6/9AkC7NRPPzmvXuLJlfnKoAYo.uJuZc0aeJHGum.LpxO0a","hours":0,"roles":"MECHANIC"},{"id":3,"firstName":"Fabien","lastName":"Chapeau","email":"fabien@gmail.com","password":"$2a$10$jPUTDV6/9AkC7NRPPzmvXuLJlfnKoAYo.uJuZc0aeJHGum.LpxO0a","hours":1875,"roles":"USER"},{"id":4,"firstName":"userName","lastName":"userLastName","email":"test1@gmail.com","password":"$2a$10$jPUTDV6/9AkC7NRPPzmvXuLJlfnKoAYo.uJuZc0aeJHGum.LpxO0a","hours":138,"roles":"USER"},{"id":5,"firstName":"userName","lastName":"userLastName","email":"test2@gmail.com","password":"$2a$10$jPUTDV6/9AkC7NRPPzmvXuLJlfnKoAYo.uJuZc0aeJHGum.LpxO0a","hours":459,"roles":"USER"},{"id":6,"firstName":"userName","lastName":"userLastName","email":"test3@gmail.com","password":"$2a$10$jPUTDV6/9AkC7NRPPzmvXuLJlfnKoAYo.uJuZc0aeJHGum.LpxO0a","hours":38,"roles":"USER"}]
+2024-02-05 12:50:37,654 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getRegisteredUsers] <--- END HTTP (916-byte body)
+2024-02-05 12:50:38,796 INFO com.fabienit.flyingclub.web.controllers.WebappController [http-nio-8002-exec-7] Reach url: /registration - GET
+2024-02-05 12:51:26,858 INFO com.fabienit.flyingclub.AeroclubwebApplication [restartedMain] No active profile set, falling back to default profiles: default
+2024-02-05 12:51:33,606 INFO com.fabienit.flyingclub.AeroclubwebApplication [restartedMain] Started AeroclubwebApplication in 8.753 seconds (JVM running for 10.801)
+2024-02-05 12:53:04,952 INFO com.fabienit.flyingclub.web.controllers.WebappController [http-nio-8002-exec-2] Reach url: /disconnect - GET
+2024-02-05 12:53:04,987 INFO com.fabienit.flyingclub.web.controllers.WebappController [http-nio-8002-exec-3] Reach url: /connexion - GET
+2024-02-05 12:53:08,306 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] ---> POST http://localhost:8001/users/email HTTP/1.1
+2024-02-05 12:53:08,306 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] Authorization: Basic ZmFiaWVuOjEyMzQ1Ng==
+2024-02-05 12:53:08,307 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] Content-Length: 15
+2024-02-05 12:53:08,307 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] Content-Type: text/plain;charset=UTF-8
+2024-02-05 12:53:08,307 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] 
+2024-02-05 12:53:08,307 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] admin@admin.com
+2024-02-05 12:53:08,307 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] ---> END HTTP (15-byte body)
+2024-02-05 12:53:08,456 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] <--- HTTP/1.1 200 (148ms)
+2024-02-05 12:53:08,456 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] cache-control: no-cache, no-store, max-age=0, must-revalidate
+2024-02-05 12:53:08,456 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] connection: keep-alive
+2024-02-05 12:53:08,456 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] content-type: application/json
+2024-02-05 12:53:08,457 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] date: Mon, 05 Feb 2024 11:53:08 GMT
+2024-02-05 12:53:08,457 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] expires: 0
+2024-02-05 12:53:08,457 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] keep-alive: timeout=60
+2024-02-05 12:53:08,457 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] pragma: no-cache
+2024-02-05 12:53:08,457 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] set-cookie: JSESSIONID=5F724575924695FEF8CECE7E5BA2BE5C; Path=/; HttpOnly
+2024-02-05 12:53:08,457 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] transfer-encoding: chunked
+2024-02-05 12:53:08,458 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] x-content-type-options: nosniff
+2024-02-05 12:53:08,458 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] x-xss-protection: 1; mode=block
+2024-02-05 12:53:08,458 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] 
+2024-02-05 12:53:08,459 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] {"id":1,"firstName":"ad","lastName":"min","email":"admin@admin.com","password":"$2a$10$jPUTDV6/9AkC7NRPPzmvXuLJlfnKoAYo.uJuZc0aeJHGum.LpxO0a","hours":10000,"roles":"ADMIN"}
+2024-02-05 12:53:08,460 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] <--- END HTTP (172-byte body)
+2024-02-05 12:53:08,637 INFO com.fabienit.flyingclub.web.controllers.WebappController [http-nio-8002-exec-5] Reach url: / - GET
+2024-02-05 12:53:09,852 INFO com.fabienit.flyingclub.web.controllers.WebappController [http-nio-8002-exec-6] Reach url: /allUsers - GET
+2024-02-05 12:53:09,854 DEBUG com.fabienit.flyingclub.service.impl.WebappServiceImpl [http-nio-8002-exec-6] Getting authenticated current user id
+2024-02-05 12:53:09,855 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getRegisteredUsers] ---> GET http://localhost:8001/users HTTP/1.1
+2024-02-05 12:53:09,855 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getRegisteredUsers] Authorization: Basic ZmFiaWVuOjEyMzQ1Ng==
+2024-02-05 12:53:09,855 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getRegisteredUsers] ---> END HTTP (0-byte body)
+2024-02-05 12:53:09,999 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getRegisteredUsers] <--- HTTP/1.1 200 (143ms)
+2024-02-05 12:53:09,999 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getRegisteredUsers] cache-control: no-cache, no-store, max-age=0, must-revalidate
+2024-02-05 12:53:09,999 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getRegisteredUsers] connection: keep-alive
+2024-02-05 12:53:09,999 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getRegisteredUsers] content-type: application/json
+2024-02-05 12:53:10,000 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getRegisteredUsers] date: Mon, 05 Feb 2024 11:53:09 GMT
+2024-02-05 12:53:10,000 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getRegisteredUsers] expires: 0
+2024-02-05 12:53:10,000 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getRegisteredUsers] keep-alive: timeout=60
+2024-02-05 12:53:10,000 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getRegisteredUsers] pragma: no-cache
+2024-02-05 12:53:10,001 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getRegisteredUsers] set-cookie: JSESSIONID=145072BCC6809B448334DFDDEAE28685; Path=/; HttpOnly
+2024-02-05 12:53:10,001 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getRegisteredUsers] transfer-encoding: chunked
+2024-02-05 12:53:10,001 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getRegisteredUsers] x-content-type-options: nosniff
+2024-02-05 12:53:10,001 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getRegisteredUsers] x-xss-protection: 1; mode=block
+2024-02-05 12:53:10,001 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getRegisteredUsers] 
+2024-02-05 12:53:10,001 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getRegisteredUsers] [{"id":2,"firstName":"mech","lastName":"anic","email":"mechanic@mechanic.com","password":"$2a$10$jPUTDV6/9AkC7NRPPzmvXuLJlfnKoAYo.uJuZc0aeJHGum.LpxO0a","hours":0,"roles":"MECHANIC"},{"id":3,"firstName":"Fabien","lastName":"Chapeau","email":"fabien@gmail.com","password":"$2a$10$jPUTDV6/9AkC7NRPPzmvXuLJlfnKoAYo.uJuZc0aeJHGum.LpxO0a","hours":1875,"roles":"USER"},{"id":4,"firstName":"userName","lastName":"userLastName","email":"test1@gmail.com","password":"$2a$10$jPUTDV6/9AkC7NRPPzmvXuLJlfnKoAYo.uJuZc0aeJHGum.LpxO0a","hours":138,"roles":"USER"},{"id":5,"firstName":"userName","lastName":"userLastName","email":"test2@gmail.com","password":"$2a$10$jPUTDV6/9AkC7NRPPzmvXuLJlfnKoAYo.uJuZc0aeJHGum.LpxO0a","hours":459,"roles":"USER"},{"id":6,"firstName":"userName","lastName":"userLastName","email":"test3@gmail.com","password":"$2a$10$jPUTDV6/9AkC7NRPPzmvXuLJlfnKoAYo.uJuZc0aeJHGum.LpxO0a","hours":38,"roles":"USER"}]
+2024-02-05 12:53:10,001 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-6] [ApiProxy#getRegisteredUsers] <--- END HTTP (916-byte body)
+2024-02-05 12:53:11,288 INFO com.fabienit.flyingclub.web.controllers.WebappController [http-nio-8002-exec-7] Reach url: /registration - GET
+2024-02-05 12:53:55,327 INFO com.fabienit.flyingclub.AeroclubwebApplication [restartedMain] No active profile set, falling back to default profiles: default
+2024-02-05 12:54:01,928 INFO com.fabienit.flyingclub.AeroclubwebApplication [restartedMain] Started AeroclubwebApplication in 8.397 seconds (JVM running for 10.994)
+2024-02-05 12:54:01,971 INFO com.fabienit.flyingclub.web.controllers.WebappController [http-nio-8002-exec-2] Reach url: /disconnect - GET
+2024-02-05 12:54:02,105 INFO com.fabienit.flyingclub.web.controllers.WebappController [http-nio-8002-exec-3] Reach url: /connexion - GET
+2024-02-05 12:54:05,280 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] ---> POST http://localhost:8001/users/email HTTP/1.1
+2024-02-05 12:54:05,281 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] Authorization: Basic ZmFiaWVuOjEyMzQ1Ng==
+2024-02-05 12:54:05,281 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] Content-Length: 15
+2024-02-05 12:54:05,282 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] Content-Type: text/plain;charset=UTF-8
+2024-02-05 12:54:05,282 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] 
+2024-02-05 12:54:05,282 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] admin@admin.com
+2024-02-05 12:54:05,282 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] ---> END HTTP (15-byte body)
+2024-02-05 12:54:05,429 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] <--- HTTP/1.1 200 (146ms)
+2024-02-05 12:54:05,429 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] cache-control: no-cache, no-store, max-age=0, must-revalidate
+2024-02-05 12:54:05,430 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] connection: keep-alive
+2024-02-05 12:54:05,430 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] content-type: application/json
+2024-02-05 12:54:05,430 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] date: Mon, 05 Feb 2024 11:54:05 GMT
+2024-02-05 12:54:05,430 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] expires: 0
+2024-02-05 12:54:05,430 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] keep-alive: timeout=60
+2024-02-05 12:54:05,430 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] pragma: no-cache
+2024-02-05 12:54:05,430 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] set-cookie: JSESSIONID=0474C190942D4763DC0B471D67C9ACAB; Path=/; HttpOnly
+2024-02-05 12:54:05,431 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] transfer-encoding: chunked
+2024-02-05 12:54:05,431 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] x-content-type-options: nosniff
+2024-02-05 12:54:05,431 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] x-xss-protection: 1; mode=block
+2024-02-05 12:54:05,431 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] 
+2024-02-05 12:54:05,432 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] {"id":1,"firstName":"ad","lastName":"min","email":"admin@admin.com","password":"$2a$10$jPUTDV6/9AkC7NRPPzmvXuLJlfnKoAYo.uJuZc0aeJHGum.LpxO0a","hours":10000,"roles":"ADMIN"}
+2024-02-05 12:54:05,433 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#findUserByEmail] <--- END HTTP (172-byte body)
+2024-02-05 12:54:05,637 INFO com.fabienit.flyingclub.web.controllers.WebappController [http-nio-8002-exec-5] Reach url: / - GET
+2024-02-05 12:54:08,408 INFO com.fabienit.flyingclub.web.controllers.WebappController [http-nio-8002-exec-7] Reach url: /allUsers - GET
+2024-02-05 12:54:08,435 DEBUG com.fabienit.flyingclub.service.impl.WebappServiceImpl [http-nio-8002-exec-7] Getting authenticated current user id
+2024-02-05 12:54:08,436 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#getRegisteredUsers] ---> GET http://localhost:8001/users HTTP/1.1
+2024-02-05 12:54:08,436 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#getRegisteredUsers] Authorization: Basic ZmFiaWVuOjEyMzQ1Ng==
+2024-02-05 12:54:08,436 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#getRegisteredUsers] ---> END HTTP (0-byte body)
+2024-02-05 12:54:08,593 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#getRegisteredUsers] <--- HTTP/1.1 200 (154ms)
+2024-02-05 12:54:08,593 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#getRegisteredUsers] cache-control: no-cache, no-store, max-age=0, must-revalidate
+2024-02-05 12:54:08,593 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#getRegisteredUsers] connection: keep-alive
+2024-02-05 12:54:08,593 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#getRegisteredUsers] content-type: application/json
+2024-02-05 12:54:08,593 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#getRegisteredUsers] date: Mon, 05 Feb 2024 11:54:08 GMT
+2024-02-05 12:54:08,594 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#getRegisteredUsers] expires: 0
+2024-02-05 12:54:08,594 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#getRegisteredUsers] keep-alive: timeout=60
+2024-02-05 12:54:08,594 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#getRegisteredUsers] pragma: no-cache
+2024-02-05 12:54:08,594 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#getRegisteredUsers] set-cookie: JSESSIONID=CE8C1ECA20848B74E43C1C2B2E6D5AFE; Path=/; HttpOnly
+2024-02-05 12:54:08,594 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#getRegisteredUsers] transfer-encoding: chunked
+2024-02-05 12:54:08,594 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#getRegisteredUsers] x-content-type-options: nosniff
+2024-02-05 12:54:08,595 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#getRegisteredUsers] x-xss-protection: 1; mode=block
+2024-02-05 12:54:08,595 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#getRegisteredUsers] 
+2024-02-05 12:54:08,595 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#getRegisteredUsers] [{"id":2,"firstName":"mech","lastName":"anic","email":"mechanic@mechanic.com","password":"$2a$10$jPUTDV6/9AkC7NRPPzmvXuLJlfnKoAYo.uJuZc0aeJHGum.LpxO0a","hours":0,"roles":"MECHANIC"},{"id":3,"firstName":"Fabien","lastName":"Chapeau","email":"fabien@gmail.com","password":"$2a$10$jPUTDV6/9AkC7NRPPzmvXuLJlfnKoAYo.uJuZc0aeJHGum.LpxO0a","hours":1875,"roles":"USER"},{"id":4,"firstName":"userName","lastName":"userLastName","email":"test1@gmail.com","password":"$2a$10$jPUTDV6/9AkC7NRPPzmvXuLJlfnKoAYo.uJuZc0aeJHGum.LpxO0a","hours":138,"roles":"USER"},{"id":5,"firstName":"userName","lastName":"userLastName","email":"test2@gmail.com","password":"$2a$10$jPUTDV6/9AkC7NRPPzmvXuLJlfnKoAYo.uJuZc0aeJHGum.LpxO0a","hours":459,"roles":"USER"},{"id":6,"firstName":"userName","lastName":"userLastName","email":"test3@gmail.com","password":"$2a$10$jPUTDV6/9AkC7NRPPzmvXuLJlfnKoAYo.uJuZc0aeJHGum.LpxO0a","hours":38,"roles":"USER"}]
+2024-02-05 12:54:08,595 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-7] [ApiProxy#getRegisteredUsers] <--- END HTTP (916-byte body)
+2024-02-05 12:54:09,329 INFO com.fabienit.flyingclub.web.controllers.WebappController [http-nio-8002-exec-8] Reach url: /registration - GET
+2024-02-05 12:54:46,824 INFO com.fabienit.flyingclub.web.controllers.WebappController [http-nio-8002-exec-9] Reach url: / - GET
+2024-02-05 12:54:49,220 INFO com.fabienit.flyingclub.web.controllers.WebappController [http-nio-8002-exec-10] Reach url: / - GET
+2024-02-05 12:54:55,989 INFO com.fabienit.flyingclub.web.controllers.WebappController [http-nio-8002-exec-1] Reach url: / - GET
+2024-02-05 12:54:58,148 INFO com.fabienit.flyingclub.web.controllers.WebappController [http-nio-8002-exec-3] Reach url: /disconnect - GET
+2024-02-05 12:54:58,166 INFO com.fabienit.flyingclub.web.controllers.WebappController [http-nio-8002-exec-4] Reach url: /connexion - GET
+2024-02-05 12:55:00,271 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-5] [ApiProxy#findUserByEmail] ---> POST http://localhost:8001/users/email HTTP/1.1
+2024-02-05 12:55:00,272 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-5] [ApiProxy#findUserByEmail] Authorization: Basic ZmFiaWVuOjEyMzQ1Ng==
+2024-02-05 12:55:00,272 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-5] [ApiProxy#findUserByEmail] Content-Length: 21
+2024-02-05 12:55:00,273 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-5] [ApiProxy#findUserByEmail] Content-Type: text/plain;charset=UTF-8
+2024-02-05 12:55:00,273 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-5] [ApiProxy#findUserByEmail] 
+2024-02-05 12:55:00,273 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-5] [ApiProxy#findUserByEmail] mechanic@mechanic.com
+2024-02-05 12:55:00,273 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-5] [ApiProxy#findUserByEmail] ---> END HTTP (21-byte body)
+2024-02-05 12:55:00,430 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-5] [ApiProxy#findUserByEmail] <--- HTTP/1.1 200 (156ms)
+2024-02-05 12:55:00,430 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-5] [ApiProxy#findUserByEmail] cache-control: no-cache, no-store, max-age=0, must-revalidate
+2024-02-05 12:55:00,430 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-5] [ApiProxy#findUserByEmail] connection: keep-alive
+2024-02-05 12:55:00,430 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-5] [ApiProxy#findUserByEmail] content-type: application/json
+2024-02-05 12:55:00,431 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-5] [ApiProxy#findUserByEmail] date: Mon, 05 Feb 2024 11:55:00 GMT
+2024-02-05 12:55:00,431 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-5] [ApiProxy#findUserByEmail] expires: 0
+2024-02-05 12:55:00,432 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-5] [ApiProxy#findUserByEmail] keep-alive: timeout=60
+2024-02-05 12:55:00,432 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-5] [ApiProxy#findUserByEmail] pragma: no-cache
+2024-02-05 12:55:00,432 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-5] [ApiProxy#findUserByEmail] set-cookie: JSESSIONID=9FA79F9E5C5DC7A408A5FD7E80788F7E; Path=/; HttpOnly
+2024-02-05 12:55:00,432 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-5] [ApiProxy#findUserByEmail] transfer-encoding: chunked
+2024-02-05 12:55:00,432 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-5] [ApiProxy#findUserByEmail] x-content-type-options: nosniff
+2024-02-05 12:55:00,432 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-5] [ApiProxy#findUserByEmail] x-xss-protection: 1; mode=block
+2024-02-05 12:55:00,432 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-5] [ApiProxy#findUserByEmail] 
+2024-02-05 12:55:00,433 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-5] [ApiProxy#findUserByEmail] {"id":2,"firstName":"mech","lastName":"anic","email":"mechanic@mechanic.com","password":"$2a$10$jPUTDV6/9AkC7NRPPzmvXuLJlfnKoAYo.uJuZc0aeJHGum.LpxO0a","hours":0,"roles":"MECHANIC"}
+2024-02-05 12:55:00,433 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-5] [ApiProxy#findUserByEmail] <--- END HTTP (180-byte body)
+2024-02-05 12:55:00,586 INFO com.fabienit.flyingclub.web.controllers.WebappController [http-nio-8002-exec-6] Reach url: / - GET
+2024-02-05 12:56:18,435 INFO com.fabienit.flyingclub.AeroclubwebApplication [restartedMain] No active profile set, falling back to default profiles: default
+2024-02-05 12:56:25,167 INFO com.fabienit.flyingclub.AeroclubwebApplication [restartedMain] Started AeroclubwebApplication in 9.46 seconds (JVM running for 11.448)
+2024-02-05 12:56:25,269 INFO com.fabienit.flyingclub.web.controllers.WebappController [http-nio-8002-exec-2] Reach url: / - GET
+2024-02-05 12:56:28,653 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-1] [ApiProxy#findUserByEmail] ---> POST http://localhost:8001/users/email HTTP/1.1
+2024-02-05 12:56:28,653 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-1] [ApiProxy#findUserByEmail] Authorization: Basic ZmFiaWVuOjEyMzQ1Ng==
+2024-02-05 12:56:28,654 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-1] [ApiProxy#findUserByEmail] Content-Length: 21
+2024-02-05 12:56:28,654 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-1] [ApiProxy#findUserByEmail] Content-Type: text/plain;charset=UTF-8
+2024-02-05 12:56:28,655 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-1] [ApiProxy#findUserByEmail] 
+2024-02-05 12:56:28,655 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-1] [ApiProxy#findUserByEmail] mechanic@mechanic.com
+2024-02-05 12:56:28,656 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-1] [ApiProxy#findUserByEmail] ---> END HTTP (21-byte body)
+2024-02-05 12:56:29,279 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-1] [ApiProxy#findUserByEmail] <--- HTTP/1.1 200 (622ms)
+2024-02-05 12:56:29,279 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-1] [ApiProxy#findUserByEmail] cache-control: no-cache, no-store, max-age=0, must-revalidate
+2024-02-05 12:56:29,280 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-1] [ApiProxy#findUserByEmail] connection: keep-alive
+2024-02-05 12:56:29,280 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-1] [ApiProxy#findUserByEmail] content-type: application/json
+2024-02-05 12:56:29,280 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-1] [ApiProxy#findUserByEmail] date: Mon, 05 Feb 2024 11:56:29 GMT
+2024-02-05 12:56:29,280 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-1] [ApiProxy#findUserByEmail] expires: 0
+2024-02-05 12:56:29,282 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-1] [ApiProxy#findUserByEmail] keep-alive: timeout=60
+2024-02-05 12:56:29,282 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-1] [ApiProxy#findUserByEmail] pragma: no-cache
+2024-02-05 12:56:29,282 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-1] [ApiProxy#findUserByEmail] set-cookie: JSESSIONID=B6512F1CFD4112E025B4C385EE6C1484; Path=/; HttpOnly
+2024-02-05 12:56:29,283 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-1] [ApiProxy#findUserByEmail] transfer-encoding: chunked
+2024-02-05 12:56:29,284 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-1] [ApiProxy#findUserByEmail] x-content-type-options: nosniff
+2024-02-05 12:56:29,287 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-1] [ApiProxy#findUserByEmail] x-xss-protection: 1; mode=block
+2024-02-05 12:56:29,287 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-1] [ApiProxy#findUserByEmail] 
+2024-02-05 12:56:29,289 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-1] [ApiProxy#findUserByEmail] {"id":2,"firstName":"mech","lastName":"anic","email":"mechanic@mechanic.com","password":"$2a$10$jPUTDV6/9AkC7NRPPzmvXuLJlfnKoAYo.uJuZc0aeJHGum.LpxO0a","hours":0,"roles":"MECHANIC"}
+2024-02-05 12:56:29,289 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-1] [ApiProxy#findUserByEmail] <--- END HTTP (180-byte body)
+2024-02-05 12:56:29,739 INFO com.fabienit.flyingclub.web.controllers.WebappController [http-nio-8002-exec-3] Reach url: / - GET
+2024-02-05 13:04:11,049 INFO com.fabienit.flyingclub.web.controllers.WebappController [http-nio-8002-exec-7] Reach url: / - GET
+2024-02-05 13:05:25,931 INFO com.fabienit.flyingclub.AeroclubwebApplication [restartedMain] No active profile set, falling back to default profiles: default
+2024-02-05 13:05:32,125 INFO com.fabienit.flyingclub.AeroclubwebApplication [restartedMain] Started AeroclubwebApplication in 7.685 seconds (JVM running for 9.361)
+2024-02-05 13:05:44,151 INFO com.fabienit.flyingclub.web.controllers.WebappController [http-nio-8002-exec-1] Reach url: / - GET
+2024-02-05 13:05:50,428 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-2] [ApiProxy#findUserByEmail] ---> POST http://localhost:8001/users/email HTTP/1.1
+2024-02-05 13:05:50,429 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-2] [ApiProxy#findUserByEmail] Authorization: Basic ZmFiaWVuOjEyMzQ1Ng==
+2024-02-05 13:05:50,429 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-2] [ApiProxy#findUserByEmail] Content-Length: 21
+2024-02-05 13:05:50,430 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-2] [ApiProxy#findUserByEmail] Content-Type: text/plain;charset=UTF-8
+2024-02-05 13:05:50,430 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-2] [ApiProxy#findUserByEmail] 
+2024-02-05 13:05:50,430 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-2] [ApiProxy#findUserByEmail] mechanic@mechanic.com
+2024-02-05 13:05:50,431 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-2] [ApiProxy#findUserByEmail] ---> END HTTP (21-byte body)
+2024-02-05 13:05:50,765 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-2] [ApiProxy#findUserByEmail] <--- HTTP/1.1 200 (334ms)
+2024-02-05 13:05:50,765 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-2] [ApiProxy#findUserByEmail] cache-control: no-cache, no-store, max-age=0, must-revalidate
+2024-02-05 13:05:50,766 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-2] [ApiProxy#findUserByEmail] connection: keep-alive
+2024-02-05 13:05:50,766 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-2] [ApiProxy#findUserByEmail] content-type: application/json
+2024-02-05 13:05:50,766 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-2] [ApiProxy#findUserByEmail] date: Mon, 05 Feb 2024 12:05:50 GMT
+2024-02-05 13:05:50,766 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-2] [ApiProxy#findUserByEmail] expires: 0
+2024-02-05 13:05:50,766 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-2] [ApiProxy#findUserByEmail] keep-alive: timeout=60
+2024-02-05 13:05:50,766 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-2] [ApiProxy#findUserByEmail] pragma: no-cache
+2024-02-05 13:05:50,766 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-2] [ApiProxy#findUserByEmail] set-cookie: JSESSIONID=8D9A43AC997834A5BD19BF569F788BA9; Path=/; HttpOnly
+2024-02-05 13:05:50,767 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-2] [ApiProxy#findUserByEmail] transfer-encoding: chunked
+2024-02-05 13:05:50,767 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-2] [ApiProxy#findUserByEmail] x-content-type-options: nosniff
+2024-02-05 13:05:50,767 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-2] [ApiProxy#findUserByEmail] x-xss-protection: 1; mode=block
+2024-02-05 13:05:50,767 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-2] [ApiProxy#findUserByEmail] 
+2024-02-05 13:05:50,768 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-2] [ApiProxy#findUserByEmail] {"id":2,"firstName":"mech","lastName":"anic","email":"mechanic@mechanic.com","password":"$2a$10$jPUTDV6/9AkC7NRPPzmvXuLJlfnKoAYo.uJuZc0aeJHGum.LpxO0a","hours":0,"roles":"MECHANIC"}
+2024-02-05 13:05:50,769 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-2] [ApiProxy#findUserByEmail] <--- END HTTP (180-byte body)
+2024-02-05 13:05:51,197 INFO com.fabienit.flyingclub.web.controllers.WebappController [http-nio-8002-exec-3] Reach url: / - GET
+2024-02-05 13:05:52,875 INFO com.fabienit.flyingclub.web.controllers.WebappController [http-nio-8002-exec-4] Reach url: /profile - GET
+2024-02-05 13:05:52,876 DEBUG com.fabienit.flyingclub.service.impl.WebappServiceImpl [http-nio-8002-exec-4] Getting authenticated current user id
+2024-02-05 13:05:52,878 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#getRegisteredUserById] ---> GET http://localhost:8001/users/2 HTTP/1.1
+2024-02-05 13:05:52,878 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#getRegisteredUserById] Authorization: Basic ZmFiaWVuOjEyMzQ1Ng==
+2024-02-05 13:05:52,878 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#getRegisteredUserById] ---> END HTTP (0-byte body)
+2024-02-05 13:05:53,061 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#getRegisteredUserById] <--- HTTP/1.1 200 (182ms)
+2024-02-05 13:05:53,062 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#getRegisteredUserById] cache-control: no-cache, no-store, max-age=0, must-revalidate
+2024-02-05 13:05:53,062 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#getRegisteredUserById] connection: keep-alive
+2024-02-05 13:05:53,062 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#getRegisteredUserById] content-type: application/json
+2024-02-05 13:05:53,062 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#getRegisteredUserById] date: Mon, 05 Feb 2024 12:05:53 GMT
+2024-02-05 13:05:53,062 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#getRegisteredUserById] expires: 0
+2024-02-05 13:05:53,062 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#getRegisteredUserById] keep-alive: timeout=60
+2024-02-05 13:05:53,063 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#getRegisteredUserById] pragma: no-cache
+2024-02-05 13:05:53,063 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#getRegisteredUserById] set-cookie: JSESSIONID=C1C3365F1A41E28FFF41A4A5F6F24A2D; Path=/; HttpOnly
+2024-02-05 13:05:53,063 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#getRegisteredUserById] transfer-encoding: chunked
+2024-02-05 13:05:53,063 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#getRegisteredUserById] x-content-type-options: nosniff
+2024-02-05 13:05:53,063 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#getRegisteredUserById] x-xss-protection: 1; mode=block
+2024-02-05 13:05:53,063 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#getRegisteredUserById] 
+2024-02-05 13:05:53,063 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#getRegisteredUserById] {"id":2,"firstName":"mech","lastName":"anic","email":"mechanic@mechanic.com","password":"$2a$10$jPUTDV6/9AkC7NRPPzmvXuLJlfnKoAYo.uJuZc0aeJHGum.LpxO0a","hours":0,"roles":"MECHANIC"}
+2024-02-05 13:05:53,064 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-4] [ApiProxy#getRegisteredUserById] <--- END HTTP (180-byte body)
+2024-02-05 13:05:55,771 INFO com.fabienit.flyingclub.web.controllers.WebappController [http-nio-8002-exec-5] Reach url: /profile/updateRegisteredUserForm - GET
+2024-02-05 13:05:55,772 DEBUG com.fabienit.flyingclub.service.impl.WebappServiceImpl [http-nio-8002-exec-5] Getting authenticated current user id
+2024-02-05 13:05:55,776 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-5] [ApiProxy#getRegisteredUserById] ---> GET http://localhost:8001/users/2 HTTP/1.1
+2024-02-05 13:05:55,776 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-5] [ApiProxy#getRegisteredUserById] Authorization: Basic ZmFiaWVuOjEyMzQ1Ng==
+2024-02-05 13:05:55,777 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-5] [ApiProxy#getRegisteredUserById] ---> END HTTP (0-byte body)
+2024-02-05 13:05:55,908 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-5] [ApiProxy#getRegisteredUserById] <--- HTTP/1.1 200 (130ms)
+2024-02-05 13:05:55,908 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-5] [ApiProxy#getRegisteredUserById] cache-control: no-cache, no-store, max-age=0, must-revalidate
+2024-02-05 13:05:55,908 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-5] [ApiProxy#getRegisteredUserById] connection: keep-alive
+2024-02-05 13:05:55,908 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-5] [ApiProxy#getRegisteredUserById] content-type: application/json
+2024-02-05 13:05:55,908 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-5] [ApiProxy#getRegisteredUserById] date: Mon, 05 Feb 2024 12:05:55 GMT
+2024-02-05 13:05:55,909 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-5] [ApiProxy#getRegisteredUserById] expires: 0
+2024-02-05 13:05:55,909 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-5] [ApiProxy#getRegisteredUserById] keep-alive: timeout=60
+2024-02-05 13:05:55,909 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-5] [ApiProxy#getRegisteredUserById] pragma: no-cache
+2024-02-05 13:05:55,909 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-5] [ApiProxy#getRegisteredUserById] set-cookie: JSESSIONID=06F5619617C70E37CFF195C43DF34C77; Path=/; HttpOnly
+2024-02-05 13:05:55,909 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-5] [ApiProxy#getRegisteredUserById] transfer-encoding: chunked
+2024-02-05 13:05:55,909 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-5] [ApiProxy#getRegisteredUserById] x-content-type-options: nosniff
+2024-02-05 13:05:55,909 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-5] [ApiProxy#getRegisteredUserById] x-xss-protection: 1; mode=block
+2024-02-05 13:05:55,909 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-5] [ApiProxy#getRegisteredUserById] 
+2024-02-05 13:05:55,910 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-5] [ApiProxy#getRegisteredUserById] {"id":2,"firstName":"mech","lastName":"anic","email":"mechanic@mechanic.com","password":"$2a$10$jPUTDV6/9AkC7NRPPzmvXuLJlfnKoAYo.uJuZc0aeJHGum.LpxO0a","hours":0,"roles":"MECHANIC"}
+2024-02-05 13:05:55,910 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-5] [ApiProxy#getRegisteredUserById] <--- END HTTP (180-byte body)
+2024-02-05 13:05:58,533 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-8] [ApiProxy#updateRegisteredUser] ---> PUT http://localhost:8001/users/2 HTTP/1.1
+2024-02-05 13:05:58,535 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-8] [ApiProxy#updateRegisteredUser] Authorization: Basic ZmFiaWVuOjEyMzQ1Ng==
+2024-02-05 13:05:58,536 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-8] [ApiProxy#updateRegisteredUser] Content-Length: 180
+2024-02-05 13:05:58,540 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-8] [ApiProxy#updateRegisteredUser] Content-Type: application/json
+2024-02-05 13:05:58,540 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-8] [ApiProxy#updateRegisteredUser] 
+2024-02-05 13:05:58,541 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-8] [ApiProxy#updateRegisteredUser] {"id":2,"firstName":"mech","lastName":"anic","email":"mechanic@mechanic.com","password":"$2a$10$jPUTDV6/9AkC7NRPPzmvXuLJlfnKoAYo.uJuZc0aeJHGum.LpxO0a","hours":3,"roles":"MECHANIC"}
+2024-02-05 13:05:58,542 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-8] [ApiProxy#updateRegisteredUser] ---> END HTTP (180-byte body)
+2024-02-05 13:05:58,900 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-8] [ApiProxy#updateRegisteredUser] <--- HTTP/1.1 200 (357ms)
+2024-02-05 13:05:58,900 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-8] [ApiProxy#updateRegisteredUser] cache-control: no-cache, no-store, max-age=0, must-revalidate
+2024-02-05 13:05:58,900 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-8] [ApiProxy#updateRegisteredUser] connection: keep-alive
+2024-02-05 13:05:58,900 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-8] [ApiProxy#updateRegisteredUser] content-length: 0
+2024-02-05 13:05:58,901 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-8] [ApiProxy#updateRegisteredUser] date: Mon, 05 Feb 2024 12:05:58 GMT
+2024-02-05 13:05:58,901 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-8] [ApiProxy#updateRegisteredUser] expires: 0
+2024-02-05 13:05:58,901 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-8] [ApiProxy#updateRegisteredUser] keep-alive: timeout=60
+2024-02-05 13:05:58,901 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-8] [ApiProxy#updateRegisteredUser] pragma: no-cache
+2024-02-05 13:05:58,902 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-8] [ApiProxy#updateRegisteredUser] set-cookie: JSESSIONID=E00BD7B651E480FFAC06DFD37563162F; Path=/; HttpOnly
+2024-02-05 13:05:58,902 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-8] [ApiProxy#updateRegisteredUser] x-content-type-options: nosniff
+2024-02-05 13:05:58,902 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-8] [ApiProxy#updateRegisteredUser] x-xss-protection: 1; mode=block
+2024-02-05 13:05:58,902 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-8] [ApiProxy#updateRegisteredUser] 
+2024-02-05 13:05:58,902 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-8] [ApiProxy#updateRegisteredUser] <--- END HTTP (0-byte body)
+2024-02-05 13:05:58,903 DEBUG com.fabienit.flyingclub.service.impl.WebappServiceImpl [http-nio-8002-exec-8] Getting authenticated current user id
+2024-02-05 13:05:58,904 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-8] [ApiProxy#getRegisteredUserById] ---> GET http://localhost:8001/users/2 HTTP/1.1
+2024-02-05 13:05:58,904 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-8] [ApiProxy#getRegisteredUserById] Authorization: Basic ZmFiaWVuOjEyMzQ1Ng==
+2024-02-05 13:05:58,904 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-8] [ApiProxy#getRegisteredUserById] ---> END HTTP (0-byte body)
+2024-02-05 13:05:59,054 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-8] [ApiProxy#getRegisteredUserById] <--- HTTP/1.1 200 (148ms)
+2024-02-05 13:05:59,054 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-8] [ApiProxy#getRegisteredUserById] cache-control: no-cache, no-store, max-age=0, must-revalidate
+2024-02-05 13:05:59,054 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-8] [ApiProxy#getRegisteredUserById] connection: keep-alive
+2024-02-05 13:05:59,054 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-8] [ApiProxy#getRegisteredUserById] content-type: application/json
+2024-02-05 13:05:59,054 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-8] [ApiProxy#getRegisteredUserById] date: Mon, 05 Feb 2024 12:05:58 GMT
+2024-02-05 13:05:59,054 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-8] [ApiProxy#getRegisteredUserById] expires: 0
+2024-02-05 13:05:59,055 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-8] [ApiProxy#getRegisteredUserById] keep-alive: timeout=60
+2024-02-05 13:05:59,055 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-8] [ApiProxy#getRegisteredUserById] pragma: no-cache
+2024-02-05 13:05:59,055 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-8] [ApiProxy#getRegisteredUserById] set-cookie: JSESSIONID=9CD8CFA03D056BFDC3DAE37D650C4D11; Path=/; HttpOnly
+2024-02-05 13:05:59,055 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-8] [ApiProxy#getRegisteredUserById] transfer-encoding: chunked
+2024-02-05 13:05:59,055 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-8] [ApiProxy#getRegisteredUserById] x-content-type-options: nosniff
+2024-02-05 13:05:59,055 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-8] [ApiProxy#getRegisteredUserById] x-xss-protection: 1; mode=block
+2024-02-05 13:05:59,055 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-8] [ApiProxy#getRegisteredUserById] 
+2024-02-05 13:05:59,056 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-8] [ApiProxy#getRegisteredUserById] {"id":2,"firstName":"mech","lastName":"anic","email":"mechanic@mechanic.com","password":"$2a$10$jPUTDV6/9AkC7NRPPzmvXuLJlfnKoAYo.uJuZc0aeJHGum.LpxO0a","hours":3,"roles":"MECHANIC"}
+2024-02-05 13:05:59,056 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-8] [ApiProxy#getRegisteredUserById] <--- END HTTP (180-byte body)
+2024-02-05 13:05:59,081 INFO com.fabienit.flyingclub.web.controllers.WebappController [http-nio-8002-exec-9] Reach url: /profile - GET
+2024-02-05 13:05:59,081 DEBUG com.fabienit.flyingclub.service.impl.WebappServiceImpl [http-nio-8002-exec-9] Getting authenticated current user id
+2024-02-05 13:05:59,081 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-9] [ApiProxy#getRegisteredUserById] ---> GET http://localhost:8001/users/2 HTTP/1.1
+2024-02-05 13:05:59,082 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-9] [ApiProxy#getRegisteredUserById] Authorization: Basic ZmFiaWVuOjEyMzQ1Ng==
+2024-02-05 13:05:59,082 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-9] [ApiProxy#getRegisteredUserById] ---> END HTTP (0-byte body)
+2024-02-05 13:05:59,222 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-9] [ApiProxy#getRegisteredUserById] <--- HTTP/1.1 200 (140ms)
+2024-02-05 13:05:59,222 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-9] [ApiProxy#getRegisteredUserById] cache-control: no-cache, no-store, max-age=0, must-revalidate
+2024-02-05 13:05:59,223 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-9] [ApiProxy#getRegisteredUserById] connection: keep-alive
+2024-02-05 13:05:59,223 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-9] [ApiProxy#getRegisteredUserById] content-type: application/json
+2024-02-05 13:05:59,223 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-9] [ApiProxy#getRegisteredUserById] date: Mon, 05 Feb 2024 12:05:58 GMT
+2024-02-05 13:05:59,223 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-9] [ApiProxy#getRegisteredUserById] expires: 0
+2024-02-05 13:05:59,223 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-9] [ApiProxy#getRegisteredUserById] keep-alive: timeout=60
+2024-02-05 13:05:59,223 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-9] [ApiProxy#getRegisteredUserById] pragma: no-cache
+2024-02-05 13:05:59,223 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-9] [ApiProxy#getRegisteredUserById] set-cookie: JSESSIONID=DCEBCB9CD51194B63478BDFB39D426E3; Path=/; HttpOnly
+2024-02-05 13:05:59,223 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-9] [ApiProxy#getRegisteredUserById] transfer-encoding: chunked
+2024-02-05 13:05:59,224 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-9] [ApiProxy#getRegisteredUserById] x-content-type-options: nosniff
+2024-02-05 13:05:59,224 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-9] [ApiProxy#getRegisteredUserById] x-xss-protection: 1; mode=block
+2024-02-05 13:05:59,224 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-9] [ApiProxy#getRegisteredUserById] 
+2024-02-05 13:05:59,224 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-9] [ApiProxy#getRegisteredUserById] {"id":2,"firstName":"mech","lastName":"anic","email":"mechanic@mechanic.com","password":"$2a$10$jPUTDV6/9AkC7NRPPzmvXuLJlfnKoAYo.uJuZc0aeJHGum.LpxO0a","hours":3,"roles":"MECHANIC"}
+2024-02-05 13:05:59,224 DEBUG com.fabienit.flyingclub.web.proxies.ApiProxy [http-nio-8002-exec-9] [ApiProxy#getRegisteredUserById] <--- END HTTP (180-byte body)
