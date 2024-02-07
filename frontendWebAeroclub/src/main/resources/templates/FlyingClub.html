@@ -27,57 +27,57 @@
 
 <!-- Header -->
 <div class="container-fluid px-0">
-<div th:replace="Header :: header"></div>
+    <div th:replace="Header :: header"></div>
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-6">
-            <!-- flyingclub -->
-            <div class="card mb-4">
-                <div class="card-header" th:each="f:${flyingClub}">
-                    <h2 class="text-center" th:text="*{f.name}"></h2>
-                </div>
-                <div class="card-block">
-                    <div class="table-responsive">
-                        <table class="table table-striped table-hover align-middle">
-                            <tbody th:each="f:${flyingClub}">
-                            <tr>
-                                <th scope="row" class="col-md-3">OACI</th>
-                                <td class="col-md-6 text-center" th:text="*{f.oaci}"></td>
-                            </tr>
-                            <tr>
-                                <th scope="row" class="col-md-3">Téléphone</th>
-                                <td class="col-md-6 text-center"th:text="*{f.phoneNumber}"></td>
-                            </tr>
-                            <tr>
-                                <th scope="row" class="col-md-3">Email</th>
-                                <td class="col-md-6 text-center" th:text="*{f.mail}"></td>
-                            </tr>
-                            <tr>
-                                <th scope="row" class="col-md-3">Adresse</th>
-                                <td class="col-md-6 text-center" th:text="*{f.address}"></td>
-                            </tr>
-                            <tr>
-                                <th scope="row" class="col-md-3">Code postal</th>
-                                <td class="col-md-6 text-center" th:text="*{f.postalCode}"></td>
-                            </tr>
-                            <tr>
-                                <th scope="row" class="col-md-3">Commune</th>
-                                <td class="col-md-6 text-center" th:text="*{f.city}"></td>
-                            </tr>
-                            <tr>
-                                <th scope="row" >Nos avions</th>
-                                <td class="text-center">
-                                    <a class="btn btn-info" href="/aircrafts" role="button">Nos Avions</a>
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
+                <!-- flyingclub -->
+                <div class="card mb-4">
+                    <div class="card-header" th:each="f:${flyingClub}">
+                        <h2 class="text-center" th:text="*{f.name}"></h2>
+                    </div>
+                    <div class="card-block">
+                        <div class="table-responsive">
+                            <table class="table table-striped table-hover align-middle">
+                                <tbody th:each="f:${flyingClub}">
+                                <tr>
+                                    <th scope="row" class="col-md-3">OACI</th>
+                                    <td class="col-md-6 text-center" th:text="*{f.oaci}"></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="col-md-3">Téléphone</th>
+                                    <td class="col-md-6 text-center"th:text="*{f.phoneNumber}"></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="col-md-3">Email</th>
+                                    <td class="col-md-6 text-center" th:text="*{f.mail}"></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="col-md-3">Adresse</th>
+                                    <td class="col-md-6 text-center" th:text="*{f.address}"></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="col-md-3">Code postal</th>
+                                    <td class="col-md-6 text-center" th:text="*{f.postalCode}"></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="col-md-3">Commune</th>
+                                    <td class="col-md-6 text-center" th:text="*{f.city}"></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" >Nos avions</th>
+                                    <td class="text-center">
+                                        <a class="btn btn-info" href="/aircrafts" role="button">Nos Avions</a>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 </div>
 
 <!-- Optional JavaScript -->

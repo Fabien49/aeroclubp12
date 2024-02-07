@@ -22,44 +22,35 @@
 <body>
 <div class="container-fluid px-0">
     <div th:replace="Header :: header"></div>
-
-<!--    <div class="container">
+    <div class="container">
         <div class="row">
             <div class="col">
-                <div class="card">
-                    <div class="col-md-2 mb-3">
-                        <a class="btn btn-info" href="/reservations">Retour</a>
-                    </div>
-                </div>-->
-                <div class="container">
-                    <div class="row">
-                        <div class="col">
-                            <div sec:authorize="isAuthenticated()" class="border-secondary shadow jumbotron">
-                                <div class="card-body">
-                                <a class="btn btn-info mb-4" href="/reservations">Retour</a>
-                                <h2 class="mb-2">Veuillez renseigner les dates de réservations souhaitées</h2>
-                                <form class="form-row align-items-end mt-4" th:action="@{/addAircraftReservation}" th:object="${reservationDto}" method="get">
-                                    <input type="hidden" th:value="${reservationDto.registeredUserId}"/>
-                                    <div class="col-md-4 mb-3">
-                                        <label for="borrowingDate">Date d'emprunt</label>
-                                        <input type="date" class="form-control" name="borrowingDate" id="borrowingDate" th:field="${reservationDto.borrowingDate}" th:min="${currentDate}" required/>
-                                    </div>
-                                    <div class="col-md-4 mb-3">
-                                        <label for="returnDate">Date de retour</label>
-                                        <input type="date" class="form-control" name="returnDate" id="returnDate" th:field="${reservationDto.returnDate}" th:min="${currentDate}" required/>
-                                    </div>
-                                    <div class="col-md-4 mb-3">
-                                        <label for="availableAircraft"></label><br>
-                                        <button type="submit" class="form-control btn btn-warning text-center font-weight-bold" name="availableAircraft" id="availableAircraft">Avions disponibles</button>
-                                    </div>
-                                </form>
-                                <div>
-                                </div>
+                <div sec:authorize="isAuthenticated()" class="border-secondary shadow jumbotron">
+                    <div class="card-body">
+                        <a class="btn btn-info mb-4" href="/reservations">Retour</a>
+                        <h2 class="mb-2">Veuillez renseigner les dates de réservations souhaitées</h2>
+                        <form class="form-row align-items-end mt-4" th:action="@{/addAircraftReservation}" th:object="${reservationDto}" method="get">
+                            <input type="hidden" th:value="${reservationDto.registeredUserId}"/>
+                            <div class="col-md-4 mb-3">
+                                <label for="borrowingDate">Date d'emprunt</label>
+                                <input type="date" class="form-control" name="borrowingDate" id="borrowingDate" th:field="${reservationDto.borrowingDate}" th:min="${currentDate}" required/>
                             </div>
+                            <div class="col-md-4 mb-3">
+                                <label for="returnDate">Date de retour</label>
+                                <input type="date" class="form-control" name="returnDate" id="returnDate" th:field="${reservationDto.returnDate}" th:min="${currentDate}" required/>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label for="availableAircraft"></label><br>
+                                <button type="submit" class="form-control btn btn-warning text-center font-weight-bold" name="availableAircraft" id="availableAircraft">Avions disponibles</button>
+                            </div>
+                        </form>
+                        <div>
                         </div>
                     </div>
+                </div>
             </div>
-</div>
+        </div>
     </div>
+</div>
 </body>
 </html>

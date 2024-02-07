@@ -308,50 +308,6 @@ public class WebappController {
     }
 
 
-/*    @PutMapping("/modify-hours/{id}/{action}/{hoursToAdd}")
-    @ResponseBody
-    public ResponseEntity<Map<String, Object>> modifyHours(
-            @PathVariable int id,
-            @PathVariable String action,
-            @PathVariable int hoursToAdd) {
-
-        try {
-            // Effectuez les opérations nécessaires pour modifier les heures côté serveur
-            webappService.modifyUserHours(id, action, hoursToAdd);
-
-            // Renvoyez une réponse avec les nouvelles heures à afficher côté client
-            Map<String, Object> response = new HashMap<>();
-            response.put("success", true);
-            response.put("message", "Modification réussie");
-            response.put("newTotalHours", webappService.getUserTotalHours(id));
-
-            return ResponseEntity.ok(response);
-
-        } catch (Exception e) {
-            // En cas d'erreur, renvoyez une réponse d'erreur
-            Map<String, Object> errorResponse = new HashMap<>();
-            errorResponse.put("success", false);
-            errorResponse.put("message", "Erreur lors de la modification des heures : " + e.getMessage());
-
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(errorResponse);
-        }
-    }*/
-
-/*    @PostMapping(value = "/profile")
-    public String extendBorrowDuration(@RequestParam int borrowId) {
-
-        logger.info("Reach url: /profile - POST");
-
-        // Get Borrow
-        BorrowBean borrowBean = apiProxy.getBorrowById(borrowId);
-
-        // Extend borrow duration
-        apiProxy.extendBorrow(borrowId, borrowBean);
-
-        return "redirect:/profile";
-    }*/
-
-
     @GetMapping(value = "/reservations")
     public String getReservationPage(Model model) {
 
@@ -577,6 +533,10 @@ public class WebappController {
     @PostMapping("/confirmFinishReservation/{id}")
     public String confirmFinish(@PathVariable int id, @RequestParam("hours") int hours, Model model) {
 
+        Boolean isAuthenticated = webappService.getIsAuthenticated();
+
+        if (isAuthenticated) {
+
         ReservationBean reservation = webappService.getReservationById(id);
 
         RegisteredUserBean pilot = reservation.getRegisteredUser();
@@ -587,10 +547,16 @@ public class WebappController {
         aircraft.setAircraftHours(aircraft.getAircraftHours() + hours);
         aircraft.setMotorHours(aircraft.getMotorHours() + hours);
         webappService.updateAircraft(reservation.getAircraft().getId(), aircraft);
-
         reservation.setFinished(true);
-
         webappService.updateReservation(id, reservation);
+
+            int registeredUserId = webappService.getAuthenticatedRegisteredUserId();
+            RegisteredUserBean registeredUserBean = webappService.getRegisteredUserById(registeredUserId);
+
+            if (registeredUserBean.getRoles().equals("ADMIN")) {
+                return "redirect:/allReservations";
+            }
+        }
 
         return "redirect:/reservations";
     }
@@ -811,14 +777,14 @@ public class WebappController {
         Boolean isAuthenticated = webappService.getIsAuthenticated();
 
         if (isAuthenticated) {
-            /*int registeredUserId = webappService.getAuthenticatedRegisteredUserId();
-            RegisteredUserBean registeredUserBean = webappService.getRegisteredUserById(registeredUserId);*/
+            int registeredUserId = webappService.getAuthenticatedRegisteredUserId();
+            RegisteredUserBean registeredUserBean = webappService.getRegisteredUserById(registeredUserId);
             webappService.canceledIntervention(id);
             redirectAttributes.addAttribute("canceledIntervention", true);
 
-/*            if (Objects.equals(registeredUserBean.getRoles(), "ADMIN")){
+            if (Objects.equals(registeredUserBean.getRoles(), "ADMIN")){
                 return "redirect:/allReservations";
-            }*/
+            }
         }
         return "redirect:/workshop";
     }
@@ -852,9 +818,9 @@ public class WebappController {
 
         try {
             webappService.updateWorkshopBean(id, workshopBean);
-            redirectAttributes.addFlashAttribute("successMessage", "Utilisateur mis à jour avec succès!");
+            redirectAttributes.addFlashAttribute("successMessage", "Atelier mis à jour avec succès!");
         } catch (FeignException e) {
-            redirectAttributes.addFlashAttribute("errorMessage", "Erreur lors de la mise à jour de l'utilisateur.");
+            redirectAttributes.addFlashAttribute("errorMessage", "Erreur lors de la mise à jour de l'atelier.");
         }
 
         model.addAttribute("workshop", workshopBean);

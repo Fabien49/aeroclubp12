@@ -1,105 +1,95 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
-  <head>
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
 
     <!-- Bootstrap CSS -->
     <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-      crossorigin="anonymous"
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+            crossorigin="anonymous"
     />
     <link type="text/css" rel="stylesheet" href="/static/css/bootstrap.min.css" />
     <link type="text/css" rel="stylesheet" href="/static/css/style.css" />
 
     <title>Atelier</title>
-  </head>
+</head>
 
-  <body>
-  <div class="container-fluid px-0">
-      <div th:replace="Header :: header"></div>
-      <div class="container">
-          <div class="row">
-              <div class="col">
-                  <div class="card">
-                      <div class="col-md-2 mb-3">
-                          <a class="btn btn-info" href="/workshop">Retour à l'atelier</a>
-                      </div>
-                  </div>
-                  <div class="card">
-                      <h2>Modification de l'intervention</h2>
-                      <form class="form-row" th:action="@{/updateWorkshop/{id}(id=${workshop.id})}" th:object="${workshop}" method="post">
-                          <input type="hidden" th:field="*{aircraft.id}"/>
-                          <div class="col-md-6 mb-3">
-                              <label for="seats">Avion</label>
-                              <input type="text" class="form-control" id="seats" th:field="*{aircraft.mark}" th:placeholder="${workshop.aircraft.mark}" readonly/>
-                          </div>
-                          <div class="col-md-6 mb-3">
-                              <label for="helix_change">Changement de l'hélice </label>
-                              <select class="form-control" id="helix_change" th:field="*{helixChange}">
-                                  <option th:value="false">A remplacer</option>
-                                  <option th:value="true">Remplacée</option>
-                              </select>
-                          </div>
-                          <div class="col-md-6 mb-3">
-                              <label for="motor_change">Changement du moteur </label>
-                              <select class="form-control" id="motor_change" th:field="*{motorChange}">
-                                  <option th:value="false">A remplacer</option>
-                                  <option th:value="true">Remplacé</option>
-                              </select>
-                          </div>
-                          <div class="col-md-6 mb-3">
-                              <label for="other">Autre </label>
-                              <input type="text" class="form-control" id="other" th:field="*{other}" th:placeholder="${workshop.other}"/>
-                          </div>
-                          <div class="col-md-6 mb-3">
-                              <label for="entry_date">Date d'entrée</label>
-                              <input type="text" class="form-control" id="entry_date" th:field="*{entryDate}" th:placeholder="${workshop.entryDate}" readonly/>
-                          </div>
-<!--                          <div class="col-md-6 mb-3">
-                              <label for="exit_date">Date de sortie</label>
-                              <input type="text" class="form-control" id="exit_date" th:field="*{exitDate}" th:placeholder="${workshop.exitDate}"/>
-                          </div>-->
-                          <div class="col-md-6 mb-3">
-                              <label for="submit"> </label>
-                              <button type="submit" id="submit" class="form-control btn btn-warning mt-2">Modifier</button>
-                          </div>
-                      </form>
+<body>
+<div class="container-fluid px-0">
+    <div th:replace="Header :: header"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="col-md-2 mb-3">
+                        <a class="btn btn-info" href="/workshop">Retour à l'atelier</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <h2>Modification de l'intervention</h2>
+                    <form class="form-row" th:action="@{/updateWorkshop/{id}(id=${workshop.id})}" th:object="${workshop}" method="post">
+                        <input type="hidden" th:field="*{aircraft.id}"/>
+                        <div class="col-md-6 mb-3">
+                            <label for="seats">Avion</label>
+                            <input type="text" class="form-control" id="seats" th:field="*{aircraft.mark}" th:placeholder="${workshop.aircraft.mark}" readonly/>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="helix_change">Changement de l'hélice </label>
+                            <select class="form-control" id="helix_change" th:field="*{helixChange}">
+                                <option th:value="false">A remplacer</option>
+                                <option th:value="true">Remplacée</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="motor_change">Changement du moteur </label>
+                            <select class="form-control" id="motor_change" th:field="*{motorChange}">
+                                <option th:value="false">A remplacer</option>
+                                <option th:value="true">Remplacé</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="other">Autre </label>
+                            <input type="text" class="form-control" id="other" th:field="*{other}" th:placeholder="${workshop.other}"/>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="entry_date">Date d'entrée</label>
+                            <input type="text" class="form-control" id="entry_date" th:field="*{entryDate}" th:placeholder="${workshop.entryDate}" readonly/>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="submit"> </label>
+                            <button type="submit" id="submit" class="form-control btn btn-warning mt-2">Modifier</button>
+                        </div>
+                    </form>
 
-                  </div>
-              </div>
-          </div>
-      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-                  <ul class="nav nav-pills">
-                      <li  th:each="page,status:${pages}">
-                          <a  th:class="${status.index == currentPage?'btn btn-primary' : 'btn'}" th:href="@{topoListe(page=${status.index}, keyword=${keyword}, disponible=${disponible})}" th:text="${status.index + 1}"></a>
-                      </li>
-                  </ul>
-              </div>
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script
-      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script
+        src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"
+></script>
+<script
+        src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"
+></script>
+<script
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"
+></script>
+</body>
 </html>

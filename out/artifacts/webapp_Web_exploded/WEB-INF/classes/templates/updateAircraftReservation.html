@@ -32,7 +32,6 @@
                         <form th:action="@{'/saveUpdateAircraftReservation/' + ${reservationDto.id}}" th:object="${reservationDto}" method="post">
                             <input type="hidden" th:field="*{registeredUserId}"/>
                             <input type="hidden" th:field="*{id}" />
-                            <!-- Champs de date -->
                             <div class="form-row">
                                 <div class="col-md-6 mb-3">
                                     <label for="borrowingDate">Date d'emprunt</label>
@@ -43,7 +42,6 @@
                                     <input type="date" class="form-control" id="returnDate" th:field="*{returnDate}" required readonly/>
                                 </div>
                             </div>
-                            <!-- Liste des avions disponibles -->
                             <div class="form-group">
                                 <label for="aircraftList">Avions disponibles</label>
                                 <div th:each="aircraft : ${aircraftList}" class="form-check">
@@ -51,7 +49,6 @@
                                     <label class="form-check-label" th:text="${aircraft.mark}"></label>
                                 </div>
                             </div>
-                            <!-- Bouton de soumission -->
                             <div class="form-group">
                                 <button type="submit" class="btn btn-success text-center font-weight-bold">Modifier</button>
                             </div>
@@ -62,6 +59,5 @@
         </div>
     </div>
 </div>
-
 </body>
 </html>

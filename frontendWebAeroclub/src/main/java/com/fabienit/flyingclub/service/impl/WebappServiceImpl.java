@@ -237,9 +237,12 @@ public class WebappServiceImpl implements WebappService {
     @Override
     public ResponseEntity<Void>  canceledIntervention(int id) {
         WorkshopBean workshopBean = apiProxy.getWorkshopById(id);
+        AircraftBean aircraftBean = apiProxy.getWorkshopById(id).getAircraft();
+        aircraftBean.setAvailable(true);
 
         if (workshopBean != null) {
             workshopBean.setCanceled(true);
+            apiProxy.updateAircraft(aircraftBean.getId(),aircraftBean);
             apiProxy.updateWorkshop(id, workshopBean);
             return ResponseEntity.noContent().build();
         } else {

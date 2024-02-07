@@ -22,15 +22,6 @@
 <body>
 <div class="container-fluid px-0">
     <div th:replace="Header :: header"></div>
-
-<!--    <div class="container">
-        <div class="row">
-            <div class="col">
-                <div class="card">
-                    <div class="col-md-2 mb-3">
-                        <a class="btn btn-info" href="/reservations">Retour</a>
-                    </div>
-                </div>-->
     <div class="container">
         <div class="row">
             <div class="col">
@@ -52,7 +43,6 @@
                                     <input type="date" class="form-control" id="returnDate" th:field="*{returnDate}" required readonly/>
                                 </div>
                             </div>
-                            <!-- Liste des avions disponibles -->
                             <div class="form-group">
                                 <label for="aircraftList">Avions disponibles</label>
                                 <div th:each="aircraft : ${aircraftList}" class="form-check">
@@ -60,7 +50,6 @@
                                     <label class="form-check-label" th:text="${aircraft.mark}"></label>
                                 </div>
                             </div>
-                            <!-- Bouton de soumission -->
                             <div class="form-group">
                                 <button type="submit" class="btn btn-success text-center font-weight-bold">Réserver</button>
                             </div>

@@ -1,21 +1,21 @@
 <!doctype html>
-<html lang="fr" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<html lang="fr" xmlns:sec="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 
 <head>
 
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
-            name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
+            name="viewport"
     />
 
     <!-- Bootstrap CSS -->
     <link
-            rel="stylesheet"
+            crossorigin="anonymous"
             href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
             integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-            crossorigin="anonymous"
+            rel="stylesheet"
     />
 
 
@@ -28,73 +28,62 @@
 <!-- Header -->
 <div th:replace="Header :: header"></div>
 
-<!--<div class="container">
+<div class="container">
     <div class="row">
         <div class="col">
-            <div class="border-secondary bg-info jumbotron text-center font-weight-bold">
+            <div class="border-secondary shadow jumbotron bg-info text-white text-center font-weight-bold">
                 <h1>Bienvenue chez Aéroclub Passion !</h1>
-                <div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 my-4 col-lg-4" sec:authorize="isAuthenticated()">
+            <div class="border-secondary shadow card h-60">
+                <img alt="mon_aérodrome" class="card-img-top" height="200" src="http://localhost/aeroclubp12/monaerodrome.png">
+                <div class="card-body d-flex flex-column">
+                    <a class="stretched-link btn btn-warning mt-auto" href="/flyingClub" role="button">Mon aérodrome</a>
                 </div>
             </div>
         </div>
-    </div>-->
 
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <div class="border-secondary shadow jumbotron bg-info text-white text-center font-weight-bold">
-                    <h1>Bienvenue chez Aéroclub Passion !</h1>
+
+        <div class="col-12 my-4 col-lg-4" sec:authorize="isAuthenticated()">
+            <div class="border-secondary shadow card h-60">
+                <img alt="reservation " class="card-img-top" height="200" src="http://localhost/aeroclubp12/reservation.png">
+                <div class="card-body d-flex flex-column">
+                    <a class="stretched-link btn btn-warning mt-auto" href="/allReservations" role="button" th:if="${#authorization.expression('hasRole(''ADMIN'')')}">Réservations</a>
+                    <a class="stretched-link btn btn-warning mt-auto" href="/reservations" role="button" th:unless="${#authorization.expression('hasRole(''ADMIN'')')}">Réservations</a>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div sec:authorize="isAuthenticated()" class="col-12 my-4 col-lg-4">
-                <div class="border-secondary shadow card h-60">
-                    <img class="card-img-top" src="http://localhost/aeroclubp12/monaerodrome.png" alt="mon_aérodrome" height="200">
-                    <div class="card-body d-flex flex-column">
-                        <a class="stretched-link btn btn-warning mt-auto" role="button" href="/flyingClub">Mon aérodrome</a>
-                    </div>
-                </div>
-            </div>
 
 
-            <div sec:authorize="isAuthenticated()" class="col-12 my-4 col-lg-4">
-                <div class="border-secondary shadow card h-60">
-                    <img class="card-img-top" src="http://localhost/aeroclubp12/reservation.png" alt="reservation " height="200">
-                    <div class="card-body d-flex flex-column">
-                        <a th:if="${#authorization.expression('hasRole(''ADMIN'')')}" class="stretched-link btn btn-warning mt-auto" role="button" href="/allReservations">Réservations</a>
-                        <a th:unless="${#authorization.expression('hasRole(''ADMIN'')')}" class="stretched-link btn btn-warning mt-auto" role="button" href="/reservations">Réservations</a>
-                    </div>
-                </div>
-            </div>
-
-
-            <div sec:authorize="isAuthenticated()" class="col-12 my-4 col-lg-4">
-                <div class="border-secondary shadow card h-60">
-                    <img class="card-img-top" src="http://localhost/aeroclubp12/atelier.jpg" alt="atelier" height="200">
-                    <div class="card-body d-flex flex-column">
-                        <a class="stretched-link btn btn-warning mt-auto" role="button" href="/workshop">Atelier</a>
-                    </div>
+        <div class="col-12 my-4 col-lg-4" sec:authorize="isAuthenticated()">
+            <div class="border-secondary shadow card h-60">
+                <img alt="atelier" class="card-img-top" height="200" src="http://localhost/aeroclubp12/atelier.jpg">
+                <div class="card-body d-flex flex-column">
+                    <a class="stretched-link btn btn-warning mt-auto" href="/workshop" role="button">Atelier</a>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
 
 <div
         style="max-width:600px;margin-left: auto;margin-right: auto;margin-top:24px;padding: 24px;"
 >
-    <div sec:authorize="isAnonymous()" class="card">
+    <div class="card" sec:authorize="isAnonymous()">
         <div class="card-header"><i class="fa fa-user"></i> <h2 class="text-center">Connexion</h2></div>
         <div class="card-block" style="padding: 24px;">
-            <form name="f" th:action="@{/connexion}" method="post">
+            <form method="post" name="f" th:action="@{/connexion}">
                 <fieldset>
                     <!-- Thymeleaf + Spring Security error display -->
-                    <div th:if="${param.error}" class="alert alert-danger">
+                    <div class="alert alert-danger" th:if="${param.error}">
                         Adresse email / mot de passe invalide.
                     </div>
 
-                    <div th:if="${param.logout}" class="alert alert-success">
+                    <div class="alert alert-success" th:if="${param.logout}">
                         Vous avez été déconnecté.
                     </div>
 
@@ -102,22 +91,22 @@
                     <div class="form-group">
                         <label for="txtUsername">Email</label>
                         <input
-                                type="text"
                                 class="form-control"
                                 id="txtUsername"
                                 name="username"
                                 placeholder="Email"
+                                type="text"
                         />
                     </div>
 
                     <div class="form-group">
                         <label for="txtPassword">Mot de passe</label>
                         <input
-                                type="password"
                                 class="form-control"
                                 id="txtPassword"
                                 name="password"
                                 placeholder="Mot de passe"
+                                type="password"
                         />
                     </div>
 
@@ -128,7 +117,7 @@
 
                     <!-- Login Button -->
                     <div class="form-actions text-center" style="margin-top: 12px;">
-                        <button type="submit" class="btn btn-success">
+                        <button class="btn btn-success" type="submit">
                             Se connecter
                         </button>
                     </div>
@@ -142,19 +131,19 @@
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script
-        src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        crossorigin="anonymous"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"
+        src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
 ></script>
 <script
-        src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        crossorigin="anonymous"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"
+        src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
 ></script>
 <script
-        src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
 ></script>
 </body>
 </html>
