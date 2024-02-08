@@ -395,7 +395,6 @@ public class WebappController {
             model.addAttribute("reservationDto", reservationDto);
             model.addAttribute("currentDate", LocalDate.now());
 
-
         }
 
         return "AddDateReservation";
@@ -422,8 +421,6 @@ public class WebappController {
 
         return "AddAircraftReservation";
     }
-
-
 
 
     @GetMapping("/getAvailableAircrafts")

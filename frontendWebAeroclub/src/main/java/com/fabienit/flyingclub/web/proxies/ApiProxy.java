@@ -46,23 +46,6 @@ public interface ApiProxy {
     @DeleteMapping(value = "/aircrafts/{id}")
     void deleteAircraft(@PathVariable @Min(value = 1) int id);
 
-    // AvailableCopie methods
-
-    @GetMapping(value = "/availableCopies/{book_id}/{library_id}")
-    Optional<AvailableCopieBean> getAvailableCopieById(@PathVariable(value = "book_id") @Min(value = 1) int bookId,
-                                                       @PathVariable(value = "library_id") @Min(value = 1) int libraryId);
-
-    @PostMapping(value = "/availableCopies")
-    public ResponseEntity<Void> addAvalaibleCopie(@Valid @RequestBody AvailableCopieBean availableCopie);
-
-    @PutMapping(value = "/availableCopies/{book_id}/{library_id}")
-    public ResponseEntity<Void> updateAvailableCopie(@PathVariable(value = "book_id") @Min(value = 1) int bookId,
-                                                     @PathVariable(value = "library_id") @Min(value = 1) int libraryId,
-                                                     @Valid @RequestBody AvailableCopieBean updatedAvailableCopie);
-
-    @DeleteMapping("/availableCopies/{book_id}/{library_id}")
-    public void deleteAvailableCopie(@PathVariable(value = "book_id") @Min(value = 1) int bookId,
-                                     @PathVariable(value = "library_id") @Min(value = 1) int libraryId);
 
     //******************************************************************************************************************************
     // FlyingClub methods
@@ -109,23 +92,6 @@ public interface ApiProxy {
 
     @PostMapping(value = "/users/email")
     RegisteredUserBean findUserByEmail(@RequestBody String email);
-
-    // Borrows methods
-
-    @GetMapping(value = "/users/{user_id}/borrows")
-    List<BorrowBean> getBorrowsByUserId(@PathVariable(value = "user_id") @Min(value = 1) int userId);
-
-    @GetMapping(value = "/borrows/{id}")
-    BorrowBean getBorrowById(@PathVariable @Min(value = 1) int id);
-
-    @PutMapping(value = "/borrows/{id}")
-    ResponseEntity<Void> updateBorrow(@PathVariable @Min(value = 1) int id,
-                                      @Valid @RequestBody BorrowBean borrowDetails);
-
-    @PutMapping(value="/borrows/extend/{id}")
-    ResponseEntity<Void> extendBorrow(@PathVariable @Min(value = 1) int id, @Valid @RequestBody BorrowBean borrowDetails);
-
-
 
 
     // Reservation methods

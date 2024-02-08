@@ -25,10 +25,6 @@ public interface WebappService {
 
     RegisteredUserBean updateRegisteredUser(int id, RegisteredUserBean updateRegisteredUserFormDto);
 
-    ResponseEntity<Void> modifyUserHours(int id, String action, int hoursToAdd);
-
-    int getUserTotalHours(int id);
-
     List<ReservationBean> getAllReservation();
 
     ReservationBean getReservationById(int id);
@@ -59,8 +55,11 @@ public interface WebappService {
     WorkshopBean getWorkshopBeanById (int id);
 
     ResponseEntity<Void> createWorkshop(WorkshopBean workshopBean);
+
     WorkshopBean updateWorkshopBean (int id, WorkshopBean workshopBean);
+
     WorkshopBean saveIntervention (int id, WorkshopBean workshopBean);
+
     ResponseEntity<Void> canceledIntervention (int id);
 
 

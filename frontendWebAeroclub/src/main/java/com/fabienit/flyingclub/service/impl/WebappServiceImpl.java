@@ -40,7 +40,7 @@ public class WebappServiceImpl implements WebappService {
 
     /**
      * Create Registered user bean with user input, call proxy api method to
-     * register new user
+     * @Return addRegisteredUser
      */
     @Override
     public ResponseEntity<Void> createUser(RegisteredUserDto accountDto) {
@@ -81,7 +81,6 @@ public class WebappServiceImpl implements WebappService {
 
     /**
      * Return true if a user is authenticated
-     *
      * @return authentication
      */
     @Override
@@ -92,49 +91,49 @@ public class WebappServiceImpl implements WebappService {
         return !(authentication instanceof AnonymousAuthenticationToken);
     }
 
+    /**
+     * Get registeredUser by Id
+     * @Param id
+     */
     @Override
     public RegisteredUserBean getRegisteredUserById(int id) {
         return apiProxy.getRegisteredUserById(id);
     }
 
+    /**
+     * Get registeredUser list for authenticated user
+     * @Return List registeredUser
+     */
     @Override
     public List<RegisteredUserBean> getAllRegisteredUsers() {
         return apiProxy.getRegisteredUsers();
     }
 
+    /**
+     * Put registeredUser for authenticated user
+     * @Param id,
+     * @Param registeredUser
+     * @Return updateRegisteredUser
+     */
     @Override
     public RegisteredUserBean updateRegisteredUser(int id, RegisteredUserBean updateRegisteredUserBean) {
         return apiProxy.updateRegisteredUser(id, updateRegisteredUserBean);
     }
 
-
-    @Override
-    public ResponseEntity<Void> modifyUserHours(int id, String action, int hoursToAdd) {
-        RegisteredUserBean registeredUserBean = apiProxy.getRegisteredUserById(id);
-
-        if ("add".equals(action)) {
-            registeredUserBean.setHours(registeredUserBean.getHours() + hoursToAdd);
-        } else if ("subtract".equals(action)) {
-            int remainingHours = registeredUserBean.getHours() - hoursToAdd;
-            registeredUserBean.setHours(Math.max(0, remainingHours));
-        }
-
-        return apiProxy.modifyRegisteredUserHours(id, action, hoursToAdd);
-    }
-
-    @Override
-    public int getUserTotalHours(int id) {
-        RegisteredUserBean registeredUserBean = apiProxy.getRegisteredUserById(id);
-        return registeredUserBean.getHours();
-    }
-
-
+    /**
+     * Get reservation list for authenticated user
+     * @Return getAllReservation
+     */
     @Override
     public List<ReservationBean> getAllReservation(){
         return apiProxy.getAllReservation();
     }
 
-
+    /**
+     * Get reservation by id for authenticated user
+     * @Param id
+     * @Return getReservationById
+     */
     @Override
     public ReservationBean getReservationById(int id) {
         return apiProxy.getReservationById(id);
@@ -142,6 +141,7 @@ public class WebappServiceImpl implements WebappService {
 
     /**
      * Get reservation list for authenticated user
+     * @Return getReservationByRegisteredUser
      */
     @Override
     public List<ReservationBean> getReservationsByRegisteredUserId() {
@@ -153,27 +153,51 @@ public class WebappServiceImpl implements WebappService {
         return apiProxy.getReservationByRegisteredUser(authenticatedUserId);
     }
 
+    /**
+     * Get reservation by id and dates for authenticated user
+     * @Param id, startDate, endDate
+     * @Return getReservationByIdAndDate
+     */
     @Override
     public boolean getReservationByIdAndDate(int id, LocalDate startDate, LocalDate endDate) {
         return apiProxy.getReservationByIdAndDate(id, startDate, endDate);
     }
 
+    /**
+     * Create Aircraft with authenticated user
+     * @Return aircraftBean
+     */
     @Override
     public AircraftBean createAircraft(AircraftBean aircraftBean) {
         return aircraftBean;
     }
 
+    /**
+     * Get aircraft by id for authenticated user
+     * @Param id
+     * @Return getAircraftById
+     */
     @Override
     public AircraftBean getAircraftById(int id) {
         return apiProxy.getAircraftById(id);
     }
 
+    /**
+     * Get aircraft by reservation id for authenticated user
+     * @Param id
+     * @Return getAircraftByReservationId
+     */
     @Override
     public AircraftBean getAircraftByReservationId(int id) {
         return apiProxy.getAircraftByReservationId(id);
     }
 
 
+    /**
+     * Put aircraft for authenticated user
+     * @Param id, aircraftBean
+     * @Return updateAircraft
+     */
     @Override
     public AircraftBean updateAircraft(int id, AircraftBean aircraftBean) {
 
@@ -234,6 +258,12 @@ public class WebappServiceImpl implements WebappService {
         return apiProxy.saveIntervention(id, workshopBean);
     }
 
+    /**
+     * Cancelled intervention by id.
+     * @Param id
+     * @Return ResponseEntity<Void>
+     * @Throws EntityNotFoundException
+     */
     @Override
     public ResponseEntity<Void>  canceledIntervention(int id) {
         WorkshopBean workshopBean = apiProxy.getWorkshopById(id);
@@ -268,6 +298,12 @@ public class WebappServiceImpl implements WebappService {
         return apiProxy.updateReservation(id, reservationBean);
     }
 
+    /**
+     * Cancelled reservation by id.
+     * @Param id
+     * @Return ResponseEntity<Void>
+     * @Throws EntityNotFoundException
+     */
     @Override
     public ResponseEntity<Void> canceledReservation(int id) {
         ReservationBean reservationBean = apiProxy.getReservationById(id);
