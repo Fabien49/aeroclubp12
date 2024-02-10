@@ -2,6 +2,13 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
 <head>
     <meta charset="UTF-8">
+    <!-- Bootstrap CSS -->
+    <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+            crossorigin="anonymous"
+    />
     <title>Fin de réservation</title>
 </head>
 <body>
@@ -11,6 +18,7 @@
 <p>Date de départ : <span th:text="${borrowingDate}">Date de départ</span></p>
 <p>Date de retour : <span th:text="${returnDate}">Date de retour</span></p>
 <p>Après ce vol, votre compteur d'heures de vol personnel est à : <span th:text="${hours}">Nombre d'heures</span></p>
+<p>Vous pouvez retrouver le détail sur le site <a class="btn btn-warning " href="http://localhost:8002/" role="button">Aller sur le site</a></p>
 <p>A bientôt !</p>
 
 </body>

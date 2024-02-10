@@ -61,19 +61,17 @@ public class WebappServiceImpl implements WebappService {
 
     /**
      * Extract RegisteredUserBean from authenticated userPrincipal to return user id
+     * @Return authenticatedRegisteredUserId
      */
     @Override
     public int getAuthenticatedRegisteredUserId() {
 
         logger.debug("Getting authenticated current user id");
 
-        // Get authentification context
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 
-        // Get Authenticated userPrincipal
         UserPrincipal authenticatedUser = (UserPrincipal) authentication.getPrincipal();
 
-        // Get user id
         int authenticatedRegisteredUserId = authenticatedUser.getUserPrincipal().getId();
 
         return authenticatedRegisteredUserId;
@@ -86,6 +84,8 @@ public class WebappServiceImpl implements WebappService {
     @Override
     public Boolean getIsAuthenticated() {
 
+        logger.debug("Getting isAuthenticated ");
+
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 
         return !(authentication instanceof AnonymousAuthenticationToken);
@@ -94,9 +94,13 @@ public class WebappServiceImpl implements WebappService {
     /**
      * Get registeredUser by Id
      * @Param id
+     * @Return apiProxy.getRegisteredUserById
      */
     @Override
     public RegisteredUserBean getRegisteredUserById(int id) {
+
+        logger.debug("Getting authenticated current user by id");
+
         return apiProxy.getRegisteredUserById(id);
     }
 
@@ -106,6 +110,9 @@ public class WebappServiceImpl implements WebappService {
      */
     @Override
     public List<RegisteredUserBean> getAllRegisteredUsers() {
+
+        logger.debug("Getting all RegisteredUsers");
+
         return apiProxy.getRegisteredUsers();
     }
 
@@ -117,50 +124,10 @@ public class WebappServiceImpl implements WebappService {
      */
     @Override
     public RegisteredUserBean updateRegisteredUser(int id, RegisteredUserBean updateRegisteredUserBean) {
+
+        logger.debug("Updating RegisteredUser by id");
+
         return apiProxy.updateRegisteredUser(id, updateRegisteredUserBean);
-    }
-
-    /**
-     * Get reservation list for authenticated user
-     * @Return getAllReservation
-     */
-    @Override
-    public List<ReservationBean> getAllReservation(){
-        return apiProxy.getAllReservation();
-    }
-
-    /**
-     * Get reservation by id for authenticated user
-     * @Param id
-     * @Return getReservationById
-     */
-    @Override
-    public ReservationBean getReservationById(int id) {
-        return apiProxy.getReservationById(id);
-    }
-
-    /**
-     * Get reservation list for authenticated user
-     * @Return getReservationByRegisteredUser
-     */
-    @Override
-    public List<ReservationBean> getReservationsByRegisteredUserId() {
-
-        logger.debug("Getting reservations for current authenticated user");
-
-        int authenticatedUserId = getAuthenticatedRegisteredUserId();
-
-        return apiProxy.getReservationByRegisteredUser(authenticatedUserId);
-    }
-
-    /**
-     * Get reservation by id and dates for authenticated user
-     * @Param id, startDate, endDate
-     * @Return getReservationByIdAndDate
-     */
-    @Override
-    public boolean getReservationByIdAndDate(int id, LocalDate startDate, LocalDate endDate) {
-        return apiProxy.getReservationByIdAndDate(id, startDate, endDate);
     }
 
     /**
@@ -169,6 +136,9 @@ public class WebappServiceImpl implements WebappService {
      */
     @Override
     public AircraftBean createAircraft(AircraftBean aircraftBean) {
+
+        logger.debug("Creating AircraftBean for addAircraft");
+
         return aircraftBean;
     }
 
@@ -179,6 +149,9 @@ public class WebappServiceImpl implements WebappService {
      */
     @Override
     public AircraftBean getAircraftById(int id) {
+
+        logger.debug("Getting authenticated current user id");
+
         return apiProxy.getAircraftById(id);
     }
 
@@ -189,6 +162,9 @@ public class WebappServiceImpl implements WebappService {
      */
     @Override
     public AircraftBean getAircraftByReservationId(int id) {
+
+        logger.debug("Getting Aircraft by ReservationId");
+
         return apiProxy.getAircraftByReservationId(id);
     }
 
@@ -200,6 +176,8 @@ public class WebappServiceImpl implements WebappService {
      */
     @Override
     public AircraftBean updateAircraft(int id, AircraftBean aircraftBean) {
+
+        logger.debug("Updating AircraftBean by id");
 
         if (aircraftBean.getMotorHours() >= 10000) {
             aircraftBean.setAvailable(false);
@@ -219,82 +197,125 @@ public class WebappServiceImpl implements WebappService {
         return aircraftBean;
     }
 
+    /**
+     * Get all availableAircrafts for authenticated user
+     * @Return apiProxy.getAvailableAircrafts
+     */
     @Override
     public List<AircraftDto> getAvailableAircrafts() {
+
+        logger.debug("Getting all availableAircrafts");
+
         return apiProxy.getAvailableAircrafts().stream()
                 .map(aircraftMapper::convertToDTO)
                 .collect(Collectors.toList());
     }
 
+    /**
+     * Get all availableAircrafts between dates for authenticated user
+     * @Param startDate, endDate
+     * @Return apiProxy.getAvailableAircraftsBetweenDates
+     */
     @Override
     public List<AircraftDto> getAvailableAircraftsBetweenDates(LocalDate startDate, LocalDate endDate) {
+
+        logger.debug("Getting availableAircrafts between dates for addAircraftReservation and/or updateAircraftReservation");
+
         return apiProxy.getAvailableAircraftsBetweenDates(startDate, endDate).stream()
                 .map(aircraftMapper::convertToDTO)
                 .collect(Collectors.toList());
     }
 
-
-    @Override
-    public WorkshopBean getWorkshopBeanById(int id) {
-        return apiProxy.getWorkshopById(id);
-    }
-
-    @Override
-    public ResponseEntity<Void> createWorkshop(WorkshopBean workshopBean) {
-
-        workshopBean.setHelixChange(!workshopBean.getHelixChange());
-        workshopBean.setMotorChange(!workshopBean.getMotorChange());
-
-        return apiProxy.addWorkshop(workshopBean);
-    }
-
-    @Override
-    public WorkshopBean updateWorkshopBean(int id, WorkshopBean workshopBean) {
-        return apiProxy.updateWorkshop(id, workshopBean);
-    }
-
-    @Override
-    public WorkshopBean saveIntervention(int id, WorkshopBean workshopBean) {
-        return apiProxy.saveIntervention(id, workshopBean);
-    }
-
     /**
-     * Cancelled intervention by id.
-     * @Param id
-     * @Return ResponseEntity<Void>
-     * @Throws EntityNotFoundException
+     * Create Reservation with authenticated user
+     * @Return addReservation
      */
     @Override
-    public ResponseEntity<Void>  canceledIntervention(int id) {
-        WorkshopBean workshopBean = apiProxy.getWorkshopById(id);
-        AircraftBean aircraftBean = apiProxy.getWorkshopById(id).getAircraft();
-        aircraftBean.setAvailable(true);
-
-        if (workshopBean != null) {
-            workshopBean.setCanceled(true);
-            apiProxy.updateAircraft(aircraftBean.getId(),aircraftBean);
-            apiProxy.updateWorkshop(id, workshopBean);
-            return ResponseEntity.noContent().build();
-        } else {
-            throw new EntityNotFoundException("L'intervention avec l'ID " + id + " n'a pas été trouvée.");
-        }
-    }
-
-    @Override
     public ResponseEntity<Void> createReservation(ReservationDto reservationDto) {
+
+        logger.debug("Creating ReservationDto for addReservation");
 
         ReservationBean reservationBean = reservationMapper.convertToEntity(reservationDto);
 
         return apiProxy.addReservation(reservationBean);
     }
 
+    /**
+     * Get all reservation for authenticated user
+     * @Return getAllReservation
+     */
+    @Override
+    public List<ReservationBean> getAllReservation(){
+
+        logger.debug("Getting all Reservations");
+
+        return apiProxy.getAllReservation();
+    }
+
+    /**
+     * Get reservation by id for authenticated user
+     * @Param id
+     * @Return getReservationById
+     */
+    @Override
+    public ReservationBean getReservationById(int id) {
+
+        logger.debug("Getting Reservation by id");
+
+        return apiProxy.getReservationById(id);
+    }
+
+    /**
+     * Get reservation list for authenticated user
+     * @Param registeredUserId
+     * @Return getReservationByRegisteredUser
+     */
+    @Override
+    public List<ReservationBean> getReservationsByRegisteredUserId() {
+
+        logger.debug("Getting reservations for current authenticated user");
+
+        int authenticatedUserId = getAuthenticatedRegisteredUserId();
+
+        return apiProxy.getReservationByRegisteredUser(authenticatedUserId);
+    }
+
+    /**
+     * Get reservation by id and dates for authenticated user
+     * @Param id, startDate, endDate
+     * @Return getReservationByIdAndDate
+     */
+    @Override
+    public boolean getReservationByIdAndDate(int id, LocalDate startDate, LocalDate endDate) {
+
+        logger.debug("Getting Reservation by id and dates for updateAircraftReservation");
+
+        return apiProxy.getReservationByIdAndDate(id, startDate, endDate);
+    }
+
+    /**
+     * Put aircraftReservation for authenticated user
+     * @Param id, reservationBean
+     * @Return updateAircraftReservation
+     */
     @Override
     public ResponseEntity<Void> updateAircraftReservation(int id, ReservationBean reservationBean) {
+
+        logger.debug("Updating AircraftReservationBean by id");
+
         return apiProxy.updateAircraftReservation(id, reservationBean);
     }
 
+    /**
+     * Put reservation for authenticated user
+     * @Param id, reservationBean
+     * @Return updateReservation
+     */
     @Override
     public ResponseEntity<Void> updateReservation(int id, ReservationBean reservationBean) {
+
+        logger.debug("Updating ReservationBean by id");
+
         return apiProxy.updateReservation(id, reservationBean);
     }
 
@@ -306,6 +327,9 @@ public class WebappServiceImpl implements WebappService {
      */
     @Override
     public ResponseEntity<Void> canceledReservation(int id) {
+
+        logger.debug("Cancelling Reservation by id");
+
         ReservationBean reservationBean = apiProxy.getReservationById(id);
 
         if (reservationBean != null) {
@@ -314,6 +338,88 @@ public class WebappServiceImpl implements WebappService {
             return ResponseEntity.noContent().build();
         } else {
             throw new EntityNotFoundException("La réservation avec l'ID " + id + " n'a pas été trouvée.");
+        }
+    }
+
+
+    /**
+     * Get workshopBean by id for authenticated user
+     * @Param id
+     * @Return getWorkshopById
+     */
+    @Override
+    public WorkshopBean getWorkshopBeanById(int id) {
+
+        logger.debug("Getting workshopBean by id");
+
+        return apiProxy.getWorkshopById(id);
+    }
+
+    /**
+     * Post workshopBean for authenticated user
+     * @Param workshopBean
+     * @Return apiProxy.addWorkshop
+     */
+    @Override
+    public ResponseEntity<Void> createWorkshop(WorkshopBean workshopBean) {
+
+        logger.debug("Creating WorkshopBean for addWorkshop");
+
+        workshopBean.setHelixChange(!workshopBean.getHelixChange());
+        workshopBean.setMotorChange(!workshopBean.getMotorChange());
+
+        return apiProxy.addWorkshop(workshopBean);
+    }
+
+
+    /**
+     * Put workshopBean by id for authenticated user
+     * @Param id, workshopBean
+     * @Return apiProxy.updateWorkhop
+     */
+    @Override
+    public WorkshopBean updateWorkshopBean(int id, WorkshopBean workshopBean) {
+
+        logger.debug("Updating WorkshopBean by id");
+
+        return apiProxy.updateWorkshop(id, workshopBean);
+    }
+
+    /**
+     * Post intervention for authenticated user
+     * @Param id, workshopBean
+     * @Return getAllReservation
+     */
+    @Override
+    public WorkshopBean saveIntervention(int id, WorkshopBean workshopBean) {
+
+        logger.debug("Creating WorkshopBean by id");
+
+        return apiProxy.saveIntervention(id, workshopBean);
+    }
+
+    /**
+     * Cancelled intervention by id.
+     * @Param id
+     * @Return ResponseEntity<Void>
+     * @Throws EntityNotFoundException
+     */
+    @Override
+    public ResponseEntity<Void>  canceledIntervention(int id) {
+
+        logger.debug("Cancelling Intervention by id");
+
+        WorkshopBean workshopBean = apiProxy.getWorkshopById(id);
+        AircraftBean aircraftBean = apiProxy.getWorkshopById(id).getAircraft();
+        aircraftBean.setAvailable(true);
+
+        if (workshopBean != null) {
+            workshopBean.setCanceled(true);
+            apiProxy.updateAircraft(aircraftBean.getId(),aircraftBean);
+            apiProxy.updateWorkshop(id, workshopBean);
+            return ResponseEntity.noContent().build();
+        } else {
+            throw new EntityNotFoundException("L'intervention avec l'ID " + id + " n'a pas été trouvée.");
         }
     }
 

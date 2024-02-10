@@ -32,6 +32,7 @@ public interface WebappService {
     List<ReservationBean> getReservationsByRegisteredUserId();
 
     boolean getReservationByIdAndDate(int id, LocalDate startDate, LocalDate endDate);
+
     ResponseEntity<Void> createReservation(ReservationDto reservationDto);
 
     ResponseEntity<Void> updateReservation(int id, ReservationBean reservationBean);

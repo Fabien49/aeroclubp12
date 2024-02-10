@@ -353,13 +353,9 @@ public class WebappController {
             RegisteredUserBean registeredUserBean = new RegisteredUserBean();
             registeredUserBean.setId(id);
 
-
-            // Get available aircrafts
             List<AircraftDto> availableAircrafts = webappService.getAvailableAircrafts();
             model.addAttribute("availableAircrafts", availableAircrafts);
 
-
-            // Get all reservations list
             List<ReservationBean> reservationsList = webappService.getAllReservation();
 
             model.addAttribute("currentDate", LocalDate.now());
