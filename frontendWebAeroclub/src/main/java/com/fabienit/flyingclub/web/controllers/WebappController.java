@@ -71,6 +71,7 @@ public class WebappController {
     public String getAddAircraftPage(Model model){
 
         logger.info("Reach url: /addAircraft - GET");
+
         AircraftBean aircraftBean = new AircraftBean();
         model.addAttribute("aircraftBean", aircraftBean);
 
@@ -106,13 +107,16 @@ public class WebappController {
     @RequestMapping(value = "/aircrafts/{id}")
     public String deleteAircraft(@PathVariable int id, RedirectAttributes redirectAttributes) {
 
+        logger.info("Reach url: /aircrafts - POST");
+
         apiProxy.deleteAircraft(id);
         return "redirect:/aircrafts";
     }
 
     @GetMapping("/aircrafts/updateAircraft/{id}")
     public String upddateAircraftForm(Model model, @PathVariable int id){
-        logger.info("Reach url: /profile/updateRegisteredUserForm - GET");
+
+        logger.info("Reach url: /aircrafts/updateAircraft - GET");
 
         AircraftBean aircraftBean = webappService.getAircraftById(id);
             model.addAttribute("aircraft", aircraftBean);
@@ -122,6 +126,8 @@ public class WebappController {
 
     @PostMapping("/aircrafts/updateAircraft/{id}")
     public String updateAircraft(@PathVariable int id, @ModelAttribute("aircraft") AircraftBean updateAircraftFormDto, BindingResult result, RedirectAttributes redirectAttributes, Model model){
+
+        logger.info("Reach url: /aircrafts/updateAircrafts - POST");
 
         if (result.hasErrors()) {
             return "UpdateAircraft";
@@ -151,6 +157,8 @@ public class WebappController {
 
     @GetMapping(value = "/flyingClub")
     public String getFlyingClub(Model model){
+
+        logger.info("Reach url: /flyingClub - GET");
 
         List<FlyingClubBean> flyingClubBean = apiProxy.getFlyingClub();
         model.addAttribute("flyingClub", flyingClubBean);
@@ -252,6 +260,7 @@ public class WebappController {
 
     @GetMapping("/profile/updateRegisteredUser")
     public String upddateRegisteredUserForm(@RequestParam(name = "id", required = false) Integer id, Model model){
+
         logger.info("Reach url: /profile/updateRegisteredUserForm - GET");
 
         Boolean isAuthenticated = webappService.getIsAuthenticated();
@@ -274,6 +283,8 @@ public class WebappController {
 
     @PostMapping("/profile/updateRegisteredUser/{id}")
     public String updateRegisteredUser(@PathVariable int id, @ModelAttribute("registeredUser") RegisteredUserBean updateRegisteredUserFormDto, BindingResult result, RedirectAttributes redirectAttributes, Model model){
+
+        logger.info("Reach url: /profile/updateRegisteredUser - POST");
 
         if (result.hasErrors()) {
             return "UpdateRegisteredUser";
@@ -424,6 +435,7 @@ public class WebappController {
     public List<AircraftDto> getAvailableAircrafts( @RequestParam("borrowingDate") @DateTimeFormat(pattern = "yyyy-MM-dd") Date borrowingDate,
                                                     @RequestParam("returnDate") @DateTimeFormat(pattern = "yyyy-MM-dd") Date returnDate, Model model) {
 
+        logger.info("Reach url: /getAvailableAircrafts - GET");
 
         List<AircraftDto> availableAircrafts = webappService.getAvailableAircrafts();
         model.addAttribute("availableAircrafts", availableAircrafts);
@@ -440,14 +452,14 @@ public class WebappController {
     @PostMapping(value = "/saveReservation")
     public String saveReservation(@ModelAttribute ("reservationDto") ReservationDto reservationDto, Model model, RedirectAttributes redirectAttributes, BindingResult bindingResult){
 
+        logger.info("Reach url: /saveReservation - POST");
+
         if (bindingResult.hasErrors()) {
 
             model.addAttribute("reservationDto", reservationDto);
 
             return "redirect:/reservations";
         }
-
-        logger.info("Reach url: /saveReservation - POST");
 
         ResponseEntity<Void> response = null;
         int status = 0;
@@ -495,6 +507,8 @@ public class WebappController {
     @RequestMapping(value = "/reservations/{id}")
     public String deleteReservation(@PathVariable int id, RedirectAttributes redirectAttributes) {
 
+        logger.info("Reach url: /reservations - GET");
+
         apiProxy.deleteReservation(id);
         redirectAttributes.addAttribute("deletedReservation", true);
         return "redirect:/reservations";
@@ -505,6 +519,7 @@ public class WebappController {
     public String getAddHoursPage(Model model){
 
         logger.info("Reach url: /addHours - GET");
+
         RegisteredUserBean registeredUserBean = new RegisteredUserBean();
         model.addAttribute("RegisteredUserBean", registeredUserBean);
         WorkshopBean workshopBean = new WorkshopBean();
@@ -518,6 +533,9 @@ public class WebappController {
 
     @GetMapping("/confirmFinishReservation/{id}")
     public String getConfirmFinishPage(@PathVariable int id, Model model) {
+
+        logger.info("Reach url: /confirmFinishReservation - GET");
+
         ReservationBean reservation = webappService.getReservationById(id);
         model.addAttribute("reservation", reservation);
         return "ConfirmFinishReservation";
@@ -525,6 +543,8 @@ public class WebappController {
 
     @PostMapping("/confirmFinishReservation/{id}")
     public String confirmFinish(@PathVariable int id, @RequestParam("hours") int hours, Model model) {
+
+        logger.info("Reach url: /confirmFinishReservation - POST");
 
         Boolean isAuthenticated = webappService.getIsAuthenticated();
 
@@ -556,6 +576,8 @@ public class WebappController {
 
     @GetMapping("/updateReservation/{id}")
     public String updateReservationForm(@PathVariable int id, Model model){
+
+        logger.info("Reach url: /updateReservationForm - GET");
 
         ReservationDto reservationDto = reservationMapper.convertToDTO(webappService.getReservationById(id));
         model.addAttribute("reservationDto", reservationDto);
@@ -619,38 +641,6 @@ public class WebappController {
         return "redirect:/reservations";
     }
 
-
-
-
-
-    @PostMapping("/updateHours/{id}")
-    public String updateHours(@PathVariable int id, @ModelAttribute("registeredUser") RegisteredUserBean updateRegisteredUserFormDto, BindingResult result, RedirectAttributes redirectAttributes, Model model){
-
-
-        if (result.hasErrors()) {
-            return "UpdateHours";
-        }
-
-        updateRegisteredUserFormDto.setLastName(updateRegisteredUserFormDto.getLastName());
-        updateRegisteredUserFormDto.setFirstName(updateRegisteredUserFormDto.getFirstName());
-        updateRegisteredUserFormDto.setEmail(updateRegisteredUserFormDto.getEmail());
-        updateRegisteredUserFormDto.setHours(updateRegisteredUserFormDto.getHours());
-        updateRegisteredUserFormDto.setPassword(updateRegisteredUserFormDto.getPassword());
-        updateRegisteredUserFormDto.setRoles(updateRegisteredUserFormDto.getRoles());
-
-
-        try {
-            webappService.updateRegisteredUser(id, updateRegisteredUserFormDto);
-            redirectAttributes.addFlashAttribute("successMessage", "Utilisateur mis à jour avec succès!");
-        } catch (FeignException e) {
-            redirectAttributes.addFlashAttribute("errorMessage", "Erreur lors de la mise à jour de l'utilisateur.");
-        }
-
-        model.addAttribute("updateRegisteredUserFormDto", updateRegisteredUserFormDto);
-
-        return "redirect:/reservations";
-    }
-
     @GetMapping(value = "/workshop")
     public String getWorkshopPage(Model model, @RequestParam(required = false) Integer aircraftId) {
 
@@ -674,6 +664,7 @@ public class WebappController {
     public String getAddWorkshopPage(Model model){
 
         logger.info("Reach url: /addWorkshop - GET");
+
         LocalDate currentDate = LocalDate.now();
         model.addAttribute("currentDate", currentDate);
         WorkshopBean workshopBean = new WorkshopBean();
@@ -687,6 +678,7 @@ public class WebappController {
 
     @PostMapping(value = "/addWorkshop")
     public String addWorkshop(@Valid WorkshopBean workshopBean, RedirectAttributes redirectAttributes){
+
         logger.info("Reach url: /addWorkshop - POST");
 
         AircraftBean aircraftBean = webappService.getAircraftById(workshopBean.getAircraft().getId());
@@ -716,7 +708,8 @@ public class WebappController {
 
     @GetMapping("/intervention/{id}")
     public String interventionForm(Model model, @PathVariable int id){
-        logger.info("Reach url: /interventionForm - GET");
+
+        logger.info("Reach url: /intervention - GET");
 
         WorkshopBean workshopBean = webappService.getWorkshopBeanById(id);
 
@@ -728,6 +721,8 @@ public class WebappController {
 
     @PostMapping("/saveIntervention/{id}")
     public String saveIntervention(@PathVariable int id, @ModelAttribute("intervention") WorkshopBean workshopBean, BindingResult result, RedirectAttributes redirectAttributes, Model model){
+
+        logger.info("Reach url: /saveIntervention - POST");
 
         if (result.hasErrors()) {
             for (ObjectError error : result.getAllErrors()) {
@@ -785,7 +780,8 @@ public class WebappController {
 
     @GetMapping("/updateWorkshop/{id}")
     public String updateWorkshopForm(Model model, @PathVariable int id){
-        logger.info("Reach url: /updateWorkshopForm - GET");
+
+        logger.info("Reach url: /updateWorkshop - GET");
 
         WorkshopBean workshopBean = webappService.getWorkshopBeanById(id);
         model.addAttribute("workshop", workshopBean);
@@ -795,6 +791,8 @@ public class WebappController {
 
     @PostMapping("/updateWorkshop/{id}")
     public String updateWorkshopBean(@PathVariable int id, @ModelAttribute("workshop") WorkshopBean workshopBean, BindingResult result, RedirectAttributes redirectAttributes, Model model){
+
+        logger.info("Reach url: /updateWorkshop- POST");
 
         if (result.hasErrors()) {
             for (ObjectError error : result.getAllErrors()) {

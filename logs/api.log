@@ -2,3 +2,174 @@
 2024-02-10 16:14:54,179 DEBUG com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
 2024-02-10 16:14:54,180 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] The following profiles are active: dev
 2024-02-10 16:15:02,097 DEBUG com.fabienit.flyingclub.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$32c5282b [restartedMain] Set Swagger2 documentation
+2024-02-10 16:15:03,118 INFO com.fabienit.flyingclub.AeroclubApiApplication [restartedMain] Started AeroclubApiApplication in 9.469 seconds (JVM running for 11.301)
+2024-02-10 17:08:17,531 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-1] Search user by email: test1@gmail.com
+2024-02-10 17:08:19,195 INFO com.fabienit.flyingclub.web.controllers.FlyingClubController [http-nio-8001-exec-2] Providing aircraft resource from database: all flyingClub list
+2024-02-10 17:08:21,135 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-3] Providing registeredUser resource from database: registeredUser id: 4
+2024-02-10 17:08:25,873 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-4] Providing registeredUser resource from database: registeredUser id: 4
+2024-02-10 17:08:30,897 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-5] Providing registeredUser resource from database: registeredUser id: 4
+2024-02-10 19:44:55,397 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-7] Search user by email: test1@gmail.com
+2024-02-10 19:44:56,628 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-8] Providing aircraft resource from database: all aircraft list
+2024-02-10 19:44:56,888 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-9] Providing reservation list for registered user from database: user id: 4
+2024-02-10 19:45:04,204 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-10] Providing aircraft resource from database: available between dates aircraft list
+2024-02-10 19:45:06,785 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-1] Providing registeredUser resource from database: registeredUser id: 4
+2024-02-10 19:45:06,916 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-2] Providing aircraft resource from database: aircraft id: 1
+2024-02-10 19:45:07,121 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-3] Adding new reservation in database
+2024-02-10 19:45:09,749 ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] [http-nio-8001-exec-3] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.mail.MailSendException: Mail server connection failed; nested exception is com.sun.mail.util.MailConnectException: Couldn't connect to host, port: localhost, 25; timeout -1;
+  nested exception is:
+	java.net.ConnectException: Connection refused: connect. Failed messages: com.sun.mail.util.MailConnectException: Couldn't connect to host, port: localhost, 25; timeout -1;
+  nested exception is:
+	java.net.ConnectException: Connection refused: connect; message exceptions (1) are:
+Failed message 1: com.sun.mail.util.MailConnectException: Couldn't connect to host, port: localhost, 25; timeout -1;
+  nested exception is:
+	java.net.ConnectException: Connection refused: connect] with root cause
+java.net.ConnectException: Connection refused: connect
+	at java.base/java.net.PlainSocketImpl.connect0(Native Method)
+	at java.base/java.net.PlainSocketImpl.socketConnect(PlainSocketImpl.java:101)
+	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
+	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
+	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:403)
+	at java.base/java.net.Socket.connect(Socket.java:591)
+	at java.base/java.net.Socket.connect(Socket.java:540)
+	at com.sun.mail.util.SocketFetcher.createSocket(SocketFetcher.java:335)
+	at com.sun.mail.util.SocketFetcher.getSocket(SocketFetcher.java:214)
+	at com.sun.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:2160)
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:722)
+	at javax.mail.Service.connect(Service.java:342)
+	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:518)
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:437)
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:361)
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:356)
+	at com.fabienit.flyingclub.manager.EmailService.sendHtmlMessage(EmailService.java:42)
+	at com.fabienit.flyingclub.manager.impl.ReservationManagerImpl.save(ReservationManagerImpl.java:77)
+	at com.fabienit.flyingclub.manager.impl.ReservationManagerImpl$$FastClassBySpringCGLIB$$b422f1f0.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:769)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:366)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:99)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:689)
+	at com.fabienit.flyingclub.manager.impl.ReservationManagerImpl$$EnhancerBySpringCGLIB$$b0aaeb25.save(<generated>)
+	at com.fabienit.flyingclub.web.controllers.ReservationController.addReservation(ReservationController.java:72)
+	at com.fabienit.flyingclub.web.controllers.ReservationController$$FastClassBySpringCGLIB$$2c17ce79.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:769)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747)
+	at org.springframework.validation.beanvalidation.MethodValidationInterceptor.invoke(MethodValidationInterceptor.java:120)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:689)
+	at com.fabienit.flyingclub.web.controllers.ReservationController$$EnhancerBySpringCGLIB$$f360079c.addReservation(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:126)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:90)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:118)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:158)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:203)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1591)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2024-02-10 19:45:09,916 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-4] Providing aircraft resource from database: all aircraft list
+2024-02-10 19:45:10,069 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-5] Providing reservation list for registered user from database: user id: 4
+2024-02-10 19:45:11,423 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-6] Providing aircraft resource from database: all aircraft list
+2024-02-10 19:45:11,563 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-7] Providing reservation list for registered user from database: user id: 4
+2024-02-10 19:45:36,738 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-8] Providing aircraft resource from database: available between dates aircraft list
+2024-02-10 19:45:38,762 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-9] Providing registeredUser resource from database: registeredUser id: 4
+2024-02-10 19:45:38,889 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-10] Providing aircraft resource from database: aircraft id: 1
+2024-02-10 19:45:39,030 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-1] Adding new reservation in database
+2024-02-10 19:45:39,413 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-2] Providing aircraft resource from database: all aircraft list
+2024-02-10 19:45:39,541 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-3] Providing reservation list for registered user from database: user id: 4
+2024-02-10 19:45:48,382 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-4] Providing aircraft resource from database: available between dates aircraft list
+2024-02-10 19:45:50,486 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-5] Providing registeredUser resource from database: registeredUser id: 4
+2024-02-10 19:45:50,613 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-6] Providing aircraft resource from database: aircraft id: 1
+2024-02-10 19:45:50,751 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-7] Adding new reservation in database
+2024-02-10 19:45:50,931 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-8] Providing aircraft resource from database: all aircraft list
+2024-02-10 19:45:51,050 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-9] Providing reservation list for registered user from database: user id: 4
+2024-02-10 19:45:58,724 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-10] Providing reservation resource from database: reservation id: 9
+2024-02-10 19:46:02,259 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-1] Providing reservation resource from database: reservation id: 9
+2024-02-10 19:46:02,412 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-2] Updating registeredUser in database, id: 4
+2024-02-10 19:46:02,588 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-3] Updating aircraft in database, id: 1
+2024-02-10 19:46:02,735 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-4] Updating reservation in database, id: 9
+2024-02-10 19:46:02,903 INFO com.fabienit.flyingclub.web.controllers.RegisteredUserController [http-nio-8001-exec-5] Providing registeredUser resource from database: registeredUser id: 4
+2024-02-10 19:46:03,038 INFO com.fabienit.flyingclub.web.controllers.AircraftController [http-nio-8001-exec-6] Providing aircraft resource from database: all aircraft list
+2024-02-10 19:46:03,164 INFO com.fabienit.flyingclub.web.controllers.ReservationController [http-nio-8001-exec-7] Providing reservation list for registered user from database: user id: 4
