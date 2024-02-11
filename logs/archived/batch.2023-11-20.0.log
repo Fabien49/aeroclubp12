@@ -1,5 +1,0 @@
-2023-11-20 12:45:04,385 INFO com.fabienit.flyingclub.AeroclubApiApplication [main] Starting AeroclubApiApplication on FABPC with PID 1080 (started by FaB PC in C:\Users\FaB\Git\Projet 12\aeroclubp12)
-2023-11-20 12:45:04,401 DEBUG com.fabienit.flyingclub.AeroclubApiApplication [main] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
-2023-11-20 12:45:04,402 INFO com.fabienit.flyingclub.AeroclubApiApplication [main] The following profiles are active: dev
-2023-11-20 12:45:11,894 DEBUG com.fabienit.flyingclub.configuration.SwaggerConfig$$EnhancerBySpringCGLIB$$1e7f66be [main] Set Swagger2 documentation
-2023-11-20 12:45:12,779 INFO com.fabienit.flyingclub.AeroclubApiApplication [main] Started AeroclubApiApplication in 9.105 seconds (JVM running for 10.905)
