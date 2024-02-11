@@ -6,19 +6,14 @@
 
 Aeroclub12 est un site web dédié aux pilotes d'un aéroclub, cette application web JEE a été réalisée dans le cadre du parcours Développeur d'application Java de la plateforme d'enseignement OpenClassrooms.
 
-Les compétences évaluées sont les suivantes:
-
-* Concevoir une application web avec une approche par composants
-* Respecter les bonnes pratiques de développement en vigueur
-* Créer une API web avec un microservice REST
-* Sélectionner les langages de programmation adaptés pour le développement de l’application
-* Interagir avec des composants externes
-
 Les fonctions suivantes sont implémentées:
 
-* Rechercher des ouvrages et voir le nombre d’exemplaires disponibles.
-* Permettre aux usagers de consulter leurs prêts en cours. Les prêts sont pour une période de 4 semaines.
-* Prolonger un prêt en cours. Le prêt d’un ouvrage n’est prolongeable qu’une seule fois. La prolongation ajoute une nouvelle période de prêt (4 semaines) à la période initiale.
+* Consulter ses réservations.
+* Réserver un avion.
+* Modifier ou annuler une réservation.
+* Intervenir en atelier sur un avion.
+* Ajout automatique d'un avion en atelier quand son moteur a atteint dix mille heures ou plus.
+* Ajout manuellement d'un avion en atelier.
 * Login via un formulaire
 
 ## Guide de démarrage
@@ -47,7 +42,7 @@ server.port=8001
 #### Nom de l'application
 
 ```properties
-spring.application.name=biblio-api
+spring.application.name=aeroclub-api
 ```
 
 #### Données de connexion à la base de données (API seulement) en mode prod (fichier application-prod.properties)
@@ -56,7 +51,7 @@ spring.application.name=biblio-api
 # ===============================
 # = DATA SOURCE
 # ===============================
-spring.datasource.url= jdbc:mysql://localhost:3306/bibliop7?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+spring.datasource.url= jdbc:mysql://localhost:3306/aeroclubp12?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
 spring.datasource.username= root
 spring.datasource.password= admin
 spring.datasource.testWhileIdle = true
@@ -80,7 +75,7 @@ spring.h2.console.path=/h2web
 spring.h2.console.settings.web-allow-others=true
 
 # Datasource
-spring.datasource.url=jdbc:h2:mem:contactmanager;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+spring.datasource.url=jdbc:h2:mem:flyingclubp12;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
 spring.datasource.driverClassName=org.h2.Driver
 spring.datasource.username=sa
 spring.datasource.password=
@@ -89,7 +84,7 @@ spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
 spring.jpa.hibernate.ddl-auto=create-drop
 ```
 
-#### Identifiants Basic Auth (API seulement)
+#### Identifiants Basic Auth (API seulement and H2)
 
 ```properties
 spring.security.user.name=fabien
@@ -190,8 +185,10 @@ Ce fichier se trouve dans le répertoire /database
 spring.jpa.hibernate.ddl-auto = update
 ````
 
-### Utilisateur enregistré
+### Utilisateurs enregistrés
 
+Identifiant : admin@admin.com  
+Mot de passe : 123456
 Identifiant : fabien@gmail.com  
 Mot de passe : 123456
 
