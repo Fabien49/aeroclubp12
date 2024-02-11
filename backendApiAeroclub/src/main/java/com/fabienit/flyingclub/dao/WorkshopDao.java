@@ -15,7 +15,5 @@ import java.util.List;
 @Repository
 public interface WorkshopDao extends JpaRepository<Workshop, Integer>{
 
-    List<Workshop> findAllByAircraftMarkContaining(String mark);
-
     List<Workshop> findAllByAircraftId(Integer aircraftId);
 }
