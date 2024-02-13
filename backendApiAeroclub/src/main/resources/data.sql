@@ -87,7 +87,7 @@ insert into aircrafts (
     power,
     seats,
     autonomy,
-    use,
+    application,
     aircraft_hours,
     motor_hours,
     is_available

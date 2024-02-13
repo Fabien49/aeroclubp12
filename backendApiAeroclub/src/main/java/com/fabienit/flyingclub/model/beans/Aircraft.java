@@ -39,7 +39,7 @@ public class Aircraft {
     @Column(name = "autonomy")
     private int autonomy;
 
-    @Column(name = "use")
+    @Column(name = "application")
     private String use;
 
     @Column(name = "aircraft_hours", nullable = false)
