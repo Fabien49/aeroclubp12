@@ -4,7 +4,6 @@ com.fabienit.flyingclub.configuration
 com.fabienit.flyingclub.dao
 com.fabienit.flyingclub.manager
 com.fabienit.flyingclub.manager.impl
-com.fabienit.flyingclub.manager.impl.unit
 com.fabienit.flyingclub.model.beans
 com.fabienit.flyingclub.model.dto
 com.fabienit.flyingclub.model.mappers

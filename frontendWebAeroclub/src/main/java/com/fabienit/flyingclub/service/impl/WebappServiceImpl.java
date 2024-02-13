@@ -40,7 +40,7 @@ public class WebappServiceImpl implements WebappService {
 
     /**
      * Create Registered user bean with user input, call proxy api method to
-     * @Return addRegisteredUser
+     * @return addRegisteredUser
      */
     @Override
     public ResponseEntity<Void> createUser(RegisteredUserDto accountDto) {
@@ -61,7 +61,7 @@ public class WebappServiceImpl implements WebappService {
 
     /**
      * Extract RegisteredUserBean from authenticated userPrincipal to return user id
-     * @Return authenticatedRegisteredUserId
+     * @return authenticatedRegisteredUserId
      */
     @Override
     public int getAuthenticatedRegisteredUserId() {
@@ -93,8 +93,8 @@ public class WebappServiceImpl implements WebappService {
 
     /**
      * Get registeredUser by Id
-     * @Param id
-     * @Return apiProxy.getRegisteredUserById
+     * @param id
+     * @return apiProxy.getRegisteredUserById
      */
     @Override
     public RegisteredUserBean getRegisteredUserById(int id) {
@@ -106,7 +106,7 @@ public class WebappServiceImpl implements WebappService {
 
     /**
      * Get registeredUser list for authenticated user
-     * @Return List registeredUser
+     * @return List registeredUser
      */
     @Override
     public List<RegisteredUserBean> getAllRegisteredUsers() {
@@ -118,9 +118,9 @@ public class WebappServiceImpl implements WebappService {
 
     /**
      * Put registeredUser for authenticated user
-     * @Param id,
-     * @Param registeredUser
-     * @Return updateRegisteredUser
+     * @param id,
+     * @param updateRegisteredUserBean
+     * @return updateRegisteredUser
      */
     @Override
     public RegisteredUserBean updateRegisteredUser(int id, RegisteredUserBean updateRegisteredUserBean) {
@@ -132,7 +132,7 @@ public class WebappServiceImpl implements WebappService {
 
     /**
      * Create Aircraft with authenticated user
-     * @Return aircraftBean
+     * @return aircraftBean
      */
     @Override
     public AircraftBean createAircraft(AircraftBean aircraftBean) {
@@ -144,8 +144,8 @@ public class WebappServiceImpl implements WebappService {
 
     /**
      * Get aircraft by id for authenticated user
-     * @Param id
-     * @Return getAircraftById
+     * @param id
+     * @return getAircraftById
      */
     @Override
     public AircraftBean getAircraftById(int id) {
@@ -157,8 +157,8 @@ public class WebappServiceImpl implements WebappService {
 
     /**
      * Get aircraft by reservation id for authenticated user
-     * @Param id
-     * @Return getAircraftByReservationId
+     * @param id
+     * @return getAircraftByReservationId
      */
     @Override
     public AircraftBean getAircraftByReservationId(int id) {
@@ -171,8 +171,9 @@ public class WebappServiceImpl implements WebappService {
 
     /**
      * Put aircraft for authenticated user
-     * @Param id, aircraftBean
-     * @Return updateAircraft
+     * @param id
+     * @param aircraftBean
+     * @return updateAircraft
      */
     @Override
     public AircraftBean updateAircraft(int id, AircraftBean aircraftBean) {
@@ -199,7 +200,7 @@ public class WebappServiceImpl implements WebappService {
 
     /**
      * Get all availableAircrafts for authenticated user
-     * @Return apiProxy.getAvailableAircrafts
+     * @return apiProxy.getAvailableAircrafts
      */
     @Override
     public List<AircraftDto> getAvailableAircrafts() {
@@ -213,8 +214,9 @@ public class WebappServiceImpl implements WebappService {
 
     /**
      * Get all availableAircrafts between dates for authenticated user
-     * @Param startDate, endDate
-     * @Return apiProxy.getAvailableAircraftsBetweenDates
+     * @param startDate
+     * @param endDate
+     * @return apiProxy.getAvailableAircraftsBetweenDates
      */
     @Override
     public List<AircraftDto> getAvailableAircraftsBetweenDates(LocalDate startDate, LocalDate endDate) {
@@ -228,7 +230,7 @@ public class WebappServiceImpl implements WebappService {
 
     /**
      * Create Reservation with authenticated user
-     * @Return addReservation
+     * @return addReservation
      */
     @Override
     public ResponseEntity<Void> createReservation(ReservationDto reservationDto) {
@@ -242,7 +244,7 @@ public class WebappServiceImpl implements WebappService {
 
     /**
      * Get all reservation for authenticated user
-     * @Return getAllReservation
+     * @return getAllReservation
      */
     @Override
     public List<ReservationBean> getAllReservation(){
@@ -254,8 +256,8 @@ public class WebappServiceImpl implements WebappService {
 
     /**
      * Get reservation by id for authenticated user
-     * @Param id
-     * @Return getReservationById
+     * @param id
+     * @return getReservationById
      */
     @Override
     public ReservationBean getReservationById(int id) {
@@ -267,8 +269,7 @@ public class WebappServiceImpl implements WebappService {
 
     /**
      * Get reservation list for authenticated user
-     * @Param registeredUserId
-     * @Return getReservationByRegisteredUser
+     * @return getReservationByRegisteredUser
      */
     @Override
     public List<ReservationBean> getReservationsByRegisteredUserId() {
@@ -282,8 +283,10 @@ public class WebappServiceImpl implements WebappService {
 
     /**
      * Get reservation by id and dates for authenticated user
-     * @Param id, startDate, endDate
-     * @Return getReservationByIdAndDate
+     * @param id
+     * @param startDate
+     * @param endDate
+     * @return getReservationByIdAndDate
      */
     @Override
     public boolean getReservationByIdAndDate(int id, LocalDate startDate, LocalDate endDate) {
@@ -295,8 +298,9 @@ public class WebappServiceImpl implements WebappService {
 
     /**
      * Put aircraftReservation for authenticated user
-     * @Param id, reservationBean
-     * @Return updateAircraftReservation
+     * @param id
+     * @param reservationBean
+     * @return updateAircraftReservation
      */
     @Override
     public ResponseEntity<Void> updateAircraftReservation(int id, ReservationBean reservationBean) {
@@ -308,8 +312,9 @@ public class WebappServiceImpl implements WebappService {
 
     /**
      * Put reservation for authenticated user
-     * @Param id, reservationBean
-     * @Return updateReservation
+     * @param id
+     * @param reservationBean
+     * @return updateReservation
      */
     @Override
     public ResponseEntity<Void> updateReservation(int id, ReservationBean reservationBean) {
@@ -321,9 +326,9 @@ public class WebappServiceImpl implements WebappService {
 
     /**
      * Cancelled reservation by id.
-     * @Param id
-     * @Return ResponseEntity<Void>
-     * @Throws EntityNotFoundException
+     * @param id
+     * @return reservationBean
+     * @throws EntityNotFoundException
      */
     @Override
     public ResponseEntity<Void> canceledReservation(int id) {
@@ -344,8 +349,8 @@ public class WebappServiceImpl implements WebappService {
 
     /**
      * Get workshopBean by id for authenticated user
-     * @Param id
-     * @Return getWorkshopById
+     * @param id
+     * @return getWorkshopById
      */
     @Override
     public WorkshopBean getWorkshopBeanById(int id) {
@@ -357,8 +362,8 @@ public class WebappServiceImpl implements WebappService {
 
     /**
      * Post workshopBean for authenticated user
-     * @Param workshopBean
-     * @Return apiProxy.addWorkshop
+     * @param workshopBean
+     * @return apiProxy.addWorkshop
      */
     @Override
     public ResponseEntity<Void> createWorkshop(WorkshopBean workshopBean) {
@@ -374,8 +379,9 @@ public class WebappServiceImpl implements WebappService {
 
     /**
      * Put workshopBean by id for authenticated user
-     * @Param id, workshopBean
-     * @Return apiProxy.updateWorkhop
+     * @param id
+     * @param workshopBean
+     * @return apiProxy.updateWorkhop
      */
     @Override
     public WorkshopBean updateWorkshopBean(int id, WorkshopBean workshopBean) {
@@ -387,8 +393,9 @@ public class WebappServiceImpl implements WebappService {
 
     /**
      * Post intervention for authenticated user
-     * @Param id, workshopBean
-     * @Return getAllReservation
+     * @param id It's the id of the aircraft that's going to be put in the workshop
+     * @param workshopBean The object representing the workshop on which the operation is to be performed
+     * @return getAllReservation
      */
     @Override
     public WorkshopBean saveIntervention(int id, WorkshopBean workshopBean) {
@@ -400,9 +407,9 @@ public class WebappServiceImpl implements WebappService {
 
     /**
      * Cancelled intervention by id.
-     * @Param id
-     * @Return ResponseEntity<Void>
-     * @Throws EntityNotFoundException
+     * @param id
+     * @return ResponseEntity<Void>
+     * @throws EntityNotFoundException
      */
     @Override
     public ResponseEntity<Void>  canceledIntervention(int id) {
